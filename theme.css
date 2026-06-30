@@ -339,8 +339,7 @@ body[data-theme='light'] {
 
 h1,
 .markdown-preview-view h1,
-.markdown-rendered h1,
-.cm-header-1 {
+.markdown-rendered h1 {
   color: var(--h1-color);
   font-weight: var(--h1-weight);
   letter-spacing: 0;
@@ -734,8 +733,7 @@ input[type='checkbox']:checked,
 
   h1,
   .markdown-preview-view h1,
-  .markdown-rendered h1,
-  .cm-header-1 {
+  .markdown-rendered h1 {
     padding-left: 0.45em;
   }
 }
@@ -747,8 +745,7 @@ input[type='checkbox']:checked,
 
 h1,
 .markdown-preview-view h1,
-.markdown-rendered h1,
-.cm-header-1 {
+.markdown-rendered h1 {
   color: var(--h1-color);
   border-left-color: var(--nr-pine);
 }
@@ -1415,4 +1412,552 @@ h6,
 .theme-dark .nav-file-tag,
 .theme-dark .nav-file-title .nav-file-tag {
   color: color-mix(in srgb, var(--nr-slate) 72%, var(--nr-shadow));
+}
+
+/* Command center pass: operational focus, telemetry tables, search clarity. */
+.theme-dark .workspace-leaf.mod-active {
+  box-shadow: inset 2px 0 0 color-mix(in srgb, var(--nr-seafoam) 42%, transparent);
+}
+
+.theme-dark .workspace-leaf.mod-active .view-header-title {
+  color: color-mix(in srgb, var(--nr-fog) 82%, var(--nr-slate));
+}
+
+.theme-dark .prompt-input,
+.theme-dark .search-input-container input,
+.theme-dark .workspace-leaf.mod-active input[type='search'] {
+  background: color-mix(in srgb, var(--nr-midnight) 88%, var(--nr-moonstone));
+  border: 1px solid color-mix(in srgb, var(--nr-seafoam) 38%, var(--nr-iron));
+  box-shadow:
+    inset 2px 0 0 color-mix(in srgb, var(--nr-seafoam) 52%, transparent),
+    0 0 0 3px color-mix(in srgb, var(--nr-seafoam) 5%, transparent);
+}
+
+.theme-dark .suggestion-container .prompt-results,
+.theme-dark .suggestion {
+  border-top: 1px solid color-mix(in srgb, var(--nr-iron) 52%, transparent);
+}
+
+.theme-dark .suggestion-item {
+  border-radius: var(--nr-radius-s);
+}
+
+.theme-dark .suggestion-item.is-selected .suggestion-highlight,
+.theme-dark .suggestion-highlight {
+  color: color-mix(in srgb, var(--nr-cloud) 84%, var(--nr-copper));
+  background: color-mix(in srgb, var(--nr-copper) 18%, transparent);
+  border-radius: var(--nr-radius-s);
+}
+
+.theme-dark .search-result-file-title {
+  color: color-mix(in srgb, var(--nr-pine) 72%, var(--nr-fog));
+}
+
+.theme-dark .search-result-file-match:hover {
+  background: color-mix(in srgb, var(--nr-pine) 7%, var(--nr-shadow));
+}
+
+.theme-dark .markdown-rendered table,
+.theme-dark .markdown-preview-view table,
+.theme-dark .dataview.table-view-table {
+  border-color: color-mix(in srgb, var(--nr-iron) 72%, var(--nr-midnight));
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 3%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--nr-shadow) 48%, transparent);
+}
+
+.theme-dark .markdown-rendered th,
+.theme-dark .markdown-preview-view th,
+.theme-dark .dataview.table-view-table th {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--nr-ridge) 88%, var(--nr-moonstone)), color-mix(in srgb, var(--nr-midnight) 82%, var(--nr-ridge)));
+  border-bottom-color: color-mix(in srgb, var(--nr-copper) 32%, var(--nr-iron));
+}
+
+.theme-dark .markdown-rendered td,
+.theme-dark .markdown-preview-view td,
+.theme-dark .dataview.table-view-table td {
+  border-color: color-mix(in srgb, var(--nr-iron) 58%, var(--nr-shadow));
+}
+
+.theme-dark .markdown-rendered tr:nth-child(even) td,
+.theme-dark .markdown-preview-view tr:nth-child(even) td,
+.theme-dark .dataview.table-view-table tr:nth-child(even) td {
+  background: color-mix(in srgb, var(--nr-moonstone) 18%, transparent);
+}
+
+.theme-dark .markdown-rendered tr:hover td,
+.theme-dark .markdown-preview-view tr:hover td,
+.theme-dark .dataview.table-view-table tr:hover td {
+  background: color-mix(in srgb, var(--nr-pine) 8%, var(--nr-shadow));
+}
+
+.theme-dark .notice {
+  background: color-mix(in srgb, var(--nr-midnight) 88%, var(--nr-moonstone));
+  border: 1px solid color-mix(in srgb, var(--nr-pine) 34%, var(--nr-iron));
+  box-shadow:
+    inset 3px 0 0 var(--nr-pine),
+    0 12px 34px color-mix(in srgb, var(--nr-shadow) 55%, transparent);
+}
+
+.theme-dark .status-bar {
+  position: relative;
+}
+
+.theme-dark .status-bar::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--nr-pine) 42%, transparent), transparent);
+}
+
+/* Ridge sharpness pass: dark, clear, high-signal. */
+.theme-dark,
+body[data-theme='dark'] {
+  --text-normal: color-mix(in srgb, var(--nr-fog) 93%, var(--nr-cloud));
+  --text-muted: color-mix(in srgb, var(--nr-fog) 58%, var(--nr-slate));
+  --text-faint: color-mix(in srgb, var(--nr-slate) 74%, var(--nr-shadow));
+  --text-accent: color-mix(in srgb, var(--nr-copper) 88%, var(--nr-cloud));
+  --text-accent-hover: color-mix(in srgb, var(--nr-pine) 88%, var(--nr-cloud));
+  --text-on-accent: var(--nr-shadow);
+  --background-modifier-border: color-mix(in srgb, var(--nr-iron) 82%, var(--nr-slate));
+  --background-modifier-hover: color-mix(in srgb, var(--nr-pine) 14%, transparent);
+  --background-modifier-active-hover: color-mix(in srgb, var(--nr-seafoam) 12%, transparent);
+  --interactive-hover: color-mix(in srgb, var(--nr-pine) 72%, var(--nr-ridge));
+  --interactive-accent-hover: color-mix(in srgb, var(--nr-seafoam) 78%, var(--nr-pine));
+  --border-color: color-mix(in srgb, var(--nr-iron) 84%, var(--nr-slate));
+  --hr-color: color-mix(in srgb, var(--nr-iron) 84%, var(--nr-slate));
+  --inline-title-color: color-mix(in srgb, var(--nr-cloud) 82%, var(--nr-fog));
+}
+
+.theme-dark .workspace-ribbon,
+.theme-dark .workspace-tabs .workspace-tab-header-container,
+.theme-dark .view-header,
+.theme-dark .mod-sidedock .workspace-tabs {
+  background: color-mix(in srgb, var(--nr-shadow) 72%, var(--nr-midnight));
+  border-color: color-mix(in srgb, var(--nr-iron) 74%, var(--nr-shadow));
+}
+
+.theme-dark .workspace-split.mod-left-split,
+.theme-dark .workspace-split.mod-right-split,
+.theme-dark .nav-files-container {
+  background: linear-gradient(180deg, var(--nr-shadow), color-mix(in srgb, var(--nr-shadow) 86%, var(--nr-midnight)));
+}
+
+.theme-dark .markdown-preview-view,
+.theme-dark .markdown-source-view.mod-cm6 .cm-editor,
+.theme-dark .cm-s-obsidian {
+  color: var(--text-normal);
+}
+
+.theme-dark h1,
+.theme-dark .markdown-preview-view h1,
+.theme-dark .markdown-rendered h1 {
+  color: color-mix(in srgb, var(--nr-pine) 88%, var(--nr-cloud));
+}
+
+.theme-dark h2,
+.theme-dark .markdown-preview-view h2,
+.theme-dark .markdown-rendered h2,
+.theme-dark .cm-header-2 {
+  color: color-mix(in srgb, var(--nr-copper) 92%, var(--nr-cloud));
+}
+
+.theme-dark h3,
+.theme-dark .markdown-preview-view h3,
+.theme-dark .markdown-rendered h3,
+.theme-dark .cm-header-3 {
+  color: color-mix(in srgb, var(--nr-lichen) 88%, var(--nr-cloud));
+}
+
+.theme-dark h4,
+.theme-dark .markdown-preview-view h4,
+.theme-dark .markdown-rendered h4,
+.theme-dark .cm-header-4 {
+  color: color-mix(in srgb, var(--nr-ember) 74%, var(--nr-cloud));
+}
+
+.theme-dark h5,
+.theme-dark .markdown-preview-view h5,
+.theme-dark .markdown-rendered h5,
+.theme-dark .cm-header-5 {
+  color: color-mix(in srgb, var(--nr-slate) 62%, var(--nr-cloud));
+}
+
+.theme-dark h6,
+.theme-dark .markdown-preview-view h6,
+.theme-dark .markdown-rendered h6,
+.theme-dark .cm-header-6 {
+  color: color-mix(in srgb, var(--nr-seafoam) 82%, var(--nr-cloud));
+}
+
+.theme-dark a,
+.theme-dark .internal-link,
+.theme-dark .external-link,
+.theme-dark .cm-link,
+.theme-dark .cm-hmd-internal-link,
+.theme-dark .markdown-rendered .internal-link {
+  color: color-mix(in srgb, var(--nr-copper) 88%, var(--nr-cloud));
+  text-decoration-color: color-mix(in srgb, var(--nr-copper) 70%, transparent);
+}
+
+.theme-dark a:hover,
+.theme-dark .internal-link:hover,
+.theme-dark .external-link:hover,
+.theme-dark .cm-link:hover,
+.theme-dark .cm-hmd-internal-link:hover {
+  color: color-mix(in srgb, var(--nr-seafoam) 84%, var(--nr-cloud));
+  text-decoration-color: color-mix(in srgb, var(--nr-seafoam) 74%, transparent);
+}
+
+.theme-dark .metadata-properties,
+.theme-dark .markdown-embed,
+.theme-dark .callout,
+.theme-dark .prompt,
+.theme-dark .popover,
+.theme-dark .menu,
+.theme-dark .suggestion-container,
+.theme-dark .search-result-container,
+.theme-dark .modal {
+  background: #0D171F;
+  border-color: #2F414B;
+}
+
+.theme-dark .view-content,
+.theme-dark .markdown-preview-view,
+.theme-dark .markdown-source-view.mod-cm6 .cm-scroller {
+  background: #05080C;
+}
+
+.theme-dark .nav-files-container {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-pine) 88%, var(--nr-cloud));
+}
+
+.theme-dark .nav-files-container .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-copper) 86%, var(--nr-fog));
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-lichen) 86%, var(--nr-fog));
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-ember) 64%, var(--nr-fog));
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-slate) 68%, var(--nr-cloud));
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-seafoam) 72%, var(--nr-cloud));
+}
+
+.theme-dark .nav-files-container .nav-file-title,
+.theme-dark .nav-files-container .tree-item-self.nav-file-title,
+.theme-dark .nav-files-container .nav-file-title .nav-file-title-content,
+.theme-dark .nav-files-container .tree-item-self.nav-file-title .tree-item-inner {
+  color: color-mix(in srgb, var(--nr-fog) 80%, var(--nr-slate));
+}
+
+.theme-dark .tree-item-self.is-active,
+.theme-dark .nav-file-title.is-active,
+.theme-dark .tree-item-self.nav-file-title.is-active {
+  background: color-mix(in srgb, var(--nr-pine) 18%, var(--nr-shadow));
+  border-left-color: color-mix(in srgb, var(--nr-seafoam) 80%, var(--nr-pine));
+}
+
+.theme-dark .callout,
+.theme-dark .markdown-rendered table,
+.theme-dark .markdown-preview-view table,
+.theme-dark .dataview.table-view-table {
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 6%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--nr-shadow) 62%, transparent);
+}
+
+.theme-dark .prompt-input,
+.theme-dark .search-input-container input,
+.theme-dark input:focus,
+.theme-dark textarea:focus,
+.theme-dark select:focus,
+.theme-dark .dropdown:focus {
+  border-color: color-mix(in srgb, var(--nr-seafoam) 70%, var(--nr-iron));
+  box-shadow:
+    inset 2px 0 0 color-mix(in srgb, var(--nr-seafoam) 84%, transparent),
+    0 0 0 3px color-mix(in srgb, var(--nr-seafoam) 10%, transparent);
+}
+
+/* Graph command-map pass: dark topology, bright selected signal. */
+.theme-dark,
+body[data-theme='dark'] {
+  --text-normal: #E7ECEF;
+  --text-muted: #9AAAB2;
+  --text-faint: #5F737D;
+}
+
+.theme-dark .graph-view,
+.theme-dark .graph-view-container,
+.theme-dark .workspace-leaf-content[data-type='graph'] .view-content,
+.theme-dark .workspace-leaf-content[data-type='localgraph'] .view-content {
+  background: radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--nr-midnight) 72%, transparent), var(--nr-shadow) 64%);
+}
+
+.theme-dark .graph-view.color-line,
+.theme-dark .graph-view.color-arrow {
+  color: #18252E !important;
+}
+
+.theme-dark .graph-view.color-fill,
+.theme-dark .graph-view.color-circle {
+  color: #33424B !important;
+}
+
+.theme-dark .graph-view.color-fill-highlight,
+.theme-dark .graph-view.color-circle-highlight,
+.theme-dark .graph-view.color-line-highlight,
+.theme-dark .graph-view.color-arrow-highlight {
+  color: #6FDAD4 !important;
+}
+
+.theme-dark .graph-view.color-fill-focused,
+.theme-dark .graph-view.color-circle-focused {
+  color: #6FDAD4 !important;
+}
+
+.theme-dark .graph-view.color-line-focused,
+.theme-dark .graph-view.color-arrow-focused {
+  color: #5FA89D !important;
+}
+
+.theme-dark .graph-view.color-fill-unresolved {
+  color: #B87333 !important;
+}
+
+.theme-dark .graph-view.color-fill-tag,
+.theme-dark .graph-view.color-fill-attachment {
+  color: #5FA89D !important;
+}
+
+.theme-dark .graph-view text,
+.theme-dark .graph-view .graph-view-label {
+  color: #DDE2E5 !important;
+  fill: #DDE2E5 !important;
+}
+
+.theme-dark .workspace-leaf.mod-active {
+  box-shadow:
+    inset 2px 0 0 color-mix(in srgb, var(--nr-seafoam) 62%, transparent),
+    inset 0 0 0 1px color-mix(in srgb, var(--nr-iron) 42%, transparent);
+}
+
+/* Crisp command center pass: remove fog, keep dark. */
+.theme-dark,
+body[data-theme='dark'] {
+  --background-primary: #02070B;
+  --background-primary-alt: #061018;
+  --background-secondary: #0A1822;
+  --background-secondary-alt: #10232F;
+  --background-modifier-border: #2F414B;
+  --border-color: #2F414B;
+  --hr-color: #2F414B;
+
+  --text-normal: #F0F5F6;
+  --text-muted: #B7C5CB;
+  --text-faint: #708892;
+  --text-accent: #C7864A;
+  --text-accent-hover: #6FDAD4;
+  --text-success: #7ECFC3;
+  --text-warning: #C7864A;
+  --text-error: #D25B45;
+
+  --interactive-normal: #10232F;
+  --interactive-hover: #1A3A44;
+  --interactive-accent: #7ECFC3;
+  --interactive-accent-hover: #6FDAD4;
+
+  --graph-line: #20323B;
+  --graph-node: #5FA89D;
+  --graph-node-focused: #6FDAD4;
+  --graph-node-tag: #8FAE8A;
+  --graph-node-attachment: #6F8793;
+  --graph-node-unresolved: #B87333;
+  --graph-text: #DDE2E5;
+}
+
+.theme-dark .view-content,
+.theme-dark .workspace-leaf-content,
+.theme-dark .markdown-preview-view,
+.theme-dark .markdown-source-view.mod-cm6 .cm-scroller {
+  background: #02070B;
+}
+
+.theme-dark .workspace-ribbon,
+.theme-dark .workspace-tabs .workspace-tab-header-container,
+.theme-dark .view-header,
+.theme-dark .mod-sidedock .workspace-tabs,
+.theme-dark .status-bar {
+  background: #061018;
+  border-color: #243842;
+}
+
+.theme-dark .metadata-properties,
+.theme-dark .markdown-embed,
+.theme-dark .callout,
+.theme-dark .prompt,
+.theme-dark .popover,
+.theme-dark .menu,
+.theme-dark .suggestion-container,
+.theme-dark .search-result-container,
+.theme-dark .modal,
+.theme-dark .setting-item {
+  background: #0A1822;
+  border-color: #2F414B;
+}
+
+.theme-dark .metadata-property-key,
+.theme-dark .metadata-property-key-input,
+.theme-dark .metadata-property-icon,
+.theme-dark .side-dock-ribbon-action,
+.theme-dark .clickable-icon {
+  color: #8FA6B0;
+}
+
+.theme-dark h1,
+.theme-dark .markdown-preview-view h1,
+.theme-dark .markdown-rendered h1 {
+  color: #7ECFC3;
+}
+
+.theme-dark h2,
+.theme-dark .markdown-preview-view h2,
+.theme-dark .markdown-rendered h2,
+.theme-dark .cm-header-2 {
+  color: #C7864A;
+  border-bottom-color: rgba(199, 134, 74, 0.52);
+}
+
+.theme-dark h3,
+.theme-dark .markdown-preview-view h3,
+.theme-dark .markdown-rendered h3,
+.theme-dark .cm-header-3 {
+  color: #9DC59A;
+}
+
+.theme-dark p,
+.theme-dark li,
+.theme-dark .markdown-preview-view,
+.theme-dark .markdown-rendered {
+  color: #F0F5F6;
+}
+
+.theme-dark .cm-line,
+.theme-dark .markdown-source-view.mod-cm6 {
+  color: #F0F5F6;
+}
+
+.theme-dark .nav-file-title,
+.theme-dark .tree-item-self.nav-file-title,
+.theme-dark .nav-file-title .nav-file-title-content,
+.theme-dark .tree-item-self.nav-file-title .tree-item-inner {
+  color: #C4D0D5;
+}
+
+.theme-dark .nav-files-container {
+  --nr-folder-depth-color: #7ECFC3;
+}
+
+.theme-dark .nav-files-container .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children {
+  --nr-folder-depth-color: #C7864A;
+  border-left-color: rgba(47, 65, 75, 0.58);
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: #9DC59A;
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: #D25B45;
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: #8FA6B0;
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: #6FDAD4;
+}
+
+.theme-dark .graph-view,
+.theme-dark .graph-view-container,
+.theme-dark .workspace-leaf-content[data-type='graph'] .view-content,
+.theme-dark .workspace-leaf-content[data-type='localgraph'] .view-content {
+  background: #02070B !important;
+}
+
+.theme-dark .graph-view.color-line,
+.theme-dark .graph-view.color-arrow {
+  color: #20323B !important;
+}
+
+.theme-dark .graph-view.color-fill,
+.theme-dark .graph-view.color-circle {
+  color: #5FA89D !important;
+}
+
+.theme-dark .graph-view.color-fill-highlight,
+.theme-dark .graph-view.color-circle-highlight,
+.theme-dark .graph-view.color-fill-focused,
+.theme-dark .graph-view.color-circle-focused {
+  color: #6FDAD4 !important;
+}
+
+/* Ridge edge pass: sharper active pane, darker graph topology, leaner properties. */
+.theme-dark .workspace-leaf.mod-active {
+  box-shadow:
+    inset 2px 0 0 #6FDAD4,
+    inset 0 1px 0 rgba(111, 218, 212, 0.34),
+    inset 0 0 0 1px rgba(47, 65, 75, 0.54);
+}
+
+.theme-dark .workspace-leaf.mod-active .view-header {
+  border-bottom-color: rgba(111, 218, 212, 0.38);
+}
+
+.theme-dark .graph-view.color-line,
+.theme-dark .graph-view.color-arrow {
+  color: #17262E !important;
+}
+
+.theme-dark .graph-view.color-fill,
+.theme-dark .graph-view.color-circle {
+  color: #35645E !important;
+}
+
+.theme-dark .graph-view.color-fill-tag {
+  color: #5F805B !important;
+}
+
+.theme-dark .graph-view.color-fill-attachment {
+  color: #4F646D !important;
+}
+
+.theme-dark .metadata-properties {
+  background: #08141D;
+  border-color: #263A45;
+  box-shadow:
+    inset 0 1px 0 rgba(245, 247, 248, 0.025),
+    0 0 0 1px rgba(5, 8, 12, 0.72);
 }
