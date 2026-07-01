@@ -1289,16 +1289,22 @@ h6,
 .theme-dark h2,
 .theme-dark .markdown-preview-view h2,
 .theme-dark .markdown-rendered h2 {
-  padding-bottom: 0.18em;
-  border-bottom: 1px solid color-mix(in srgb, var(--nr-copper) 34%, transparent);
-  box-shadow: inset 0 -2px 0 color-mix(in srgb, var(--nr-pine) 5%, transparent);
+  padding-bottom: 0.04em;
+  border-bottom: 0;
+  box-shadow: none;
+  text-decoration-line: underline;
+  text-decoration-color: rgba(199, 134, 74, 0.42);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.24em;
+  text-decoration-skip-ink: auto;
 }
 
 .theme-dark .cm-header-2 {
-  text-decoration: underline;
-  text-decoration-color: color-mix(in srgb, var(--nr-copper) 34%, transparent);
+  text-decoration-line: underline;
+  text-decoration-color: rgba(199, 134, 74, 0.42);
   text-decoration-thickness: 1px;
-  text-underline-offset: 0.22em;
+  text-underline-offset: 0.24em;
+  text-decoration-skip-ink: auto;
 }
 
 .theme-dark .cm-active,
@@ -1834,6 +1840,28 @@ body[data-theme='dark'] {
 .theme-dark .markdown-preview-view h1,
 .theme-dark .markdown-rendered h1 {
   color: #7ECFC3;
+  border-left-color: #6FF0E8;
+  border-left-width: 4px;
+  padding: 0.08em 0 0.1em 0.62em;
+  border-radius: 2px;
+  background:
+    radial-gradient(
+      ellipse 46px 82% at -2px 50%,
+      rgba(111, 240, 232, 0.34) 0%,
+      rgba(111, 218, 212, 0.16) 36%,
+      transparent 74%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(111, 218, 212, 0.060) 0%,
+      rgba(95, 168, 157, 0.022) 26%,
+      transparent 50%
+    );
+  box-shadow:
+    inset 1px 0 0 rgba(111, 240, 232, 0.95),
+    inset 6px 0 16px rgba(111, 240, 232, 0.10),
+    0 0 14px rgba(111, 218, 212, 0.085);
+  text-shadow: 0 0 13px rgba(126, 207, 195, 0.18);
 }
 
 .theme-dark h2,
@@ -1841,7 +1869,7 @@ body[data-theme='dark'] {
 .theme-dark .markdown-rendered h2,
 .theme-dark .cm-header-2 {
   color: #C7864A;
-  border-bottom-color: rgba(199, 134, 74, 0.52);
+  border-bottom: 0;
 }
 
 .theme-dark h3,
@@ -1877,27 +1905,51 @@ body[data-theme='dark'] {
 .theme-dark .nav-files-container .nav-folder-children,
 .theme-dark .nav-files-container .tree-item-children {
   --nr-folder-depth-color: #C7864A;
-  border-left-color: rgba(47, 65, 75, 0.58);
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: rgba(126, 207, 195, 0.34);
 }
 
 .theme-dark .nav-files-container .nav-folder-children .nav-folder-children,
 .theme-dark .nav-files-container .tree-item-children .tree-item-children {
   --nr-folder-depth-color: #9DC59A;
+  border-left-color: rgba(199, 134, 74, 0.32);
 }
 
 .theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children,
 .theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children {
   --nr-folder-depth-color: #D25B45;
+  border-left-color: rgba(157, 197, 154, 0.30);
 }
 
 .theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
 .theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
-  --nr-folder-depth-color: #8FA6B0;
+  --nr-folder-depth-color: #6FDAD4;
+  border-left-color: rgba(210, 91, 69, 0.30);
 }
 
 .theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
 .theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
-  --nr-folder-depth-color: #6FDAD4;
+  --nr-folder-depth-color: #8FA6B0;
+  border-left-color: rgba(111, 218, 212, 0.30);
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: #2F414B;
+  border-left-color: rgba(143, 166, 176, 0.32);
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: #5FA89D;
+  border-left-color: rgba(47, 65, 75, 0.32);
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: #C4D0D5;
+  border-left-color: rgba(95, 168, 157, 0.30);
 }
 
 .theme-dark .graph-view,
@@ -1927,8 +1979,8 @@ body[data-theme='dark'] {
 /* Ridge edge pass: sharper active pane, darker graph topology, leaner properties. */
 .theme-dark .workspace-leaf.mod-active {
   box-shadow:
-    inset 2px 0 0 #6FDAD4,
-    inset 0 1px 0 rgba(111, 218, 212, 0.34),
+    inset 1px 0 0 rgba(111, 218, 212, 0.58),
+    inset 0 1px 0 rgba(111, 218, 212, 0.22),
     inset 0 0 0 1px rgba(47, 65, 75, 0.54);
 }
 
@@ -1960,4 +2012,381 @@ body[data-theme='dark'] {
   box-shadow:
     inset 0 1px 0 rgba(245, 247, 248, 0.025),
     0 0 0 1px rgba(5, 8, 12, 0.72);
+}
+
+/* Forge health state colors: let dashboard status beat generic heading colors. */
+.theme-dark .forge-health-dashboard .forge-health-header[data-status] h1,
+.theme-dark .forge-health-dashboard .forge-health-section-header[data-status] h2,
+.theme-dark .forge-health-dashboard .forge-health-section-header h2[data-status],
+.theme-dark .forge-health-dashboard .forge-health-section[data-status] .forge-health-section-header h2 {
+  color: var(--forge-health-status-color);
+}
+
+.theme-dark .forge-health-dashboard .forge-health-pill[data-status],
+.theme-dark .forge-health-dashboard .forge-health-section-status[data-status] {
+  color: var(--forge-health-status-color);
+  border-color: color-mix(in srgb, var(--forge-health-status-color) 42%, transparent);
+}
+
+.theme-dark .nav-files-container .nav-file-title.is-active,
+.theme-dark .nav-files-container .tree-item-self.nav-file-title.is-active {
+  border-left-width: 4px;
+  border-left-color: #6FF0E8;
+  background:
+    radial-gradient(
+      ellipse 42px 90% at -2px 50%,
+      rgba(111, 240, 232, 0.14) 0%,
+      rgba(111, 218, 212, 0.05) 40%,
+      transparent 76%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(111, 218, 212, 0.055) 0%,
+      rgba(95, 168, 157, 0.022) 32%,
+      transparent 72%
+    );
+  box-shadow:
+    inset 1px 0 0 rgba(111, 240, 232, 0.74),
+    0 0 10px rgba(111, 218, 212, 0.045);
+}
+
+/* Folder rail depth radar: brighten only the ancestor branch for the active file. */
+.theme-dark .nav-files-container .nav-folder:has(.nav-file-title.is-active) > .nav-folder-children,
+.theme-dark .nav-files-container .nav-folder:has(.tree-item-self.nav-file-title.is-active) > .nav-folder-children,
+.theme-dark .nav-files-container .tree-item:has(.nav-file-title.is-active) > .tree-item-children,
+.theme-dark .nav-files-container .tree-item:has(.tree-item-self.nav-file-title.is-active) > .tree-item-children {
+  border-left-width: 1px;
+  border-left-color: color-mix(in srgb, var(--nr-folder-depth-color) 34%, transparent);
+  box-shadow:
+    -1px 0 0 color-mix(in srgb, var(--nr-folder-depth-color) 12%, transparent),
+    -5px 0 14px color-mix(in srgb, var(--nr-folder-depth-color) 4%, transparent);
+}
+
+.theme-dark .nav-files-container .nav-folder:has(.nav-file-title.is-active) > .nav-folder-title,
+.theme-dark .nav-files-container .nav-folder:has(.tree-item-self.nav-file-title.is-active) > .nav-folder-title {
+  color: color-mix(in srgb, var(--nr-folder-depth-color) 88%, var(--nr-cloud));
+  text-shadow: 0 0 8px color-mix(in srgb, var(--nr-folder-depth-color) 8%, transparent);
+}
+
+/* Forge semantic status pass: trust explicit data-status hooks only. */
+.theme-dark .forge-health-dashboard [data-status='good' i] {
+  --forge-health-status-color: var(--nr-pine);
+}
+
+.theme-dark .forge-health-dashboard [data-status='warning' i] {
+  --forge-health-status-color: var(--nr-copper);
+}
+
+.theme-dark .forge-health-dashboard [data-status='critical' i] {
+  --forge-health-status-color: var(--nr-ember);
+}
+
+.theme-dark .forge-health-dashboard [data-status='muted' i] {
+  --forge-health-status-color: var(--nr-slate);
+}
+
+.theme-dark .forge-health-dashboard .forge-health-header[data-status] h1,
+.theme-dark .forge-health-dashboard .forge-health-section[data-status] .forge-health-section-header h2,
+.theme-dark .forge-health-dashboard .forge-health-section-header[data-status] h2,
+.theme-dark .forge-health-dashboard :is(h1, h2)[data-status] {
+  color: var(--forge-health-status-color);
+  text-decoration-color: color-mix(in srgb, var(--forge-health-status-color) 46%, transparent);
+}
+
+.theme-dark .forge-health-dashboard .forge-health-pill[data-status],
+.theme-dark .forge-health-dashboard .forge-health-section-status[data-status] {
+  color: var(--forge-health-status-color);
+  border-color: color-mix(in srgb, var(--forge-health-status-color) 44%, transparent);
+}
+
+/* Editor signal polish: seafoam caret, dark pine selection, no heading overrides. */
+.theme-dark,
+.theme-dark .markdown-source-view.mod-cm6 .cm-editor,
+.theme-dark .markdown-source-view.mod-cm6 .cm-content,
+.theme-dark .markdown-source-view.mod-cm6 .cm-line {
+  caret-color: var(--nr-seafoam);
+}
+
+.theme-dark ::selection {
+  background: color-mix(in srgb, var(--nr-pine) 34%, var(--nr-shadow));
+  color: color-mix(in srgb, var(--nr-cloud) 92%, var(--nr-slate));
+}
+
+.theme-dark .cm-cursor,
+.theme-dark .cm-dropCursor {
+  border-left-color: var(--nr-seafoam) !important;
+  box-shadow: 0 0 8px color-mix(in srgb, var(--nr-seafoam) 32%, transparent);
+}
+
+.theme-dark .cm-selectionBackground,
+.theme-dark .markdown-source-view.mod-cm6 .cm-selectionBackground,
+.theme-dark .markdown-source-view.mod-cm6 .cm-line::selection,
+.theme-dark .markdown-source-view.mod-cm6 .cm-line *::selection {
+  background: color-mix(in srgb, var(--nr-pine) 26%, var(--nr-shadow)) !important;
+}
+
+/* Table command grid polish: restrained borders, copper headers, pine lead column. */
+.theme-dark .markdown-rendered table,
+.theme-dark .markdown-preview-view table,
+.theme-dark .dataview.table-view-table {
+  border-color: color-mix(in srgb, var(--nr-slate) 28%, var(--nr-shadow));
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 4%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--nr-shadow) 72%, transparent);
+}
+
+.theme-dark .markdown-rendered th,
+.theme-dark .markdown-preview-view th,
+.theme-dark .dataview.table-view-table th {
+  color: color-mix(in srgb, var(--nr-copper) 88%, var(--nr-cloud));
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--nr-ridge) 78%, var(--nr-midnight)),
+      color-mix(in srgb, var(--nr-midnight) 92%, var(--nr-ridge))
+    );
+  border-bottom-color: color-mix(in srgb, var(--nr-copper) 42%, var(--nr-iron));
+}
+
+.theme-dark .markdown-rendered td:first-child,
+.theme-dark .markdown-preview-view td:first-child,
+.theme-dark .dataview.table-view-table td:first-child {
+  color: color-mix(in srgb, var(--nr-pine) 76%, var(--nr-fog));
+}
+
+.theme-dark .markdown-rendered tr:hover td,
+.theme-dark .markdown-preview-view tr:hover td,
+.theme-dark .dataview.table-view-table tr:hover td {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 7%, var(--nr-shadow)),
+      color-mix(in srgb, var(--nr-pine) 5%, var(--nr-shadow)) 34%,
+      color-mix(in srgb, var(--nr-shadow) 96%, transparent)
+    );
+  border-top-color: color-mix(in srgb, var(--nr-pine) 18%, var(--nr-iron));
+  border-bottom-color: color-mix(in srgb, var(--nr-pine) 14%, var(--nr-iron));
+}
+
+/* Dataview state language: empty is neutral, warnings are copper, errors stay ember. */
+.theme-dark div.dataview-error-box {
+  color: color-mix(in srgb, var(--nr-fog) 82%, var(--nr-slate));
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-copper) 6%, var(--nr-shadow)),
+      color-mix(in srgb, var(--nr-midnight) 92%, var(--nr-shadow)) 24%,
+      color-mix(in srgb, var(--nr-shadow) 96%, transparent)
+    );
+  border-color: color-mix(in srgb, var(--nr-copper) 30%, var(--nr-iron));
+  box-shadow:
+    inset 2px 0 0 color-mix(in srgb, var(--nr-copper) 54%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 3%, transparent);
+}
+
+.theme-dark .dataview-error-message {
+  color: color-mix(in srgb, var(--nr-copper) 64%, var(--nr-fog));
+}
+
+.theme-dark pre.dataview-error {
+  color: color-mix(in srgb, var(--nr-ember) 88%, var(--nr-fog));
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-ember) 10%, var(--nr-shadow)),
+      color-mix(in srgb, var(--nr-midnight) 92%, var(--nr-shadow))
+    );
+  border-color: color-mix(in srgb, var(--nr-ember) 58%, var(--nr-iron));
+  box-shadow:
+    inset 2px 0 0 color-mix(in srgb, var(--nr-ember) 72%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 3%, transparent);
+}
+
+/* Mobile beacon: active icon signal only, never a whole-button glow. */
+.is-mobile .mobile-navbar .clickable-icon.is-active,
+.is-mobile .mobile-navbar .is-active > .clickable-icon,
+.is-mobile .mobile-toolbar .clickable-icon.is-active,
+.is-mobile .mobile-toolbar .is-active > .clickable-icon,
+.is-mobile .workspace-drawer-tab-option-item.is-active .clickable-icon,
+.is-mobile .workspace-drawer-ribbon-action.is-active .clickable-icon {
+  color: var(--nr-seafoam);
+  filter: drop-shadow(0 0 5px color-mix(in srgb, var(--nr-seafoam) 48%, transparent));
+}
+
+.is-mobile .mobile-navbar .clickable-icon.is-active::after,
+.is-mobile .mobile-toolbar .clickable-icon.is-active::after {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Callout hierarchy: rails carry status; fills stay quiet. */
+.theme-dark .callout {
+  --nr-callout-signal: var(--nr-slate);
+  border-left-color: var(--nr-callout-signal);
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-callout-signal) 6%, var(--nr-shadow)),
+      color-mix(in srgb, var(--nr-moonstone) 68%, var(--nr-shadow)) 18%,
+      color-mix(in srgb, var(--nr-moonstone) 68%, var(--nr-shadow))
+    );
+}
+
+.theme-dark .callout[data-callout='note'],
+.theme-dark .callout[data-callout='quote'],
+.theme-dark .callout[data-callout='cite'],
+.theme-dark .callout[data-callout='abstract'],
+.theme-dark .callout[data-callout='summary'],
+.theme-dark .callout[data-callout='todo'] {
+  --nr-callout-signal: var(--nr-slate);
+}
+
+.theme-dark .callout[data-callout='info'],
+.theme-dark .callout[data-callout='tip'],
+.theme-dark .callout[data-callout='hint'] {
+  --nr-callout-signal: var(--nr-seafoam);
+}
+
+.theme-dark .callout[data-callout='success'],
+.theme-dark .callout[data-callout='check'],
+.theme-dark .callout[data-callout='done'] {
+  --nr-callout-signal: var(--nr-pine);
+}
+
+.theme-dark .callout[data-callout='warning'],
+.theme-dark .callout[data-callout='question'],
+.theme-dark .callout[data-callout='attention'] {
+  --nr-callout-signal: var(--nr-copper);
+}
+
+.theme-dark .callout[data-callout='danger'],
+.theme-dark .callout[data-callout='error'],
+.theme-dark .callout[data-callout='failure'],
+.theme-dark .callout[data-callout='bug'] {
+  --nr-callout-signal: var(--nr-ember);
+}
+
+.theme-dark .callout .callout-title,
+.theme-dark .callout .callout-icon {
+  color: color-mix(in srgb, var(--nr-callout-signal) 86%, var(--nr-cloud));
+}
+
+/* Search scanner bars: slim ticks for result cards, seafoam for active/focus. */
+.theme-dark .search-result-file-match,
+.theme-dark .search-result-file-matches {
+  position: relative;
+  border-left: 2px solid color-mix(in srgb, var(--nr-copper) 44%, transparent);
+}
+
+.theme-dark .search-result-file-match::before,
+.theme-dark .search-result-file-matches::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 -2px;
+  width: 2px;
+  background: color-mix(in srgb, var(--nr-copper) 64%, transparent);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--nr-copper) 16%, transparent);
+}
+
+.theme-dark .search-result-file-match:hover,
+.theme-dark .search-result-file-match.is-active,
+.theme-dark .search-result-file-match.is-selected {
+  border-left-color: color-mix(in srgb, var(--nr-seafoam) 62%, transparent);
+}
+
+.theme-dark .search-result-file-match:hover::before,
+.theme-dark .search-result-file-match.is-active::before,
+.theme-dark .search-result-file-match.is-selected::before {
+  background: color-mix(in srgb, var(--nr-seafoam) 82%, transparent);
+  box-shadow: 0 0 9px color-mix(in srgb, var(--nr-seafoam) 28%, transparent);
+}
+
+/* Property panel accents: type/status/tags get signal through text and borders only. */
+.theme-dark .metadata-property[data-property-key='type'] .metadata-property-key,
+.theme-dark .metadata-property[data-property-key='type'] .metadata-property-icon,
+.theme-dark .metadata-property[data-property-key='type'] .metadata-property-value {
+  color: color-mix(in srgb, var(--nr-pine) 82%, var(--nr-fog));
+}
+
+.theme-dark .metadata-property[data-property-key='status'] .metadata-property-key,
+.theme-dark .metadata-property[data-property-key='status'] .metadata-property-icon,
+.theme-dark .metadata-property[data-property-key='status'] .metadata-property-value {
+  color: color-mix(in srgb, var(--nr-copper) 82%, var(--nr-fog));
+}
+
+.theme-dark .metadata-property[data-property-key='type'],
+.theme-dark .metadata-property[data-property-key='status'],
+.theme-dark .metadata-property[data-property-key='tags'] {
+  border-left: 2px solid color-mix(in srgb, var(--nr-slate) 30%, transparent);
+}
+
+.theme-dark .metadata-property[data-property-key='type'] {
+  border-left-color: color-mix(in srgb, var(--nr-pine) 42%, transparent);
+}
+
+.theme-dark .metadata-property[data-property-key='status'] {
+  border-left-color: color-mix(in srgb, var(--nr-copper) 44%, transparent);
+}
+
+.theme-dark .metadata-property[data-property-key='tags'] {
+  border-left-color: color-mix(in srgb, var(--nr-lichen) 40%, transparent);
+}
+
+.theme-dark .metadata-property[data-property-key='tags'] .multi-select-pill,
+.theme-dark a.tag,
+.theme-dark .cm-hashtag {
+  color: color-mix(in srgb, var(--nr-lichen) 84%, var(--nr-cloud));
+  background: color-mix(in srgb, var(--nr-lichen) 10%, var(--nr-shadow));
+  border: 1px solid color-mix(in srgb, var(--nr-lichen) 34%, var(--nr-iron));
+}
+
+/* Property rhythm: repeat eight Night Ridge signals from top to bottom. */
+.theme-dark .metadata-properties {
+  --nr-property-signal: var(--nr-slate);
+}
+
+.theme-dark .metadata-properties .metadata-property:nth-child(8n + 1) {
+  --nr-property-signal: var(--nr-pine);
+}
+
+.theme-dark .metadata-properties .metadata-property:nth-child(8n + 2) {
+  --nr-property-signal: var(--nr-copper);
+}
+
+.theme-dark .metadata-properties .metadata-property:nth-child(8n + 3) {
+  --nr-property-signal: var(--nr-lichen);
+}
+
+.theme-dark .metadata-properties .metadata-property:nth-child(8n + 4) {
+  --nr-property-signal: var(--nr-slate);
+}
+
+.theme-dark .metadata-properties .metadata-property:nth-child(8n + 5) {
+  --nr-property-signal: var(--nr-seafoam);
+}
+
+.theme-dark .metadata-properties .metadata-property:nth-child(8n + 6) {
+  --nr-property-signal: var(--nr-ember);
+}
+
+.theme-dark .metadata-properties .metadata-property:nth-child(8n + 7) {
+  --nr-property-signal: color-mix(in srgb, var(--nr-ridge) 62%, var(--nr-seafoam));
+}
+
+.theme-dark .metadata-properties .metadata-property:nth-child(8n) {
+  --nr-property-signal: color-mix(in srgb, var(--nr-fog) 78%, var(--nr-slate));
+}
+
+.theme-dark .metadata-properties .metadata-property {
+  border-left: 2px solid color-mix(in srgb, var(--nr-property-signal) 38%, transparent);
+}
+
+.theme-dark .metadata-properties .metadata-property-icon,
+.theme-dark .metadata-properties .metadata-property-key,
+.theme-dark .metadata-properties .metadata-property-key-input {
+  color: color-mix(in srgb, var(--nr-property-signal) 70%, var(--nr-fog));
+}
+
+.theme-dark .metadata-properties .metadata-property:hover {
+  background: color-mix(in srgb, var(--nr-property-signal) 5%, transparent);
 }
