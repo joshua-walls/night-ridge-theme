@@ -3320,13 +3320,57 @@ body[data-theme='light'] {
 .theme-light .modal.mod-settings .setting-item,
 .theme-light .vertical-tab-content .setting-item,
 .theme-light .community-modal .setting-item {
-  background: color-mix(in srgb, #BFD0D6 92%, var(--nr-cloud));
-  border-color: color-mix(in srgb, var(--nr-ridge) 34%, transparent);
+  align-items: center;
+  min-height: 4.25rem;
+  margin: 0;
+  padding: 0.9rem 1.15rem;
+  background: color-mix(in srgb, #BFD0D6 84%, var(--nr-cloud));
+  border: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--nr-ridge) 20%, transparent);
+  box-shadow: none;
+}
+
+.theme-light .modal.mod-settings .setting-item:last-child,
+.theme-light .vertical-tab-content .setting-item:last-child,
+.theme-light .community-modal .setting-item:last-child {
+  border-bottom: 0;
 }
 
 .theme-light .setting-item-name,
 .theme-light .setting-item-description {
   color: color-mix(in srgb, var(--nr-midnight) 86%, var(--nr-ridge));
+  line-height: 1.35;
+}
+
+.theme-light .modal.mod-settings .setting-item-name,
+.theme-light .vertical-tab-content .setting-item-name,
+.theme-light .community-modal .setting-item-name {
+  margin-bottom: 0.18rem;
+}
+
+.theme-light .modal.mod-settings .setting-item-description,
+.theme-light .vertical-tab-content .setting-item-description,
+.theme-light .community-modal .setting-item-description {
+  max-width: 42rem;
+}
+
+.theme-light .modal.mod-settings .setting-item-control,
+.theme-light .vertical-tab-content .setting-item-control,
+.theme-light .community-modal .setting-item-control {
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.theme-light .modal.mod-settings .setting-item-control select,
+.theme-light .modal.mod-settings .setting-item-control .dropdown,
+.theme-light .modal.mod-settings .setting-item-control button,
+.theme-light .vertical-tab-content .setting-item-control select,
+.theme-light .vertical-tab-content .setting-item-control .dropdown,
+.theme-light .vertical-tab-content .setting-item-control button,
+.theme-light .community-modal .setting-item-control select,
+.theme-light .community-modal .setting-item-control .dropdown,
+.theme-light .community-modal .setting-item-control button {
+  min-height: 2.15rem;
 }
 
 .theme-light button:not(.mod-cta):not(.mod-warning),
@@ -3517,10 +3561,12 @@ body[data-theme='light'] {
 }
 
 .theme-light .metadata-property {
+  align-items: center;
   background: #BFD0D6 !important;
   border-left: 2px solid color-mix(in srgb, var(--nr-property-signal) 36%, transparent);
   border-right: 1px solid color-mix(in srgb, var(--nr-ridge) 22%, transparent);
   border-bottom: 1px solid color-mix(in srgb, var(--nr-ridge) 18%, transparent);
+  min-height: 2.35rem;
 }
 
 .theme-light .metadata-property:first-child {
@@ -3530,7 +3576,53 @@ body[data-theme='light'] {
 .theme-light .metadata-property-key,
 .theme-light .metadata-property-key-input,
 .theme-light .metadata-property-icon {
+  align-items: center;
   background: color-mix(in srgb, var(--nr-ridge) 7%, transparent) !important;
+  min-height: 2.35rem;
+}
+
+.theme-light .metadata-property-value {
+  align-items: center;
+  min-height: 2.35rem;
+}
+
+.theme-light .metadata-property-value .multi-select-container,
+.theme-light .metadata-property-value .multi-select-pill-container {
+  align-items: center;
+  min-height: 1.8rem;
+}
+
+.theme-light .metadata-property[data-property-key='tags'] {
+  align-items: stretch;
+}
+
+.theme-light .metadata-property[data-property-key='tags'] .metadata-property-key,
+.theme-light .metadata-property[data-property-key='tags'] .metadata-property-key-input {
+  align-self: stretch;
+  align-items: flex-start;
+  padding-top: 0.55rem;
+}
+
+.theme-light .metadata-property[data-property-key='tags'] .metadata-property-icon {
+  align-items: flex-start;
+  padding-top: 0.12rem;
+}
+
+.theme-light .metadata-property[data-property-key='tags'] .metadata-property-value {
+  align-items: flex-start;
+  padding-block: 0.32rem;
+}
+
+.theme-light .metadata-property[data-property-key='tags'] .multi-select-container,
+.theme-light .metadata-property[data-property-key='tags'] .multi-select-pill-container {
+  row-gap: 0.35rem;
+}
+
+.theme-light .metadata-property[data-property-key='tags'] .multi-select-pill {
+  line-height: 1.2;
+  margin-block: 0;
+  min-height: 1.55rem;
+  padding-block: 0.12rem;
 }
 
 .theme-light,
@@ -3612,4 +3704,1040 @@ body[data-theme='light'] {
 
 .theme-light .graph-view.color-fill-unresolved {
   color: #A94130 !important;
+}
+
+/* Callout refinement: title tab, nested restraint, collapsed beacon, mobile density. */
+.theme-dark .callout,
+.theme-light .callout {
+  position: relative;
+}
+
+.theme-dark .callout .callout-title,
+.theme-light .callout .callout-title {
+  position: relative;
+  gap: 0.45em;
+  padding-left: 0;
+  padding-bottom: 0.28em;
+}
+
+.theme-dark .callout .callout-title::before,
+.theme-light .callout .callout-title::before {
+  content: none;
+}
+
+.theme-dark .callout .callout-title::after,
+.theme-light .callout .callout-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  width: min(8.5rem, 44%);
+  height: 1px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--nr-callout-signal) 58%, transparent);
+}
+
+.theme-dark .callout .callout-icon,
+.theme-light .callout .callout-icon {
+  color: var(--nr-callout-signal);
+}
+
+.theme-dark .callout .callout-icon svg,
+.theme-dark .callout .callout-icon .svg-icon,
+.theme-light .callout .callout-icon svg,
+.theme-light .callout .callout-icon .svg-icon {
+  color: var(--nr-callout-signal) !important;
+  stroke: currentColor !important;
+}
+
+.theme-dark .callout[data-callout='note'],
+.theme-dark .callout[data-callout='abstract'],
+.theme-dark .callout[data-callout='summary'] {
+  --nr-callout-signal: var(--nr-slate);
+}
+
+.theme-dark .callout[data-callout='quote'],
+.theme-dark .callout[data-callout='cite'] {
+  --nr-callout-signal: var(--nr-lichen);
+}
+
+.theme-dark .callout[data-callout='todo'] {
+  --nr-callout-signal: var(--nr-pine);
+}
+
+.theme-light .callout[data-callout='note'],
+.theme-light .callout[data-callout='abstract'],
+.theme-light .callout[data-callout='summary'] {
+  --nr-callout-signal: var(--nr-slate);
+}
+
+.theme-light .callout[data-callout='quote'],
+.theme-light .callout[data-callout='cite'] {
+  --nr-callout-signal: var(--nr-lichen);
+}
+
+.theme-light .callout[data-callout='todo'] {
+  --nr-callout-signal: var(--nr-pine);
+}
+
+.theme-dark .callout .callout {
+  border-left-width: 2px;
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-callout-signal) 4%, var(--nr-shadow)),
+      color-mix(in srgb, var(--nr-midnight) 86%, var(--nr-shadow)) 20%,
+      color-mix(in srgb, var(--nr-midnight) 86%, var(--nr-shadow))
+    );
+  box-shadow: none;
+}
+
+.theme-light .callout .callout {
+  border-left-width: 2px;
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-callout-signal) 8%, #BFD0D6),
+      #BFD0D6 22%,
+      #BFD0D6
+    );
+  box-shadow: none;
+}
+
+.theme-dark .callout.is-collapsed,
+.theme-dark .callout[data-callout-fold='-'] {
+  border-left-width: 4px;
+  box-shadow:
+    inset 1px 0 0 color-mix(in srgb, var(--nr-callout-signal) 50%, transparent),
+    0 0 12px color-mix(in srgb, var(--nr-callout-signal) 5%, transparent);
+}
+
+.theme-light .callout.is-collapsed,
+.theme-light .callout[data-callout-fold='-'] {
+  border-left-width: 4px;
+  box-shadow:
+    inset 1px 0 0 color-mix(in srgb, var(--nr-callout-signal) 38%, transparent),
+    0 0 10px color-mix(in srgb, var(--nr-callout-signal) 8%, transparent);
+}
+
+.theme-dark .callout.is-collapsed .callout-title,
+.theme-dark .callout[data-callout-fold='-'] .callout-title {
+  text-shadow: 0 0 8px color-mix(in srgb, var(--nr-callout-signal) 12%, transparent);
+}
+
+.theme-light .callout.is-collapsed .callout-title,
+.theme-light .callout[data-callout-fold='-'] .callout-title {
+  text-shadow: 0 1px 0 color-mix(in srgb, var(--nr-cloud) 48%, transparent);
+}
+
+@media (max-width: 700px) {
+  .theme-dark .callout,
+  .theme-light .callout {
+    padding: 0.72em 0.84em;
+    border-left-width: 3px;
+  }
+
+  .theme-dark .callout .callout-title,
+  .theme-light .callout .callout-title {
+    font-size: 0.95em;
+    line-height: 1.25;
+    margin-bottom: 0.42em;
+  }
+
+  .theme-dark .callout .callout-content,
+  .theme-light .callout .callout-content {
+    font-size: 0.95em;
+  }
+}
+
+/* Callout repair: edit-mode gutters should guide, not obscure markdown lines. */
+.theme-dark .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote,
+.theme-dark .markdown-source-view.mod-cm6 .cm-quote,
+.theme-light .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote,
+.theme-light .markdown-source-view.mod-cm6 .cm-quote {
+  border-left-width: 1px;
+  border-left-color: color-mix(in srgb, var(--nr-seafoam) 28%, transparent);
+  box-shadow: none;
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-formatting-quote,
+.theme-light .markdown-source-view.mod-cm6 .cm-formatting-quote {
+  color: color-mix(in srgb, var(--nr-seafoam) 58%, var(--text-muted));
+  text-shadow: none;
+}
+
+/* Edit-mode callout fallback: neutral gutter unless Obsidian exposes type hooks. */
+.theme-dark .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote,
+.theme-dark .markdown-source-view.mod-cm6 .cm-quote,
+.theme-light .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote,
+.theme-light .markdown-source-view.mod-cm6 .cm-quote {
+  border-left-color: color-mix(in srgb, var(--nr-slate) 24%, transparent);
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-formatting-quote,
+.theme-light .markdown-source-view.mod-cm6 .cm-formatting-quote {
+  color: color-mix(in srgb, var(--nr-slate) 62%, var(--text-muted));
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='info' i], .cm-callout-info, .cm-hmd-callout-info),
+.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='tip' i], .cm-callout-tip, .cm-hmd-callout-tip),
+.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='hint' i], .cm-callout-hint, .cm-hmd-callout-hint),
+.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='info' i], .cm-callout-info, .cm-hmd-callout-info),
+.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='tip' i], .cm-callout-tip, .cm-hmd-callout-tip),
+.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='hint' i], .cm-callout-hint, .cm-hmd-callout-hint) {
+  border-left-color: color-mix(in srgb, var(--nr-seafoam) 58%, transparent);
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='success' i], .cm-callout-success, .cm-hmd-callout-success),
+.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='check' i], .cm-callout-check, .cm-hmd-callout-check),
+.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='done' i], .cm-callout-done, .cm-hmd-callout-done),
+.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='todo' i], .cm-callout-todo, .cm-hmd-callout-todo),
+.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='success' i], .cm-callout-success, .cm-hmd-callout-success),
+.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='check' i], .cm-callout-check, .cm-hmd-callout-check),
+.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='done' i], .cm-callout-done, .cm-hmd-callout-done),
+.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='todo' i], .cm-callout-todo, .cm-hmd-callout-todo) {
+  border-left-color: color-mix(in srgb, var(--nr-pine) 56%, transparent);
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='warning' i], .cm-callout-warning, .cm-hmd-callout-warning),
+.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='question' i], .cm-callout-question, .cm-hmd-callout-question),
+.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='attention' i], .cm-callout-attention, .cm-hmd-callout-attention),
+.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='warning' i], .cm-callout-warning, .cm-hmd-callout-warning),
+.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='question' i], .cm-callout-question, .cm-hmd-callout-question),
+.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='attention' i], .cm-callout-attention, .cm-hmd-callout-attention) {
+  border-left-color: color-mix(in srgb, var(--nr-copper) 58%, transparent);
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='danger' i], .cm-callout-danger, .cm-hmd-callout-danger),
+.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='error' i], .cm-callout-error, .cm-hmd-callout-error),
+.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='failure' i], .cm-callout-failure, .cm-hmd-callout-failure),
+.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='bug' i], .cm-callout-bug, .cm-hmd-callout-bug),
+.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='danger' i], .cm-callout-danger, .cm-hmd-callout-danger),
+.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='error' i], .cm-callout-error, .cm-hmd-callout-error),
+.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='failure' i], .cm-callout-failure, .cm-hmd-callout-failure),
+.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='bug' i], .cm-callout-bug, .cm-hmd-callout-bug) {
+  border-left-color: color-mix(in srgb, var(--nr-ember) 60%, transparent);
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='quote' i], .cm-callout-quote, .cm-hmd-callout-quote),
+.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='cite' i], .cm-callout-cite, .cm-hmd-callout-cite),
+.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='quote' i], .cm-callout-quote, .cm-hmd-callout-quote),
+.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='cite' i], .cm-callout-cite, .cm-hmd-callout-cite) {
+  border-left-color: color-mix(in srgb, var(--nr-lichen) 58%, transparent);
+}
+
+/* Live Preview edit mode: no callout/quote gutters while editing. */
+.theme-dark .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote,
+.theme-dark .markdown-source-view.mod-cm6 .cm-quote,
+.theme-light .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote,
+.theme-light .markdown-source-view.mod-cm6 .cm-quote {
+  border-left: 0 !important;
+  box-shadow: none !important;
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote::before,
+.theme-dark .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote::after,
+.theme-dark .markdown-source-view.mod-cm6 .cm-quote::before,
+.theme-dark .markdown-source-view.mod-cm6 .cm-quote::after,
+.theme-light .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote::before,
+.theme-light .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote::after,
+.theme-light .markdown-source-view.mod-cm6 .cm-quote::before,
+.theme-light .markdown-source-view.mod-cm6 .cm-quote::after {
+  border-left: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-formatting-quote,
+.theme-light .markdown-source-view.mod-cm6 .cm-formatting-quote {
+  color: color-mix(in srgb, var(--nr-slate) 56%, var(--text-muted)) !important;
+  text-shadow: none !important;
+}
+
+/* Metadata section label: quieter ridge support text, not primary heading. */
+.theme-dark .metadata-properties-heading,
+.theme-dark .metadata-container .metadata-properties-title,
+.theme-dark .metadata-content .metadata-properties-title,
+.theme-dark .metadata-properties .metadata-properties-title,
+.theme-dark .metadata-container > .tree-item-self,
+.theme-light .metadata-properties-heading,
+.theme-light .metadata-container .metadata-properties-title,
+.theme-light .metadata-content .metadata-properties-title,
+.theme-light .metadata-properties .metadata-properties-title,
+.theme-light .metadata-container > .tree-item-self {
+  color: color-mix(in srgb, var(--nr-ridge) 72%, var(--nr-slate)) !important;
+  font-weight: 620;
+}
+
+.theme-dark .metadata-properties-heading,
+.theme-dark .metadata-container .metadata-properties-title,
+.theme-dark .metadata-content .metadata-properties-title,
+.theme-dark .metadata-properties .metadata-properties-title,
+.theme-dark .metadata-container > .tree-item-self {
+  color: color-mix(in srgb, var(--nr-ridge) 64%, var(--nr-fog)) !important;
+}
+
+/* Forge current-note title signal: only works when Forge exposes status on editor/title ancestors. */
+.theme-dark .workspace-leaf.mod-active,
+.theme-light .workspace-leaf.mod-active {
+  --nr-current-note-title-signal: transparent;
+}
+
+.theme-dark :is(
+  .workspace-leaf.mod-active,
+  .workspace-leaf-content,
+  .markdown-source-view,
+  .markdown-preview-view,
+  .view-content
+):is(
+  [data-status='good' i],
+  [data-status='healthy' i],
+  [data-status='clear' i],
+  [data-status='valid' i],
+  [data-status='indexed' i],
+  [data-current-note-status='good' i],
+  [data-current-note-status='healthy' i],
+  [data-current-note-status='clear' i],
+  [data-current-note-status='valid' i],
+  [data-current-note-status='indexed' i],
+  [data-forge-current-note-status='good' i],
+  [data-forge-current-note-status='healthy' i],
+  [data-forge-current-note-status='clear' i],
+  [data-forge-current-note-status='valid' i],
+  [data-forge-current-note-status='indexed' i]
+),
+.theme-light :is(
+  .workspace-leaf.mod-active,
+  .workspace-leaf-content,
+  .markdown-source-view,
+  .markdown-preview-view,
+  .view-content
+):is(
+  [data-status='good' i],
+  [data-status='healthy' i],
+  [data-status='clear' i],
+  [data-status='valid' i],
+  [data-status='indexed' i],
+  [data-current-note-status='good' i],
+  [data-current-note-status='healthy' i],
+  [data-current-note-status='clear' i],
+  [data-current-note-status='valid' i],
+  [data-current-note-status='indexed' i],
+  [data-forge-current-note-status='good' i],
+  [data-forge-current-note-status='healthy' i],
+  [data-forge-current-note-status='clear' i],
+  [data-forge-current-note-status='valid' i],
+  [data-forge-current-note-status='indexed' i]
+) {
+  --nr-current-note-title-signal: var(--nr-pine);
+}
+
+.theme-dark .workspace-leaf.mod-active:has(:is(
+  [data-status='good' i],
+  [data-status='healthy' i],
+  [data-status='clear' i],
+  [data-status='valid' i],
+  [data-status='indexed' i],
+  [data-current-note-status='good' i],
+  [data-current-note-status='healthy' i],
+  [data-current-note-status='clear' i],
+  [data-current-note-status='valid' i],
+  [data-current-note-status='indexed' i],
+  [data-forge-current-note-status='good' i],
+  [data-forge-current-note-status='healthy' i],
+  [data-forge-current-note-status='clear' i],
+  [data-forge-current-note-status='valid' i],
+  [data-forge-current-note-status='indexed' i]
+)),
+.theme-light .workspace-leaf.mod-active:has(:is(
+  [data-status='good' i],
+  [data-status='healthy' i],
+  [data-status='clear' i],
+  [data-status='valid' i],
+  [data-status='indexed' i],
+  [data-current-note-status='good' i],
+  [data-current-note-status='healthy' i],
+  [data-current-note-status='clear' i],
+  [data-current-note-status='valid' i],
+  [data-current-note-status='indexed' i],
+  [data-forge-current-note-status='good' i],
+  [data-forge-current-note-status='healthy' i],
+  [data-forge-current-note-status='clear' i],
+  [data-forge-current-note-status='valid' i],
+  [data-forge-current-note-status='indexed' i]
+)) {
+  --nr-current-note-title-signal: var(--nr-pine);
+}
+
+.theme-dark :is(
+  .workspace-leaf.mod-active,
+  .workspace-leaf-content,
+  .markdown-source-view,
+  .markdown-preview-view,
+  .view-content
+):is(
+  [data-status='warning' i],
+  [data-status='needs attention' i],
+  [data-status='needs-attention' i],
+  [data-current-note-status='warning' i],
+  [data-current-note-status='needs attention' i],
+  [data-current-note-status='needs-attention' i],
+  [data-forge-current-note-status='warning' i],
+  [data-forge-current-note-status='needs attention' i],
+  [data-forge-current-note-status='needs-attention' i]
+),
+.theme-light :is(
+  .workspace-leaf.mod-active,
+  .workspace-leaf-content,
+  .markdown-source-view,
+  .markdown-preview-view,
+  .view-content
+):is(
+  [data-status='warning' i],
+  [data-status='needs attention' i],
+  [data-status='needs-attention' i],
+  [data-current-note-status='warning' i],
+  [data-current-note-status='needs attention' i],
+  [data-current-note-status='needs-attention' i],
+  [data-forge-current-note-status='warning' i],
+  [data-forge-current-note-status='needs attention' i],
+  [data-forge-current-note-status='needs-attention' i]
+) {
+  --nr-current-note-title-signal: var(--nr-copper);
+}
+
+.theme-dark .workspace-leaf.mod-active:has(:is(
+  [data-status='warning' i],
+  [data-status='needs attention' i],
+  [data-status='needs-attention' i],
+  [data-current-note-status='warning' i],
+  [data-current-note-status='needs attention' i],
+  [data-current-note-status='needs-attention' i],
+  [data-forge-current-note-status='warning' i],
+  [data-forge-current-note-status='needs attention' i],
+  [data-forge-current-note-status='needs-attention' i]
+)),
+.theme-light .workspace-leaf.mod-active:has(:is(
+  [data-status='warning' i],
+  [data-status='needs attention' i],
+  [data-status='needs-attention' i],
+  [data-current-note-status='warning' i],
+  [data-current-note-status='needs attention' i],
+  [data-current-note-status='needs-attention' i],
+  [data-forge-current-note-status='warning' i],
+  [data-forge-current-note-status='needs attention' i],
+  [data-forge-current-note-status='needs-attention' i]
+)) {
+  --nr-current-note-title-signal: var(--nr-copper);
+}
+
+.theme-dark :is(
+  .workspace-leaf.mod-active,
+  .workspace-leaf-content,
+  .markdown-source-view,
+  .markdown-preview-view,
+  .view-content
+):is(
+  [data-status='critical' i],
+  [data-status='error' i],
+  [data-status='fail' i],
+  [data-status='failed' i],
+  [data-current-note-status='critical' i],
+  [data-current-note-status='error' i],
+  [data-current-note-status='fail' i],
+  [data-current-note-status='failed' i],
+  [data-forge-current-note-status='critical' i],
+  [data-forge-current-note-status='error' i],
+  [data-forge-current-note-status='fail' i],
+  [data-forge-current-note-status='failed' i]
+),
+.theme-light :is(
+  .workspace-leaf.mod-active,
+  .workspace-leaf-content,
+  .markdown-source-view,
+  .markdown-preview-view,
+  .view-content
+):is(
+  [data-status='critical' i],
+  [data-status='error' i],
+  [data-status='fail' i],
+  [data-status='failed' i],
+  [data-current-note-status='critical' i],
+  [data-current-note-status='error' i],
+  [data-current-note-status='fail' i],
+  [data-current-note-status='failed' i],
+  [data-forge-current-note-status='critical' i],
+  [data-forge-current-note-status='error' i],
+  [data-forge-current-note-status='fail' i],
+  [data-forge-current-note-status='failed' i]
+) {
+  --nr-current-note-title-signal: var(--nr-ember);
+}
+
+.theme-dark .workspace-leaf.mod-active:has(:is(
+  [data-status='critical' i],
+  [data-status='error' i],
+  [data-status='fail' i],
+  [data-status='failed' i],
+  [data-current-note-status='critical' i],
+  [data-current-note-status='error' i],
+  [data-current-note-status='fail' i],
+  [data-current-note-status='failed' i],
+  [data-forge-current-note-status='critical' i],
+  [data-forge-current-note-status='error' i],
+  [data-forge-current-note-status='fail' i],
+  [data-forge-current-note-status='failed' i]
+)),
+.theme-light .workspace-leaf.mod-active:has(:is(
+  [data-status='critical' i],
+  [data-status='error' i],
+  [data-status='fail' i],
+  [data-status='failed' i],
+  [data-current-note-status='critical' i],
+  [data-current-note-status='error' i],
+  [data-current-note-status='fail' i],
+  [data-current-note-status='failed' i],
+  [data-forge-current-note-status='critical' i],
+  [data-forge-current-note-status='error' i],
+  [data-forge-current-note-status='fail' i],
+  [data-forge-current-note-status='failed' i]
+)) {
+  --nr-current-note-title-signal: var(--nr-ember);
+}
+
+.theme-dark :is(
+  .workspace-leaf.mod-active,
+  .workspace-leaf-content,
+  .markdown-source-view,
+  .markdown-preview-view,
+  .view-content
+):is(
+  [data-status='muted' i],
+  [data-status='no note' i],
+  [data-status='no-note' i],
+  [data-status='exempt' i],
+  [data-current-note-status='muted' i],
+  [data-current-note-status='no note' i],
+  [data-current-note-status='no-note' i],
+  [data-current-note-status='exempt' i],
+  [data-forge-current-note-status='muted' i],
+  [data-forge-current-note-status='no note' i],
+  [data-forge-current-note-status='no-note' i],
+  [data-forge-current-note-status='exempt' i]
+),
+.theme-light :is(
+  .workspace-leaf.mod-active,
+  .workspace-leaf-content,
+  .markdown-source-view,
+  .markdown-preview-view,
+  .view-content
+):is(
+  [data-status='muted' i],
+  [data-status='no note' i],
+  [data-status='no-note' i],
+  [data-status='exempt' i],
+  [data-current-note-status='muted' i],
+  [data-current-note-status='no note' i],
+  [data-current-note-status='no-note' i],
+  [data-current-note-status='exempt' i],
+  [data-forge-current-note-status='muted' i],
+  [data-forge-current-note-status='no note' i],
+  [data-forge-current-note-status='no-note' i],
+  [data-forge-current-note-status='exempt' i]
+) {
+  --nr-current-note-title-signal: var(--nr-slate);
+}
+
+.theme-dark .workspace-leaf.mod-active:has(:is(
+  [data-status='muted' i],
+  [data-status='no note' i],
+  [data-status='no-note' i],
+  [data-status='exempt' i],
+  [data-current-note-status='muted' i],
+  [data-current-note-status='no note' i],
+  [data-current-note-status='no-note' i],
+  [data-current-note-status='exempt' i],
+  [data-forge-current-note-status='muted' i],
+  [data-forge-current-note-status='no note' i],
+  [data-forge-current-note-status='no-note' i],
+  [data-forge-current-note-status='exempt' i]
+)),
+.theme-light .workspace-leaf.mod-active:has(:is(
+  [data-status='muted' i],
+  [data-status='no note' i],
+  [data-status='no-note' i],
+  [data-status='exempt' i],
+  [data-current-note-status='muted' i],
+  [data-current-note-status='no note' i],
+  [data-current-note-status='no-note' i],
+  [data-current-note-status='exempt' i],
+  [data-forge-current-note-status='muted' i],
+  [data-forge-current-note-status='no note' i],
+  [data-forge-current-note-status='no-note' i],
+  [data-forge-current-note-status='exempt' i]
+)) {
+  --nr-current-note-title-signal: var(--nr-slate);
+}
+
+.theme-dark .workspace-leaf.mod-active:has(:is(
+  [data-status],
+  [data-current-note-status],
+  [data-forge-current-note-status]
+)) .inline-title,
+.theme-dark .workspace-leaf.mod-active:has(:is(
+  [data-status],
+  [data-current-note-status],
+  [data-forge-current-note-status]
+)) .view-header-title,
+.theme-light .workspace-leaf.mod-active:has(:is(
+  [data-status],
+  [data-current-note-status],
+  [data-forge-current-note-status]
+)) .inline-title,
+.theme-light .workspace-leaf.mod-active:has(:is(
+  [data-status],
+  [data-current-note-status],
+  [data-forge-current-note-status]
+)) .view-header-title {
+  border-bottom: 1px solid color-mix(in srgb, var(--nr-current-note-title-signal) 26%, transparent);
+  text-shadow: 0 0 10px color-mix(in srgb, var(--nr-current-note-title-signal) 5%, transparent);
+}
+
+.theme-dark .workspace-leaf.mod-active:has(:is(
+  [data-status],
+  [data-current-note-status],
+  [data-forge-current-note-status]
+)) .inline-title {
+  color: color-mix(in srgb, var(--nr-current-note-title-signal) 18%, var(--nr-cloud));
+}
+
+.theme-light .workspace-leaf.mod-active:has(:is(
+  [data-status],
+  [data-current-note-status],
+  [data-forge-current-note-status]
+)) .inline-title {
+  color: color-mix(in srgb, var(--nr-current-note-title-signal) 20%, var(--nr-midnight));
+}
+
+/* Inline note title beacon: theme-level signal, no Forge status guessing. */
+.theme-dark .inline-title,
+.theme-dark .markdown-source-view.mod-cm6 .inline-title,
+.theme-light .inline-title,
+.theme-light .markdown-source-view.mod-cm6 .inline-title {
+  border-left: 2px solid color-mix(in srgb, var(--nr-seafoam) 72%, transparent);
+  border-radius: 2px;
+}
+
+.theme-dark .inline-title,
+.theme-dark .markdown-source-view.mod-cm6 .inline-title {
+  padding: 0.02em 0 0.04em 0.48em;
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 6%, transparent),
+      color-mix(in srgb, var(--nr-pine) 2%, transparent) 34%,
+      transparent 62%
+    );
+  box-shadow:
+    inset 1px 0 0 color-mix(in srgb, var(--nr-seafoam) 56%, transparent),
+    inset 5px 0 12px color-mix(in srgb, var(--nr-seafoam) 5%, transparent);
+}
+
+.theme-light .inline-title,
+.theme-light .markdown-source-view.mod-cm6 .inline-title {
+  padding: 0.02em 0 0.04em 0.48em;
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 9%, transparent),
+      color-mix(in srgb, var(--nr-pine) 4%, transparent) 34%,
+      transparent 62%
+    );
+  box-shadow:
+    inset 1px 0 0 color-mix(in srgb, var(--nr-seafoam) 50%, transparent),
+    inset 5px 0 12px color-mix(in srgb, var(--nr-seafoam) 6%, transparent);
+}
+
+/* Preview, tree, and backlink scanner polish. */
+.theme-dark .popover.hover-popover,
+.theme-light .popover.hover-popover {
+  overflow: hidden;
+  border-left: 2px solid color-mix(in srgb, var(--nr-seafoam) 62%, transparent);
+}
+
+.theme-dark .popover.hover-popover {
+  background: color-mix(in srgb, var(--nr-midnight) 90%, var(--nr-moonstone));
+  border-color: color-mix(in srgb, var(--nr-iron) 70%, var(--nr-midnight));
+  box-shadow:
+    0 12px 32px color-mix(in srgb, #000 38%, transparent),
+    inset 2px 0 0 color-mix(in srgb, var(--nr-seafoam) 54%, transparent);
+}
+
+.theme-light .popover.hover-popover {
+  background: color-mix(in srgb, #BFD0D6 88%, var(--nr-cloud));
+  border-color: color-mix(in srgb, var(--nr-ridge) 34%, transparent);
+  box-shadow:
+    0 14px 34px color-mix(in srgb, var(--nr-ridge) 18%, transparent),
+    inset 2px 0 0 color-mix(in srgb, var(--nr-seafoam) 48%, transparent);
+}
+
+.theme-dark .popover.hover-popover .markdown-preview-view,
+.theme-light .popover.hover-popover .markdown-preview-view {
+  padding: 1rem 1.15rem;
+}
+
+.theme-light .nav-files-container .nav-file-title,
+.theme-light .nav-files-container .tree-item-self.nav-file-title,
+.theme-light .nav-files-container .nav-file-title .nav-file-title-content,
+.theme-light .nav-files-container .tree-item-self.nav-file-title .tree-item-inner {
+  color: color-mix(in srgb, var(--nr-midnight) 84%, var(--nr-ridge));
+}
+
+.theme-light .nav-files-container .nav-folder-title:hover,
+.theme-light .nav-files-container .nav-file-title:hover,
+.theme-light .nav-files-container .tree-item-self:hover {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 10%, transparent),
+      color-mix(in srgb, var(--nr-ridge) 5%, transparent) 44%,
+      transparent
+    );
+  box-shadow: inset 2px 0 0 color-mix(in srgb, var(--nr-folder-depth-color, var(--nr-pine)) 34%, transparent);
+}
+
+.theme-light .nav-files-container .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children {
+  border-left-color: color-mix(in srgb, var(--nr-folder-depth-color, var(--nr-pine)) 20%, transparent);
+}
+
+.theme-dark .backlink-pane .search-result-file-match,
+.theme-dark .outgoing-link-pane .search-result-file-match,
+.theme-dark .search-result-container .search-result-file-match {
+  background: color-mix(in srgb, var(--nr-moonstone) 74%, var(--nr-midnight));
+  border-color: color-mix(in srgb, var(--nr-iron) 62%, var(--nr-midnight));
+  box-shadow: inset 2px 0 0 color-mix(in srgb, var(--nr-copper) 58%, transparent);
+}
+
+.theme-light .backlink-pane .search-result-file-match,
+.theme-light .outgoing-link-pane .search-result-file-match,
+.theme-light .search-result-container .search-result-file-match {
+  background: color-mix(in srgb, #BFD0D6 86%, var(--nr-cloud));
+  border-color: color-mix(in srgb, var(--nr-ridge) 30%, transparent);
+  box-shadow: inset 2px 0 0 color-mix(in srgb, var(--nr-copper) 54%, transparent);
+}
+
+.theme-dark .backlink-pane .search-result-file-matched-text,
+.theme-dark .outgoing-link-pane .search-result-file-matched-text,
+.theme-dark .search-result-container .search-result-file-matched-text {
+  color: color-mix(in srgb, var(--nr-cloud) 92%, var(--nr-copper));
+  background: color-mix(in srgb, var(--nr-copper) 18%, var(--nr-midnight));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--nr-copper) 28%, transparent);
+}
+
+.theme-light .backlink-pane .search-result-file-matched-text,
+.theme-light .outgoing-link-pane .search-result-file-matched-text,
+.theme-light .search-result-container .search-result-file-matched-text {
+  color: color-mix(in srgb, var(--nr-midnight) 86%, var(--nr-copper));
+  background: color-mix(in srgb, var(--nr-copper) 16%, var(--nr-cloud));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--nr-copper) 26%, transparent);
+}
+
+/* Dark folder hover parity with light mode. */
+.theme-dark .nav-files-container .nav-folder-title:hover,
+.theme-dark .nav-files-container .nav-file-title:hover,
+.theme-dark .nav-files-container .tree-item-self:hover {
+  color: color-mix(in srgb, var(--nr-cloud) 88%, var(--nr-seafoam));
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 12%, transparent),
+      color-mix(in srgb, var(--nr-ridge) 13%, transparent) 46%,
+      transparent
+    );
+  box-shadow: inset 2px 0 0 color-mix(in srgb, var(--nr-folder-depth-color, var(--nr-pine)) 46%, transparent);
+}
+
+.theme-dark .nav-files-container .tree-item-self.is-active,
+.theme-dark .nav-files-container .nav-folder-title.is-active,
+.theme-dark .nav-files-container .nav-file-title.is-active {
+  color: color-mix(in srgb, var(--nr-cloud) 90%, var(--nr-seafoam));
+  background:
+    radial-gradient(
+      ellipse 34px 88% at -2px 50%,
+      color-mix(in srgb, var(--nr-seafoam) 18%, transparent) 0%,
+      color-mix(in srgb, var(--nr-pine) 4%, transparent) 34%,
+      transparent 70%
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 4%, transparent),
+      color-mix(in srgb, var(--nr-ridge) 3%, transparent) 30%,
+      transparent
+    );
+  box-shadow:
+    inset 3px 0 0 color-mix(in srgb, var(--nr-seafoam) 90%, transparent),
+    inset 7px 0 12px color-mix(in srgb, var(--nr-seafoam) 5%, transparent);
+}
+
+.theme-dark .nav-files-container .nav-file-title.is-active,
+.theme-dark .nav-files-container .tree-item-self.nav-file-title.is-active {
+  border-left-width: 3px;
+  border-left-color: color-mix(in srgb, var(--nr-seafoam) 88%, var(--nr-cloud));
+  color: color-mix(in srgb, var(--nr-cloud) 94%, var(--nr-seafoam));
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 6%, transparent),
+      color-mix(in srgb, var(--nr-pine) 3%, transparent) 18%,
+      transparent 42%
+    );
+  box-shadow:
+    inset 3px 0 0 color-mix(in srgb, var(--nr-seafoam) 92%, transparent),
+    inset 10px 0 16px color-mix(in srgb, var(--nr-seafoam) 4%, transparent);
+}
+
+/* Command palette: edge-first selection, quiet command-center shell. */
+.theme-dark .prompt,
+.theme-light .prompt {
+  overflow: hidden;
+}
+
+.theme-dark .prompt {
+  border-color: color-mix(in srgb, var(--nr-seafoam) 40%, var(--nr-iron));
+  box-shadow:
+    0 14px 36px color-mix(in srgb, #000 42%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--nr-seafoam) 18%, transparent);
+}
+
+.theme-light .prompt {
+  border-color: color-mix(in srgb, var(--nr-ridge) 32%, var(--nr-seafoam));
+  box-shadow:
+    0 14px 32px color-mix(in srgb, var(--nr-ridge) 17%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 48%, transparent);
+}
+
+.theme-dark .prompt-input,
+.theme-light .prompt-input {
+  border-width: 0 0 1px 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.theme-dark .prompt-input {
+  background: color-mix(in srgb, var(--nr-midnight) 86%, var(--nr-moonstone));
+  border-color: color-mix(in srgb, var(--nr-seafoam) 42%, var(--nr-iron));
+}
+
+.theme-light .prompt-input {
+  background: color-mix(in srgb, #BFD0D6 88%, var(--nr-cloud));
+  border-color: color-mix(in srgb, var(--nr-ridge) 26%, var(--nr-seafoam));
+}
+
+.theme-dark .suggestion-item,
+.theme-light .suggestion-item {
+  border-radius: var(--nr-radius-s);
+  margin: 0.08rem 0.45rem;
+}
+
+.theme-dark .suggestion-item.is-selected,
+.theme-light .suggestion-item.is-selected {
+  box-shadow:
+    inset 3px 0 0 color-mix(in srgb, var(--nr-seafoam) 76%, transparent),
+    inset 10px 0 18px color-mix(in srgb, var(--nr-seafoam) 5%, transparent);
+}
+
+.theme-dark .suggestion-item.is-selected {
+  color: color-mix(in srgb, var(--nr-cloud) 92%, var(--nr-seafoam));
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 8%, transparent),
+      color-mix(in srgb, var(--nr-pine) 4%, transparent) 30%,
+      transparent 72%
+    );
+}
+
+.theme-light .suggestion-item.is-selected {
+  color: color-mix(in srgb, var(--nr-midnight) 90%, var(--nr-pine));
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 18%, #BFD0D6),
+      color-mix(in srgb, var(--nr-pine) 9%, #BFD0D6) 38%,
+      color-mix(in srgb, var(--nr-cloud) 18%, #BFD0D6) 100%
+    );
+}
+
+.theme-dark .suggestion-hotkey,
+.theme-light .suggestion-hotkey {
+  border-radius: var(--nr-radius-s);
+  border: 1px solid color-mix(in srgb, var(--nr-ridge) 28%, transparent);
+}
+
+.theme-dark .suggestion-hotkey {
+  color: color-mix(in srgb, var(--nr-cloud) 82%, var(--nr-slate));
+  background: color-mix(in srgb, var(--nr-ridge) 28%, var(--nr-midnight));
+}
+
+.theme-light .suggestion-hotkey {
+  color: color-mix(in srgb, var(--nr-ridge) 84%, var(--nr-midnight));
+  background: color-mix(in srgb, var(--nr-cloud) 38%, #BFD0D6);
+}
+
+/* App chrome pass: settings, tabs, and status bar stay quiet but intentional. */
+.theme-dark .modal.mod-settings,
+.theme-light .modal.mod-settings {
+  overflow: hidden;
+}
+
+.theme-dark .modal.mod-settings .modal-content,
+.theme-dark .vertical-tab-content-container {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--nr-midnight) 88%, var(--nr-shadow)), var(--nr-shadow));
+}
+
+.theme-light .modal.mod-settings .modal-content,
+.theme-light .vertical-tab-content-container {
+  background: #C8D3D8;
+}
+
+.theme-dark .modal.mod-settings .vertical-tab-header,
+.theme-light .modal.mod-settings .vertical-tab-header {
+  border-right: 1px solid var(--background-modifier-border);
+}
+
+.theme-dark .modal.mod-settings .vertical-tab-header-group-title,
+.theme-light .modal.mod-settings .vertical-tab-header-group-title {
+  color: var(--text-muted);
+  letter-spacing: 0;
+}
+
+.theme-dark .modal.mod-settings .vertical-tab-nav-item,
+.theme-light .modal.mod-settings .vertical-tab-nav-item {
+  border-radius: var(--nr-radius-s);
+}
+
+.theme-dark .modal.mod-settings .vertical-tab-nav-item.is-active,
+.theme-light .modal.mod-settings .vertical-tab-nav-item.is-active {
+  box-shadow:
+    inset 2px 0 0 color-mix(in srgb, var(--nr-seafoam) 76%, transparent),
+    inset 8px 0 14px color-mix(in srgb, var(--nr-seafoam) 5%, transparent);
+}
+
+.theme-dark .modal.mod-settings .vertical-tab-nav-item.is-active {
+  color: color-mix(in srgb, var(--nr-cloud) 88%, var(--nr-seafoam));
+  background: color-mix(in srgb, var(--nr-seafoam) 8%, transparent);
+}
+
+.theme-light .modal.mod-settings .vertical-tab-nav-item.is-active {
+  color: color-mix(in srgb, var(--nr-midnight) 88%, var(--nr-pine));
+  background: color-mix(in srgb, var(--nr-seafoam) 10%, #C8D3D8);
+  box-shadow:
+    inset 2px 0 0 color-mix(in srgb, var(--nr-pine) 74%, var(--nr-ridge)),
+    inset 8px 0 14px color-mix(in srgb, var(--nr-pine) 7%, transparent);
+}
+
+.theme-dark .modal.mod-settings .setting-item,
+.theme-light .modal.mod-settings .setting-item {
+  border-radius: 0;
+}
+
+.theme-light .modal.mod-settings .vertical-tab-content > .setting-item,
+.theme-light .vertical-tab-content > .setting-item {
+  background: color-mix(in srgb, #C8D3D8 94%, var(--nr-cloud));
+  border-bottom-color: color-mix(in srgb, var(--nr-ridge) 16%, transparent);
+}
+
+.theme-dark .modal.mod-settings .setting-item:hover {
+  background: color-mix(in srgb, var(--nr-seafoam) 4%, transparent);
+}
+
+.theme-light .modal.mod-settings .setting-item:hover {
+  background: color-mix(in srgb, var(--nr-cloud) 22%, #C8D3D8);
+}
+
+.theme-dark .workspace-tab-header,
+.theme-light .workspace-tab-header {
+  position: relative;
+}
+
+.theme-dark .workspace-tab-header::after,
+.theme-light .workspace-tab-header::after {
+  content: '';
+  position: absolute;
+  left: 0.85rem;
+  right: 0.85rem;
+  bottom: 0;
+  height: 1px;
+  opacity: 0;
+  transition: opacity 140ms ease, background-color 140ms ease;
+}
+
+.theme-dark .workspace-tab-header:hover::after,
+.theme-light .workspace-tab-header:hover::after {
+  opacity: 0.42;
+  background: var(--nr-slate);
+}
+
+.theme-dark .workspace-tab-header.is-active::after,
+.theme-light .workspace-tab-header.is-active::after {
+  opacity: 1;
+  height: 1px;
+  background: color-mix(in srgb, var(--nr-seafoam) 82%, var(--nr-pine));
+  box-shadow: 0 0 8px color-mix(in srgb, var(--nr-seafoam) 18%, transparent);
+}
+
+.theme-dark .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  color: color-mix(in srgb, var(--nr-cloud) 88%, var(--nr-seafoam));
+}
+
+.theme-light .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  color: color-mix(in srgb, var(--nr-midnight) 90%, var(--nr-ridge));
+}
+
+.theme-dark .status-bar,
+.theme-light .status-bar {
+  gap: 0.15rem;
+  border-radius: var(--nr-radius-m) 0 0 0;
+  overflow: hidden;
+}
+
+.theme-dark .status-bar {
+  gap: 0.15rem;
+  border-radius: 0;
+  border-top-color: color-mix(in srgb, var(--nr-iron) 46%, var(--nr-shadow));
+  background: color-mix(in srgb, var(--nr-midnight) 84%, var(--nr-shadow));
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--nr-seafoam) 14%, transparent);
+}
+
+.theme-dark .status-bar::before {
+  display: block;
+}
+
+.theme-dark .status-bar-item,
+.theme-light .status-bar-item {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--nr-radius-s);
+  padding-inline: 0.35rem;
+}
+
+.theme-dark .status-bar-item {
+  color: color-mix(in srgb, var(--nr-slate) 84%, var(--nr-fog));
+}
+
+.theme-light .status-bar-item {
+  color: color-mix(in srgb, var(--nr-ridge) 78%, var(--nr-midnight));
+}
+
+.theme-dark .status-bar-item.mod-clickable:hover {
+  color: color-mix(in srgb, var(--nr-cloud) 90%, var(--nr-seafoam));
+  background: color-mix(in srgb, var(--nr-seafoam) 8%, transparent);
+}
+
+.theme-light .status-bar-item.mod-clickable:hover {
+  color: color-mix(in srgb, var(--nr-midnight) 88%, var(--nr-pine));
+  background: color-mix(in srgb, var(--nr-seafoam) 13%, transparent);
 }
