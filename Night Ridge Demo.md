@@ -1,8 +1,11 @@
-# Night Ridge Demo
+---
+updated: 2026-07-01
+created: 2026-07-01
+---
 
-Night Ridge is built for clear notes, restrained contrast, and code that still feels at home beside prose. This page is a quick capture target for the theme store screenshot.
+Night Ridge is built for clear notes, restrained contrast, and command-center styling that stays readable beside normal prose. This page is a compact visual check for the theme store screenshot and for day-to-day theme tuning.
 
-## Waypoints
+# Reading Signals
 
 Use this section to check headings, links, inline code, emphasis, and list rhythm.
 
@@ -11,23 +14,24 @@ Use this section to check headings, links, inline code, emphasis, and list rhyth
 - Mark something **important** without making the page shout.
 - Keep muted text readable in both light and dark mode.
 
-> [!note] Field note
+> [!info] Vault signal
 > Callouts should feel integrated with the page, with enough structure to scan quickly.
-
-> [!warning] Trail condition
-> Long unbroken code tokens should stay inside their blocks in Live Preview.
+>> [!bug] Nested issue
+>> Nested callouts should keep their status color without turning into stacked panels.
 
 ## Status
 
 - [x] Base palette
 - [x] Dark mode
 - [x] Light mode
-- [ ] Community theme review
+- [x] Callout hierarchy
+- [x] Property rhythm
+- [x] Graph tuning
 
-## Sample Table
+### Sample Table
 
 | Area | Color Role | Intent |
-| --- | --- | --- |
+| --------- | ------------------------------ | -------------------- |
 | Moonstone | Navigation and headings | Grounded structure |
 | Pine | Primary accent and action | Stable identity |
 | Copper | Secondary action and warning | Distant warmth |
@@ -37,22 +41,18 @@ Use this section to check headings, links, inline code, emphasis, and list rhyth
 | Seafoam | Telemetry and info | Sparse soft contrast |
 | Fog | Body text | Low-glare reading |
 
-## Code
-
-```text
-lockblock:v1:kid=20260618T152832Z:alg=AES-GCM:iv=jyFDUi6DXOC2OdF5:ct=kmxnz7ni1BsIVBTg7d7BEQeCwwOXpNefP
-```
+#### Code
 
 ```js
 const nightRidge = {
-  name: "Night Ridge",
-  modes: ["dark", "light"],
-  accent: "#5FA89D",
+name: "Night Ridge",
+modes: ["dark", "light"],
+accent: "#5FA89D",
 };
 
 console.log(`Ready for ${nightRidge.modes.join(" and ")} mode.`);
 ```
 
-## Closing Note
+##### Closing Note
 
-The best screenshot is probably this file in Live Preview with the left file explorer visible, using a medium-width pane and the default Obsidian interface chrome.
+Enjoy this theme!
