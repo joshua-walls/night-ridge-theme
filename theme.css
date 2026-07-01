@@ -2390,3 +2390,1226 @@ body[data-theme='dark'] {
 .theme-dark .metadata-properties .metadata-property:hover {
   background: color-mix(in srgb, var(--nr-property-signal) 5%, transparent);
 }
+
+/* Light mode start: dim ridge paper, readable ink, restrained command surfaces. */
+.theme-light,
+body[data-theme='light'] {
+  color-scheme: light;
+
+  --background-primary: #D5DEE2;
+  --background-primary-alt: #C9D5DA;
+  --background-secondary: #B9C8CE;
+  --background-secondary-alt: #AABCC4;
+  --background-accent: #B9C8CE;
+  --background-modifier-border: color-mix(in srgb, var(--nr-ridge) 34%, #D5DEE2);
+  --background-modifier-hover: color-mix(in srgb, var(--nr-pine) 11%, transparent);
+  --background-modifier-active-hover: color-mix(in srgb, var(--nr-copper) 12%, transparent);
+  --background-modifier-form-field: color-mix(in srgb, var(--nr-cloud) 72%, var(--nr-ridge));
+  --background-modifier-form-field-highlighted: color-mix(in srgb, var(--nr-seafoam) 16%, #D5DEE2);
+  --background-modifier-box-shadow: rgba(17, 35, 47, 0.20);
+  --background-modifier-cover: rgba(17, 35, 47, 0.34);
+
+  --text-normal: color-mix(in srgb, var(--nr-midnight) 90%, var(--nr-ridge));
+  --text-muted: color-mix(in srgb, var(--nr-ridge) 78%, var(--nr-slate));
+  --text-faint: color-mix(in srgb, var(--nr-slate) 80%, #D5DEE2);
+  --text-accent: color-mix(in srgb, var(--nr-copper) 86%, var(--nr-midnight));
+  --text-accent-hover: color-mix(in srgb, var(--nr-pine) 78%, var(--nr-midnight));
+  --text-on-accent: var(--nr-cloud);
+  --text-selection: color-mix(in srgb, var(--nr-pine) 24%, transparent);
+  --text-highlight-bg: color-mix(in srgb, var(--nr-copper) 20%, transparent);
+
+  --interactive-normal: #C0CED4;
+  --interactive-hover: color-mix(in srgb, var(--nr-pine) 18%, #C9D5DA);
+  --interactive-accent: color-mix(in srgb, var(--nr-pine) 90%, var(--nr-ridge));
+  --interactive-accent-hover: color-mix(in srgb, var(--nr-copper) 88%, var(--nr-ridge));
+
+  --border-color: color-mix(in srgb, var(--nr-ridge) 34%, #D5DEE2);
+  --hr-color: color-mix(in srgb, var(--nr-ridge) 28%, #D5DEE2);
+  --inline-title-color: color-mix(in srgb, var(--nr-midnight) 86%, var(--nr-ridge));
+  --code-background: color-mix(in srgb, var(--nr-cloud) 68%, #C9D5DA);
+  --code-normal: color-mix(in srgb, var(--nr-midnight) 88%, var(--nr-ridge));
+}
+
+.theme-light .workspace-ribbon,
+.theme-light .workspace-tabs .workspace-tab-header-container,
+.theme-light .view-header,
+.theme-light .mod-sidedock .workspace-tabs,
+.theme-light .status-bar {
+  background: color-mix(in srgb, var(--background-primary-alt) 86%, var(--nr-ridge));
+  border-color: color-mix(in srgb, var(--nr-ridge) 34%, transparent);
+}
+
+.theme-light .workspace-split.mod-left-split,
+.theme-light .workspace-split.mod-right-split,
+.theme-light .nav-files-container {
+  background: color-mix(in srgb, var(--background-primary-alt) 90%, var(--nr-ridge));
+}
+
+.theme-light .markdown-preview-view,
+.theme-light .markdown-source-view.mod-cm6 .cm-editor,
+.theme-light .cm-s-obsidian {
+  background: #D5DEE2;
+  color: var(--text-normal);
+}
+
+.theme-light .metadata-properties,
+.theme-light .markdown-embed,
+.theme-light .callout,
+.theme-light .prompt,
+.theme-light .popover,
+.theme-light .menu,
+.theme-light .suggestion-container,
+.theme-light .search-result-container,
+.theme-light .modal,
+.theme-light .setting-item {
+  background: color-mix(in srgb, var(--background-primary-alt) 78%, var(--nr-cloud));
+  border-color: color-mix(in srgb, var(--nr-ridge) 30%, transparent);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 48%, transparent);
+}
+
+.theme-light .callout {
+  --nr-callout-signal: var(--nr-slate);
+  border-left-color: var(--nr-callout-signal);
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-callout-signal) 10%, #D5DEE2),
+      color-mix(in srgb, var(--background-primary-alt) 78%, var(--nr-cloud)) 20%,
+      color-mix(in srgb, var(--background-primary-alt) 78%, var(--nr-cloud))
+    );
+}
+
+.theme-light .callout[data-callout='info'],
+.theme-light .callout[data-callout='tip'],
+.theme-light .callout[data-callout='hint'] {
+  --nr-callout-signal: color-mix(in srgb, var(--nr-seafoam) 86%, var(--nr-ridge));
+}
+
+.theme-light .callout[data-callout='success'],
+.theme-light .callout[data-callout='check'],
+.theme-light .callout[data-callout='done'] {
+  --nr-callout-signal: var(--nr-pine);
+}
+
+.theme-light .callout[data-callout='warning'],
+.theme-light .callout[data-callout='question'],
+.theme-light .callout[data-callout='attention'] {
+  --nr-callout-signal: var(--nr-copper);
+}
+
+.theme-light .callout[data-callout='danger'],
+.theme-light .callout[data-callout='error'],
+.theme-light .callout[data-callout='failure'],
+.theme-light .callout[data-callout='bug'] {
+  --nr-callout-signal: var(--nr-ember);
+}
+
+.theme-light .callout .callout-title,
+.theme-light .callout .callout-icon {
+  color: color-mix(in srgb, var(--nr-callout-signal) 78%, var(--nr-midnight));
+}
+
+.theme-light code,
+.theme-light .cm-inline-code,
+.theme-light .markdown-rendered :not(pre) > code,
+.theme-light .markdown-preview-view :not(pre) > code {
+  color: color-mix(in srgb, var(--nr-ridge) 72%, var(--nr-pine));
+  background: color-mix(in srgb, var(--nr-cloud) 70%, #C9D5DA);
+  border-color: color-mix(in srgb, var(--nr-ridge) 28%, transparent);
+}
+
+.theme-light .markdown-rendered table,
+.theme-light .markdown-preview-view table,
+.theme-light .dataview.table-view-table {
+  background: color-mix(in srgb, var(--background-primary-alt) 76%, var(--nr-cloud));
+  border-color: color-mix(in srgb, var(--nr-ridge) 30%, transparent);
+}
+
+.theme-light .markdown-rendered th,
+.theme-light .markdown-preview-view th,
+.theme-light .dataview.table-view-table th {
+  color: color-mix(in srgb, var(--nr-copper) 82%, var(--nr-midnight));
+  background: color-mix(in srgb, var(--background-secondary) 72%, var(--nr-cloud));
+  border-bottom-color: color-mix(in srgb, var(--nr-copper) 36%, var(--nr-ridge));
+}
+
+.theme-light .markdown-rendered tr:hover td,
+.theme-light .markdown-preview-view tr:hover td,
+.theme-light .dataview.table-view-table tr:hover td {
+  background: color-mix(in srgb, var(--nr-pine) 9%, transparent);
+}
+
+/* Light mode parity: beacon headings, depth rhythm, status language. */
+.theme-light h1,
+.theme-light .markdown-preview-view h1,
+.theme-light .markdown-rendered h1 {
+  color: color-mix(in srgb, var(--nr-pine) 78%, var(--nr-midnight));
+  border-left-color: color-mix(in srgb, var(--nr-seafoam) 78%, var(--nr-ridge));
+  border-left-width: 4px;
+  padding: 0.08em 0 0.1em 0.62em;
+  border-radius: 2px;
+  background:
+    radial-gradient(
+      ellipse 46px 82% at -2px 50%,
+      color-mix(in srgb, var(--nr-seafoam) 24%, transparent) 0%,
+      color-mix(in srgb, var(--nr-pine) 11%, transparent) 38%,
+      transparent 76%
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 8%, transparent) 0%,
+      color-mix(in srgb, var(--nr-pine) 4%, transparent) 30%,
+      transparent 58%
+    );
+  box-shadow:
+    inset 1px 0 0 color-mix(in srgb, var(--nr-seafoam) 74%, transparent),
+    inset 6px 0 16px color-mix(in srgb, var(--nr-seafoam) 8%, transparent);
+  text-shadow: 0 1px 0 color-mix(in srgb, var(--nr-cloud) 46%, transparent);
+}
+
+.theme-light h2,
+.theme-light .markdown-preview-view h2,
+.theme-light .markdown-rendered h2,
+.theme-light .cm-header-2 {
+  color: color-mix(in srgb, var(--nr-copper) 82%, var(--nr-midnight));
+  border-bottom: 0;
+}
+
+.theme-light h3,
+.theme-light .markdown-preview-view h3,
+.theme-light .markdown-rendered h3,
+.theme-light .cm-header-3 {
+  color: color-mix(in srgb, var(--nr-lichen) 74%, var(--nr-midnight));
+}
+
+.theme-light .nav-files-container {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-pine) 76%, var(--nr-midnight));
+}
+
+.theme-light .nav-files-container .nav-folder-title,
+.theme-light .nav-files-container .nav-folder-title .tree-item-inner,
+.theme-light .nav-files-container .nav-folder-title .nav-folder-title-content,
+.theme-light .nav-files-container .nav-folder-title .collapse-icon {
+  color: var(--nr-folder-depth-color);
+}
+
+.theme-light .nav-files-container .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-copper) 82%, var(--nr-midnight));
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: color-mix(in srgb, var(--nr-pine) 26%, transparent);
+}
+
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-lichen) 76%, var(--nr-midnight));
+  border-left-color: color-mix(in srgb, var(--nr-copper) 26%, transparent);
+}
+
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-ember) 78%, var(--nr-midnight));
+  border-left-color: color-mix(in srgb, var(--nr-lichen) 26%, transparent);
+}
+
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-seafoam) 72%, var(--nr-midnight));
+  border-left-color: color-mix(in srgb, var(--nr-ember) 24%, transparent);
+}
+
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-slate) 86%, var(--nr-midnight));
+  border-left-color: color-mix(in srgb, var(--nr-seafoam) 25%, transparent);
+}
+
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-ridge) 72%, var(--nr-pine));
+  border-left-color: color-mix(in srgb, var(--nr-slate) 24%, transparent);
+}
+
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-pine) 78%, var(--nr-midnight));
+  border-left-color: color-mix(in srgb, var(--nr-ridge) 24%, transparent);
+}
+
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-fog) 60%, var(--nr-ridge));
+  border-left-color: color-mix(in srgb, var(--nr-pine) 24%, transparent);
+}
+
+.theme-light .nav-files-container .nav-file-title.is-active,
+.theme-light .nav-files-container .tree-item-self.nav-file-title.is-active {
+  border-left-width: 4px;
+  border-left-color: color-mix(in srgb, var(--nr-seafoam) 78%, var(--nr-ridge));
+  background:
+    radial-gradient(
+      ellipse 42px 90% at -2px 50%,
+      color-mix(in srgb, var(--nr-seafoam) 18%, transparent) 0%,
+      color-mix(in srgb, var(--nr-pine) 8%, transparent) 42%,
+      transparent 78%
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 9%, transparent) 0%,
+      color-mix(in srgb, var(--nr-pine) 4%, transparent) 34%,
+      transparent 74%
+    );
+  box-shadow:
+    inset 1px 0 0 color-mix(in srgb, var(--nr-seafoam) 66%, transparent),
+    0 0 10px color-mix(in srgb, var(--nr-seafoam) 8%, transparent);
+}
+
+.theme-light .nav-files-container .nav-folder:has(.nav-file-title.is-active) > .nav-folder-children,
+.theme-light .nav-files-container .nav-folder:has(.tree-item-self.nav-file-title.is-active) > .nav-folder-children,
+.theme-light .nav-files-container .tree-item:has(.nav-file-title.is-active) > .tree-item-children,
+.theme-light .nav-files-container .tree-item:has(.tree-item-self.nav-file-title.is-active) > .tree-item-children {
+  border-left-width: 1px;
+  border-left-color: color-mix(in srgb, var(--nr-folder-depth-color) 30%, transparent);
+  box-shadow:
+    -1px 0 0 color-mix(in srgb, var(--nr-folder-depth-color) 10%, transparent),
+    -5px 0 14px color-mix(in srgb, var(--nr-folder-depth-color) 3%, transparent);
+}
+
+.theme-light .forge-health-dashboard [data-status='good' i],
+.theme-light .forge-health-dashboard [data-status='healthy' i],
+.theme-light .forge-health-dashboard [data-status='clear' i],
+.theme-light .forge-health-dashboard [data-status='valid' i],
+.theme-light .forge-health-dashboard [data-status='indexed' i] {
+  --forge-health-status-color: color-mix(in srgb, var(--nr-pine) 82%, var(--nr-midnight));
+}
+
+.theme-light .forge-health-dashboard [data-status='warning' i],
+.theme-light .forge-health-dashboard [data-status='needs attention' i],
+.theme-light .forge-health-dashboard [data-status='needs-attention' i] {
+  --forge-health-status-color: color-mix(in srgb, var(--nr-copper) 86%, var(--nr-midnight));
+}
+
+.theme-light .forge-health-dashboard [data-status='critical' i],
+.theme-light .forge-health-dashboard [data-status='error' i],
+.theme-light .forge-health-dashboard [data-status='fail' i],
+.theme-light .forge-health-dashboard [data-status='failed' i] {
+  --forge-health-status-color: color-mix(in srgb, var(--nr-ember) 84%, var(--nr-midnight));
+}
+
+.theme-light .forge-health-dashboard [data-status='muted' i],
+.theme-light .forge-health-dashboard [data-status='no note' i],
+.theme-light .forge-health-dashboard [data-status='no-note' i],
+.theme-light .forge-health-dashboard [data-status='exempt' i] {
+  --forge-health-status-color: color-mix(in srgb, var(--nr-slate) 84%, var(--nr-midnight));
+}
+
+.theme-light .forge-health-dashboard .forge-health-header[data-status] h1,
+.theme-light .forge-health-dashboard .forge-health-section[data-status] .forge-health-section-header h2,
+.theme-light .forge-health-dashboard .forge-health-section-header[data-status] h2,
+.theme-light .forge-health-dashboard :is(h1, h2, h3)[data-status] {
+  color: var(--forge-health-status-color);
+  text-decoration-color: color-mix(in srgb, var(--forge-health-status-color) 34%, transparent);
+}
+
+.theme-light div.dataview-error-box {
+  color: color-mix(in srgb, var(--nr-midnight) 82%, var(--nr-ridge));
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-copper) 10%, #D5DEE2),
+      color-mix(in srgb, var(--background-primary-alt) 88%, var(--nr-cloud)) 24%,
+      color-mix(in srgb, var(--background-primary-alt) 94%, transparent)
+    );
+  border-color: color-mix(in srgb, var(--nr-copper) 34%, var(--nr-ridge));
+  box-shadow:
+    inset 2px 0 0 color-mix(in srgb, var(--nr-copper) 60%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 42%, transparent);
+}
+
+.theme-light .dataview-error-message {
+  color: color-mix(in srgb, var(--nr-copper) 76%, var(--nr-midnight));
+}
+
+.theme-light pre.dataview-error {
+  color: color-mix(in srgb, var(--nr-ember) 84%, var(--nr-midnight));
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-ember) 12%, #D5DEE2),
+      color-mix(in srgb, var(--background-primary-alt) 88%, var(--nr-cloud))
+    );
+  border-color: color-mix(in srgb, var(--nr-ember) 52%, var(--nr-ridge));
+  box-shadow:
+    inset 2px 0 0 color-mix(in srgb, var(--nr-ember) 66%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 42%, transparent);
+}
+
+.theme-light .search-result-file-match,
+.theme-light .search-result-file-matches {
+  position: relative;
+  border-left: 2px solid color-mix(in srgb, var(--nr-copper) 46%, transparent);
+}
+
+.theme-light .search-result-file-match::before,
+.theme-light .search-result-file-matches::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 -2px;
+  width: 2px;
+  background: color-mix(in srgb, var(--nr-copper) 62%, transparent);
+}
+
+.theme-light .search-result-file-match:hover,
+.theme-light .search-result-file-match.is-active,
+.theme-light .search-result-file-match.is-selected {
+  border-left-color: color-mix(in srgb, var(--nr-seafoam) 70%, var(--nr-ridge));
+}
+
+.theme-light .search-result-file-match:hover::before,
+.theme-light .search-result-file-match.is-active::before,
+.theme-light .search-result-file-match.is-selected::before {
+  background: color-mix(in srgb, var(--nr-seafoam) 76%, var(--nr-ridge));
+}
+
+.theme-light .metadata-properties {
+  --nr-property-signal: var(--nr-slate);
+}
+
+.theme-light .metadata-properties .metadata-property:nth-child(8n + 1) {
+  --nr-property-signal: color-mix(in srgb, var(--nr-pine) 82%, var(--nr-midnight));
+}
+
+.theme-light .metadata-properties .metadata-property:nth-child(8n + 2) {
+  --nr-property-signal: color-mix(in srgb, var(--nr-copper) 86%, var(--nr-midnight));
+}
+
+.theme-light .metadata-properties .metadata-property:nth-child(8n + 3) {
+  --nr-property-signal: color-mix(in srgb, var(--nr-lichen) 76%, var(--nr-midnight));
+}
+
+.theme-light .metadata-properties .metadata-property:nth-child(8n + 4) {
+  --nr-property-signal: color-mix(in srgb, var(--nr-slate) 84%, var(--nr-midnight));
+}
+
+.theme-light .metadata-properties .metadata-property:nth-child(8n + 5) {
+  --nr-property-signal: color-mix(in srgb, var(--nr-seafoam) 72%, var(--nr-ridge));
+}
+
+.theme-light .metadata-properties .metadata-property:nth-child(8n + 6) {
+  --nr-property-signal: color-mix(in srgb, var(--nr-ember) 82%, var(--nr-midnight));
+}
+
+.theme-light .metadata-properties .metadata-property:nth-child(8n + 7) {
+  --nr-property-signal: color-mix(in srgb, var(--nr-ridge) 78%, var(--nr-pine));
+}
+
+.theme-light .metadata-properties .metadata-property:nth-child(8n) {
+  --nr-property-signal: color-mix(in srgb, var(--nr-fog) 44%, var(--nr-ridge));
+}
+
+.theme-light .metadata-properties .metadata-property {
+  border-left: 2px solid color-mix(in srgb, var(--nr-property-signal) 34%, transparent);
+}
+
+.theme-light .metadata-properties .metadata-property-icon,
+.theme-light .metadata-properties .metadata-property-key,
+.theme-light .metadata-properties .metadata-property-key-input {
+  color: color-mix(in srgb, var(--nr-property-signal) 76%, var(--nr-midnight));
+}
+
+.theme-light .metadata-properties .metadata-property:hover {
+  background: color-mix(in srgb, var(--nr-property-signal) 6%, transparent);
+}
+
+.theme-light .metadata-property[data-property-key='tags'] .multi-select-pill,
+.theme-light a.tag,
+.theme-light .cm-hashtag {
+  color: color-mix(in srgb, var(--nr-lichen) 72%, var(--nr-midnight));
+  background: color-mix(in srgb, var(--nr-lichen) 12%, #D5DEE2);
+  border: 1px solid color-mix(in srgb, var(--nr-lichen) 34%, var(--nr-ridge));
+}
+
+/* Light mode refinement: keep dark-mode signals, translated onto dim paper. */
+.theme-light .view-content,
+.theme-light .workspace-leaf-content,
+.theme-light .markdown-preview-view,
+.theme-light .markdown-source-view.mod-cm6 .cm-scroller {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, #D5DEE2 94%, var(--nr-cloud)),
+      color-mix(in srgb, #C9D5DA 86%, var(--nr-cloud))
+    );
+}
+
+.theme-light .workspace-leaf.mod-active {
+  box-shadow:
+    inset 1px 0 0 color-mix(in srgb, var(--nr-seafoam) 56%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--nr-seafoam) 20%, transparent),
+    inset 0 0 0 1px color-mix(in srgb, var(--nr-ridge) 24%, transparent);
+}
+
+.theme-light .workspace-leaf.mod-active .view-header {
+  border-bottom-color: color-mix(in srgb, var(--nr-seafoam) 34%, var(--nr-ridge));
+}
+
+.theme-light .nav-file-title,
+.theme-light .tree-item-self.nav-file-title,
+.theme-light .nav-file-title .nav-file-title-content,
+.theme-light .tree-item-self.nav-file-title .tree-item-inner {
+  color: color-mix(in srgb, var(--nr-ridge) 72%, var(--nr-midnight));
+}
+
+.theme-light .nav-files-container .nav-folder:has(.nav-file-title.is-active) > .nav-folder-title,
+.theme-light .nav-files-container .nav-folder:has(.tree-item-self.nav-file-title.is-active) > .nav-folder-title {
+  color: color-mix(in srgb, var(--nr-folder-depth-color) 82%, var(--nr-midnight));
+  text-shadow: 0 1px 0 color-mix(in srgb, var(--nr-cloud) 40%, transparent);
+}
+
+.theme-light h4,
+.theme-light .markdown-preview-view h4,
+.theme-light .markdown-rendered h4,
+.theme-light .cm-header-4 {
+  color: color-mix(in srgb, var(--nr-ember) 80%, var(--nr-midnight));
+}
+
+.theme-light h5,
+.theme-light .markdown-preview-view h5,
+.theme-light .markdown-rendered h5,
+.theme-light .cm-header-5 {
+  color: color-mix(in srgb, var(--nr-slate) 86%, var(--nr-midnight));
+}
+
+.theme-light h6,
+.theme-light .markdown-preview-view h6,
+.theme-light .markdown-rendered h6,
+.theme-light .cm-header-6 {
+  color: color-mix(in srgb, var(--nr-seafoam) 70%, var(--nr-ridge));
+}
+
+.theme-light p,
+.theme-light li,
+.theme-light .markdown-preview-view,
+.theme-light .markdown-rendered,
+.theme-light .cm-line,
+.theme-light .markdown-source-view.mod-cm6 {
+  color: color-mix(in srgb, var(--nr-midnight) 88%, var(--nr-ridge));
+}
+
+.theme-light,
+.theme-light .markdown-source-view.mod-cm6 .cm-editor,
+.theme-light .markdown-source-view.mod-cm6 .cm-content,
+.theme-light .markdown-source-view.mod-cm6 .cm-line {
+  caret-color: color-mix(in srgb, var(--nr-seafoam) 74%, var(--nr-ridge));
+}
+
+.theme-light ::selection {
+  background: color-mix(in srgb, var(--nr-pine) 22%, var(--nr-cloud));
+  color: var(--nr-midnight);
+}
+
+.theme-light .cm-cursor,
+.theme-light .cm-dropCursor {
+  border-left-color: color-mix(in srgb, var(--nr-seafoam) 78%, var(--nr-ridge)) !important;
+  box-shadow: 0 0 7px color-mix(in srgb, var(--nr-seafoam) 26%, transparent);
+}
+
+.theme-light .cm-selectionBackground,
+.theme-light .markdown-source-view.mod-cm6 .cm-selectionBackground,
+.theme-light .markdown-source-view.mod-cm6 .cm-line::selection,
+.theme-light .markdown-source-view.mod-cm6 .cm-line *::selection {
+  background: color-mix(in srgb, var(--nr-pine) 22%, var(--nr-cloud)) !important;
+}
+
+.theme-light button,
+.theme-light .clickable-icon,
+.theme-light .side-dock-ribbon-action {
+  color: color-mix(in srgb, var(--nr-ridge) 72%, var(--nr-slate));
+}
+
+.theme-light button {
+  background: color-mix(in srgb, var(--background-primary-alt) 78%, var(--nr-cloud));
+  border-color: color-mix(in srgb, var(--nr-ridge) 24%, transparent);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 44%, transparent);
+}
+
+.theme-light button:hover,
+.theme-light .clickable-icon:hover {
+  color: color-mix(in srgb, var(--nr-pine) 82%, var(--nr-midnight));
+  background: color-mix(in srgb, var(--nr-pine) 10%, var(--background-primary-alt));
+}
+
+.theme-light button.mod-cta {
+  color: var(--nr-cloud);
+  background: color-mix(in srgb, var(--nr-pine) 86%, var(--nr-ridge));
+  border-color: color-mix(in srgb, var(--nr-pine) 50%, var(--nr-ridge));
+}
+
+.theme-light button.mod-warning {
+  color: var(--nr-cloud);
+  background: color-mix(in srgb, var(--nr-ember) 82%, var(--nr-ridge));
+  border-color: color-mix(in srgb, var(--nr-ember) 54%, var(--nr-ridge));
+}
+
+.theme-light input,
+.theme-light textarea,
+.theme-light select,
+.theme-light .dropdown,
+.theme-light .text-input {
+  color: var(--nr-midnight);
+  background: color-mix(in srgb, var(--nr-cloud) 72%, var(--background-primary-alt));
+  border-color: color-mix(in srgb, var(--nr-ridge) 26%, transparent);
+}
+
+.theme-light input:focus,
+.theme-light textarea:focus,
+.theme-light select:focus,
+.theme-light .dropdown:focus {
+  border-color: color-mix(in srgb, var(--nr-seafoam) 62%, var(--nr-ridge));
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--nr-seafoam) 15%, transparent);
+}
+
+.theme-light .metadata-properties {
+  background: color-mix(in srgb, var(--background-primary-alt) 78%, var(--nr-cloud));
+  border-color: color-mix(in srgb, var(--nr-ridge) 30%, transparent);
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 52%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--nr-ridge) 10%, transparent);
+}
+
+.theme-light .metadata-add-button {
+  color: color-mix(in srgb, var(--nr-ridge) 70%, var(--nr-slate));
+}
+
+.theme-light .metadata-property[data-property-key='type'] .metadata-property-key,
+.theme-light .metadata-property[data-property-key='type'] .metadata-property-icon,
+.theme-light .metadata-property[data-property-key='type'] .metadata-property-value {
+  color: color-mix(in srgb, var(--nr-pine) 74%, var(--nr-midnight));
+}
+
+.theme-light .metadata-property[data-property-key='status'] .metadata-property-key,
+.theme-light .metadata-property[data-property-key='status'] .metadata-property-icon,
+.theme-light .metadata-property[data-property-key='status'] .metadata-property-value {
+  color: color-mix(in srgb, var(--nr-copper) 78%, var(--nr-midnight));
+}
+
+.theme-light .metadata-property[data-property-key='type'],
+.theme-light .metadata-property[data-property-key='status'],
+.theme-light .metadata-property[data-property-key='tags'] {
+  border-left: 2px solid color-mix(in srgb, var(--nr-slate) 26%, transparent);
+}
+
+.theme-light .metadata-property[data-property-key='type'] {
+  border-left-color: color-mix(in srgb, var(--nr-pine) 38%, transparent);
+}
+
+.theme-light .metadata-property[data-property-key='status'] {
+  border-left-color: color-mix(in srgb, var(--nr-copper) 40%, transparent);
+}
+
+.theme-light .metadata-property[data-property-key='tags'] {
+  border-left-color: color-mix(in srgb, var(--nr-lichen) 38%, transparent);
+}
+
+.theme-light .forge-health-dashboard .forge-health-pill[data-status],
+.theme-light .forge-health-dashboard .forge-health-section-status[data-status] {
+  color: var(--forge-health-status-color);
+  border-color: color-mix(in srgb, var(--forge-health-status-color) 38%, transparent);
+  background: color-mix(in srgb, var(--forge-health-status-color) 8%, transparent);
+}
+
+.theme-light .forge-health-dashboard .forge-health-section,
+.theme-light .forge-health-dashboard .forge-health-card,
+.theme-light .forge-health-dashboard .forge-health-metric-card {
+  background: color-mix(in srgb, var(--background-primary-alt) 78%, var(--nr-cloud));
+  border-color: color-mix(in srgb, var(--nr-ridge) 24%, transparent);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 46%, transparent);
+}
+
+.theme-light .markdown-rendered td:first-child,
+.theme-light .markdown-preview-view td:first-child,
+.theme-light .dataview.table-view-table td:first-child {
+  color: color-mix(in srgb, var(--nr-pine) 72%, var(--nr-midnight));
+}
+
+.theme-light .markdown-rendered tr:hover td,
+.theme-light .markdown-preview-view tr:hover td,
+.theme-light .dataview.table-view-table tr:hover td {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 9%, #D5DEE2),
+      color-mix(in srgb, var(--nr-pine) 6%, #D5DEE2) 34%,
+      transparent
+    );
+  border-top-color: color-mix(in srgb, var(--nr-pine) 16%, var(--nr-ridge));
+  border-bottom-color: color-mix(in srgb, var(--nr-pine) 12%, var(--nr-ridge));
+}
+
+.theme-light .status-bar {
+  color: color-mix(in srgb, var(--nr-ridge) 76%, var(--nr-slate));
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--nr-seafoam) 12%, transparent);
+}
+
+.theme-light .status-bar-item.mod-clickable:hover {
+  color: color-mix(in srgb, var(--nr-pine) 82%, var(--nr-midnight));
+}
+
+.theme-light.is-mobile .mobile-navbar,
+.theme-light.is-mobile .mobile-toolbar,
+.theme-light.is-mobile .workspace-drawer-tab-option-item,
+.theme-light.is-mobile .workspace-drawer-ribbon-action,
+.is-mobile .theme-light .mobile-navbar,
+.is-mobile .theme-light .mobile-toolbar,
+.is-mobile .theme-light .workspace-drawer-tab-option-item,
+.is-mobile .theme-light .workspace-drawer-ribbon-action {
+  background: color-mix(in srgb, var(--background-primary-alt) 82%, var(--nr-ridge));
+  border-color: color-mix(in srgb, var(--nr-ridge) 24%, transparent);
+}
+
+/* Light mode repair: mobile screenshots showed washout and weak card edges. */
+.theme-light,
+body[data-theme='light'] {
+  --background-primary: #C8D3D8;
+  --background-primary-alt: #B9C8CE;
+  --background-secondary: #AABBC2;
+  --background-secondary-alt: #9CAEBA;
+  --background-modifier-border: color-mix(in srgb, var(--nr-ridge) 44%, #C8D3D8);
+  --background-modifier-hover: color-mix(in srgb, var(--nr-pine) 15%, transparent);
+  --text-normal: color-mix(in srgb, var(--nr-midnight) 94%, var(--nr-shadow));
+  --text-muted: color-mix(in srgb, var(--nr-ridge) 86%, var(--nr-midnight));
+  --text-faint: color-mix(in srgb, var(--nr-slate) 78%, var(--nr-ridge));
+  --inline-title-color: color-mix(in srgb, var(--nr-midnight) 94%, var(--nr-shadow));
+}
+
+.theme-light .view-content,
+.theme-light .workspace-leaf-content,
+.theme-light .markdown-preview-view,
+.theme-light .markdown-source-view.mod-cm6 .cm-scroller,
+.theme-light .markdown-source-view.mod-cm6 .cm-editor,
+.theme-light .cm-s-obsidian {
+  background: #C8D3D8;
+}
+
+.theme-light .workspace-ribbon,
+.theme-light .workspace-tabs .workspace-tab-header-container,
+.theme-light .view-header,
+.theme-light .mod-sidedock .workspace-tabs,
+.theme-light .status-bar,
+.theme-light.is-mobile .workspace-drawer,
+.theme-light.is-mobile .workspace-drawer-inner,
+.theme-light.is-mobile .workspace-drawer-active-tab-container,
+.is-mobile .theme-light .workspace-drawer,
+.is-mobile .theme-light .workspace-drawer-inner,
+.is-mobile .theme-light .workspace-drawer-active-tab-container {
+  background: #B8C7CE;
+  border-color: color-mix(in srgb, var(--nr-ridge) 34%, transparent);
+}
+
+.theme-light .metadata-properties,
+.theme-light .markdown-embed,
+.theme-light .callout,
+.theme-light .prompt,
+.theme-light .popover,
+.theme-light .menu,
+.theme-light .suggestion-container,
+.theme-light .search-result-container,
+.theme-light .modal,
+.theme-light .setting-item,
+.theme-light .forge-health-dashboard .forge-health-section,
+.theme-light .forge-health-dashboard .forge-health-card,
+.theme-light .forge-health-dashboard .forge-health-metric-card {
+  background: #BFD0D6;
+  border-color: color-mix(in srgb, var(--nr-ridge) 42%, transparent);
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 34%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--nr-ridge) 10%, transparent);
+}
+
+.theme-light .metadata-properties {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-moonstone) 8%, #BFD0D6) 0 24%,
+      #BFD0D6 24%
+    );
+}
+
+.theme-light .metadata-property,
+.theme-light .metadata-property-key,
+.theme-light .metadata-property-key-input,
+.theme-light .metadata-property-value,
+.theme-light .metadata-property-value input,
+.theme-light .metadata-property-value textarea {
+  background: transparent !important;
+}
+
+.theme-light .metadata-property {
+  border-bottom: 1px solid color-mix(in srgb, var(--nr-ridge) 10%, transparent);
+}
+
+.theme-light .metadata-property-key,
+.theme-light .metadata-property-key-input,
+.theme-light .metadata-property-icon {
+  color: color-mix(in srgb, var(--nr-property-signal) 82%, var(--nr-midnight));
+}
+
+.theme-light h1,
+.theme-light .markdown-preview-view h1,
+.theme-light .markdown-rendered h1 {
+  color: color-mix(in srgb, var(--nr-pine) 86%, var(--nr-midnight));
+  background:
+    radial-gradient(
+      ellipse 46px 82% at -2px 50%,
+      color-mix(in srgb, var(--nr-seafoam) 32%, transparent) 0%,
+      color-mix(in srgb, var(--nr-pine) 14%, transparent) 38%,
+      transparent 76%
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 12%, transparent) 0%,
+      color-mix(in srgb, var(--nr-pine) 7%, transparent) 32%,
+      transparent 58%
+    );
+}
+
+.theme-light p,
+.theme-light li,
+.theme-light .markdown-preview-view,
+.theme-light .markdown-rendered,
+.theme-light .cm-line,
+.theme-light .markdown-source-view.mod-cm6 {
+  color: color-mix(in srgb, var(--nr-midnight) 94%, var(--nr-shadow));
+}
+
+.theme-light a,
+.theme-light .cm-link,
+.theme-light .external-link {
+  color: color-mix(in srgb, var(--nr-copper) 86%, var(--nr-midnight));
+}
+
+.theme-light code,
+.theme-light .cm-inline-code,
+.theme-light .markdown-rendered :not(pre) > code,
+.theme-light .markdown-preview-view :not(pre) > code {
+  color: color-mix(in srgb, var(--nr-ridge) 82%, var(--nr-midnight));
+  background: color-mix(in srgb, var(--nr-cloud) 46%, #BFD0D6);
+  border-color: color-mix(in srgb, var(--nr-ridge) 38%, transparent);
+}
+
+.theme-light mark,
+.theme-light .cm-highlight {
+  color: var(--nr-midnight);
+  background: color-mix(in srgb, var(--nr-copper) 24%, var(--nr-cloud));
+}
+
+.theme-light .callout {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-callout-signal) 13%, #BFD0D6),
+      #BFD0D6 22%,
+      #BFD0D6
+    );
+  border-color: color-mix(in srgb, var(--nr-ridge) 42%, transparent);
+  border-left-color: var(--nr-callout-signal);
+}
+
+.theme-light .markdown-rendered table,
+.theme-light .markdown-preview-view table,
+.theme-light .dataview.table-view-table {
+  background: #BFD0D6;
+  border-color: color-mix(in srgb, var(--nr-ridge) 48%, transparent);
+}
+
+.theme-light .markdown-rendered th,
+.theme-light .markdown-preview-view th,
+.theme-light .dataview.table-view-table th {
+  color: color-mix(in srgb, var(--nr-copper) 88%, var(--nr-midnight));
+  background: color-mix(in srgb, var(--nr-ridge) 11%, #BFD0D6);
+  border-color: color-mix(in srgb, var(--nr-ridge) 42%, transparent);
+}
+
+.theme-light .markdown-rendered td,
+.theme-light .markdown-preview-view td,
+.theme-light .dataview.table-view-table td {
+  border-color: color-mix(in srgb, var(--nr-ridge) 34%, transparent);
+}
+
+.theme-light div.dataview-error-box {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-copper) 12%, #BFD0D6),
+      #BFD0D6 28%,
+      #BFD0D6
+    );
+  border-color: color-mix(in srgb, var(--nr-copper) 48%, var(--nr-ridge));
+}
+
+.theme-light .search-result-file-match,
+.theme-light .search-result-file-matches {
+  background: color-mix(in srgb, var(--nr-cloud) 24%, #BFD0D6);
+  border-color: color-mix(in srgb, var(--nr-ridge) 34%, transparent);
+  border-left-color: color-mix(in srgb, var(--nr-copper) 58%, transparent);
+}
+
+.theme-light button,
+.theme-light input,
+.theme-light textarea,
+.theme-light select,
+.theme-light .dropdown,
+.theme-light .text-input {
+  background: color-mix(in srgb, var(--nr-cloud) 42%, #BFD0D6);
+  border-color: color-mix(in srgb, var(--nr-ridge) 36%, transparent);
+}
+
+.theme-light button:not(.mod-cta):not(.mod-warning) {
+  color: color-mix(in srgb, var(--nr-ridge) 86%, var(--nr-midnight));
+}
+
+.theme-light .forge-health-dashboard button:not(.mod-cta):not(.mod-warning) {
+  background: color-mix(in srgb, var(--nr-cloud) 34%, #BFD0D6);
+}
+
+.theme-light .forge-health-dashboard .forge-health-metric-card {
+  background: color-mix(in srgb, var(--nr-ridge) 10%, #BFD0D6);
+}
+
+.theme-light.is-mobile .mobile-navbar,
+.theme-light.is-mobile .mobile-toolbar,
+.theme-light.is-mobile .workspace-drawer-tab-option-item,
+.theme-light.is-mobile .workspace-drawer-ribbon-action,
+.is-mobile .theme-light .mobile-navbar,
+.is-mobile .theme-light .mobile-toolbar,
+.is-mobile .theme-light .workspace-drawer-tab-option-item,
+.is-mobile .theme-light .workspace-drawer-ribbon-action {
+  background: #B8C7CE;
+  border-color: color-mix(in srgb, var(--nr-ridge) 30%, transparent);
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 40%, transparent),
+    0 8px 18px color-mix(in srgb, var(--nr-ridge) 20%, transparent);
+}
+
+.theme-light.is-mobile .workspace-drawer-tab-option-item.is-active .clickable-icon,
+.theme-light.is-mobile .workspace-drawer-ribbon-action.is-active .clickable-icon,
+.is-mobile .theme-light .workspace-drawer-tab-option-item.is-active .clickable-icon,
+.is-mobile .theme-light .workspace-drawer-ribbon-action.is-active .clickable-icon {
+  color: color-mix(in srgb, var(--nr-seafoam) 74%, var(--nr-ridge));
+  filter: drop-shadow(0 0 4px color-mix(in srgb, var(--nr-seafoam) 30%, transparent));
+}
+
+/* Light mode repair 2: remove false boxes, strengthen mobile/control contrast. */
+.theme-light .modal.mod-settings .setting-item-heading,
+.theme-light .vertical-tab-content .setting-item-heading,
+.theme-light .community-modal .setting-item-heading,
+.theme-light .setting-item.setting-item-heading {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.theme-light .setting-item-heading .setting-item-name {
+  color: color-mix(in srgb, var(--nr-ridge) 88%, var(--nr-midnight));
+  font-weight: 720;
+}
+
+.theme-light .modal.mod-settings .setting-item,
+.theme-light .vertical-tab-content .setting-item,
+.theme-light .community-modal .setting-item {
+  background: color-mix(in srgb, #BFD0D6 92%, var(--nr-cloud));
+  border-color: color-mix(in srgb, var(--nr-ridge) 34%, transparent);
+}
+
+.theme-light .setting-item-name,
+.theme-light .setting-item-description {
+  color: color-mix(in srgb, var(--nr-midnight) 86%, var(--nr-ridge));
+}
+
+.theme-light button:not(.mod-cta):not(.mod-warning),
+.theme-light .forge-health-dashboard button:not(.mod-cta):not(.mod-warning),
+.theme-light .setting-item-control button:not(.mod-cta):not(.mod-warning) {
+  color: color-mix(in srgb, var(--nr-midnight) 86%, var(--nr-ridge));
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--nr-cloud) 48%, #BFD0D6),
+      color-mix(in srgb, var(--nr-cloud) 24%, #B8C7CE)
+    );
+  border-color: color-mix(in srgb, var(--nr-ridge) 32%, transparent);
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 42%, transparent),
+    0 1px 2px color-mix(in srgb, var(--nr-ridge) 10%, transparent);
+}
+
+.theme-light button:not(.mod-cta):not(.mod-warning):hover,
+.theme-light .forge-health-dashboard button:not(.mod-cta):not(.mod-warning):hover,
+.theme-light .setting-item-control button:not(.mod-cta):not(.mod-warning):hover {
+  color: color-mix(in srgb, var(--nr-pine) 82%, var(--nr-midnight));
+  border-color: color-mix(in srgb, var(--nr-pine) 40%, transparent);
+  background: color-mix(in srgb, var(--nr-pine) 13%, #BFD0D6);
+}
+
+.theme-light button.mod-cta,
+.theme-light .setting-item-control button.mod-cta,
+.theme-light .forge-health-dashboard button.mod-cta {
+  color: var(--nr-cloud);
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--nr-pine) 90%, var(--nr-seafoam)),
+      color-mix(in srgb, var(--nr-pine) 82%, var(--nr-ridge))
+    );
+  border-color: color-mix(in srgb, var(--nr-ridge) 32%, var(--nr-pine));
+}
+
+.theme-light .nav-files-container .tree-item-self,
+.theme-light .nav-files-container .nav-folder-title,
+.theme-light .nav-files-container .nav-file-title {
+  color: color-mix(in srgb, var(--nr-ridge) 78%, var(--nr-midnight));
+}
+
+.theme-light .nav-files-container .tree-item-self.is-active,
+.theme-light .nav-files-container .nav-folder-title.is-active,
+.theme-light .nav-files-container .nav-file-title.is-active {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 11%, transparent),
+      color-mix(in srgb, var(--nr-ridge) 5%, transparent) 46%,
+      transparent
+    );
+}
+
+.theme-light.is-mobile .workspace-drawer,
+.theme-light.is-mobile .workspace-drawer-inner,
+.theme-light.is-mobile .workspace-drawer-active-tab-container,
+.is-mobile .theme-light .workspace-drawer,
+.is-mobile .theme-light .workspace-drawer-inner,
+.is-mobile .theme-light .workspace-drawer-active-tab-container {
+  background: #B3C3CA;
+}
+
+.theme-light.is-mobile .nav-files-container,
+.is-mobile .theme-light .nav-files-container {
+  background: #B3C3CA;
+}
+
+.theme-light .modal-container,
+.theme-light .modal-bg,
+.theme-light.is-mobile .workspace-drawer-backdrop,
+.is-mobile .theme-light .workspace-drawer-backdrop {
+  background-color: color-mix(in srgb, var(--nr-ridge) 32%, transparent);
+}
+
+.theme-light .forge-health-dashboard .forge-health-section {
+  border-top-color: color-mix(in srgb, var(--nr-ridge) 44%, transparent);
+}
+
+.theme-light .forge-health-dashboard .forge-health-metric-card {
+  background: color-mix(in srgb, var(--nr-ridge) 13%, #BFD0D6);
+  border-color: color-mix(in srgb, var(--nr-ridge) 42%, transparent);
+}
+
+/* Light mode repair 3: graph readability and calmer mobile nav selection. */
+.theme-light .graph-view,
+.theme-light .graph-view-container,
+.theme-light .workspace-leaf-content[data-type='graph'] .view-content,
+.theme-light .workspace-leaf-content[data-type='localgraph'] .view-content {
+  background: #C8D3D8 !important;
+}
+
+.theme-light,
+body[data-theme='light'] {
+  --graph-line: #6E838C;
+  --graph-node: #4F9187;
+  --graph-node-focused: #22AFA8;
+  --graph-node-tag: #A2642E;
+  --graph-node-attachment: #647B86;
+  --graph-node-unresolved: #A94331;
+  --graph-text: #14222A;
+}
+
+.theme-light .graph-view.color-line,
+.theme-light .graph-view.color-arrow {
+  color: #6E838C !important;
+}
+
+.theme-light .graph-view.color-fill,
+.theme-light .graph-view.color-circle {
+  color: #4F9187 !important;
+}
+
+.theme-light .graph-view.color-fill-highlight,
+.theme-light .graph-view.color-circle-highlight,
+.theme-light .graph-view.color-fill-focused,
+.theme-light .graph-view.color-circle-focused {
+  color: #22AFA8 !important;
+}
+
+.theme-light .graph-view.color-line-highlight,
+.theme-light .graph-view.color-arrow-highlight,
+.theme-light .graph-view.color-line-focused,
+.theme-light .graph-view.color-arrow-focused {
+  color: #4F9187 !important;
+}
+
+.theme-light .graph-view.color-fill-unresolved {
+  color: #A94331 !important;
+}
+
+.theme-light .graph-view.color-fill-tag {
+  color: #A2642E !important;
+}
+
+.theme-light .graph-view.color-fill-attachment {
+  color: #647B86 !important;
+}
+
+.theme-light .graph-view text,
+.theme-light .graph-view .graph-view-label {
+  color: #14222A !important;
+  fill: #14222A !important;
+}
+
+.theme-light.is-mobile .mobile-navbar .clickable-icon.is-active,
+.theme-light.is-mobile .mobile-navbar .is-active > .clickable-icon,
+.is-mobile .theme-light .mobile-navbar .clickable-icon.is-active,
+.is-mobile .theme-light .mobile-navbar .is-active > .clickable-icon {
+  color: color-mix(in srgb, var(--nr-seafoam) 76%, var(--nr-ridge));
+  background: color-mix(in srgb, var(--nr-cloud) 18%, transparent);
+  filter: drop-shadow(0 0 4px color-mix(in srgb, var(--nr-seafoam) 24%, transparent));
+}
+
+.theme-light.is-mobile .mobile-navbar .clickable-icon.is-active::before,
+.theme-light.is-mobile .mobile-navbar .is-active > .clickable-icon::before,
+.is-mobile .theme-light .mobile-navbar .clickable-icon.is-active::before,
+.is-mobile .theme-light .mobile-navbar .is-active > .clickable-icon::before {
+  opacity: 0.26;
+}
+
+.theme-light .nav-files-container .nav-folder-title.is-active,
+.theme-light .nav-files-container .tree-item-self.nav-folder-title.is-active {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 8%, transparent),
+      color-mix(in srgb, var(--nr-ridge) 4%, transparent) 34%,
+      transparent 68%
+    );
+}
+
+/* Light mode repair 4: remove properties ghost panel, calm graph web. */
+.theme-light .metadata-container,
+.theme-light .metadata-content {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.theme-light .metadata-properties {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.theme-light .metadata-property {
+  background: #BFD0D6 !important;
+  border-left: 2px solid color-mix(in srgb, var(--nr-property-signal) 36%, transparent);
+  border-right: 1px solid color-mix(in srgb, var(--nr-ridge) 22%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--nr-ridge) 18%, transparent);
+}
+
+.theme-light .metadata-property:first-child {
+  border-top: 1px solid color-mix(in srgb, var(--nr-ridge) 22%, transparent);
+}
+
+.theme-light .metadata-property-key,
+.theme-light .metadata-property-key-input,
+.theme-light .metadata-property-icon {
+  background: color-mix(in srgb, var(--nr-ridge) 7%, transparent) !important;
+}
+
+.theme-light,
+body[data-theme='light'] {
+  --graph-line: #9AAAB0;
+  --graph-node: #2F8F85;
+  --graph-node-focused: #00AFA8;
+  --graph-node-tag: #A66A31;
+  --graph-node-attachment: #708892;
+  --graph-node-unresolved: #AA4634;
+}
+
+.theme-light .graph-view.color-line,
+.theme-light .graph-view.color-arrow {
+  color: #9AAAB0 !important;
+}
+
+.theme-light .graph-view.color-fill,
+.theme-light .graph-view.color-circle {
+  color: #2F8F85 !important;
+}
+
+.theme-light .graph-view.color-fill-highlight,
+.theme-light .graph-view.color-circle-highlight,
+.theme-light .graph-view.color-fill-focused,
+.theme-light .graph-view.color-circle-focused {
+  color: #00AFA8 !important;
+}
+
+.theme-light .graph-view.color-line-highlight,
+.theme-light .graph-view.color-arrow-highlight,
+.theme-light .graph-view.color-line-focused,
+.theme-light .graph-view.color-arrow-focused {
+  color: #5FA89D !important;
+}
+
+/* Light graph tuning: let nodes lead and links sit back. */
+.theme-light,
+body[data-theme='light'] {
+  --graph-line: #A8B8BE;
+  --graph-node: #1F8F86;
+  --graph-node-focused: #00BDB5;
+  --graph-node-tag: #A8662E;
+  --graph-node-attachment: #6D828B;
+  --graph-node-unresolved: #A94130;
+}
+
+.theme-light .graph-view.color-line,
+.theme-light .graph-view.color-arrow {
+  color: #A8B8BE !important;
+}
+
+.theme-light .graph-view.color-fill,
+.theme-light .graph-view.color-circle {
+  color: #1F8F86 !important;
+}
+
+.theme-light .graph-view.color-fill-highlight,
+.theme-light .graph-view.color-circle-highlight,
+.theme-light .graph-view.color-fill-focused,
+.theme-light .graph-view.color-circle-focused {
+  color: #00BDB5 !important;
+}
+
+.theme-light .graph-view.color-line-highlight,
+.theme-light .graph-view.color-arrow-highlight,
+.theme-light .graph-view.color-line-focused,
+.theme-light .graph-view.color-arrow-focused {
+  color: #A8662E !important;
+}
+
+.theme-light .graph-view.color-fill-tag {
+  color: #A8662E !important;
+}
+
+.theme-light .graph-view.color-fill-attachment {
+  color: #6D828B !important;
+}
+
+.theme-light .graph-view.color-fill-unresolved {
+  color: #A94130 !important;
+}
