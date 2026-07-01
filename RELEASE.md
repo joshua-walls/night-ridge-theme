@@ -4,7 +4,7 @@ This file is for maintainers and release prep.
 
 ## Changelog
 
-### 0.1.3
+### 0.1.4
 
 - Released light-mode parity for Night Ridge command-center styling.
 - Added dark and light support for inline title beacons, property rhythm, callout hierarchy, and graph tuning.
