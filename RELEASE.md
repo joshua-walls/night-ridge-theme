@@ -4,6 +4,12 @@ This file is for maintainers and release prep.
 
 ## Changelog
 
+### 0.1.6
+
+- Refined dark-mode heading, code block, dashboard, table, callout, and sidebar contrast.
+- Adjusted light-mode shell, card, table, callout, and control surfaces for a cooler Night Ridge paper feel.
+- Updated the visual check screenshot for the current theme state.
+
 ### 0.1.5
 
 - Removed Obsidian CSS lint warnings for unsupported `text-decoration`, `!important`, and broad `:has()` selectors.
