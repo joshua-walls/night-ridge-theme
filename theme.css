@@ -1,6 +1,6 @@
 /*
   Night Ridge Theme
-  Version: 0.1.0
+  Version: 0.1.6
   Palette baseline: 3.1
 */
 
@@ -460,9 +460,15 @@ pre,
   color: var(--code-normal);
   background: var(--code-background);
   border: 1px solid var(--border-color);
-  border-left: 3px solid var(--nr-seafoam);
+  border-left: 3px solid color-mix(in srgb, var(--nr-seafoam) 72%, var(--nr-slate));
   border-radius: var(--nr-radius-m);
   font-family: var(--font-family-monospace);
+  line-height: 1.52;
+}
+
+pre,
+.markdown-rendered pre {
+  padding-block: 0.72em;
 }
 
 .callout {
@@ -1157,58 +1163,87 @@ h6,
 }
 
 .theme-dark .mermaid,
-.theme-dark .mermaid svg {
+.theme-dark .mermaid svg,
+.theme-dark svg[id^='mermaid-'],
+.theme-dark svg[aria-roledescription] {
   background: transparent;
 }
 
-.theme-dark :is(#nr-mermaid-override, .mermaid) .node rect,
-.theme-dark :is(#nr-mermaid-override, .mermaid) .node circle,
-.theme-dark :is(#nr-mermaid-override, .mermaid) .node ellipse,
-.theme-dark :is(#nr-mermaid-override, .mermaid) .node polygon,
-.theme-dark :is(#nr-mermaid-override, .mermaid) .node path {
-  fill: color-mix(in srgb, var(--nr-moonstone) 42%, var(--nr-shadow));
-  stroke: color-mix(in srgb, var(--nr-pine) 72%, var(--nr-seafoam));
-  stroke-width: 1.4px;
-  fill-opacity: 0.34;
-  stroke-opacity: 1;
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .node rect,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .node circle,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .node ellipse,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .node polygon,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .node path {
+  fill: #1C2B36 !important;
+  stroke: #6FDAD4 !important;
+  stroke-width: 1.35px !important;
+  fill-opacity: 0.94 !important;
+  stroke-opacity: 0.92 !important;
 }
 
-.theme-dark :is(#nr-mermaid-override, .mermaid) .edgePath .path,
-.theme-dark :is(#nr-mermaid-override, .mermaid) .flowchart-link,
-.theme-dark :is(#nr-mermaid-override, .mermaid) .messageLine0,
-.theme-dark :is(#nr-mermaid-override, .mermaid) .messageLine1 {
-  stroke: color-mix(in srgb, var(--nr-slate) 74%, var(--nr-fog));
-  stroke-width: 1.25px;
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .node.default rect,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .node.default circle,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .node.default ellipse,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .node.default polygon,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .node.default path {
+  fill: #20323B !important;
+  stroke: #5FA89D !important;
 }
 
-.theme-dark :is(#nr-mermaid-override, .mermaid) marker path,
-.theme-dark :is(#nr-mermaid-override, .mermaid) .arrowheadPath {
-  fill: color-mix(in srgb, var(--nr-slate) 76%, var(--nr-fog));
-  stroke: color-mix(in srgb, var(--nr-slate) 76%, var(--nr-fog));
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .flowchart-link,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .edgePath .path,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .messageLine0,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .messageLine1 {
+  stroke: #6F8793 !important;
+  stroke-width: 1.2px !important;
+  stroke-opacity: 0.82 !important;
 }
 
-.theme-dark :is(#nr-mermaid-override, .mermaid) svg text,
-.theme-dark :is(#nr-mermaid-override, .mermaid) svg tspan,
-.theme-dark :is(#nr-mermaid-override, .mermaid) .label,
-.theme-dark :is(#nr-mermaid-override, .mermaid) .label *,
-.theme-dark :is(#nr-mermaid-override, .mermaid) .nodeLabel,
-.theme-dark :is(#nr-mermaid-override, .mermaid) .nodeLabel *,
-.theme-dark :is(#nr-mermaid-override, .mermaid) foreignObject div,
-.theme-dark :is(#nr-mermaid-override, .mermaid) foreignObject span,
-.theme-dark :is(#nr-mermaid-override, .mermaid) foreignObject p {
-  color: #000;
-  fill: #000;
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) marker path,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .arrowheadPath {
+  fill: #6F8793 !important;
+  stroke: #6F8793 !important;
 }
 
-.theme-dark :is(#nr-mermaid-override, .mermaid) .edgeLabel,
-.theme-dark :is(#nr-mermaid-override, .mermaid) .edgeLabel p {
-  background: color-mix(in srgb, var(--nr-copper) 18%, var(--nr-shadow));
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) text,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) tspan,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .label,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .label *,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .nodeLabel,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .nodeLabel *,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) foreignObject div,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) foreignObject span,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) foreignObject p {
+  color: #F5F7F8 !important;
+  fill: #F5F7F8 !important;
 }
 
-.theme-dark :is(#nr-mermaid-override, .mermaid) .edgeLabel p {
-  color: color-mix(in srgb, var(--nr-copper) 72%, var(--nr-cloud));
-  border: 1px solid color-mix(in srgb, var(--nr-copper) 48%, transparent);
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .edgeLabel,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .edgeLabel p,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .edgeLabel rect,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .labelBkg {
+  background: #111B24 !important;
+  fill: #111B24 !important;
+  color: #D29A67 !important;
+}
+
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .edgeLabel p {
+  border: 1px solid color-mix(in srgb, var(--nr-copper) 44%, transparent);
   border-radius: var(--nr-radius-s);
+  padding: 0.04em 0.28em;
+}
+
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .cluster rect {
+  fill: color-mix(in srgb, var(--nr-moonstone) 62%, var(--nr-shadow)) !important;
+  stroke: color-mix(in srgb, var(--nr-copper) 48%, var(--nr-iron)) !important;
+  stroke-width: 1.1px !important;
+}
+
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .cluster .nodeLabel,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .cluster-label,
+.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .cluster-label * {
+  color: color-mix(in srgb, var(--nr-copper) 78%, var(--nr-cloud)) !important;
+  fill: color-mix(in srgb, var(--nr-copper) 78%, var(--nr-cloud)) !important;
 }
 
 .theme-light :is(#nr-mermaid-override, .mermaid) .node rect,
@@ -1623,14 +1658,14 @@ body[data-theme='dark'] {
 .theme-dark .markdown-preview-view h4,
 .theme-dark .markdown-rendered h4,
 .theme-dark .cm-header-4 {
-  color: color-mix(in srgb, var(--nr-ember) 74%, var(--nr-cloud));
+  color: color-mix(in srgb, var(--nr-copper) 48%, var(--nr-ember));
 }
 
 .theme-dark h5,
 .theme-dark .markdown-preview-view h5,
 .theme-dark .markdown-rendered h5,
 .theme-dark .cm-header-5 {
-  color: color-mix(in srgb, var(--nr-slate) 62%, var(--nr-cloud));
+  color: color-mix(in srgb, var(--nr-slate) 78%, var(--nr-cloud));
 }
 
 .theme-dark h6,
@@ -2090,19 +2125,35 @@ body[data-theme='dark'] {
 }
 
 /* Forge semantic status pass: trust explicit data-status hooks only. */
-.theme-dark .forge-health-dashboard [data-status='good' i] {
+.theme-dark .forge-health-dashboard {
   --forge-health-status-color: var(--nr-pine);
 }
 
-.theme-dark .forge-health-dashboard [data-status='warning' i] {
+.theme-dark .forge-health-dashboard [data-status='good' i],
+.theme-dark .forge-health-dashboard [data-status='healthy' i],
+.theme-dark .forge-health-dashboard [data-status='clear' i],
+.theme-dark .forge-health-dashboard [data-status='valid' i],
+.theme-dark .forge-health-dashboard [data-status='indexed' i] {
+  --forge-health-status-color: var(--nr-pine);
+}
+
+.theme-dark .forge-health-dashboard [data-status='warning' i],
+.theme-dark .forge-health-dashboard [data-status='needs attention' i],
+.theme-dark .forge-health-dashboard [data-status='needs-attention' i] {
   --forge-health-status-color: var(--nr-copper);
 }
 
-.theme-dark .forge-health-dashboard [data-status='critical' i] {
+.theme-dark .forge-health-dashboard [data-status='critical' i],
+.theme-dark .forge-health-dashboard [data-status='error' i],
+.theme-dark .forge-health-dashboard [data-status='fail' i],
+.theme-dark .forge-health-dashboard [data-status='failed' i] {
   --forge-health-status-color: var(--nr-ember);
 }
 
-.theme-dark .forge-health-dashboard [data-status='muted' i] {
+.theme-dark .forge-health-dashboard [data-status='muted' i],
+.theme-dark .forge-health-dashboard [data-status='no note' i],
+.theme-dark .forge-health-dashboard [data-status='no-note' i],
+.theme-dark .forge-health-dashboard [data-status='exempt' i] {
   --forge-health-status-color: var(--nr-slate);
 }
 
@@ -2115,8 +2166,46 @@ body[data-theme='dark'] {
 
 .theme-dark .forge-health-dashboard .forge-health-pill[data-status],
 .theme-dark .forge-health-dashboard .forge-health-section-status[data-status] {
-  color: var(--forge-health-status-color);
-  border-color: color-mix(in srgb, var(--forge-health-status-color) 44%, transparent);
+  color: color-mix(in srgb, var(--forge-health-status-color) 82%, var(--nr-cloud));
+  background: color-mix(in srgb, var(--forge-health-status-color) 9%, transparent);
+  border-color: color-mix(in srgb, var(--forge-health-status-color) 38%, transparent);
+}
+
+.theme-dark .forge-health-dashboard .forge-health-section,
+.theme-dark .forge-health-dashboard .forge-health-card,
+.theme-dark .forge-health-dashboard .forge-health-metric-card {
+  background: color-mix(in srgb, var(--nr-midnight) 68%, var(--nr-shadow));
+  border: 1px solid color-mix(in srgb, var(--nr-iron) 52%, var(--nr-midnight));
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 2%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--nr-shadow) 58%, transparent);
+}
+
+.theme-dark .forge-health-dashboard .forge-health-metric-card {
+  background: color-mix(in srgb, var(--nr-ridge) 46%, var(--nr-midnight));
+  border-color: color-mix(in srgb, var(--nr-pine) 18%, var(--nr-iron));
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 4%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--nr-shadow) 68%, transparent);
+}
+
+.theme-dark .forge-health-dashboard .forge-health-section[data-status],
+.theme-dark .forge-health-dashboard .forge-health-card[data-status],
+.theme-dark .forge-health-dashboard .forge-health-metric-card[data-status] {
+  border-color: color-mix(in srgb, var(--forge-health-status-color) 28%, var(--nr-iron));
+}
+
+.theme-dark .forge-health-dashboard button:not(.mod-cta):not(.mod-warning) {
+  color: color-mix(in srgb, var(--nr-cloud) 82%, var(--nr-slate));
+  background: color-mix(in srgb, var(--nr-ridge) 62%, var(--nr-midnight));
+  border: 1px solid color-mix(in srgb, var(--nr-iron) 72%, var(--nr-midnight));
+  box-shadow: none;
+}
+
+.theme-dark .forge-health-dashboard button:not(.mod-cta):not(.mod-warning):hover {
+  color: color-mix(in srgb, var(--nr-cloud) 88%, var(--nr-seafoam));
+  background: color-mix(in srgb, var(--nr-pine) 13%, var(--nr-midnight));
+  border-color: color-mix(in srgb, var(--nr-pine) 34%, var(--nr-iron));
 }
 
 /* Editor signal polish: seafoam caret, dark pine selection, no heading overrides. */
@@ -2149,7 +2238,8 @@ body[data-theme='dark'] {
 .theme-dark .markdown-rendered table,
 .theme-dark .markdown-preview-view table,
 .theme-dark .dataview.table-view-table {
-  border-color: color-mix(in srgb, var(--nr-slate) 28%, var(--nr-shadow));
+  background: color-mix(in srgb, var(--nr-midnight) 86%, var(--nr-shadow));
+  border-color: color-mix(in srgb, var(--nr-iron) 74%, var(--nr-midnight));
   box-shadow:
     inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 4%, transparent),
     0 0 0 1px color-mix(in srgb, var(--nr-shadow) 72%, transparent);
@@ -2172,6 +2262,12 @@ body[data-theme='dark'] {
 .theme-dark .markdown-preview-view td:first-child,
 .theme-dark .dataview.table-view-table td:first-child {
   color: color-mix(in srgb, var(--nr-pine) 76%, var(--nr-fog));
+}
+
+.theme-dark .markdown-rendered td,
+.theme-dark .markdown-preview-view td,
+.theme-dark .dataview.table-view-table td {
+  border-color: color-mix(in srgb, var(--nr-iron) 68%, var(--nr-midnight));
 }
 
 .theme-dark .markdown-rendered tr:hover td,
@@ -3073,15 +3169,15 @@ body[data-theme='light'] {
 /* Light mode repair: mobile screenshots showed washout and weak card edges. */
 .theme-light,
 body[data-theme='light'] {
-  --background-primary: #C8D3D8;
-  --background-primary-alt: #B9C8CE;
-  --background-secondary: #AABBC2;
-  --background-secondary-alt: #9CAEBA;
-  --background-modifier-border: color-mix(in srgb, var(--nr-ridge) 44%, #C8D3D8);
+  --background-primary: #D1D9DD;
+  --background-primary-alt: #BBC9CF;
+  --background-secondary: #AABCC4;
+  --background-secondary-alt: #99ADB7;
+  --background-modifier-border: color-mix(in srgb, var(--nr-ridge) 48%, #D1D9DD);
   --background-modifier-hover: color-mix(in srgb, var(--nr-pine) 15%, transparent);
-  --text-normal: color-mix(in srgb, var(--nr-midnight) 94%, var(--nr-shadow));
-  --text-muted: color-mix(in srgb, var(--nr-ridge) 86%, var(--nr-midnight));
-  --text-faint: color-mix(in srgb, var(--nr-slate) 78%, var(--nr-ridge));
+  --text-normal: color-mix(in srgb, var(--nr-midnight) 96%, var(--nr-shadow));
+  --text-muted: color-mix(in srgb, var(--nr-ridge) 90%, var(--nr-midnight));
+  --text-faint: color-mix(in srgb, var(--nr-slate) 68%, var(--nr-ridge));
   --inline-title-color: color-mix(in srgb, var(--nr-midnight) 94%, var(--nr-shadow));
 }
 
@@ -3091,7 +3187,7 @@ body[data-theme='light'] {
 .theme-light .markdown-source-view.mod-cm6 .cm-scroller,
 .theme-light .markdown-source-view.mod-cm6 .cm-editor,
 .theme-light .cm-s-obsidian {
-  background: #C8D3D8;
+  background: #D1D9DD;
 }
 
 .theme-light .workspace-ribbon,
@@ -3105,8 +3201,8 @@ body[data-theme='light'] {
 .is-mobile .theme-light .workspace-drawer,
 .is-mobile .theme-light .workspace-drawer-inner,
 .is-mobile .theme-light .workspace-drawer-active-tab-container {
-  background: #B8C7CE;
-  border-color: color-mix(in srgb, var(--nr-ridge) 34%, transparent);
+  background: #B2C2C9;
+  border-color: color-mix(in srgb, var(--nr-ridge) 42%, transparent);
 }
 
 .theme-light .metadata-properties,
@@ -3122,19 +3218,19 @@ body[data-theme='light'] {
 .theme-light .forge-health-dashboard .forge-health-section,
 .theme-light .forge-health-dashboard .forge-health-card,
 .theme-light .forge-health-dashboard .forge-health-metric-card {
-  background: #BFD0D6;
-  border-color: color-mix(in srgb, var(--nr-ridge) 42%, transparent);
+  background: #C5D2D7;
+  border-color: color-mix(in srgb, var(--nr-ridge) 46%, transparent);
   box-shadow:
-    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 34%, transparent),
-    0 0 0 1px color-mix(in srgb, var(--nr-ridge) 10%, transparent);
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 38%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--nr-ridge) 14%, transparent);
 }
 
 .theme-light .metadata-properties {
   background:
     linear-gradient(
       90deg,
-      color-mix(in srgb, var(--nr-moonstone) 8%, #BFD0D6) 0 24%,
-      #BFD0D6 24%
+      color-mix(in srgb, var(--nr-moonstone) 8%, #C5D2D7) 0 24%,
+      #C5D2D7 24%
     );
 }
 
@@ -3196,7 +3292,7 @@ body[data-theme='light'] {
 .theme-light .markdown-rendered :not(pre) > code,
 .theme-light .markdown-preview-view :not(pre) > code {
   color: color-mix(in srgb, var(--nr-ridge) 82%, var(--nr-midnight));
-  background: color-mix(in srgb, var(--nr-cloud) 46%, #BFD0D6);
+  background: color-mix(in srgb, var(--nr-cloud) 44%, #C5D2D7);
   border-color: color-mix(in srgb, var(--nr-ridge) 38%, transparent);
 }
 
@@ -3210,50 +3306,50 @@ body[data-theme='light'] {
   background:
     linear-gradient(
       90deg,
-      color-mix(in srgb, var(--nr-callout-signal) 13%, #BFD0D6),
-      #BFD0D6 22%,
-      #BFD0D6
+      color-mix(in srgb, var(--nr-callout-signal) 12%, #C5D2D7),
+      #C5D2D7 22%,
+      #C5D2D7
     );
-  border-color: color-mix(in srgb, var(--nr-ridge) 42%, transparent);
+  border-color: color-mix(in srgb, var(--nr-ridge) 46%, transparent);
   border-left-color: var(--nr-callout-signal);
 }
 
 .theme-light .markdown-rendered table,
 .theme-light .markdown-preview-view table,
 .theme-light .dataview.table-view-table {
-  background: #BFD0D6;
-  border-color: color-mix(in srgb, var(--nr-ridge) 48%, transparent);
+  background: #C5D2D7;
+  border-color: color-mix(in srgb, var(--nr-ridge) 52%, transparent);
 }
 
 .theme-light .markdown-rendered th,
 .theme-light .markdown-preview-view th,
 .theme-light .dataview.table-view-table th {
   color: color-mix(in srgb, var(--nr-copper) 88%, var(--nr-midnight));
-  background: color-mix(in srgb, var(--nr-ridge) 11%, #BFD0D6);
-  border-color: color-mix(in srgb, var(--nr-ridge) 42%, transparent);
+  background: color-mix(in srgb, var(--nr-ridge) 12%, #C5D2D7);
+  border-color: color-mix(in srgb, var(--nr-ridge) 48%, transparent);
 }
 
 .theme-light .markdown-rendered td,
 .theme-light .markdown-preview-view td,
 .theme-light .dataview.table-view-table td {
-  border-color: color-mix(in srgb, var(--nr-ridge) 34%, transparent);
+  border-color: color-mix(in srgb, var(--nr-ridge) 40%, transparent);
 }
 
 .theme-light div.dataview-error-box {
   background:
     linear-gradient(
       90deg,
-      color-mix(in srgb, var(--nr-copper) 12%, #BFD0D6),
-      #BFD0D6 28%,
-      #BFD0D6
+      color-mix(in srgb, var(--nr-copper) 12%, #C5D2D7),
+      #C5D2D7 28%,
+      #C5D2D7
     );
   border-color: color-mix(in srgb, var(--nr-copper) 48%, var(--nr-ridge));
 }
 
 .theme-light .search-result-file-match,
 .theme-light .search-result-file-matches {
-  background: color-mix(in srgb, var(--nr-cloud) 24%, #BFD0D6);
-  border-color: color-mix(in srgb, var(--nr-ridge) 34%, transparent);
+  background: color-mix(in srgb, var(--nr-cloud) 22%, #C5D2D7);
+  border-color: color-mix(in srgb, var(--nr-ridge) 40%, transparent);
   border-left-color: color-mix(in srgb, var(--nr-copper) 58%, transparent);
 }
 
@@ -3263,8 +3359,8 @@ body[data-theme='light'] {
 .theme-light select,
 .theme-light .dropdown,
 .theme-light .text-input {
-  background: color-mix(in srgb, var(--nr-cloud) 42%, #BFD0D6);
-  border-color: color-mix(in srgb, var(--nr-ridge) 36%, transparent);
+  background: color-mix(in srgb, var(--nr-cloud) 40%, #C5D2D7);
+  border-color: color-mix(in srgb, var(--nr-ridge) 42%, transparent);
 }
 
 .theme-light button:not(.mod-cta):not(.mod-warning) {
@@ -3272,11 +3368,11 @@ body[data-theme='light'] {
 }
 
 .theme-light .forge-health-dashboard button:not(.mod-cta):not(.mod-warning) {
-  background: color-mix(in srgb, var(--nr-cloud) 34%, #BFD0D6);
+  background: color-mix(in srgb, var(--nr-cloud) 30%, #C5D2D7);
 }
 
 .theme-light .forge-health-dashboard .forge-health-metric-card {
-  background: color-mix(in srgb, var(--nr-ridge) 10%, #BFD0D6);
+  background: color-mix(in srgb, var(--nr-ridge) 12%, #C5D2D7);
 }
 
 .theme-light.is-mobile .mobile-navbar,
@@ -3287,7 +3383,7 @@ body[data-theme='light'] {
 .is-mobile .theme-light .mobile-toolbar,
 .is-mobile .theme-light .workspace-drawer-tab-option-item,
 .is-mobile .theme-light .workspace-drawer-ribbon-action {
-  background: #B8C7CE;
+  background: #B2C2C9;
   border-color: color-mix(in srgb, var(--nr-ridge) 30%, transparent);
   box-shadow:
     inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 40%, transparent),
@@ -3326,7 +3422,7 @@ body[data-theme='light'] {
   min-height: 4.25rem;
   margin: 0;
   padding: 0.9rem 1.15rem;
-  background: color-mix(in srgb, #BFD0D6 84%, var(--nr-cloud));
+  background: color-mix(in srgb, #C5D2D7 84%, var(--nr-cloud));
   border: 0;
   border-bottom: 1px solid color-mix(in srgb, var(--nr-ridge) 20%, transparent);
   box-shadow: none;
@@ -3382,8 +3478,8 @@ body[data-theme='light'] {
   background:
     linear-gradient(
       180deg,
-      color-mix(in srgb, var(--nr-cloud) 48%, #BFD0D6),
-      color-mix(in srgb, var(--nr-cloud) 24%, #B8C7CE)
+      color-mix(in srgb, var(--nr-cloud) 48%, #C5D2D7),
+      color-mix(in srgb, var(--nr-cloud) 24%, #B2C2C9)
     );
   border-color: color-mix(in srgb, var(--nr-ridge) 32%, transparent);
   box-shadow:
@@ -3396,7 +3492,7 @@ body[data-theme='light'] {
 .theme-light .setting-item-control button:not(.mod-cta):not(.mod-warning):hover {
   color: color-mix(in srgb, var(--nr-pine) 82%, var(--nr-midnight));
   border-color: color-mix(in srgb, var(--nr-pine) 40%, transparent);
-  background: color-mix(in srgb, var(--nr-pine) 13%, #BFD0D6);
+  background: color-mix(in srgb, var(--nr-pine) 13%, #C5D2D7);
 }
 
 .theme-light button.mod-cta,
@@ -3456,7 +3552,7 @@ body[data-theme='light'] {
 }
 
 .theme-light .forge-health-dashboard .forge-health-metric-card {
-  background: color-mix(in srgb, var(--nr-ridge) 13%, #BFD0D6);
+  background: color-mix(in srgb, var(--nr-ridge) 13%, #C5D2D7);
   border-color: color-mix(in srgb, var(--nr-ridge) 42%, transparent);
 }
 
@@ -3465,7 +3561,7 @@ body[data-theme='light'] {
 .theme-light .graph-view-container,
 .theme-light .workspace-leaf-content[data-type='graph'] .view-content,
 .theme-light .workspace-leaf-content[data-type='localgraph'] .view-content {
-  background: #C8D3D8;
+  background: #D1D9DD;
 }
 
 .theme-light,
@@ -3564,7 +3660,7 @@ body[data-theme='light'] {
 
 .theme-light .metadata-property {
   align-items: center;
-  background: #BFD0D6;
+  background: #C5D2D7;
   border-left: 2px solid color-mix(in srgb, var(--nr-property-signal) 36%, transparent);
   border-right: 1px solid color-mix(in srgb, var(--nr-ridge) 22%, transparent);
   border-bottom: 1px solid color-mix(in srgb, var(--nr-ridge) 18%, transparent);
@@ -3800,9 +3896,9 @@ body[data-theme='light'] {
   background:
     linear-gradient(
       90deg,
-      color-mix(in srgb, var(--nr-callout-signal) 8%, #BFD0D6),
-      #BFD0D6 22%,
-      #BFD0D6
+      color-mix(in srgb, var(--nr-callout-signal) 8%, #C5D2D7),
+      #C5D2D7 22%,
+      #C5D2D7
     );
   box-shadow: none;
 }
@@ -4166,7 +4262,7 @@ body[data-theme='light'] {
 }
 
 .theme-light .popover.hover-popover {
-  background: color-mix(in srgb, #BFD0D6 88%, var(--nr-cloud));
+  background: color-mix(in srgb, #C5D2D7 88%, var(--nr-cloud));
   border-color: color-mix(in srgb, var(--nr-ridge) 34%, transparent);
   box-shadow:
     0 14px 34px color-mix(in srgb, var(--nr-ridge) 18%, transparent),
@@ -4214,7 +4310,7 @@ body[data-theme='light'] {
 .theme-light .backlink-pane .search-result-file-match,
 .theme-light .outgoing-link-pane .search-result-file-match,
 .theme-light .search-result-container .search-result-file-match {
-  background: color-mix(in srgb, #BFD0D6 86%, var(--nr-cloud));
+  background: color-mix(in srgb, #C5D2D7 86%, var(--nr-cloud));
   border-color: color-mix(in srgb, var(--nr-ridge) 30%, transparent);
   box-shadow: inset 2px 0 0 color-mix(in srgb, var(--nr-copper) 54%, transparent);
 }
@@ -4253,12 +4349,12 @@ body[data-theme='light'] {
 .theme-dark .nav-files-container .tree-item-self.is-active,
 .theme-dark .nav-files-container .nav-folder-title.is-active,
 .theme-dark .nav-files-container .nav-file-title.is-active {
-  color: color-mix(in srgb, var(--nr-cloud) 90%, var(--nr-seafoam));
+  color: color-mix(in srgb, var(--nr-cloud) 88%, var(--nr-seafoam));
   background:
     radial-gradient(
       ellipse 34px 88% at -2px 50%,
-      color-mix(in srgb, var(--nr-seafoam) 18%, transparent) 0%,
-      color-mix(in srgb, var(--nr-pine) 4%, transparent) 34%,
+      color-mix(in srgb, var(--nr-seafoam) 12%, transparent) 0%,
+      color-mix(in srgb, var(--nr-pine) 3%, transparent) 34%,
       transparent 70%
     ),
     linear-gradient(
@@ -4268,25 +4364,25 @@ body[data-theme='light'] {
       transparent
     );
   box-shadow:
-    inset 3px 0 0 color-mix(in srgb, var(--nr-seafoam) 90%, transparent),
-    inset 7px 0 12px color-mix(in srgb, var(--nr-seafoam) 5%, transparent);
+    inset 3px 0 0 color-mix(in srgb, var(--nr-seafoam) 82%, transparent),
+    inset 6px 0 10px color-mix(in srgb, var(--nr-seafoam) 3%, transparent);
 }
 
 .theme-dark .nav-files-container .nav-file-title.is-active,
 .theme-dark .nav-files-container .tree-item-self.nav-file-title.is-active {
   border-left-width: 3px;
-  border-left-color: color-mix(in srgb, var(--nr-seafoam) 88%, var(--nr-cloud));
-  color: color-mix(in srgb, var(--nr-cloud) 94%, var(--nr-seafoam));
+  border-left-color: color-mix(in srgb, var(--nr-seafoam) 82%, var(--nr-cloud));
+  color: color-mix(in srgb, var(--nr-cloud) 90%, var(--nr-seafoam));
   background:
     linear-gradient(
       90deg,
-      color-mix(in srgb, var(--nr-seafoam) 6%, transparent),
-      color-mix(in srgb, var(--nr-pine) 3%, transparent) 18%,
+      color-mix(in srgb, var(--nr-seafoam) 4%, transparent),
+      color-mix(in srgb, var(--nr-pine) 2%, transparent) 18%,
       transparent 42%
     );
   box-shadow:
-    inset 3px 0 0 color-mix(in srgb, var(--nr-seafoam) 92%, transparent),
-    inset 10px 0 16px color-mix(in srgb, var(--nr-seafoam) 4%, transparent);
+    inset 3px 0 0 color-mix(in srgb, var(--nr-seafoam) 84%, transparent),
+    inset 7px 0 12px color-mix(in srgb, var(--nr-seafoam) 3%, transparent);
 }
 
 /* Command palette: edge-first selection, quiet command-center shell. */
@@ -4322,7 +4418,7 @@ body[data-theme='light'] {
 }
 
 .theme-light .prompt-input {
-  background: color-mix(in srgb, #BFD0D6 88%, var(--nr-cloud));
+  background: color-mix(in srgb, #C5D2D7 88%, var(--nr-cloud));
   border-color: color-mix(in srgb, var(--nr-ridge) 26%, var(--nr-seafoam));
 }
 
@@ -4355,9 +4451,9 @@ body[data-theme='light'] {
   background:
     linear-gradient(
       90deg,
-      color-mix(in srgb, var(--nr-seafoam) 18%, #BFD0D6),
-      color-mix(in srgb, var(--nr-pine) 9%, #BFD0D6) 38%,
-      color-mix(in srgb, var(--nr-cloud) 18%, #BFD0D6) 100%
+      color-mix(in srgb, var(--nr-seafoam) 18%, #C5D2D7),
+      color-mix(in srgb, var(--nr-pine) 9%, #C5D2D7) 38%,
+      color-mix(in srgb, var(--nr-cloud) 18%, #C5D2D7) 100%
     );
 }
 
@@ -4374,7 +4470,7 @@ body[data-theme='light'] {
 
 .theme-light .suggestion-hotkey {
   color: color-mix(in srgb, var(--nr-ridge) 84%, var(--nr-midnight));
-  background: color-mix(in srgb, var(--nr-cloud) 38%, #BFD0D6);
+  background: color-mix(in srgb, var(--nr-cloud) 38%, #C5D2D7);
 }
 
 /* App chrome pass: settings, tabs, and status bar stay quiet but intentional. */
@@ -4391,7 +4487,7 @@ body[data-theme='light'] {
 
 .theme-light .modal.mod-settings .modal-content,
 .theme-light .vertical-tab-content-container {
-  background: #C8D3D8;
+  background: #D1D9DD;
 }
 
 .theme-dark .modal.mod-settings .vertical-tab-header,
@@ -4424,7 +4520,7 @@ body[data-theme='light'] {
 
 .theme-light .modal.mod-settings .vertical-tab-nav-item.is-active {
   color: color-mix(in srgb, var(--nr-midnight) 88%, var(--nr-pine));
-  background: color-mix(in srgb, var(--nr-seafoam) 10%, #C8D3D8);
+  background: color-mix(in srgb, var(--nr-seafoam) 10%, #D1D9DD);
   box-shadow:
     inset 2px 0 0 color-mix(in srgb, var(--nr-pine) 74%, var(--nr-ridge)),
     inset 8px 0 14px color-mix(in srgb, var(--nr-pine) 7%, transparent);
@@ -4437,7 +4533,7 @@ body[data-theme='light'] {
 
 .theme-light .modal.mod-settings .vertical-tab-content > .setting-item,
 .theme-light .vertical-tab-content > .setting-item {
-  background: color-mix(in srgb, #C8D3D8 94%, var(--nr-cloud));
+  background: color-mix(in srgb, #D1D9DD 94%, var(--nr-cloud));
   border-bottom-color: color-mix(in srgb, var(--nr-ridge) 16%, transparent);
 }
 
@@ -4446,7 +4542,7 @@ body[data-theme='light'] {
 }
 
 .theme-light .modal.mod-settings .setting-item:hover {
-  background: color-mix(in srgb, var(--nr-cloud) 22%, #C8D3D8);
+  background: color-mix(in srgb, var(--nr-cloud) 22%, #D1D9DD);
 }
 
 .theme-dark .workspace-tab-header,
