@@ -4,6 +4,12 @@ This file is for maintainers and release prep.
 
 ## Changelog
 
+### 0.1.5
+
+- Removed Obsidian CSS lint warnings for unsupported `text-decoration`, `!important`, and broad `:has()` selectors.
+- Refined Mermaid diagrams across dark and light mode, including readable node text, themed outlines, edge labels, and mobile-safe contrast.
+- Kept graph, Live Preview, file path, cursor, tables, and code block styling aligned with the Night Ridge palette.
+
 ### 0.1.4
 
 - Released light-mode parity for Night Ridge command-center styling.
