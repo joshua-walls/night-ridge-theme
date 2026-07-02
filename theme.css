@@ -399,7 +399,6 @@ a,
 .cm-hmd-internal-link,
 .markdown-rendered .internal-link {
   color: var(--text-accent);
-  text-decoration-color: color-mix(in srgb, var(--text-accent) 42%, transparent);
 }
 
 a:hover,
@@ -408,7 +407,6 @@ a:hover,
 .cm-link:hover,
 .cm-hmd-internal-link:hover {
   color: var(--text-accent-hover);
-  text-decoration-color: var(--text-accent-hover);
 }
 
 .cm-hashtag,
@@ -792,7 +790,6 @@ h6,
 .theme-dark .cm-hmd-internal-link,
 .theme-dark .markdown-rendered .internal-link {
   color: var(--nr-copper);
-  text-decoration-color: color-mix(in srgb, var(--nr-copper) 55%, transparent);
 }
 
 .theme-dark a:hover,
@@ -801,7 +798,6 @@ h6,
 .theme-dark .cm-link:hover,
 .theme-dark .cm-hmd-internal-link:hover {
   color: var(--nr-pine);
-  text-decoration-color: var(--nr-pine);
 }
 
 .theme-dark code,
@@ -953,7 +949,7 @@ h6,
 
 .theme-dark .cm-selectionBackground,
 .theme-dark .markdown-source-view.mod-cm6 .cm-selectionBackground {
-  background: color-mix(in srgb, var(--nr-pine) 24%, transparent) !important;
+  background: color-mix(in srgb, var(--nr-pine) 24%, transparent);
 }
 
 .theme-dark .cm-active,
@@ -1165,22 +1161,80 @@ h6,
   background: transparent;
 }
 
-.theme-dark .mermaid .node rect,
-.theme-dark .mermaid .node circle,
-.theme-dark .mermaid .node polygon,
-.theme-dark .mermaid .node path {
-  fill: color-mix(in srgb, var(--nr-moonstone) 82%, var(--nr-shadow)) !important;
-  stroke: color-mix(in srgb, var(--nr-pine) 54%, var(--nr-iron)) !important;
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node rect,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node circle,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node ellipse,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node polygon,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node path {
+  fill: color-mix(in srgb, var(--nr-moonstone) 42%, var(--nr-shadow));
+  stroke: color-mix(in srgb, var(--nr-pine) 72%, var(--nr-seafoam));
+  stroke-width: 1.4px;
+  fill-opacity: 0.34;
+  stroke-opacity: 1;
 }
 
-.theme-dark .mermaid .edgePath .path,
-.theme-dark .mermaid .flowchart-link {
-  stroke: color-mix(in srgb, var(--nr-slate) 72%, var(--nr-pine)) !important;
+.theme-dark :is(#nr-mermaid-override, .mermaid) .edgePath .path,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .flowchart-link,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .messageLine0,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .messageLine1 {
+  stroke: color-mix(in srgb, var(--nr-slate) 74%, var(--nr-fog));
+  stroke-width: 1.25px;
 }
 
-.theme-dark .mermaid .label,
-.theme-dark .mermaid .nodeLabel {
-  color: var(--text-normal) !important;
+.theme-dark :is(#nr-mermaid-override, .mermaid) marker path,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .arrowheadPath {
+  fill: color-mix(in srgb, var(--nr-slate) 76%, var(--nr-fog));
+  stroke: color-mix(in srgb, var(--nr-slate) 76%, var(--nr-fog));
+}
+
+.theme-dark :is(#nr-mermaid-override, .mermaid) svg text,
+.theme-dark :is(#nr-mermaid-override, .mermaid) svg tspan,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .label,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .label *,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .nodeLabel,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .nodeLabel *,
+.theme-dark :is(#nr-mermaid-override, .mermaid) foreignObject div,
+.theme-dark :is(#nr-mermaid-override, .mermaid) foreignObject span,
+.theme-dark :is(#nr-mermaid-override, .mermaid) foreignObject p {
+  color: #000;
+  fill: #000;
+}
+
+.theme-dark :is(#nr-mermaid-override, .mermaid) .edgeLabel,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .edgeLabel p {
+  background: color-mix(in srgb, var(--nr-copper) 18%, var(--nr-shadow));
+}
+
+.theme-dark :is(#nr-mermaid-override, .mermaid) .edgeLabel p {
+  color: color-mix(in srgb, var(--nr-copper) 72%, var(--nr-cloud));
+  border: 1px solid color-mix(in srgb, var(--nr-copper) 48%, transparent);
+  border-radius: var(--nr-radius-s);
+}
+
+.theme-light :is(#nr-mermaid-override, .mermaid) .node rect,
+.theme-light :is(#nr-mermaid-override, .mermaid) .node circle,
+.theme-light :is(#nr-mermaid-override, .mermaid) .node ellipse,
+.theme-light :is(#nr-mermaid-override, .mermaid) .node polygon,
+.theme-light :is(#nr-mermaid-override, .mermaid) .node path {
+  stroke: color-mix(in srgb, var(--nr-pine) 74%, var(--nr-ridge));
+  stroke-width: 1.35px;
+}
+
+.theme-light :is(#nr-mermaid-override, .mermaid) .edgeLabel,
+.theme-light :is(#nr-mermaid-override, .mermaid) .edgeLabel p {
+  background: color-mix(in srgb, var(--nr-copper) 12%, var(--nr-cloud));
+}
+
+.theme-light :is(#nr-mermaid-override, .mermaid) .edgeLabel p {
+  color: color-mix(in srgb, var(--nr-copper) 72%, var(--nr-midnight));
+  border: 1px solid color-mix(in srgb, var(--nr-copper) 42%, transparent);
+  border-radius: var(--nr-radius-s);
+}
+
+.theme-light :is(#nr-mermaid-override, .mermaid) marker path,
+.theme-light :is(#nr-mermaid-override, .mermaid) .arrowheadPath {
+  fill: color-mix(in srgb, var(--nr-copper) 72%, var(--nr-ridge));
+  stroke: color-mix(in srgb, var(--nr-copper) 72%, var(--nr-ridge));
 }
 
 .theme-dark .canvas-wrapper,
@@ -1292,19 +1346,6 @@ h6,
   padding-bottom: 0.04em;
   border-bottom: 0;
   box-shadow: none;
-  text-decoration-line: underline;
-  text-decoration-color: rgba(199, 134, 74, 0.42);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.24em;
-  text-decoration-skip-ink: auto;
-}
-
-.theme-dark .cm-header-2 {
-  text-decoration-line: underline;
-  text-decoration-color: rgba(199, 134, 74, 0.42);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.24em;
-  text-decoration-skip-ink: auto;
 }
 
 .theme-dark .cm-active,
@@ -1606,7 +1647,6 @@ body[data-theme='dark'] {
 .theme-dark .cm-hmd-internal-link,
 .theme-dark .markdown-rendered .internal-link {
   color: color-mix(in srgb, var(--nr-copper) 88%, var(--nr-cloud));
-  text-decoration-color: color-mix(in srgb, var(--nr-copper) 70%, transparent);
 }
 
 .theme-dark a:hover,
@@ -1615,7 +1655,6 @@ body[data-theme='dark'] {
 .theme-dark .cm-link:hover,
 .theme-dark .cm-hmd-internal-link:hover {
   color: color-mix(in srgb, var(--nr-seafoam) 84%, var(--nr-cloud));
-  text-decoration-color: color-mix(in srgb, var(--nr-seafoam) 74%, transparent);
 }
 
 .theme-dark .metadata-properties,
@@ -1718,44 +1757,44 @@ body[data-theme='dark'] {
 
 .theme-dark .graph-view.color-line,
 .theme-dark .graph-view.color-arrow {
-  color: #18252E !important;
+  color: #18252E;
 }
 
 .theme-dark .graph-view.color-fill,
 .theme-dark .graph-view.color-circle {
-  color: #33424B !important;
+  color: #33424B;
 }
 
 .theme-dark .graph-view.color-fill-highlight,
 .theme-dark .graph-view.color-circle-highlight,
 .theme-dark .graph-view.color-line-highlight,
 .theme-dark .graph-view.color-arrow-highlight {
-  color: #6FDAD4 !important;
+  color: #6FDAD4;
 }
 
 .theme-dark .graph-view.color-fill-focused,
 .theme-dark .graph-view.color-circle-focused {
-  color: #6FDAD4 !important;
+  color: #6FDAD4;
 }
 
 .theme-dark .graph-view.color-line-focused,
 .theme-dark .graph-view.color-arrow-focused {
-  color: #5FA89D !important;
+  color: #5FA89D;
 }
 
 .theme-dark .graph-view.color-fill-unresolved {
-  color: #B87333 !important;
+  color: #B87333;
 }
 
 .theme-dark .graph-view.color-fill-tag,
 .theme-dark .graph-view.color-fill-attachment {
-  color: #5FA89D !important;
+  color: #5FA89D;
 }
 
 .theme-dark .graph-view text,
 .theme-dark .graph-view .graph-view-label {
-  color: #DDE2E5 !important;
-  fill: #DDE2E5 !important;
+  color: #DDE2E5;
+  fill: #DDE2E5;
 }
 
 .theme-dark .workspace-leaf.mod-active {
@@ -1956,24 +1995,24 @@ body[data-theme='dark'] {
 .theme-dark .graph-view-container,
 .theme-dark .workspace-leaf-content[data-type='graph'] .view-content,
 .theme-dark .workspace-leaf-content[data-type='localgraph'] .view-content {
-  background: #02070B !important;
+  background: #02070B;
 }
 
 .theme-dark .graph-view.color-line,
 .theme-dark .graph-view.color-arrow {
-  color: #20323B !important;
+  color: #20323B;
 }
 
 .theme-dark .graph-view.color-fill,
 .theme-dark .graph-view.color-circle {
-  color: #5FA89D !important;
+  color: #5FA89D;
 }
 
 .theme-dark .graph-view.color-fill-highlight,
 .theme-dark .graph-view.color-circle-highlight,
 .theme-dark .graph-view.color-fill-focused,
 .theme-dark .graph-view.color-circle-focused {
-  color: #6FDAD4 !important;
+  color: #6FDAD4;
 }
 
 /* Ridge edge pass: sharper active pane, darker graph topology, leaner properties. */
@@ -1990,20 +2029,20 @@ body[data-theme='dark'] {
 
 .theme-dark .graph-view.color-line,
 .theme-dark .graph-view.color-arrow {
-  color: #17262E !important;
+  color: #17262E;
 }
 
 .theme-dark .graph-view.color-fill,
 .theme-dark .graph-view.color-circle {
-  color: #35645E !important;
+  color: #35645E;
 }
 
 .theme-dark .graph-view.color-fill-tag {
-  color: #5F805B !important;
+  color: #5F805B;
 }
 
 .theme-dark .graph-view.color-fill-attachment {
-  color: #4F646D !important;
+  color: #4F646D;
 }
 
 .theme-dark .metadata-properties {
@@ -2050,24 +2089,6 @@ body[data-theme='dark'] {
     0 0 10px rgba(111, 218, 212, 0.045);
 }
 
-/* Folder rail depth radar: brighten only the ancestor branch for the active file. */
-.theme-dark .nav-files-container .nav-folder:has(.nav-file-title.is-active) > .nav-folder-children,
-.theme-dark .nav-files-container .nav-folder:has(.tree-item-self.nav-file-title.is-active) > .nav-folder-children,
-.theme-dark .nav-files-container .tree-item:has(.nav-file-title.is-active) > .tree-item-children,
-.theme-dark .nav-files-container .tree-item:has(.tree-item-self.nav-file-title.is-active) > .tree-item-children {
-  border-left-width: 1px;
-  border-left-color: color-mix(in srgb, var(--nr-folder-depth-color) 34%, transparent);
-  box-shadow:
-    -1px 0 0 color-mix(in srgb, var(--nr-folder-depth-color) 12%, transparent),
-    -5px 0 14px color-mix(in srgb, var(--nr-folder-depth-color) 4%, transparent);
-}
-
-.theme-dark .nav-files-container .nav-folder:has(.nav-file-title.is-active) > .nav-folder-title,
-.theme-dark .nav-files-container .nav-folder:has(.tree-item-self.nav-file-title.is-active) > .nav-folder-title {
-  color: color-mix(in srgb, var(--nr-folder-depth-color) 88%, var(--nr-cloud));
-  text-shadow: 0 0 8px color-mix(in srgb, var(--nr-folder-depth-color) 8%, transparent);
-}
-
 /* Forge semantic status pass: trust explicit data-status hooks only. */
 .theme-dark .forge-health-dashboard [data-status='good' i] {
   --forge-health-status-color: var(--nr-pine);
@@ -2090,7 +2111,6 @@ body[data-theme='dark'] {
 .theme-dark .forge-health-dashboard .forge-health-section-header[data-status] h2,
 .theme-dark .forge-health-dashboard :is(h1, h2)[data-status] {
   color: var(--forge-health-status-color);
-  text-decoration-color: color-mix(in srgb, var(--forge-health-status-color) 46%, transparent);
 }
 
 .theme-dark .forge-health-dashboard .forge-health-pill[data-status],
@@ -2114,7 +2134,7 @@ body[data-theme='dark'] {
 
 .theme-dark .cm-cursor,
 .theme-dark .cm-dropCursor {
-  border-left-color: var(--nr-seafoam) !important;
+  border-left-color: var(--nr-seafoam);
   box-shadow: 0 0 8px color-mix(in srgb, var(--nr-seafoam) 32%, transparent);
 }
 
@@ -2122,7 +2142,7 @@ body[data-theme='dark'] {
 .theme-dark .markdown-source-view.mod-cm6 .cm-selectionBackground,
 .theme-dark .markdown-source-view.mod-cm6 .cm-line::selection,
 .theme-dark .markdown-source-view.mod-cm6 .cm-line *::selection {
-  background: color-mix(in srgb, var(--nr-pine) 26%, var(--nr-shadow)) !important;
+  background: color-mix(in srgb, var(--nr-pine) 26%, var(--nr-shadow));
 }
 
 /* Table command grid polish: restrained borders, copper headers, pine lead column. */
@@ -2665,17 +2685,6 @@ body[data-theme='light'] {
     0 0 10px color-mix(in srgb, var(--nr-seafoam) 8%, transparent);
 }
 
-.theme-light .nav-files-container .nav-folder:has(.nav-file-title.is-active) > .nav-folder-children,
-.theme-light .nav-files-container .nav-folder:has(.tree-item-self.nav-file-title.is-active) > .nav-folder-children,
-.theme-light .nav-files-container .tree-item:has(.nav-file-title.is-active) > .tree-item-children,
-.theme-light .nav-files-container .tree-item:has(.tree-item-self.nav-file-title.is-active) > .tree-item-children {
-  border-left-width: 1px;
-  border-left-color: color-mix(in srgb, var(--nr-folder-depth-color) 30%, transparent);
-  box-shadow:
-    -1px 0 0 color-mix(in srgb, var(--nr-folder-depth-color) 10%, transparent),
-    -5px 0 14px color-mix(in srgb, var(--nr-folder-depth-color) 3%, transparent);
-}
-
 .theme-light .forge-health-dashboard [data-status='good' i],
 .theme-light .forge-health-dashboard [data-status='healthy' i],
 .theme-light .forge-health-dashboard [data-status='clear' i],
@@ -2709,7 +2718,6 @@ body[data-theme='light'] {
 .theme-light .forge-health-dashboard .forge-health-section-header[data-status] h2,
 .theme-light .forge-health-dashboard :is(h1, h2, h3)[data-status] {
   color: var(--forge-health-status-color);
-  text-decoration-color: color-mix(in srgb, var(--forge-health-status-color) 34%, transparent);
 }
 
 .theme-light div.dataview-error-box {
@@ -2861,12 +2869,6 @@ body[data-theme='light'] {
   color: color-mix(in srgb, var(--nr-ridge) 72%, var(--nr-midnight));
 }
 
-.theme-light .nav-files-container .nav-folder:has(.nav-file-title.is-active) > .nav-folder-title,
-.theme-light .nav-files-container .nav-folder:has(.tree-item-self.nav-file-title.is-active) > .nav-folder-title {
-  color: color-mix(in srgb, var(--nr-folder-depth-color) 82%, var(--nr-midnight));
-  text-shadow: 0 1px 0 color-mix(in srgb, var(--nr-cloud) 40%, transparent);
-}
-
 .theme-light h4,
 .theme-light .markdown-preview-view h4,
 .theme-light .markdown-rendered h4,
@@ -2911,7 +2913,7 @@ body[data-theme='light'] {
 
 .theme-light .cm-cursor,
 .theme-light .cm-dropCursor {
-  border-left-color: color-mix(in srgb, var(--nr-seafoam) 78%, var(--nr-ridge)) !important;
+  border-left-color: color-mix(in srgb, var(--nr-seafoam) 78%, var(--nr-ridge));
   box-shadow: 0 0 7px color-mix(in srgb, var(--nr-seafoam) 26%, transparent);
 }
 
@@ -2919,7 +2921,7 @@ body[data-theme='light'] {
 .theme-light .markdown-source-view.mod-cm6 .cm-selectionBackground,
 .theme-light .markdown-source-view.mod-cm6 .cm-line::selection,
 .theme-light .markdown-source-view.mod-cm6 .cm-line *::selection {
-  background: color-mix(in srgb, var(--nr-pine) 22%, var(--nr-cloud)) !important;
+  background: color-mix(in srgb, var(--nr-pine) 22%, var(--nr-cloud));
 }
 
 .theme-light button,
@@ -3142,7 +3144,7 @@ body[data-theme='light'] {
 .theme-light .metadata-property-value,
 .theme-light .metadata-property-value input,
 .theme-light .metadata-property-value textarea {
-  background: transparent !important;
+  background: transparent;
 }
 
 .theme-light .metadata-property {
@@ -3305,9 +3307,9 @@ body[data-theme='light'] {
 .theme-light .vertical-tab-content .setting-item-heading,
 .theme-light .community-modal .setting-item-heading,
 .theme-light .setting-item.setting-item-heading {
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
   padding-left: 0;
   padding-right: 0;
 }
@@ -3463,7 +3465,7 @@ body[data-theme='light'] {
 .theme-light .graph-view-container,
 .theme-light .workspace-leaf-content[data-type='graph'] .view-content,
 .theme-light .workspace-leaf-content[data-type='localgraph'] .view-content {
-  background: #C8D3D8 !important;
+  background: #C8D3D8;
 }
 
 .theme-light,
@@ -3479,44 +3481,44 @@ body[data-theme='light'] {
 
 .theme-light .graph-view.color-line,
 .theme-light .graph-view.color-arrow {
-  color: #6E838C !important;
+  color: #6E838C;
 }
 
 .theme-light .graph-view.color-fill,
 .theme-light .graph-view.color-circle {
-  color: #4F9187 !important;
+  color: #4F9187;
 }
 
 .theme-light .graph-view.color-fill-highlight,
 .theme-light .graph-view.color-circle-highlight,
 .theme-light .graph-view.color-fill-focused,
 .theme-light .graph-view.color-circle-focused {
-  color: #22AFA8 !important;
+  color: #22AFA8;
 }
 
 .theme-light .graph-view.color-line-highlight,
 .theme-light .graph-view.color-arrow-highlight,
 .theme-light .graph-view.color-line-focused,
 .theme-light .graph-view.color-arrow-focused {
-  color: #4F9187 !important;
+  color: #4F9187;
 }
 
 .theme-light .graph-view.color-fill-unresolved {
-  color: #A94331 !important;
+  color: #A94331;
 }
 
 .theme-light .graph-view.color-fill-tag {
-  color: #A2642E !important;
+  color: #A2642E;
 }
 
 .theme-light .graph-view.color-fill-attachment {
-  color: #647B86 !important;
+  color: #647B86;
 }
 
 .theme-light .graph-view text,
 .theme-light .graph-view .graph-view-label {
-  color: #14222A !important;
-  fill: #14222A !important;
+  color: #14222A;
+  fill: #14222A;
 }
 
 .theme-light.is-mobile .mobile-navbar .clickable-icon.is-active,
@@ -3549,20 +3551,20 @@ body[data-theme='light'] {
 /* Light mode repair 4: remove properties ghost panel, calm graph web. */
 .theme-light .metadata-container,
 .theme-light .metadata-content {
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
 .theme-light .metadata-properties {
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
 .theme-light .metadata-property {
   align-items: center;
-  background: #BFD0D6 !important;
+  background: #BFD0D6;
   border-left: 2px solid color-mix(in srgb, var(--nr-property-signal) 36%, transparent);
   border-right: 1px solid color-mix(in srgb, var(--nr-ridge) 22%, transparent);
   border-bottom: 1px solid color-mix(in srgb, var(--nr-ridge) 18%, transparent);
@@ -3577,7 +3579,7 @@ body[data-theme='light'] {
 .theme-light .metadata-property-key-input,
 .theme-light .metadata-property-icon {
   align-items: center;
-  background: color-mix(in srgb, var(--nr-ridge) 7%, transparent) !important;
+  background: color-mix(in srgb, var(--nr-ridge) 7%, transparent);
   min-height: 2.35rem;
 }
 
@@ -3637,26 +3639,26 @@ body[data-theme='light'] {
 
 .theme-light .graph-view.color-line,
 .theme-light .graph-view.color-arrow {
-  color: #9AAAB0 !important;
+  color: #9AAAB0;
 }
 
 .theme-light .graph-view.color-fill,
 .theme-light .graph-view.color-circle {
-  color: #2F8F85 !important;
+  color: #2F8F85;
 }
 
 .theme-light .graph-view.color-fill-highlight,
 .theme-light .graph-view.color-circle-highlight,
 .theme-light .graph-view.color-fill-focused,
 .theme-light .graph-view.color-circle-focused {
-  color: #00AFA8 !important;
+  color: #00AFA8;
 }
 
 .theme-light .graph-view.color-line-highlight,
 .theme-light .graph-view.color-arrow-highlight,
 .theme-light .graph-view.color-line-focused,
 .theme-light .graph-view.color-arrow-focused {
-  color: #5FA89D !important;
+  color: #5FA89D;
 }
 
 /* Light graph tuning: let nodes lead and links sit back. */
@@ -3672,38 +3674,38 @@ body[data-theme='light'] {
 
 .theme-light .graph-view.color-line,
 .theme-light .graph-view.color-arrow {
-  color: #A8B8BE !important;
+  color: #A8B8BE;
 }
 
 .theme-light .graph-view.color-fill,
 .theme-light .graph-view.color-circle {
-  color: #1F8F86 !important;
+  color: #1F8F86;
 }
 
 .theme-light .graph-view.color-fill-highlight,
 .theme-light .graph-view.color-circle-highlight,
 .theme-light .graph-view.color-fill-focused,
 .theme-light .graph-view.color-circle-focused {
-  color: #00BDB5 !important;
+  color: #00BDB5;
 }
 
 .theme-light .graph-view.color-line-highlight,
 .theme-light .graph-view.color-arrow-highlight,
 .theme-light .graph-view.color-line-focused,
 .theme-light .graph-view.color-arrow-focused {
-  color: #A8662E !important;
+  color: #A8662E;
 }
 
 .theme-light .graph-view.color-fill-tag {
-  color: #A8662E !important;
+  color: #A8662E;
 }
 
 .theme-light .graph-view.color-fill-attachment {
-  color: #6D828B !important;
+  color: #6D828B;
 }
 
 .theme-light .graph-view.color-fill-unresolved {
-  color: #A94130 !important;
+  color: #A94130;
 }
 
 /* Callout refinement: title tab, nested restraint, collapsed beacon, mobile density. */
@@ -3747,8 +3749,8 @@ body[data-theme='light'] {
 .theme-dark .callout .callout-icon .svg-icon,
 .theme-light .callout .callout-icon svg,
 .theme-light .callout .callout-icon .svg-icon {
-  color: var(--nr-callout-signal) !important;
-  stroke: currentColor !important;
+  color: var(--nr-callout-signal);
+  stroke: currentColor;
 }
 
 .theme-dark .callout[data-callout='note'],
@@ -3880,60 +3882,13 @@ body[data-theme='light'] {
   color: color-mix(in srgb, var(--nr-slate) 62%, var(--text-muted));
 }
 
-.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='info' i], .cm-callout-info, .cm-hmd-callout-info),
-.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='tip' i], .cm-callout-tip, .cm-hmd-callout-tip),
-.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='hint' i], .cm-callout-hint, .cm-hmd-callout-hint),
-.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='info' i], .cm-callout-info, .cm-hmd-callout-info),
-.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='tip' i], .cm-callout-tip, .cm-hmd-callout-tip),
-.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='hint' i], .cm-callout-hint, .cm-hmd-callout-hint) {
-  border-left-color: color-mix(in srgb, var(--nr-seafoam) 58%, transparent);
-}
-
-.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='success' i], .cm-callout-success, .cm-hmd-callout-success),
-.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='check' i], .cm-callout-check, .cm-hmd-callout-check),
-.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='done' i], .cm-callout-done, .cm-hmd-callout-done),
-.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='todo' i], .cm-callout-todo, .cm-hmd-callout-todo),
-.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='success' i], .cm-callout-success, .cm-hmd-callout-success),
-.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='check' i], .cm-callout-check, .cm-hmd-callout-check),
-.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='done' i], .cm-callout-done, .cm-hmd-callout-done),
-.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='todo' i], .cm-callout-todo, .cm-hmd-callout-todo) {
-  border-left-color: color-mix(in srgb, var(--nr-pine) 56%, transparent);
-}
-
-.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='warning' i], .cm-callout-warning, .cm-hmd-callout-warning),
-.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='question' i], .cm-callout-question, .cm-hmd-callout-question),
-.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='attention' i], .cm-callout-attention, .cm-hmd-callout-attention),
-.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='warning' i], .cm-callout-warning, .cm-hmd-callout-warning),
-.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='question' i], .cm-callout-question, .cm-hmd-callout-question),
-.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='attention' i], .cm-callout-attention, .cm-hmd-callout-attention) {
-  border-left-color: color-mix(in srgb, var(--nr-copper) 58%, transparent);
-}
-
-.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='danger' i], .cm-callout-danger, .cm-hmd-callout-danger),
-.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='error' i], .cm-callout-error, .cm-hmd-callout-error),
-.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='failure' i], .cm-callout-failure, .cm-hmd-callout-failure),
-.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='bug' i], .cm-callout-bug, .cm-hmd-callout-bug),
-.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='danger' i], .cm-callout-danger, .cm-hmd-callout-danger),
-.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='error' i], .cm-callout-error, .cm-hmd-callout-error),
-.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='failure' i], .cm-callout-failure, .cm-hmd-callout-failure),
-.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='bug' i], .cm-callout-bug, .cm-hmd-callout-bug) {
-  border-left-color: color-mix(in srgb, var(--nr-ember) 60%, transparent);
-}
-
-.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='quote' i], .cm-callout-quote, .cm-hmd-callout-quote),
-.theme-dark .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='cite' i], .cm-callout-cite, .cm-hmd-callout-cite),
-.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='quote' i], .cm-callout-quote, .cm-hmd-callout-quote),
-.theme-light .markdown-source-view.mod-cm6 .cm-line:has(.cm-callout[data-callout='cite' i], .cm-callout-cite, .cm-hmd-callout-cite) {
-  border-left-color: color-mix(in srgb, var(--nr-lichen) 58%, transparent);
-}
-
 /* Live Preview edit mode: no callout/quote gutters while editing. */
 .theme-dark .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote,
 .theme-dark .markdown-source-view.mod-cm6 .cm-quote,
 .theme-light .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote,
 .theme-light .markdown-source-view.mod-cm6 .cm-quote {
-  border-left: 0 !important;
-  box-shadow: none !important;
+  border-left: 0;
+  box-shadow: none;
 }
 
 .theme-dark .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote::before,
@@ -3944,15 +3899,15 @@ body[data-theme='light'] {
 .theme-light .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote::after,
 .theme-light .markdown-source-view.mod-cm6 .cm-quote::before,
 .theme-light .markdown-source-view.mod-cm6 .cm-quote::after {
-  border-left: 0 !important;
-  box-shadow: none !important;
-  background: transparent !important;
+  border-left: 0;
+  box-shadow: none;
+  background: transparent;
 }
 
 .theme-dark .markdown-source-view.mod-cm6 .cm-formatting-quote,
 .theme-light .markdown-source-view.mod-cm6 .cm-formatting-quote {
-  color: color-mix(in srgb, var(--nr-slate) 56%, var(--text-muted)) !important;
-  text-shadow: none !important;
+  color: color-mix(in srgb, var(--nr-slate) 56%, var(--text-muted));
+  text-shadow: none;
 }
 
 /* Metadata section label: quieter ridge support text, not primary heading. */
@@ -3966,7 +3921,7 @@ body[data-theme='light'] {
 .theme-light .metadata-content .metadata-properties-title,
 .theme-light .metadata-properties .metadata-properties-title,
 .theme-light .metadata-container > .tree-item-self {
-  color: color-mix(in srgb, var(--nr-ridge) 72%, var(--nr-slate)) !important;
+  color: color-mix(in srgb, var(--nr-ridge) 72%, var(--nr-slate));
   font-weight: 620;
 }
 
@@ -3975,7 +3930,7 @@ body[data-theme='light'] {
 .theme-dark .metadata-content .metadata-properties-title,
 .theme-dark .metadata-properties .metadata-properties-title,
 .theme-dark .metadata-container > .tree-item-self {
-  color: color-mix(in srgb, var(--nr-ridge) 64%, var(--nr-fog)) !important;
+  color: color-mix(in srgb, var(--nr-ridge) 64%, var(--nr-fog));
 }
 
 /* Forge current-note title signal: only works when Forge exposes status on editor/title ancestors. */
@@ -4033,43 +3988,6 @@ body[data-theme='light'] {
   --nr-current-note-title-signal: var(--nr-pine);
 }
 
-.theme-dark .workspace-leaf.mod-active:has(:is(
-  [data-status='good' i],
-  [data-status='healthy' i],
-  [data-status='clear' i],
-  [data-status='valid' i],
-  [data-status='indexed' i],
-  [data-current-note-status='good' i],
-  [data-current-note-status='healthy' i],
-  [data-current-note-status='clear' i],
-  [data-current-note-status='valid' i],
-  [data-current-note-status='indexed' i],
-  [data-forge-current-note-status='good' i],
-  [data-forge-current-note-status='healthy' i],
-  [data-forge-current-note-status='clear' i],
-  [data-forge-current-note-status='valid' i],
-  [data-forge-current-note-status='indexed' i]
-)),
-.theme-light .workspace-leaf.mod-active:has(:is(
-  [data-status='good' i],
-  [data-status='healthy' i],
-  [data-status='clear' i],
-  [data-status='valid' i],
-  [data-status='indexed' i],
-  [data-current-note-status='good' i],
-  [data-current-note-status='healthy' i],
-  [data-current-note-status='clear' i],
-  [data-current-note-status='valid' i],
-  [data-current-note-status='indexed' i],
-  [data-forge-current-note-status='good' i],
-  [data-forge-current-note-status='healthy' i],
-  [data-forge-current-note-status='clear' i],
-  [data-forge-current-note-status='valid' i],
-  [data-forge-current-note-status='indexed' i]
-)) {
-  --nr-current-note-title-signal: var(--nr-pine);
-}
-
 .theme-dark :is(
   .workspace-leaf.mod-active,
   .workspace-leaf-content,
@@ -4104,31 +4022,6 @@ body[data-theme='light'] {
   [data-forge-current-note-status='needs attention' i],
   [data-forge-current-note-status='needs-attention' i]
 ) {
-  --nr-current-note-title-signal: var(--nr-copper);
-}
-
-.theme-dark .workspace-leaf.mod-active:has(:is(
-  [data-status='warning' i],
-  [data-status='needs attention' i],
-  [data-status='needs-attention' i],
-  [data-current-note-status='warning' i],
-  [data-current-note-status='needs attention' i],
-  [data-current-note-status='needs-attention' i],
-  [data-forge-current-note-status='warning' i],
-  [data-forge-current-note-status='needs attention' i],
-  [data-forge-current-note-status='needs-attention' i]
-)),
-.theme-light .workspace-leaf.mod-active:has(:is(
-  [data-status='warning' i],
-  [data-status='needs attention' i],
-  [data-status='needs-attention' i],
-  [data-current-note-status='warning' i],
-  [data-current-note-status='needs attention' i],
-  [data-current-note-status='needs-attention' i],
-  [data-forge-current-note-status='warning' i],
-  [data-forge-current-note-status='needs attention' i],
-  [data-forge-current-note-status='needs-attention' i]
-)) {
   --nr-current-note-title-signal: var(--nr-copper);
 }
 
@@ -4175,37 +4068,6 @@ body[data-theme='light'] {
   --nr-current-note-title-signal: var(--nr-ember);
 }
 
-.theme-dark .workspace-leaf.mod-active:has(:is(
-  [data-status='critical' i],
-  [data-status='error' i],
-  [data-status='fail' i],
-  [data-status='failed' i],
-  [data-current-note-status='critical' i],
-  [data-current-note-status='error' i],
-  [data-current-note-status='fail' i],
-  [data-current-note-status='failed' i],
-  [data-forge-current-note-status='critical' i],
-  [data-forge-current-note-status='error' i],
-  [data-forge-current-note-status='fail' i],
-  [data-forge-current-note-status='failed' i]
-)),
-.theme-light .workspace-leaf.mod-active:has(:is(
-  [data-status='critical' i],
-  [data-status='error' i],
-  [data-status='fail' i],
-  [data-status='failed' i],
-  [data-current-note-status='critical' i],
-  [data-current-note-status='error' i],
-  [data-current-note-status='fail' i],
-  [data-current-note-status='failed' i],
-  [data-forge-current-note-status='critical' i],
-  [data-forge-current-note-status='error' i],
-  [data-forge-current-note-status='fail' i],
-  [data-forge-current-note-status='failed' i]
-)) {
-  --nr-current-note-title-signal: var(--nr-ember);
-}
-
 .theme-dark :is(
   .workspace-leaf.mod-active,
   .workspace-leaf-content,
@@ -4247,77 +4109,6 @@ body[data-theme='light'] {
   [data-forge-current-note-status='exempt' i]
 ) {
   --nr-current-note-title-signal: var(--nr-slate);
-}
-
-.theme-dark .workspace-leaf.mod-active:has(:is(
-  [data-status='muted' i],
-  [data-status='no note' i],
-  [data-status='no-note' i],
-  [data-status='exempt' i],
-  [data-current-note-status='muted' i],
-  [data-current-note-status='no note' i],
-  [data-current-note-status='no-note' i],
-  [data-current-note-status='exempt' i],
-  [data-forge-current-note-status='muted' i],
-  [data-forge-current-note-status='no note' i],
-  [data-forge-current-note-status='no-note' i],
-  [data-forge-current-note-status='exempt' i]
-)),
-.theme-light .workspace-leaf.mod-active:has(:is(
-  [data-status='muted' i],
-  [data-status='no note' i],
-  [data-status='no-note' i],
-  [data-status='exempt' i],
-  [data-current-note-status='muted' i],
-  [data-current-note-status='no note' i],
-  [data-current-note-status='no-note' i],
-  [data-current-note-status='exempt' i],
-  [data-forge-current-note-status='muted' i],
-  [data-forge-current-note-status='no note' i],
-  [data-forge-current-note-status='no-note' i],
-  [data-forge-current-note-status='exempt' i]
-)) {
-  --nr-current-note-title-signal: var(--nr-slate);
-}
-
-.theme-dark .workspace-leaf.mod-active:has(:is(
-  [data-status],
-  [data-current-note-status],
-  [data-forge-current-note-status]
-)) .inline-title,
-.theme-dark .workspace-leaf.mod-active:has(:is(
-  [data-status],
-  [data-current-note-status],
-  [data-forge-current-note-status]
-)) .view-header-title,
-.theme-light .workspace-leaf.mod-active:has(:is(
-  [data-status],
-  [data-current-note-status],
-  [data-forge-current-note-status]
-)) .inline-title,
-.theme-light .workspace-leaf.mod-active:has(:is(
-  [data-status],
-  [data-current-note-status],
-  [data-forge-current-note-status]
-)) .view-header-title {
-  border-bottom: 1px solid color-mix(in srgb, var(--nr-current-note-title-signal) 26%, transparent);
-  text-shadow: 0 0 10px color-mix(in srgb, var(--nr-current-note-title-signal) 5%, transparent);
-}
-
-.theme-dark .workspace-leaf.mod-active:has(:is(
-  [data-status],
-  [data-current-note-status],
-  [data-forge-current-note-status]
-)) .inline-title {
-  color: color-mix(in srgb, var(--nr-current-note-title-signal) 18%, var(--nr-cloud));
-}
-
-.theme-light .workspace-leaf.mod-active:has(:is(
-  [data-status],
-  [data-current-note-status],
-  [data-forge-current-note-status]
-)) .inline-title {
-  color: color-mix(in srgb, var(--nr-current-note-title-signal) 20%, var(--nr-midnight));
 }
 
 /* Inline note title beacon: theme-level signal, no Forge status guessing. */
