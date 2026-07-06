@@ -4,6 +4,11 @@ This file is for maintainers and release prep.
 
 ## Changelog
 
+### 0.1.9
+
+- Removed link and tag `text-decoration` declarations and decoration variables for Obsidian 1.4.5 CSS lint compatibility.
+- Preserved link colors, hover colors, weights, unresolved opacity, external link colors, and tag chip styling.
+
 ### 0.1.8
 
 - Refined status bar positioning to preserve Obsidian's floating behavior in Night Ridge dark mode.

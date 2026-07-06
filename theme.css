@@ -1,6 +1,6 @@
 /*
   Night Ridge Theme
-  Version: 0.1.8
+  Version: 0.1.9
   Palette baseline: 3.1
 */
 
@@ -114,18 +114,11 @@
 
   --link-color: var(--text-accent);
   --link-color-hover: var(--text-accent-hover);
-  --link-decoration: none;
-  --link-decoration-hover: none;
-  --link-decoration-thickness: 1px;
   --link-weight: inherit;
   --link-unresolved-color: color-mix(in srgb, var(--nr-copper) 78%, var(--text-muted));
   --link-unresolved-opacity: 0.82;
-  --link-unresolved-decoration-style: dotted;
-  --link-unresolved-decoration-color: color-mix(in srgb, var(--nr-copper) 55%, transparent);
   --link-external-color: var(--text-accent);
   --link-external-color-hover: var(--text-accent-hover);
-  --link-external-decoration: none;
-  --link-external-decoration-hover: none;
 
   --tag-size: var(--font-smaller);
   --tag-color: var(--nr-lichen);
@@ -135,8 +128,6 @@
   --tag-border-color: color-mix(in srgb, var(--nr-lichen) 34%, transparent);
   --tag-border-color-hover: color-mix(in srgb, var(--nr-lichen) 52%, transparent);
   --tag-border-width: 1px;
-  --tag-decoration: none;
-  --tag-decoration-hover: none;
   --tag-padding-x: 0.38em;
   --tag-padding-y: 0.08em;
   --tag-weight: 560;
@@ -335,18 +326,11 @@
 
   --link-color: var(--text-accent);
   --link-color-hover: var(--text-accent-hover);
-  --link-decoration: none;
-  --link-decoration-hover: none;
-  --link-decoration-thickness: 1px;
   --link-weight: inherit;
   --link-unresolved-color: color-mix(in srgb, var(--nr-copper) 70%, var(--text-muted));
   --link-unresolved-opacity: 0.86;
-  --link-unresolved-decoration-style: dotted;
-  --link-unresolved-decoration-color: color-mix(in srgb, var(--nr-copper) 50%, transparent);
   --link-external-color: var(--text-accent);
   --link-external-color-hover: var(--text-accent-hover);
-  --link-external-decoration: none;
-  --link-external-decoration-hover: none;
 
   --tag-size: var(--font-smaller);
   --tag-color: color-mix(in srgb, var(--nr-lichen) 72%, var(--nr-midnight));
@@ -356,8 +340,6 @@
   --tag-border-color: color-mix(in srgb, var(--nr-lichen) 32%, transparent);
   --tag-border-color-hover: color-mix(in srgb, var(--nr-lichen) 48%, transparent);
   --tag-border-width: 1px;
-  --tag-decoration: none;
-  --tag-decoration-hover: none;
   --tag-padding-x: 0.38em;
   --tag-padding-y: 0.08em;
   --tag-weight: 560;
@@ -684,8 +666,6 @@ a,
 .markdown-rendered .internal-link {
   color: var(--link-color);
   font-weight: var(--link-weight);
-  text-decoration: var(--link-decoration);
-  text-decoration-thickness: var(--link-decoration-thickness);
 }
 
 a:hover,
@@ -694,7 +674,6 @@ a:hover,
 .cm-link:hover,
 .cm-hmd-internal-link:hover {
   color: var(--link-color-hover);
-  text-decoration: var(--link-decoration-hover);
 }
 
 .cm-hashtag,
@@ -707,7 +686,6 @@ a.tag,
   font-size: var(--tag-size);
   font-weight: var(--tag-weight);
   padding: var(--tag-padding-y) var(--tag-padding-x);
-  text-decoration: var(--tag-decoration);
 }
 
 strong,
