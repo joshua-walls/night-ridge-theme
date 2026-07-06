@@ -4,6 +4,20 @@ This file is for maintainers and release prep.
 
 ## Changelog
 
+### 0.1.8
+
+- Refined status bar positioning to preserve Obsidian's floating behavior in Night Ridge dark mode.
+- Added contained dark and light status bar beacon treatments without `!important` or `:has()` selectors.
+- Kept the Cortex install, local dist folder, and release zip aligned with source.
+
+### 0.1.7
+
+- Aligned Mermaid theme styling with Obsidian's documented Mermaid font variables.
+- Refactored theme foundations toward official Obsidian CSS variables first for fonts, links, tags, blockquotes, tables, properties, callouts, graph, canvas, tabs, ribbon, status bar, modals, inputs, and controls.
+- Narrowed Mermaid fallback selectors to rendered `.mermaid` content instead of broad SVG selectors.
+- Removed redundant `body[data-theme]` fallbacks in favor of Obsidian's `.theme-dark` and `.theme-light` classes.
+- Kept CSS lint clean of `!important` and `:has()` selectors.
+
 ### 0.1.6
 
 - Refined dark-mode heading, code block, dashboard, table, callout, and sidebar contrast.
