@@ -1,6 +1,6 @@
 /*
   Night Ridge Theme
-  Version: 0.1.6
+  Version: 0.1.8
   Palette baseline: 3.1
 */
 
@@ -25,14 +25,25 @@
   --nr-font-ui: "Avenir", "Avenir Next", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   --nr-font-mono: "SFMono-Regular", "SFMono", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 
-  --font-family-editor: var(--nr-font-ui);
-  --font-family-preview: var(--nr-font-ui);
-  --font-family-interface: var(--nr-font-ui);
-  --font-family-monospace: var(--nr-font-mono);
+  --font-text-theme: var(--nr-font-ui);
+  --font-interface-theme: var(--nr-font-ui);
+  --font-monospace-theme: var(--nr-font-mono);
+  --font-mermaid: var(--nr-font-ui);
+  --mermaid-font-family: var(--nr-font-ui);
+  --mermaid-alt-font-family: var(--nr-font-ui);
+
+  --radius-s: var(--nr-radius-s);
+  --radius-m: var(--nr-radius-m);
+  --button-radius: var(--nr-radius-s);
+  --input-radius: var(--nr-radius-s);
+  --checkbox-radius: var(--nr-radius-s);
+  --toggle-radius: var(--nr-radius-m);
+  --modal-radius: var(--nr-radius-m);
+  --callout-radius: var(--nr-radius-m);
+  --tag-radius: var(--nr-radius-s);
 }
 
-.theme-dark,
-body[data-theme='dark'] {
+.theme-dark {
   color-scheme: dark;
 
   --accent-h: 173;
@@ -80,7 +91,11 @@ body[data-theme='dark'] {
 
   --border-color: var(--nr-iron);
   --hr-color: var(--nr-iron);
-  --blockquote-border: var(--nr-copper);
+  --blockquote-border-color: var(--nr-copper);
+  --blockquote-border-thickness: 4px;
+  --blockquote-background-color: color-mix(in srgb, var(--nr-copper) 8%, transparent);
+  --blockquote-color: var(--text-muted);
+  --blockquote-font-style: normal;
 
   --h1-color: var(--nr-pine);
   --h2-color: var(--nr-copper);
@@ -96,6 +111,35 @@ body[data-theme='dark'] {
   --h6-weight: 600;
   --inline-title-color: color-mix(in srgb, var(--nr-fog) 80%, var(--nr-slate));
   --inline-title-weight: 700;
+
+  --link-color: var(--text-accent);
+  --link-color-hover: var(--text-accent-hover);
+  --link-decoration: none;
+  --link-decoration-hover: none;
+  --link-decoration-thickness: 1px;
+  --link-weight: inherit;
+  --link-unresolved-color: color-mix(in srgb, var(--nr-copper) 78%, var(--text-muted));
+  --link-unresolved-opacity: 0.82;
+  --link-unresolved-decoration-style: dotted;
+  --link-unresolved-decoration-color: color-mix(in srgb, var(--nr-copper) 55%, transparent);
+  --link-external-color: var(--text-accent);
+  --link-external-color-hover: var(--text-accent-hover);
+  --link-external-decoration: none;
+  --link-external-decoration-hover: none;
+
+  --tag-size: var(--font-smaller);
+  --tag-color: var(--nr-lichen);
+  --tag-color-hover: color-mix(in srgb, var(--nr-lichen) 84%, var(--nr-cloud));
+  --tag-background: color-mix(in srgb, var(--nr-lichen) 13%, transparent);
+  --tag-background-hover: color-mix(in srgb, var(--nr-lichen) 20%, transparent);
+  --tag-border-color: color-mix(in srgb, var(--nr-lichen) 34%, transparent);
+  --tag-border-color-hover: color-mix(in srgb, var(--nr-lichen) 52%, transparent);
+  --tag-border-width: 1px;
+  --tag-decoration: none;
+  --tag-decoration-hover: none;
+  --tag-padding-x: 0.38em;
+  --tag-padding-y: 0.08em;
+  --tag-weight: 560;
 
   --inline-code: var(--nr-lichen);
   --code-normal: color-mix(in srgb, var(--nr-fog) 84%, var(--nr-slate));
@@ -113,12 +157,114 @@ body[data-theme='dark'] {
   --nav-item-color: var(--nr-slate);
   --nav-item-color-hover: color-mix(in srgb, var(--nr-fog) 86%, var(--nr-slate));
   --nav-item-color-active: color-mix(in srgb, var(--nr-cloud) 86%, var(--nr-slate));
+  --nav-item-color-selected: var(--nav-item-color-active);
+  --nav-item-color-highlighted: var(--nr-seafoam);
   --nav-item-background-hover: rgba(95, 168, 157, 0.08);
   --nav-item-background-active: rgba(95, 168, 157, 0.14);
+  --nav-item-background-selected: rgba(95, 168, 157, 0.14);
+  --nav-item-padding: 0.28em 0.6em;
+  --nav-item-weight: 500;
+  --nav-item-weight-hover: 560;
+  --nav-item-weight-active: 620;
+  --nav-indentation-guide-color: color-mix(in srgb, var(--nr-iron) 40%, transparent);
+  --nav-indentation-guide-width: 1px;
+  --nav-collapse-icon-color: var(--nr-slate);
+  --nav-collapse-icon-color-collapsed: color-mix(in srgb, var(--nr-slate) 70%, var(--nr-shadow));
+
+  --table-background: var(--background-primary-alt);
+  --table-border-width: 1px;
+  --table-border-color: var(--border-color);
+  --table-header-background: color-mix(in srgb, var(--nr-ridge) 86%, var(--background-primary));
+  --table-header-border-width: 1px;
+  --table-header-border-color: var(--border-color);
+  --table-header-font: var(--font-interface-theme);
+  --table-header-size: inherit;
+  --table-header-weight: 650;
+  --table-header-color: var(--nr-copper);
+  --table-line-height: 1.42;
+  --table-text-size: inherit;
+  --table-text-color: var(--text-normal);
+  --table-row-background-hover: color-mix(in srgb, var(--nr-pine) 7%, transparent);
+  --table-row-alt-background: color-mix(in srgb, var(--nr-ridge) 16%, transparent);
+  --table-row-alt-background-hover: color-mix(in srgb, var(--nr-pine) 9%, transparent);
+
+  --metadata-background: color-mix(in srgb, var(--nr-midnight) 88%, var(--nr-moonstone));
+  --metadata-border-color: color-mix(in srgb, var(--nr-iron) 58%, var(--nr-midnight));
+  --metadata-border-radius: var(--nr-radius-m);
+  --metadata-label-text-color: color-mix(in srgb, var(--nr-slate) 78%, var(--nr-fog));
+  --metadata-label-text-color-hover: color-mix(in srgb, var(--nr-fog) 84%, var(--nr-slate));
+  --metadata-input-text-color: color-mix(in srgb, var(--nr-fog) 84%, var(--nr-slate));
+  --metadata-input-background-active: color-mix(in srgb, var(--nr-pine) 7%, transparent);
+
+  --callout-border-width: 1px 1px 1px 3px;
+  --callout-border-opacity: 1;
+  --callout-padding: 0.72em 0.9em;
+  --callout-title-color: var(--nr-pine);
+  --callout-title-padding: 0;
+  --callout-title-size: 1em;
+  --callout-title-weight: 680;
+  --callout-content-background: transparent;
+  --callout-default: 95, 168, 157;
+  --callout-info: 111, 218, 212;
+  --callout-tip: 111, 218, 212;
+  --callout-success: 95, 168, 157;
+  --callout-warning: 184, 115, 51;
+  --callout-error: 201, 74, 50;
+  --callout-fail: 201, 74, 50;
+  --callout-bug: 201, 74, 50;
+  --callout-question: 184, 115, 51;
+  --callout-summary: 95, 168, 157;
+  --callout-todo: 95, 168, 157;
+  --callout-quote: 143, 174, 138;
+
+  --graph-line: color-mix(in srgb, var(--nr-slate) 74%, var(--nr-shadow));
+  --graph-node: color-mix(in srgb, var(--nr-slate) 72%, var(--nr-pine));
+  --graph-node-focused: var(--nr-pine);
+  --graph-node-tag: var(--nr-lichen);
+  --graph-node-attachment: var(--nr-lichen);
+  --graph-node-unresolved: var(--nr-copper);
+  --graph-text: color-mix(in srgb, var(--nr-fog) 84%, var(--nr-slate));
+
+  --canvas-background: var(--nr-shadow);
+  --canvas-dot-pattern: color-mix(in srgb, var(--nr-iron) 36%, transparent);
+  --canvas-color-1: var(--nr-pine);
+  --canvas-color-2: var(--nr-copper);
+  --canvas-color-3: var(--nr-lichen);
+  --canvas-color-4: var(--nr-slate);
+  --canvas-color-5: var(--nr-seafoam);
+  --canvas-color-6: var(--nr-ember);
+
+  --ribbon-background: var(--nr-midnight);
+  --ribbon-background-collapsed: var(--nr-midnight);
+  --status-bar-background: color-mix(in srgb, var(--nr-shadow) 84%, var(--nr-midnight));
+  --status-bar-border-color: color-mix(in srgb, var(--nr-iron) 58%, var(--nr-shadow));
+  --status-bar-border-width: 1px 0 0 0;
+  --status-bar-text-color: color-mix(in srgb, var(--nr-slate) 82%, var(--nr-fog));
+  --status-bar-position: fixed;
+  --status-bar-radius: var(--nr-radius-m) 0 0 0;
+  --status-bar-scroll-padding: 32px;
+  --tab-container-background: var(--nr-midnight);
+  --tab-background-active: var(--nr-shadow);
+  --tab-text-color: var(--text-muted);
+  --tab-text-color-focused: var(--text-muted);
+  --tab-text-color-focused-active-current: var(--nr-pine);
+  --tab-divider-color: var(--border-color);
+  --tab-outline-color: var(--border-color);
+  --modal-background: color-mix(in srgb, var(--nr-midnight) 86%, var(--nr-moonstone));
+  --modal-border-color: color-mix(in srgb, var(--nr-iron) 70%, var(--nr-midnight));
+  --input-border-width: 1px;
+  --input-font-weight: 500;
+  --checkbox-color: var(--nr-pine);
+  --checkbox-color-hover: var(--nr-pine);
+  --checkbox-border-color: var(--nr-slate);
+  --checkbox-border-color-hover: var(--nr-pine);
+  --checkbox-marker-color: var(--nr-cloud);
+  --toggle-thumb-color: var(--nr-cloud);
+  --search-icon-color: var(--nr-slate);
+  --search-clear-button-color: var(--nr-slate);
 }
 
-.theme-light,
-body[data-theme='light'] {
+.theme-light {
   color-scheme: light;
 
   --accent-h: 173;
@@ -166,7 +312,11 @@ body[data-theme='light'] {
 
   --border-color: color-mix(in srgb, var(--nr-iron) 34%, var(--nr-fog));
   --hr-color: color-mix(in srgb, var(--nr-iron) 34%, var(--nr-fog));
-  --blockquote-border: var(--nr-copper);
+  --blockquote-border-color: var(--nr-copper);
+  --blockquote-border-thickness: 4px;
+  --blockquote-background-color: color-mix(in srgb, var(--nr-copper) 8%, transparent);
+  --blockquote-color: var(--text-muted);
+  --blockquote-font-style: normal;
 
   --h1-color: var(--nr-pine);
   --h2-color: var(--nr-copper);
@@ -182,6 +332,35 @@ body[data-theme='light'] {
   --h6-weight: 600;
   --inline-title-color: var(--nr-moonstone);
   --inline-title-weight: 700;
+
+  --link-color: var(--text-accent);
+  --link-color-hover: var(--text-accent-hover);
+  --link-decoration: none;
+  --link-decoration-hover: none;
+  --link-decoration-thickness: 1px;
+  --link-weight: inherit;
+  --link-unresolved-color: color-mix(in srgb, var(--nr-copper) 70%, var(--text-muted));
+  --link-unresolved-opacity: 0.86;
+  --link-unresolved-decoration-style: dotted;
+  --link-unresolved-decoration-color: color-mix(in srgb, var(--nr-copper) 50%, transparent);
+  --link-external-color: var(--text-accent);
+  --link-external-color-hover: var(--text-accent-hover);
+  --link-external-decoration: none;
+  --link-external-decoration-hover: none;
+
+  --tag-size: var(--font-smaller);
+  --tag-color: color-mix(in srgb, var(--nr-lichen) 72%, var(--nr-midnight));
+  --tag-color-hover: color-mix(in srgb, var(--nr-lichen) 56%, var(--nr-midnight));
+  --tag-background: color-mix(in srgb, var(--nr-lichen) 13%, transparent);
+  --tag-background-hover: color-mix(in srgb, var(--nr-lichen) 18%, transparent);
+  --tag-border-color: color-mix(in srgb, var(--nr-lichen) 32%, transparent);
+  --tag-border-color-hover: color-mix(in srgb, var(--nr-lichen) 48%, transparent);
+  --tag-border-width: 1px;
+  --tag-decoration: none;
+  --tag-decoration-hover: none;
+  --tag-padding-x: 0.38em;
+  --tag-padding-y: 0.08em;
+  --tag-weight: 560;
 
   --inline-code: var(--nr-lichen);
   --code-normal: var(--nr-midnight);
@@ -199,14 +378,117 @@ body[data-theme='light'] {
   --nav-item-color: color-mix(in srgb, var(--nr-slate) 78%, var(--nr-midnight));
   --nav-item-color-hover: var(--nr-midnight);
   --nav-item-color-active: var(--nr-moonstone);
+  --nav-item-color-selected: var(--nav-item-color-active);
+  --nav-item-color-highlighted: var(--nr-pine);
   --nav-item-background-hover: rgba(17, 35, 47, 0.06);
   --nav-item-background-active: rgba(95, 168, 157, 0.14);
+  --nav-item-background-selected: rgba(95, 168, 157, 0.14);
+  --nav-item-padding: 0.28em 0.6em;
+  --nav-item-weight: 500;
+  --nav-item-weight-hover: 560;
+  --nav-item-weight-active: 620;
+  --nav-indentation-guide-color: color-mix(in srgb, var(--nr-slate) 28%, transparent);
+  --nav-indentation-guide-width: 1px;
+  --nav-collapse-icon-color: var(--nr-slate);
+  --nav-collapse-icon-color-collapsed: color-mix(in srgb, var(--nr-slate) 70%, var(--nr-fog));
+
+  --table-background: var(--background-primary-alt);
+  --table-border-width: 1px;
+  --table-border-color: var(--border-color);
+  --table-header-background: color-mix(in srgb, var(--nr-moonstone) 90%, var(--nr-cloud));
+  --table-header-border-width: 1px;
+  --table-header-border-color: var(--border-color);
+  --table-header-font: var(--font-interface-theme);
+  --table-header-size: inherit;
+  --table-header-weight: 650;
+  --table-header-color: var(--nr-copper);
+  --table-line-height: 1.42;
+  --table-text-size: inherit;
+  --table-text-color: var(--text-normal);
+  --table-row-background-hover: color-mix(in srgb, var(--nr-pine) 8%, transparent);
+  --table-row-alt-background: color-mix(in srgb, var(--nr-slate) 6%, transparent);
+  --table-row-alt-background-hover: color-mix(in srgb, var(--nr-pine) 10%, transparent);
+
+  --metadata-background: color-mix(in srgb, var(--nr-cloud) 76%, var(--nr-fog));
+  --metadata-border-color: color-mix(in srgb, var(--nr-slate) 24%, transparent);
+  --metadata-border-radius: var(--nr-radius-m);
+  --metadata-label-text-color: color-mix(in srgb, var(--nr-slate) 76%, var(--nr-midnight));
+  --metadata-label-text-color-hover: var(--nr-midnight);
+  --metadata-input-text-color: var(--nr-midnight);
+  --metadata-input-background-active: color-mix(in srgb, var(--nr-pine) 9%, transparent);
+
+  --callout-border-width: 1px 1px 1px 3px;
+  --callout-border-opacity: 1;
+  --callout-padding: 0.72em 0.9em;
+  --callout-title-color: color-mix(in srgb, var(--nr-pine) 70%, var(--nr-midnight));
+  --callout-title-padding: 0;
+  --callout-title-size: 1em;
+  --callout-title-weight: 680;
+  --callout-content-background: transparent;
+  --callout-default: 95, 168, 157;
+  --callout-info: 67, 150, 146;
+  --callout-tip: 67, 150, 146;
+  --callout-success: 95, 168, 157;
+  --callout-warning: 184, 115, 51;
+  --callout-error: 201, 74, 50;
+  --callout-fail: 201, 74, 50;
+  --callout-bug: 201, 74, 50;
+  --callout-question: 184, 115, 51;
+  --callout-summary: 95, 168, 157;
+  --callout-todo: 95, 168, 157;
+  --callout-quote: 143, 174, 138;
+
+  --graph-line: #A8B8BE;
+  --graph-node: #1F8F86;
+  --graph-node-focused: #00BDB5;
+  --graph-node-tag: #A8662E;
+  --graph-node-attachment: #6D828B;
+  --graph-node-unresolved: #A94130;
+  --graph-text: #14222A;
+
+  --canvas-background: color-mix(in srgb, var(--nr-cloud) 78%, var(--nr-fog));
+  --canvas-dot-pattern: color-mix(in srgb, var(--nr-slate) 24%, transparent);
+  --canvas-color-1: var(--nr-pine);
+  --canvas-color-2: var(--nr-copper);
+  --canvas-color-3: var(--nr-lichen);
+  --canvas-color-4: var(--nr-slate);
+  --canvas-color-5: var(--nr-seafoam);
+  --canvas-color-6: var(--nr-ember);
+
+  --ribbon-background: var(--nr-cloud);
+  --ribbon-background-collapsed: var(--nr-cloud);
+  --status-bar-background: color-mix(in srgb, var(--nr-cloud) 84%, var(--nr-fog));
+  --status-bar-border-color: color-mix(in srgb, var(--nr-slate) 28%, transparent);
+  --status-bar-border-width: 1px 0 0 0;
+  --status-bar-text-color: color-mix(in srgb, var(--nr-slate) 78%, var(--nr-midnight));
+  --status-bar-position: fixed;
+  --status-bar-radius: var(--nr-radius-m) 0 0 0;
+  --status-bar-scroll-padding: 32px;
+  --tab-container-background: var(--nr-cloud);
+  --tab-background-active: var(--nr-fog);
+  --tab-text-color: var(--text-muted);
+  --tab-text-color-focused: var(--text-muted);
+  --tab-text-color-focused-active-current: var(--nr-pine);
+  --tab-divider-color: var(--border-color);
+  --tab-outline-color: var(--border-color);
+  --modal-background: color-mix(in srgb, var(--nr-cloud) 84%, var(--nr-fog));
+  --modal-border-color: color-mix(in srgb, var(--nr-slate) 28%, transparent);
+  --input-border-width: 1px;
+  --input-font-weight: 500;
+  --checkbox-color: var(--nr-pine);
+  --checkbox-color-hover: var(--nr-pine);
+  --checkbox-border-color: var(--nr-slate);
+  --checkbox-border-color-hover: var(--nr-pine);
+  --checkbox-marker-color: var(--nr-cloud);
+  --toggle-thumb-color: var(--nr-cloud);
+  --search-icon-color: var(--nr-slate);
+  --search-clear-button-color: var(--nr-slate);
 }
 
 .app-container,
 .theme-dark,
 .theme-light {
-  font-family: var(--font-family-interface);
+  font-family: var(--font-interface-theme);
 }
 
 ::selection {
@@ -230,8 +512,8 @@ body[data-theme='light'] {
 .workspace-tabs .workspace-tab-header-container,
 .view-header,
 .mod-sidedock .workspace-tabs {
-  background: var(--background-primary-alt);
-  border-color: var(--border-color);
+  background: var(--ribbon-background);
+  border-color: var(--tab-divider-color);
 }
 
 .theme-dark .workspace-ribbon,
@@ -254,9 +536,11 @@ body[data-theme='light'] {
 }
 
 .status-bar {
-  background: var(--background-primary-alt);
-  border-top: 1px solid var(--border-color);
-  color: var(--text-muted);
+  background: var(--status-bar-background);
+  border-color: var(--status-bar-border-color);
+  border-style: solid;
+  border-width: var(--status-bar-border-width);
+  color: var(--status-bar-text-color);
 }
 
 .view-header-title,
@@ -327,7 +611,7 @@ body[data-theme='light'] {
 .markdown-source-view.mod-cm6 .cm-editor,
 .cm-s-obsidian {
   color: var(--text-normal);
-  font-family: var(--font-family-editor);
+  font-family: var(--font-text-theme);
 }
 
 .inline-title,
@@ -398,7 +682,10 @@ a,
 .cm-link,
 .cm-hmd-internal-link,
 .markdown-rendered .internal-link {
-  color: var(--text-accent);
+  color: var(--link-color);
+  font-weight: var(--link-weight);
+  text-decoration: var(--link-decoration);
+  text-decoration-thickness: var(--link-decoration-thickness);
 }
 
 a:hover,
@@ -406,15 +693,21 @@ a:hover,
 .external-link:hover,
 .cm-link:hover,
 .cm-hmd-internal-link:hover {
-  color: var(--text-accent-hover);
+  color: var(--link-color-hover);
+  text-decoration: var(--link-decoration-hover);
 }
 
 .cm-hashtag,
 a.tag,
 .metadata-property[data-property-key='tags'] .multi-select-pill {
-  color: var(--nr-lichen);
-  background: color-mix(in srgb, var(--nr-lichen) 13%, transparent);
-  border-radius: var(--nr-radius-s);
+  color: var(--tag-color);
+  background: var(--tag-background);
+  border: var(--tag-border-width) solid var(--tag-border-color);
+  border-radius: var(--tag-radius);
+  font-size: var(--tag-size);
+  font-weight: var(--tag-weight);
+  padding: var(--tag-padding-y) var(--tag-padding-x);
+  text-decoration: var(--tag-decoration);
 }
 
 strong,
@@ -437,9 +730,10 @@ mark,
 
 blockquote,
 .markdown-preview-view blockquote {
-  border-left: 4px solid var(--blockquote-border);
-  color: var(--text-muted);
-  background: color-mix(in srgb, var(--nr-copper) 8%, transparent);
+  border-left: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+  color: var(--blockquote-color);
+  background: var(--blockquote-background-color);
+  font-style: var(--blockquote-font-style);
   padding: 0.75em 1em;
 }
 
@@ -450,7 +744,7 @@ code,
   border: 1px solid color-mix(in srgb, var(--nr-lichen) 34%, var(--border-color));
   border-radius: var(--nr-radius-s);
   padding: 0.08em 0.32em;
-  font-family: var(--font-family-monospace);
+  font-family: var(--font-monospace-theme);
 }
 
 pre,
@@ -462,7 +756,7 @@ pre,
   border: 1px solid var(--border-color);
   border-left: 3px solid color-mix(in srgb, var(--nr-seafoam) 72%, var(--nr-slate));
   border-radius: var(--nr-radius-m);
-  font-family: var(--font-family-monospace);
+  font-family: var(--font-monospace-theme);
   line-height: 1.52;
 }
 
@@ -473,12 +767,18 @@ pre,
 
 .callout {
   background: color-mix(in srgb, var(--nr-moonstone) 82%, var(--background-primary));
-  border: 1px solid var(--border-color);
-  border-radius: var(--nr-radius-m);
+  border-color: var(--border-color);
+  border-style: solid;
+  border-width: var(--callout-border-width);
+  border-radius: var(--callout-radius);
+  padding: var(--callout-padding);
 }
 
 .callout-title {
-  color: var(--nr-pine);
+  color: var(--callout-title-color);
+  font-size: var(--callout-title-size);
+  font-weight: var(--callout-title-weight);
+  padding: var(--callout-title-padding);
 }
 
 .callout[data-callout='warning'] .callout-title,
@@ -536,49 +836,52 @@ pre,
 .metadata-property-key,
 .metadata-property-key-input,
 .metadata-property-icon {
-  color: var(--nr-pine);
+  color: var(--metadata-label-text-color);
 }
 
 .metadata-property-value,
 .metadata-property-value input,
 .metadata-property-value textarea {
-  color: var(--text-normal);
+  color: var(--metadata-input-text-color);
 }
 
 .markdown-rendered table,
 .markdown-preview-view table,
 .dataview.table-view-table {
   border-collapse: collapse;
-  border: 1px solid var(--border-color);
-  background: var(--background-primary-alt);
+  border: var(--table-border-width) solid var(--table-border-color);
+  background: var(--table-background);
 }
 
 .markdown-rendered th,
 .markdown-preview-view th,
 .dataview.table-view-table th {
-  color: var(--nr-copper);
-  background: color-mix(in srgb, var(--nr-ridge) 86%, var(--background-primary));
-  border: 1px solid var(--border-color);
-  font-weight: 650;
+  color: var(--table-header-color);
+  background: var(--table-header-background);
+  border: var(--table-header-border-width) solid var(--table-header-border-color);
+  font-family: var(--table-header-font);
+  font-size: var(--table-header-size);
+  font-weight: var(--table-header-weight);
   padding: 0.42em 0.62em;
-  line-height: 1.42;
+  line-height: var(--table-line-height);
   vertical-align: top;
 }
 
 .markdown-rendered td,
 .markdown-preview-view td,
 .dataview.table-view-table td {
-  color: var(--text-normal);
-  border: 1px solid var(--border-color);
+  color: var(--table-text-color);
+  border: var(--table-border-width) solid var(--table-border-color);
+  font-size: var(--table-text-size);
   padding: 0.42em 0.62em;
-  line-height: 1.42;
+  line-height: var(--table-line-height);
   vertical-align: top;
 }
 
 .markdown-rendered tr:hover td,
 .markdown-preview-view tr:hover td,
 .dataview.table-view-table tr:hover td {
-  background: color-mix(in srgb, var(--nr-pine) 7%, transparent);
+  background: var(--table-row-background-hover);
 }
 
 .dataview.inline-field-key,
@@ -636,13 +939,13 @@ button.mod-warning {
 
 input[type='checkbox'],
 .task-list-item-checkbox {
-  border-color: var(--nr-slate);
+  border-color: var(--checkbox-border-color);
 }
 
 input[type='checkbox']:checked,
 .task-list-item-checkbox:checked {
-  background-color: var(--nr-pine);
-  border-color: var(--nr-pine);
+  background-color: var(--checkbox-color);
+  border-color: var(--checkbox-border-color-hover);
 }
 
 .markdown-rendered li[data-task='/'] > input,
@@ -681,18 +984,18 @@ input[type='checkbox']:checked,
 
 .graph-view.color-line,
 .graph-view.color-arrow {
-  color: var(--nr-slate);
+  color: var(--graph-line);
 }
 
 .graph-view.color-fill,
 .graph-view.color-circle,
 .graph-view.color-fill-highlight {
-  color: var(--nr-pine);
+  color: var(--graph-node);
 }
 
 .graph-view.color-fill-tag,
 .graph-view.color-fill-attachment {
-  color: var(--nr-lichen);
+  color: var(--graph-node-tag);
 }
 
 .is-mobile .workspace-drawer,
@@ -758,35 +1061,35 @@ h2,
 .markdown-preview-view h2,
 .markdown-rendered h2,
 .cm-header-2 {
-  color: var(--nr-copper);
+  color: var(--h2-color);
 }
 
 h3,
 .markdown-preview-view h3,
 .markdown-rendered h3,
 .cm-header-3 {
-  color: var(--nr-lichen);
+  color: var(--h3-color);
 }
 
 h4,
 .markdown-preview-view h4,
 .markdown-rendered h4,
 .cm-header-4 {
-  color: color-mix(in srgb, var(--nr-ember) 82%, var(--nr-fog));
+  color: var(--h4-color);
 }
 
 h5,
 .markdown-preview-view h5,
 .markdown-rendered h5,
 .cm-header-5 {
-  color: color-mix(in srgb, var(--nr-slate) 70%, var(--nr-fog));
+  color: var(--h5-color);
 }
 
 h6,
 .markdown-preview-view h6,
 .markdown-rendered h6,
 .cm-header-6 {
-  color: color-mix(in srgb, var(--nr-seafoam) 76%, var(--nr-fog));
+  color: var(--h6-color);
 }
 
 .theme-dark a,
@@ -795,7 +1098,7 @@ h6,
 .theme-dark .cm-link,
 .theme-dark .cm-hmd-internal-link,
 .theme-dark .markdown-rendered .internal-link {
-  color: var(--nr-copper);
+  color: var(--link-color);
 }
 
 .theme-dark a:hover,
@@ -803,7 +1106,7 @@ h6,
 .theme-dark .external-link:hover,
 .theme-dark .cm-link:hover,
 .theme-dark .cm-hmd-internal-link:hover {
-  color: var(--nr-pine);
+  color: var(--link-color-hover);
 }
 
 .theme-dark code,
@@ -893,9 +1196,9 @@ h6,
 }
 
 .theme-dark .metadata-properties {
-  background: color-mix(in srgb, var(--nr-midnight) 88%, var(--nr-moonstone));
-  border: 1px solid color-mix(in srgb, var(--nr-iron) 58%, var(--nr-midnight));
-  border-radius: var(--nr-radius-m);
+  background: var(--metadata-background);
+  border: 1px solid var(--metadata-border-color);
+  border-radius: var(--metadata-border-radius);
   box-shadow: none;
 }
 
@@ -907,13 +1210,13 @@ h6,
 .theme-dark .metadata-property-key,
 .theme-dark .metadata-property-key-input,
 .theme-dark .metadata-property-icon {
-  color: color-mix(in srgb, var(--nr-slate) 78%, var(--nr-fog));
+  color: var(--metadata-label-text-color);
 }
 
 .theme-dark .metadata-property-value,
 .theme-dark .metadata-property-value input,
 .theme-dark .metadata-property-value textarea {
-  color: color-mix(in srgb, var(--nr-fog) 84%, var(--nr-slate));
+  color: var(--metadata-input-text-color);
 }
 
 .theme-dark .metadata-add-button {
@@ -923,9 +1226,9 @@ h6,
 }
 
 .theme-dark .metadata-property[data-property-key='tags'] .multi-select-pill {
-  color: color-mix(in srgb, var(--nr-lichen) 84%, var(--nr-cloud));
-  background: color-mix(in srgb, var(--nr-ridge) 70%, var(--nr-midnight));
-  border: 1px solid color-mix(in srgb, var(--nr-lichen) 40%, var(--nr-iron));
+  color: var(--tag-color-hover);
+  background: var(--tag-background-hover);
+  border: var(--tag-border-width) solid var(--tag-border-color-hover);
 }
 
 .theme-dark select,
@@ -976,9 +1279,9 @@ h6,
 }
 
 .theme-dark .status-bar {
-  background: color-mix(in srgb, var(--nr-shadow) 84%, var(--nr-midnight));
-  color: color-mix(in srgb, var(--nr-slate) 82%, var(--nr-fog));
-  border-top-color: color-mix(in srgb, var(--nr-iron) 58%, var(--nr-shadow));
+  background: var(--status-bar-background);
+  color: var(--status-bar-text-color);
+  border-color: var(--status-bar-border-color);
 }
 
 .theme-dark .status-bar-item.mod-clickable:hover {
@@ -987,7 +1290,7 @@ h6,
 }
 
 .theme-dark .nav-folder-children {
-  border-left: 1px solid color-mix(in srgb, var(--nr-iron) 40%, transparent);
+  border-left: var(--nav-indentation-guide-width) solid var(--nav-indentation-guide-color);
   margin-left: 0.4rem;
   padding-left: 0.35rem;
 }
@@ -1164,86 +1467,86 @@ h6,
 
 .theme-dark .mermaid,
 .theme-dark .mermaid svg,
-.theme-dark svg[id^='mermaid-'],
-.theme-dark svg[aria-roledescription] {
+.theme-light .mermaid,
+.theme-light .mermaid svg {
   background: transparent;
 }
 
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .node rect,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .node circle,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .node ellipse,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .node polygon,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .node path {
-  fill: #1C2B36 !important;
-  stroke: #6FDAD4 !important;
-  stroke-width: 1.35px !important;
-  fill-opacity: 0.94 !important;
-  stroke-opacity: 0.92 !important;
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node rect,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node circle,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node ellipse,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node polygon,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node path {
+  fill: #1C2B36;
+  stroke: #6FDAD4;
+  stroke-width: 1.35px;
+  fill-opacity: 0.94;
+  stroke-opacity: 0.92;
 }
 
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .node.default rect,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .node.default circle,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .node.default ellipse,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .node.default polygon,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .node.default path {
-  fill: #20323B !important;
-  stroke: #5FA89D !important;
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node.default rect,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node.default circle,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node.default ellipse,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node.default polygon,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node.default path {
+  fill: #20323B;
+  stroke: #5FA89D;
 }
 
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .flowchart-link,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .edgePath .path,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .messageLine0,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .messageLine1 {
-  stroke: #6F8793 !important;
-  stroke-width: 1.2px !important;
-  stroke-opacity: 0.82 !important;
+.theme-dark :is(#nr-mermaid-override, .mermaid) .flowchart-link,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .edgePath .path,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .messageLine0,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .messageLine1 {
+  stroke: #6F8793;
+  stroke-width: 1.2px;
+  stroke-opacity: 0.82;
 }
 
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) marker path,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .arrowheadPath {
-  fill: #6F8793 !important;
-  stroke: #6F8793 !important;
+.theme-dark :is(#nr-mermaid-override, .mermaid) marker path,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .arrowheadPath {
+  fill: #6F8793;
+  stroke: #6F8793;
 }
 
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) text,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) tspan,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .label,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .label *,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .nodeLabel,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .nodeLabel *,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) foreignObject div,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) foreignObject span,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) foreignObject p {
-  color: #F5F7F8 !important;
-  fill: #F5F7F8 !important;
+.theme-dark :is(#nr-mermaid-override, .mermaid) svg text,
+.theme-dark :is(#nr-mermaid-override, .mermaid) svg tspan,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .label,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .label *,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .nodeLabel,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .nodeLabel *,
+.theme-dark :is(#nr-mermaid-override, .mermaid) foreignObject div,
+.theme-dark :is(#nr-mermaid-override, .mermaid) foreignObject span,
+.theme-dark :is(#nr-mermaid-override, .mermaid) foreignObject p {
+  color: #F5F7F8;
+  fill: #F5F7F8;
 }
 
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .edgeLabel,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .edgeLabel p,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .edgeLabel rect,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .labelBkg {
-  background: #111B24 !important;
-  fill: #111B24 !important;
-  color: #D29A67 !important;
+.theme-dark :is(#nr-mermaid-override, .mermaid) .edgeLabel,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .edgeLabel p,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .edgeLabel rect,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .labelBkg {
+  background: #111B24;
+  fill: #111B24;
+  color: #D29A67;
 }
 
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .edgeLabel p {
+.theme-dark :is(#nr-mermaid-override, .mermaid) .edgeLabel p {
   border: 1px solid color-mix(in srgb, var(--nr-copper) 44%, transparent);
   border-radius: var(--nr-radius-s);
   padding: 0.04em 0.28em;
 }
 
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .cluster rect {
-  fill: color-mix(in srgb, var(--nr-moonstone) 62%, var(--nr-shadow)) !important;
-  stroke: color-mix(in srgb, var(--nr-copper) 48%, var(--nr-iron)) !important;
-  stroke-width: 1.1px !important;
+.theme-dark :is(#nr-mermaid-override, .mermaid) .cluster rect {
+  fill: color-mix(in srgb, var(--nr-moonstone) 62%, var(--nr-shadow));
+  stroke: color-mix(in srgb, var(--nr-copper) 48%, var(--nr-iron));
+  stroke-width: 1.1px;
 }
 
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .cluster .nodeLabel,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .cluster-label,
-.theme-dark :is(.mermaid, svg[id^='mermaid-'], svg[aria-roledescription], .markdown-rendered svg) .cluster-label * {
-  color: color-mix(in srgb, var(--nr-copper) 78%, var(--nr-cloud)) !important;
-  fill: color-mix(in srgb, var(--nr-copper) 78%, var(--nr-cloud)) !important;
+.theme-dark :is(#nr-mermaid-override, .mermaid) .cluster .nodeLabel,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .cluster-label,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .cluster-label * {
+  color: color-mix(in srgb, var(--nr-copper) 78%, var(--nr-cloud));
+  fill: color-mix(in srgb, var(--nr-copper) 78%, var(--nr-cloud));
 }
 
 .theme-light :is(#nr-mermaid-override, .mermaid) .node rect,
@@ -1274,13 +1577,8 @@ h6,
 
 .theme-dark .canvas-wrapper,
 .theme-dark .canvas {
-  --canvas-color: var(--nr-pine);
-  --canvas-color-1: var(--nr-pine);
-  --canvas-color-2: var(--nr-copper);
-  --canvas-color-3: var(--nr-lichen);
-  --canvas-color-4: var(--nr-slate);
-  --canvas-color-5: var(--nr-seafoam);
-  --canvas-color-6: var(--nr-ember);
+  background: var(--canvas-background);
+  --canvas-color: var(--canvas-color-1);
 }
 
 .theme-dark .canvas-node {
@@ -1295,26 +1593,26 @@ h6,
 
 .theme-dark .graph-view.color-line,
 .theme-dark .graph-view.color-arrow {
-  color: color-mix(in srgb, var(--nr-slate) 74%, var(--nr-shadow));
+  color: var(--graph-line);
 }
 
 .theme-dark .graph-view.color-fill,
 .theme-dark .graph-view.color-circle {
-  color: color-mix(in srgb, var(--nr-slate) 72%, var(--nr-pine));
+  color: var(--graph-node);
 }
 
 .theme-dark .graph-view.color-fill-highlight,
 .theme-dark .graph-view.color-circle-highlight {
-  color: var(--nr-pine);
+  color: var(--graph-node-focused);
 }
 
 .theme-dark .graph-view.color-fill-unresolved {
-  color: var(--nr-copper);
+  color: var(--graph-node-unresolved);
 }
 
 .theme-dark .graph-view.color-fill-tag,
 .theme-dark .graph-view.color-fill-attachment {
-  color: var(--nr-lichen);
+  color: var(--graph-node-tag);
 }
 
 
@@ -1583,7 +1881,7 @@ h6,
 }
 
 .theme-dark .status-bar {
-  position: relative;
+  position: var(--status-bar-position);
 }
 
 .theme-dark .status-bar::before {
@@ -1596,8 +1894,7 @@ h6,
 }
 
 /* Ridge sharpness pass: dark, clear, high-signal. */
-.theme-dark,
-body[data-theme='dark'] {
+.theme-dark {
   --text-normal: color-mix(in srgb, var(--nr-fog) 93%, var(--nr-cloud));
   --text-muted: color-mix(in srgb, var(--nr-fog) 58%, var(--nr-slate));
   --text-faint: color-mix(in srgb, var(--nr-slate) 74%, var(--nr-shadow));
@@ -1776,8 +2073,7 @@ body[data-theme='dark'] {
 }
 
 /* Graph command-map pass: dark topology, bright selected signal. */
-.theme-dark,
-body[data-theme='dark'] {
+.theme-dark {
   --text-normal: #E7ECEF;
   --text-muted: #9AAAB2;
   --text-faint: #5F737D;
@@ -1839,8 +2135,7 @@ body[data-theme='dark'] {
 }
 
 /* Crisp command center pass: remove fog, keep dark. */
-.theme-dark,
-body[data-theme='dark'] {
+.theme-dark {
   --background-primary: #02070B;
   --background-primary-alt: #061018;
   --background-secondary: #0A1822;
@@ -2508,8 +2803,7 @@ body[data-theme='dark'] {
 }
 
 /* Light mode start: dim ridge paper, readable ink, restrained command surfaces. */
-.theme-light,
-body[data-theme='light'] {
+.theme-light {
   color-scheme: light;
 
   --background-primary: #D5DEE2;
@@ -3167,8 +3461,7 @@ body[data-theme='light'] {
 }
 
 /* Light mode repair: mobile screenshots showed washout and weak card edges. */
-.theme-light,
-body[data-theme='light'] {
+.theme-light {
   --background-primary: #D1D9DD;
   --background-primary-alt: #BBC9CF;
   --background-secondary: #AABCC4;
@@ -3564,8 +3857,7 @@ body[data-theme='light'] {
   background: #D1D9DD;
 }
 
-.theme-light,
-body[data-theme='light'] {
+.theme-light {
   --graph-line: #6E838C;
   --graph-node: #4F9187;
   --graph-node-focused: #22AFA8;
@@ -3723,8 +4015,7 @@ body[data-theme='light'] {
   padding-block: 0.12rem;
 }
 
-.theme-light,
-body[data-theme='light'] {
+.theme-light {
   --graph-line: #9AAAB0;
   --graph-node: #2F8F85;
   --graph-node-focused: #00AFA8;
@@ -3758,8 +4049,7 @@ body[data-theme='light'] {
 }
 
 /* Light graph tuning: let nodes lead and links sit back. */
-.theme-light,
-body[data-theme='light'] {
+.theme-light {
   --graph-line: #A8B8BE;
   --graph-node: #1F8F86;
   --graph-node-focused: #00BDB5;
@@ -4587,20 +4877,26 @@ body[data-theme='light'] {
 .theme-dark .status-bar,
 .theme-light .status-bar {
   gap: 0.15rem;
-  border-radius: var(--nr-radius-m) 0 0 0;
   overflow: hidden;
 }
 
 .theme-dark .status-bar {
   gap: 0.15rem;
-  border-radius: 0;
   border-top-color: color-mix(in srgb, var(--nr-iron) 46%, var(--nr-shadow));
   background: color-mix(in srgb, var(--nr-midnight) 84%, var(--nr-shadow));
-  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--nr-seafoam) 14%, transparent);
+  box-shadow:
+    inset 0 2px 0 color-mix(in srgb, var(--nr-seafoam) 64%, transparent),
+    inset 0 3px 8px color-mix(in srgb, var(--nr-pine) 18%, transparent);
 }
 
 .theme-dark .status-bar::before {
-  display: block;
+  display: none;
+}
+
+.theme-light .status-bar {
+  box-shadow:
+    inset 0 2px 0 color-mix(in srgb, var(--nr-pine) 42%, transparent),
+    inset 0 3px 8px color-mix(in srgb, var(--nr-seafoam) 16%, transparent);
 }
 
 .theme-dark .status-bar-item,
