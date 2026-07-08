@@ -4,6 +4,11 @@ This file is for maintainers and release prep.
 
 ## Changelog
 
+### 0.1.10
+
+- Added Night Ridge Forge Health destructive dashboard action colors for the new Forge action variable contract.
+- Preserved generic Forge dashboard button styling without overriding destructive action buttons.
+
 ### 0.1.9
 
 - Removed link and tag `text-decoration` declarations and decoration variables for Obsidian 1.4.5 CSS lint compatibility.
