@@ -4,6 +4,12 @@ This file is for maintainers and release prep.
 
 ## Changelog
 
+### 0.1.11
+
+- Refined Obsidian Mobile drawer sizing, bottom selector, vault footer, and light/dark contrast for Cortex testing.
+- Improved Theme Visual Check coverage for inline code, deferred tasks, menus, prompts, suggestions, and popovers.
+- Kept the Night Ridge palette hierarchy centered on pine, seafoam, and restrained copper warning accents.
+
 ### 0.1.10
 
 - Added Night Ridge Forge Health destructive dashboard action colors for the new Forge action variable contract.
