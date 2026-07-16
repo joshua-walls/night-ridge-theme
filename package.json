@@ -1,0 +1,15 @@
+{
+  "name": "night-ridge-theme",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:css": "node scripts/check-theme-css.mjs",
+    "validate": "npm run lint && npm run lint:css"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^8.64.0",
+    "eslint": "^9.39.5",
+    "eslint-plugin-obsidianmd": "^0.4.1"
+  }
+}
