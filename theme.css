@@ -2983,10 +2983,10 @@ h6,
   --link-external-color: var(--text-accent);
   --link-external-color-hover: var(--text-accent-hover);
   --h2-color: color-mix(in srgb, var(--nr-tertiary) 88%, var(--nr-cloud));
-  --h3-color: color-mix(in srgb, var(--nr-secondary) 78%, var(--nr-cloud));
-  --h4-color: color-mix(in srgb, var(--nr-lichen) 82%, var(--nr-cloud));
-  --h5-color: color-mix(in srgb, var(--nr-slate) 84%, var(--nr-fog));
-  --h6-color: color-mix(in srgb, var(--nr-secondary) 66%, var(--nr-slate));
+  --h3-color: color-mix(in srgb, var(--nr-lichen) 86%, var(--nr-cloud));
+  --h4-color: color-mix(in srgb, var(--nr-ember) 74%, var(--nr-cloud));
+  --h5-color: color-mix(in srgb, var(--nr-slate) 70%, var(--nr-cloud));
+  --h6-color: color-mix(in srgb, var(--nr-secondary) 76%, var(--nr-cloud));
   --nr-folder-root: color-mix(in srgb, var(--nr-primary) 88%, var(--nr-cloud));
   --nr-folder-depth-1: color-mix(in srgb, var(--nr-tertiary) 86%, var(--nr-cloud));
   --nr-folder-depth-2: color-mix(in srgb, var(--nr-lichen) 82%, var(--nr-cloud));
@@ -3006,10 +3006,10 @@ h6,
   --link-external-color: var(--text-accent);
   --link-external-color-hover: var(--text-accent-hover);
   --h2-color: color-mix(in srgb, var(--nr-tertiary) 82%, var(--nr-midnight));
-  --h3-color: color-mix(in srgb, var(--nr-secondary) 68%, var(--nr-ridge));
-  --h4-color: color-mix(in srgb, var(--nr-lichen) 72%, var(--nr-midnight));
-  --h5-color: color-mix(in srgb, var(--nr-slate) 82%, var(--nr-midnight));
-  --h6-color: color-mix(in srgb, var(--nr-secondary) 60%, var(--nr-ridge));
+  --h3-color: color-mix(in srgb, var(--nr-lichen) 72%, var(--nr-midnight));
+  --h4-color: color-mix(in srgb, var(--nr-ember) 78%, var(--nr-midnight));
+  --h5-color: color-mix(in srgb, var(--nr-slate) 76%, var(--nr-midnight));
+  --h6-color: color-mix(in srgb, var(--nr-secondary) 70%, var(--nr-ridge));
   --nr-folder-root: color-mix(in srgb, var(--nr-primary) 78%, var(--nr-midnight));
   --nr-folder-depth-1: color-mix(in srgb, var(--nr-tertiary) 80%, var(--nr-midnight));
   --nr-folder-depth-2: color-mix(in srgb, var(--nr-lichen) 72%, var(--nr-midnight));
@@ -3186,10 +3186,10 @@ h6,
   --link-external-color: var(--text-accent);
   --link-external-color-hover: var(--text-accent-hover);
   --h2-color: color-mix(in srgb, var(--nr-tertiary) 88%, var(--nr-cloud));
-  --h3-color: color-mix(in srgb, var(--nr-secondary) 78%, var(--nr-cloud));
-  --h4-color: color-mix(in srgb, var(--nr-lichen) 82%, var(--nr-cloud));
-  --h5-color: color-mix(in srgb, var(--nr-slate) 84%, var(--nr-fog));
-  --h6-color: color-mix(in srgb, var(--nr-secondary) 66%, var(--nr-slate));
+  --h3-color: color-mix(in srgb, var(--nr-lichen) 86%, var(--nr-cloud));
+  --h4-color: color-mix(in srgb, var(--nr-ember) 74%, var(--nr-cloud));
+  --h5-color: color-mix(in srgb, var(--nr-slate) 70%, var(--nr-cloud));
+  --h6-color: color-mix(in srgb, var(--nr-secondary) 76%, var(--nr-cloud));
   --nr-folder-root: color-mix(in srgb, var(--nr-primary) 88%, var(--nr-cloud));
   --nr-folder-depth-1: color-mix(in srgb, var(--nr-tertiary) 86%, var(--nr-cloud));
   --nr-folder-depth-2: color-mix(in srgb, var(--nr-lichen) 82%, var(--nr-cloud));
@@ -3209,10 +3209,10 @@ h6,
   --link-external-color: var(--text-accent);
   --link-external-color-hover: var(--text-accent-hover);
   --h2-color: color-mix(in srgb, var(--nr-tertiary) 82%, var(--nr-midnight));
-  --h3-color: color-mix(in srgb, var(--nr-secondary) 68%, var(--nr-ridge));
-  --h4-color: color-mix(in srgb, var(--nr-lichen) 72%, var(--nr-midnight));
-  --h5-color: color-mix(in srgb, var(--nr-slate) 82%, var(--nr-midnight));
-  --h6-color: color-mix(in srgb, var(--nr-secondary) 60%, var(--nr-ridge));
+  --h3-color: color-mix(in srgb, var(--nr-lichen) 72%, var(--nr-midnight));
+  --h4-color: color-mix(in srgb, var(--nr-ember) 78%, var(--nr-midnight));
+  --h5-color: color-mix(in srgb, var(--nr-slate) 76%, var(--nr-midnight));
+  --h6-color: color-mix(in srgb, var(--nr-secondary) 70%, var(--nr-ridge));
   --nr-folder-root: color-mix(in srgb, var(--nr-primary) 78%, var(--nr-midnight));
   --nr-folder-depth-1: color-mix(in srgb, var(--nr-tertiary) 80%, var(--nr-midnight));
   --nr-folder-depth-2: color-mix(in srgb, var(--nr-lichen) 72%, var(--nr-midnight));
@@ -5938,10 +5938,10 @@ body {
   --link-external-color: var(--text-accent);
   --link-external-color-hover: var(--text-accent-hover);
   --h2-color: color-mix(in srgb, var(--nr-tertiary) 88%, var(--nr-cloud));
-  --h3-color: color-mix(in srgb, var(--nr-secondary) 78%, var(--nr-cloud));
-  --h4-color: color-mix(in srgb, var(--nr-lichen) 82%, var(--nr-cloud));
-  --h5-color: color-mix(in srgb, var(--nr-slate) 84%, var(--nr-fog));
-  --h6-color: color-mix(in srgb, var(--nr-secondary) 66%, var(--nr-slate));
+  --h3-color: color-mix(in srgb, var(--nr-lichen) 86%, var(--nr-cloud));
+  --h4-color: color-mix(in srgb, var(--nr-ember) 74%, var(--nr-cloud));
+  --h5-color: color-mix(in srgb, var(--nr-slate) 70%, var(--nr-cloud));
+  --h6-color: color-mix(in srgb, var(--nr-secondary) 76%, var(--nr-cloud));
   --nr-folder-root: color-mix(in srgb, var(--nr-primary) 88%, var(--nr-cloud));
   --nr-folder-depth-1: color-mix(in srgb, var(--nr-tertiary) 86%, var(--nr-cloud));
   --nr-folder-depth-2: color-mix(in srgb, var(--nr-lichen) 82%, var(--nr-cloud));
@@ -5961,10 +5961,10 @@ body {
   --link-external-color: var(--text-accent);
   --link-external-color-hover: var(--text-accent-hover);
   --h2-color: color-mix(in srgb, var(--nr-tertiary) 82%, var(--nr-midnight));
-  --h3-color: color-mix(in srgb, var(--nr-secondary) 68%, var(--nr-ridge));
-  --h4-color: color-mix(in srgb, var(--nr-lichen) 72%, var(--nr-midnight));
-  --h5-color: color-mix(in srgb, var(--nr-slate) 82%, var(--nr-midnight));
-  --h6-color: color-mix(in srgb, var(--nr-secondary) 60%, var(--nr-ridge));
+  --h3-color: color-mix(in srgb, var(--nr-lichen) 72%, var(--nr-midnight));
+  --h4-color: color-mix(in srgb, var(--nr-ember) 78%, var(--nr-midnight));
+  --h5-color: color-mix(in srgb, var(--nr-slate) 76%, var(--nr-midnight));
+  --h6-color: color-mix(in srgb, var(--nr-secondary) 70%, var(--nr-ridge));
   --nr-folder-root: color-mix(in srgb, var(--nr-primary) 78%, var(--nr-midnight));
   --nr-folder-depth-1: color-mix(in srgb, var(--nr-tertiary) 80%, var(--nr-midnight));
   --nr-folder-depth-2: color-mix(in srgb, var(--nr-lichen) 72%, var(--nr-midnight));
@@ -6059,6 +6059,42 @@ body {
 .theme-light .markdown-rendered h6,
 .theme-light .cm-header-6 {
   color: var(--h6-color);
+}
+
+.markdown-preview-view h3,
+.markdown-rendered h3 {
+  margin-inline-start: 0.25rem;
+}
+
+.markdown-preview-view h4,
+.markdown-rendered h4 {
+  margin-inline-start: 0.5rem;
+}
+
+.markdown-preview-view h5,
+.markdown-rendered h5 {
+  margin-inline-start: 0.75rem;
+}
+
+.markdown-preview-view h6,
+.markdown-rendered h6 {
+  margin-inline-start: 1rem;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-header-3 {
+  padding-inline-start: 0.25rem;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-header-4 {
+  padding-inline-start: 0.5rem;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-header-5 {
+  padding-inline-start: 0.75rem;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-header-6 {
+  padding-inline-start: 1rem;
 }
 
 .theme-dark .markdown-rendered li::marker,
