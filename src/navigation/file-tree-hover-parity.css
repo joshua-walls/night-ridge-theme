@@ -1,0 +1,51 @@
+/* Dark folder hover parity with light mode. */
+.theme-dark .nav-files-container .nav-folder-title:hover,
+.theme-dark .nav-files-container .nav-file-title:hover,
+.theme-dark .nav-files-container .tree-item-self:hover {
+  color: color-mix(in srgb, var(--nr-cloud) 88%, var(--nr-pine));
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-pine) 11%, transparent),
+      color-mix(in srgb, var(--nr-ridge) 13%, transparent) 46%,
+      transparent
+    );
+  box-shadow: inset 2px 0 0 color-mix(in srgb, var(--nr-folder-depth-color, var(--nr-pine)) 46%, transparent);
+}
+
+.theme-dark .nav-files-container .tree-item-self.is-active,
+.theme-dark .nav-files-container .nav-folder-title.is-active,
+.theme-dark .nav-files-container .nav-file-title.is-active {
+  color: color-mix(in srgb, var(--nr-cloud) 88%, var(--nr-pine));
+  background:
+    radial-gradient(
+      ellipse 34px 88% at -2px 50%,
+      color-mix(in srgb, var(--nr-pine) 11%, transparent) 0%,
+      color-mix(in srgb, var(--nr-pine) 3%, transparent) 34%,
+      transparent 70%
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-pine) 4%, transparent),
+      color-mix(in srgb, var(--nr-ridge) 3%, transparent) 30%,
+      transparent
+    );
+  box-shadow:
+    inset 3px 0 0 color-mix(in srgb, var(--nr-pine) 78%, transparent),
+    inset 6px 0 10px color-mix(in srgb, var(--nr-pine) 3%, transparent);
+}
+
+.theme-dark .nav-files-container .nav-file-title.is-active,
+.theme-dark .nav-files-container .tree-item-self.nav-file-title.is-active {
+  color: color-mix(in srgb, var(--nr-cloud) 90%, var(--nr-pine));
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-pine) 4%, transparent),
+      color-mix(in srgb, var(--nr-pine) 2%, transparent) 18%,
+      transparent 42%
+    );
+  box-shadow:
+    inset 3px 0 0 color-mix(in srgb, var(--nr-pine) 80%, transparent),
+    inset 7px 0 12px color-mix(in srgb, var(--nr-pine) 3%, transparent);
+}

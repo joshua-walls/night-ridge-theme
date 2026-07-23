@@ -1,0 +1,85 @@
+/* Command palette: edge-first selection, quiet command-center shell. */
+.theme-dark .prompt,
+.theme-light .prompt {
+  overflow: hidden;
+}
+
+.theme-dark .prompt {
+  border-color: color-mix(in srgb, var(--nr-pine) 38%, var(--nr-iron));
+  box-shadow:
+    0 14px 36px color-mix(in srgb, #000 42%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--nr-pine) 16%, transparent);
+}
+
+.theme-light .prompt {
+  border-color: color-mix(in srgb, var(--nr-ridge) 32%, var(--nr-pine));
+  box-shadow:
+    0 14px 32px color-mix(in srgb, var(--nr-ridge) 17%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 48%, transparent);
+}
+
+.theme-dark .prompt-input,
+.theme-light .prompt-input {
+  box-shadow: none;
+}
+
+.theme-dark .prompt-input {
+  background: color-mix(in srgb, var(--nr-midnight) 86%, var(--nr-moonstone));
+  border-color: color-mix(in srgb, var(--nr-pine) 40%, var(--nr-iron));
+}
+
+.theme-light .prompt-input {
+  background: color-mix(in srgb, #C5D2D7 88%, var(--nr-cloud));
+  border-color: color-mix(in srgb, var(--nr-ridge) 26%, var(--nr-pine));
+}
+
+.theme-dark .suggestion-item,
+.theme-light .suggestion-item {
+  border-radius: var(--nr-radius-s);
+  margin: 0.08rem 0.45rem;
+}
+
+.theme-dark .suggestion-item.is-selected,
+.theme-light .suggestion-item.is-selected {
+  box-shadow:
+    inset 3px 0 0 color-mix(in srgb, var(--nr-pine) 74%, transparent),
+    inset 10px 0 18px color-mix(in srgb, var(--nr-pine) 5%, transparent);
+}
+
+.theme-dark .suggestion-item.is-selected {
+  color: color-mix(in srgb, var(--nr-cloud) 92%, var(--nr-pine));
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-pine) 8%, transparent),
+      color-mix(in srgb, var(--nr-pine) 4%, transparent) 30%,
+      transparent 72%
+    );
+}
+
+.theme-light .suggestion-item.is-selected {
+  color: color-mix(in srgb, var(--nr-midnight) 90%, var(--nr-pine));
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-pine) 14%, #C5D2D7),
+      color-mix(in srgb, var(--nr-pine) 9%, #C5D2D7) 38%,
+      color-mix(in srgb, var(--nr-cloud) 18%, #C5D2D7) 100%
+    );
+}
+
+.theme-dark .suggestion-hotkey,
+.theme-light .suggestion-hotkey {
+  border-radius: var(--nr-radius-s);
+  border: 1px solid color-mix(in srgb, var(--nr-ridge) 28%, transparent);
+}
+
+.theme-dark .suggestion-hotkey {
+  color: color-mix(in srgb, var(--nr-cloud) 82%, var(--nr-slate));
+  background: color-mix(in srgb, var(--nr-ridge) 28%, var(--nr-midnight));
+}
+
+.theme-light .suggestion-hotkey {
+  color: color-mix(in srgb, var(--nr-ridge) 84%, var(--nr-midnight));
+  background: color-mix(in srgb, var(--nr-cloud) 38%, #C5D2D7);
+}

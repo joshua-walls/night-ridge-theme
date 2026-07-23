@@ -1,0 +1,82 @@
+/* Signature pass: beacon rhythm, folder altitude, ridge depth. */
+.theme-dark {
+  caret-color: var(--nr-seafoam);
+}
+
+.theme-dark .markdown-embed,
+.theme-dark .callout,
+.theme-dark .dataview.table-view-table,
+.theme-dark .markdown-rendered table,
+.theme-dark .markdown-preview-view table,
+.theme-dark .metadata-properties {
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 3%, transparent),
+    0 10px 28px color-mix(in srgb, var(--nr-shadow) 28%, transparent);
+}
+
+.theme-dark .workspace-leaf.mod-active .view-header {
+  box-shadow: inset 0 -1px 0 color-mix(in srgb, var(--nr-pine) 18%, transparent);
+}
+
+.theme-dark .nav-folder-title,
+.theme-dark .nav-folder-title .tree-item-inner,
+.theme-dark .nav-folder-title .nav-folder-title-content,
+.theme-dark .nav-folder-title .collapse-icon {
+  color: inherit;
+}
+
+.theme-dark .nav-files-container > div > .tree-item > .tree-item-self.nav-folder-title,
+.theme-dark .nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-title {
+  color: var(--nr-pine);
+}
+
+.theme-dark .nav-folder-children .nav-folder-title {
+  color: var(--nr-copper);
+}
+
+.theme-dark .nav-folder-children .nav-folder-children .nav-folder-title {
+  color: var(--nr-lichen);
+}
+
+.theme-dark .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-title {
+  color: color-mix(in srgb, var(--nr-ember) 78%, var(--nr-fog));
+}
+
+.theme-dark .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-title {
+  color: color-mix(in srgb, var(--nr-slate) 82%, var(--nr-fog));
+}
+
+.theme-dark .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-title {
+  color: color-mix(in srgb, var(--nr-seafoam) 72%, var(--nr-fog));
+}
+
+.theme-dark .nav-folder-title:hover,
+.theme-dark .tree-item-self.nav-folder-title:hover {
+  background: color-mix(in srgb, var(--nr-pine) 8%, transparent);
+}
+
+.theme-dark h2,
+.theme-dark .markdown-preview-view h2,
+.theme-dark .markdown-rendered h2 {
+  padding-bottom: 0.04em;
+  border-bottom: 0;
+  box-shadow: none;
+}
+
+.theme-dark .cm-active,
+.theme-dark .markdown-source-view.mod-cm6 .cm-active {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--nr-pine) 6%, transparent), transparent 34%),
+    color-mix(in srgb, var(--nr-pine) 2%, transparent);
+}
+
+.theme-dark .suggestion-item.is-selected,
+.theme-dark .menu-item.is-selected,
+.theme-dark .menu-item:hover,
+.theme-dark .nav-file-title.is-active,
+.theme-dark .tree-item-self.nav-file-title.is-active {
+  box-shadow:
+    inset 3px 0 0 var(--nr-pine),
+    inset 0 0 0 1px color-mix(in srgb, var(--nr-pine) 12%, transparent),
+    0 0 18px color-mix(in srgb, var(--nr-pine) 7%, transparent);
+}

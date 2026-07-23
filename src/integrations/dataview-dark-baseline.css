@@ -1,0 +1,12 @@
+.theme-dark div.dataview-error-box,
+.theme-light div.dataview-error-box {
+  background: color-mix(in srgb, var(--nr-copper) 5%, var(--background-primary));
+  border-color: color-mix(in srgb, var(--nr-copper) 36%, var(--border-color));
+}
+
+.theme-dark pre.dataview-error,
+.theme-light pre.dataview-error {
+  color: color-mix(in srgb, var(--nr-ember) 82%, var(--text-normal));
+  background: color-mix(in srgb, var(--nr-ember) 9%, var(--background-primary));
+  border-color: color-mix(in srgb, var(--nr-ember) 56%, var(--border-color));
+}

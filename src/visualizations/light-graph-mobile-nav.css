@@ -1,0 +1,76 @@
+/* Light mode repair 3: graph readability and calmer mobile nav selection. */
+.theme-light .graph-view,
+.theme-light .graph-view-container,
+.theme-light .workspace-leaf-content[data-type='graph'] .view-content,
+.theme-light .workspace-leaf-content[data-type='localgraph'] .view-content {
+  background: #D1D9DD;
+}
+
+.theme-light .graph-view.color-line,
+.theme-light .graph-view.color-arrow {
+  color: var(--graph-line);
+}
+
+.theme-light .graph-view.color-fill,
+.theme-light .graph-view.color-circle {
+  color: var(--graph-node);
+}
+
+.theme-light .graph-view.color-fill-highlight,
+.theme-light .graph-view.color-circle-highlight,
+.theme-light .graph-view.color-fill-focused,
+.theme-light .graph-view.color-circle-focused {
+  color: var(--graph-node-focused);
+}
+
+.theme-light .graph-view.color-line-highlight,
+.theme-light .graph-view.color-arrow-highlight,
+.theme-light .graph-view.color-line-focused,
+.theme-light .graph-view.color-arrow-focused {
+  color: var(--graph-node);
+}
+
+.theme-light .graph-view.color-fill-unresolved {
+  color: var(--graph-node-unresolved);
+}
+
+.theme-light .graph-view.color-fill-tag {
+  color: var(--graph-node-tag);
+}
+
+.theme-light .graph-view.color-fill-attachment {
+  color: var(--graph-node-attachment);
+}
+
+.theme-light .graph-view text,
+.theme-light .graph-view .graph-view-label {
+  color: var(--graph-text);
+  fill: var(--graph-text);
+}
+
+.theme-light.is-mobile .mobile-navbar .clickable-icon.is-active,
+.theme-light.is-mobile .mobile-navbar .is-active > .clickable-icon,
+.is-mobile .theme-light .mobile-navbar .clickable-icon.is-active,
+.is-mobile .theme-light .mobile-navbar .is-active > .clickable-icon {
+  color: color-mix(in srgb, var(--nr-seafoam) 76%, var(--nr-ridge));
+  background: color-mix(in srgb, var(--nr-cloud) 18%, transparent);
+  filter: drop-shadow(0 0 4px color-mix(in srgb, var(--nr-seafoam) 24%, transparent));
+}
+
+.theme-light.is-mobile .mobile-navbar .clickable-icon.is-active::before,
+.theme-light.is-mobile .mobile-navbar .is-active > .clickable-icon::before,
+.is-mobile .theme-light .mobile-navbar .clickable-icon.is-active::before,
+.is-mobile .theme-light .mobile-navbar .is-active > .clickable-icon::before {
+  opacity: 0.26;
+}
+
+.theme-light .nav-files-container .nav-folder-title.is-active,
+.theme-light .nav-files-container .tree-item-self.nav-folder-title.is-active {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 8%, transparent),
+      color-mix(in srgb, var(--nr-ridge) 4%, transparent) 34%,
+      transparent 68%
+    );
+}

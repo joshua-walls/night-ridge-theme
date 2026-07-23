@@ -1,0 +1,153 @@
+/* Crisp command center pass: remove fog, keep dark. */
+
+.theme-dark .metadata-properties,
+.theme-dark .markdown-embed,
+.theme-dark .callout,
+.theme-dark .prompt,
+.theme-dark .popover,
+.theme-dark .menu,
+.theme-dark .suggestion-container,
+.theme-dark .search-result-container,
+.theme-dark .modal,
+.theme-dark .setting-item {
+  background: #0A1822;
+  border-color: #2F414B;
+}
+
+.theme-dark .metadata-property-key,
+.theme-dark .metadata-property-key-input,
+.theme-dark .metadata-property-icon,
+.theme-dark .side-dock-ribbon-action,
+.theme-dark .clickable-icon {
+  color: #8FA6B0;
+}
+
+.theme-dark h1,
+.theme-dark .markdown-preview-view h1,
+.theme-dark .markdown-rendered h1 {
+  color: var(--nr-pine);
+  border-left-color: var(--nr-pine);
+  border-left-width: 4px;
+  padding: 0.08em 0 0.1em 0.62em;
+  border-radius: 2px;
+  background:
+    radial-gradient(
+      ellipse 46px 82% at -2px 50%,
+      color-mix(in srgb, var(--nr-pine) 30%, transparent) 0%,
+      color-mix(in srgb, var(--nr-pine) 14%, transparent) 36%,
+      transparent 74%
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-pine) 6%, transparent) 0%,
+      rgba(95, 168, 157, 0.022) 26%,
+      transparent 50%
+    );
+  box-shadow:
+    inset 1px 0 0 color-mix(in srgb, var(--nr-pine) 88%, transparent),
+    inset 6px 0 16px color-mix(in srgb, var(--nr-pine) 10%, transparent),
+    0 0 14px color-mix(in srgb, var(--nr-pine) 8%, transparent);
+  text-shadow: 0 0 13px color-mix(in srgb, var(--nr-pine) 16%, transparent);
+}
+
+.theme-dark h2,
+.theme-dark .markdown-preview-view h2,
+.theme-dark .markdown-rendered h2,
+.theme-dark .cm-header-2 {
+  color: var(--nr-copper);
+  border-bottom: 0;
+}
+
+.theme-dark h3,
+.theme-dark .markdown-preview-view h3,
+.theme-dark .markdown-rendered h3,
+.theme-dark .cm-header-3 {
+  color: #9DC59A;
+}
+
+.theme-dark p,
+.theme-dark li,
+.theme-dark .markdown-preview-view,
+.theme-dark .markdown-rendered {
+  color: #F0F5F6;
+}
+
+.theme-dark .cm-line,
+.theme-dark .markdown-source-view.mod-cm6 {
+  color: #F0F5F6;
+}
+
+.theme-dark .nav-file-title,
+.theme-dark .tree-item-self.nav-file-title,
+.theme-dark .nav-file-title .nav-file-title-content,
+.theme-dark .tree-item-self.nav-file-title .tree-item-inner {
+  color: #C4D0D5;
+}
+
+.theme-dark .nav-files-container {
+  --nr-folder-depth-color: var(--nr-pine);
+}
+
+.theme-dark .nav-files-container .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children {
+  --nr-folder-depth-color: var(--nr-copper);
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: color-mix(in srgb, var(--nr-pine) 34%, transparent);
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: var(--nr-lichen);
+  border-left-color: color-mix(in srgb, var(--nr-copper) 32%, transparent);
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: var(--nr-ember);
+  border-left-color: color-mix(in srgb, var(--nr-lichen) 30%, transparent);
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: var(--nr-seafoam);
+  border-left-color: rgba(210, 91, 69, 0.30);
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: var(--nr-slate);
+  border-left-color: color-mix(in srgb, var(--nr-seafoam) 30%, transparent);
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: #2F414B;
+  border-left-color: rgba(143, 166, 176, 0.32);
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: #5FA89D;
+  border-left-color: rgba(47, 65, 75, 0.32);
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: #C4D0D5;
+  border-left-color: rgba(95, 168, 157, 0.30);
+}
+
+.theme-dark .graph-view,
+.theme-dark .graph-view-container,
+.theme-dark .workspace-leaf-content[data-type='graph'] .view-content,
+.theme-dark .workspace-leaf-content[data-type='localgraph'] .view-content {
+  background: #02070B;
+}
+
+.theme-dark .graph-view.color-fill-highlight,
+.theme-dark .graph-view.color-circle-highlight,
+.theme-dark .graph-view.color-fill-focused,
+.theme-dark .graph-view.color-circle-focused {
+  color: #6FDAD4;
+}

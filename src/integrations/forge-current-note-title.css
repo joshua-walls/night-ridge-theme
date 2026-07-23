@@ -1,0 +1,177 @@
+/* Forge current-note title signal: only works when Forge exposes status on editor/title ancestors. */
+.theme-dark .workspace-leaf.mod-active,
+.theme-light .workspace-leaf.mod-active {
+  --nr-current-note-title-signal: transparent;
+}
+
+.theme-dark :is(
+  .workspace-leaf.mod-active,
+  .workspace-leaf-content,
+  .markdown-source-view,
+  .markdown-preview-view,
+  .view-content
+):is(
+  [data-status='good' i],
+  [data-status='healthy' i],
+  [data-status='clear' i],
+  [data-status='valid' i],
+  [data-status='indexed' i],
+  [data-current-note-status='good' i],
+  [data-current-note-status='healthy' i],
+  [data-current-note-status='clear' i],
+  [data-current-note-status='valid' i],
+  [data-current-note-status='indexed' i],
+  [data-forge-current-note-status='good' i],
+  [data-forge-current-note-status='healthy' i],
+  [data-forge-current-note-status='clear' i],
+  [data-forge-current-note-status='valid' i],
+  [data-forge-current-note-status='indexed' i]
+),
+.theme-light :is(
+  .workspace-leaf.mod-active,
+  .workspace-leaf-content,
+  .markdown-source-view,
+  .markdown-preview-view,
+  .view-content
+):is(
+  [data-status='good' i],
+  [data-status='healthy' i],
+  [data-status='clear' i],
+  [data-status='valid' i],
+  [data-status='indexed' i],
+  [data-current-note-status='good' i],
+  [data-current-note-status='healthy' i],
+  [data-current-note-status='clear' i],
+  [data-current-note-status='valid' i],
+  [data-current-note-status='indexed' i],
+  [data-forge-current-note-status='good' i],
+  [data-forge-current-note-status='healthy' i],
+  [data-forge-current-note-status='clear' i],
+  [data-forge-current-note-status='valid' i],
+  [data-forge-current-note-status='indexed' i]
+) {
+  --nr-current-note-title-signal: var(--nr-pine);
+}
+
+.theme-dark :is(
+  .workspace-leaf.mod-active,
+  .workspace-leaf-content,
+  .markdown-source-view,
+  .markdown-preview-view,
+  .view-content
+):is(
+  [data-status='warning' i],
+  [data-status='needs attention' i],
+  [data-status='needs-attention' i],
+  [data-current-note-status='warning' i],
+  [data-current-note-status='needs attention' i],
+  [data-current-note-status='needs-attention' i],
+  [data-forge-current-note-status='warning' i],
+  [data-forge-current-note-status='needs attention' i],
+  [data-forge-current-note-status='needs-attention' i]
+),
+.theme-light :is(
+  .workspace-leaf.mod-active,
+  .workspace-leaf-content,
+  .markdown-source-view,
+  .markdown-preview-view,
+  .view-content
+):is(
+  [data-status='warning' i],
+  [data-status='needs attention' i],
+  [data-status='needs-attention' i],
+  [data-current-note-status='warning' i],
+  [data-current-note-status='needs attention' i],
+  [data-current-note-status='needs-attention' i],
+  [data-forge-current-note-status='warning' i],
+  [data-forge-current-note-status='needs attention' i],
+  [data-forge-current-note-status='needs-attention' i]
+) {
+  --nr-current-note-title-signal: var(--nr-copper);
+}
+
+.theme-dark :is(
+  .workspace-leaf.mod-active,
+  .workspace-leaf-content,
+  .markdown-source-view,
+  .markdown-preview-view,
+  .view-content
+):is(
+  [data-status='critical' i],
+  [data-status='error' i],
+  [data-status='fail' i],
+  [data-status='failed' i],
+  [data-current-note-status='critical' i],
+  [data-current-note-status='error' i],
+  [data-current-note-status='fail' i],
+  [data-current-note-status='failed' i],
+  [data-forge-current-note-status='critical' i],
+  [data-forge-current-note-status='error' i],
+  [data-forge-current-note-status='fail' i],
+  [data-forge-current-note-status='failed' i]
+),
+.theme-light :is(
+  .workspace-leaf.mod-active,
+  .workspace-leaf-content,
+  .markdown-source-view,
+  .markdown-preview-view,
+  .view-content
+):is(
+  [data-status='critical' i],
+  [data-status='error' i],
+  [data-status='fail' i],
+  [data-status='failed' i],
+  [data-current-note-status='critical' i],
+  [data-current-note-status='error' i],
+  [data-current-note-status='fail' i],
+  [data-current-note-status='failed' i],
+  [data-forge-current-note-status='critical' i],
+  [data-forge-current-note-status='error' i],
+  [data-forge-current-note-status='fail' i],
+  [data-forge-current-note-status='failed' i]
+) {
+  --nr-current-note-title-signal: var(--nr-ember);
+}
+
+.theme-dark :is(
+  .workspace-leaf.mod-active,
+  .workspace-leaf-content,
+  .markdown-source-view,
+  .markdown-preview-view,
+  .view-content
+):is(
+  [data-status='muted' i],
+  [data-status='no note' i],
+  [data-status='no-note' i],
+  [data-status='exempt' i],
+  [data-current-note-status='muted' i],
+  [data-current-note-status='no note' i],
+  [data-current-note-status='no-note' i],
+  [data-current-note-status='exempt' i],
+  [data-forge-current-note-status='muted' i],
+  [data-forge-current-note-status='no note' i],
+  [data-forge-current-note-status='no-note' i],
+  [data-forge-current-note-status='exempt' i]
+),
+.theme-light :is(
+  .workspace-leaf.mod-active,
+  .workspace-leaf-content,
+  .markdown-source-view,
+  .markdown-preview-view,
+  .view-content
+):is(
+  [data-status='muted' i],
+  [data-status='no note' i],
+  [data-status='no-note' i],
+  [data-status='exempt' i],
+  [data-current-note-status='muted' i],
+  [data-current-note-status='no note' i],
+  [data-current-note-status='no-note' i],
+  [data-current-note-status='exempt' i],
+  [data-forge-current-note-status='muted' i],
+  [data-forge-current-note-status='no note' i],
+  [data-forge-current-note-status='no-note' i],
+  [data-forge-current-note-status='exempt' i]
+) {
+  --nr-current-note-title-signal: var(--nr-slate);
+}

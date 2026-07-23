@@ -1,0 +1,88 @@
+/* Forge semantic status pass: trust explicit data-status hooks only. */
+.theme-dark .forge-health-dashboard {
+  --forge-health-status-color: var(--nr-pine);
+  --forge-health-action-destructive-bg: color-mix(in srgb, var(--nr-ember) 82%, var(--nr-midnight));
+  --forge-health-action-destructive-border: color-mix(in srgb, var(--nr-ember) 66%, var(--nr-iron));
+  --forge-health-action-destructive-color: var(--nr-cloud);
+  --forge-health-action-destructive-hover-bg: color-mix(in srgb, var(--nr-ember) 88%, var(--nr-midnight));
+  --forge-health-action-destructive-hover-color: var(--nr-cloud);
+}
+
+.theme-dark .forge-health-dashboard [data-status='good' i],
+.theme-dark .forge-health-dashboard [data-status='healthy' i],
+.theme-dark .forge-health-dashboard [data-status='clear' i],
+.theme-dark .forge-health-dashboard [data-status='valid' i],
+.theme-dark .forge-health-dashboard [data-status='indexed' i] {
+  --forge-health-status-color: var(--nr-pine);
+}
+
+.theme-dark .forge-health-dashboard [data-status='warning' i],
+.theme-dark .forge-health-dashboard [data-status='needs attention' i],
+.theme-dark .forge-health-dashboard [data-status='needs-attention' i] {
+  --forge-health-status-color: var(--nr-copper);
+}
+
+.theme-dark .forge-health-dashboard [data-status='critical' i],
+.theme-dark .forge-health-dashboard [data-status='error' i],
+.theme-dark .forge-health-dashboard [data-status='fail' i],
+.theme-dark .forge-health-dashboard [data-status='failed' i] {
+  --forge-health-status-color: var(--nr-ember);
+}
+
+.theme-dark .forge-health-dashboard [data-status='muted' i],
+.theme-dark .forge-health-dashboard [data-status='no note' i],
+.theme-dark .forge-health-dashboard [data-status='no-note' i],
+.theme-dark .forge-health-dashboard [data-status='exempt' i] {
+  --forge-health-status-color: var(--nr-slate);
+}
+
+.theme-dark .forge-health-dashboard .forge-health-header[data-status] h1,
+.theme-dark .forge-health-dashboard .forge-health-section[data-status] .forge-health-section-header h2,
+.theme-dark .forge-health-dashboard .forge-health-section-header[data-status] h2,
+.theme-dark .forge-health-dashboard :is(h1, h2)[data-status] {
+  color: var(--forge-health-status-color);
+}
+
+.theme-dark .forge-health-dashboard .forge-health-pill[data-status],
+.theme-dark .forge-health-dashboard .forge-health-section-status[data-status] {
+  color: color-mix(in srgb, var(--forge-health-status-color) 82%, var(--nr-cloud));
+  background: color-mix(in srgb, var(--forge-health-status-color) 9%, transparent);
+  border-color: color-mix(in srgb, var(--forge-health-status-color) 38%, transparent);
+}
+
+.theme-dark .forge-health-dashboard .forge-health-section,
+.theme-dark .forge-health-dashboard .forge-health-card,
+.theme-dark .forge-health-dashboard .forge-health-metric-card {
+  background: color-mix(in srgb, var(--nr-midnight) 68%, var(--nr-shadow));
+  border: 1px solid color-mix(in srgb, var(--nr-iron) 52%, var(--nr-midnight));
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 2%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--nr-shadow) 58%, transparent);
+}
+
+.theme-dark .forge-health-dashboard .forge-health-metric-card {
+  background: color-mix(in srgb, var(--nr-ridge) 46%, var(--nr-midnight));
+  border-color: color-mix(in srgb, var(--nr-pine) 18%, var(--nr-iron));
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 4%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--nr-shadow) 68%, transparent);
+}
+
+.theme-dark .forge-health-dashboard .forge-health-section[data-status],
+.theme-dark .forge-health-dashboard .forge-health-card[data-status],
+.theme-dark .forge-health-dashboard .forge-health-metric-card[data-status] {
+  border-color: color-mix(in srgb, var(--forge-health-status-color) 28%, var(--nr-iron));
+}
+
+.theme-dark .forge-health-dashboard button:not(.mod-cta):not(.mod-warning):not(.forge-health-action-destructive) {
+  color: color-mix(in srgb, var(--nr-cloud) 82%, var(--nr-slate));
+  background: color-mix(in srgb, var(--nr-ridge) 62%, var(--nr-midnight));
+  border: 1px solid color-mix(in srgb, var(--nr-iron) 72%, var(--nr-midnight));
+  box-shadow: none;
+}
+
+.theme-dark .forge-health-dashboard button:not(.mod-cta):not(.mod-warning):not(.forge-health-action-destructive):hover {
+  color: color-mix(in srgb, var(--nr-cloud) 88%, var(--nr-seafoam));
+  background: color-mix(in srgb, var(--nr-pine) 13%, var(--nr-midnight));
+  border-color: color-mix(in srgb, var(--nr-pine) 34%, var(--nr-iron));
+}

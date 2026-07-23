@@ -1,0 +1,38 @@
+/* Light mode parity: beacon headings, depth rhythm, status language. */
+.theme-light h1,
+.theme-light .markdown-preview-view h1,
+.theme-light .markdown-rendered h1 {
+  border-left-width: 4px;
+  padding: 0.08em 0 0.1em 0.62em;
+  border-radius: 2px;
+  box-shadow:
+    inset 1px 0 0 color-mix(in srgb, var(--nr-pine) 72%, transparent),
+    inset 6px 0 16px color-mix(in srgb, var(--nr-pine) 8%, transparent);
+  text-shadow: 0 1px 0 color-mix(in srgb, var(--nr-cloud) 46%, transparent);
+}
+
+.theme-light h2,
+.theme-light .markdown-preview-view h2,
+.theme-light .markdown-rendered h2,
+.theme-light .cm-header-2 {
+  color: color-mix(in srgb, var(--nr-copper) 82%, var(--nr-midnight));
+  border-bottom: 0;
+}
+
+.theme-light h3,
+.theme-light .markdown-preview-view h3,
+.theme-light .markdown-rendered h3,
+.theme-light .cm-header-3 {
+  color: color-mix(in srgb, var(--nr-lichen) 74%, var(--nr-midnight));
+}
+
+.theme-light .nav-files-container {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-pine) 76%, var(--nr-midnight));
+}
+
+.theme-light .nav-files-container .nav-folder-title,
+.theme-light .nav-files-container .nav-folder-title .tree-item-inner,
+.theme-light .nav-files-container .nav-folder-title .nav-folder-title-content,
+.theme-light .nav-files-container .nav-folder-title .collapse-icon {
+  color: var(--nr-folder-depth-color);
+}

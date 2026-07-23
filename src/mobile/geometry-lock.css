@@ -1,0 +1,130 @@
+/* Mobile geometry lock: touch targets and depth stay stable without changing text scale. */
+body:is(.is-mobile, .is-phone, .is-tablet),
+:is(.is-mobile, .is-phone, .is-tablet) {
+  --nr-mobile-system-font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+  --font-text-theme: var(--nr-mobile-system-font);
+  --font-interface-theme: var(--nr-mobile-system-font);
+  --font-mermaid: var(--nr-mobile-system-font);
+  --mermaid-font-family: var(--nr-mobile-system-font);
+  --mermaid-alt-font-family: var(--nr-mobile-system-font);
+  --checkbox-size: 18px;
+  --metadata-input-height: 28px;
+  --metadata-property-padding: 1px 6px;
+  --nr-metadata-key-width: minmax(8.75rem, 40%);
+  --nav-item-padding: 8px 10px;
+  --nav-item-parent-padding: 8px 10px;
+  --nr-nav-padding-left: 14px;
+  --nr-nav-item-min-height: 34px;
+  --nr-nav-depth-step: 14px;
+  --nr-nav-disclosure-size: 16px;
+  --nr-nav-disclosure-gap: 8px;
+  --nr-task-status-width: var(--checkbox-size);
+  --nr-task-status-height: var(--checkbox-size);
+  --nr-task-status-font-size: 11px;
+  --nr-task-status-gap: 0.5em;
+}
+
+:is(.is-mobile, .is-phone, .is-tablet) :is(.nav-files-container, .metadata-container, .metadata-properties, .metadata-property, .view-header, .mobile-navbar, .mobile-toolbar) {
+  font-family: var(--font-interface-theme);
+  font-size: var(--font-ui-medium, 16px);
+}
+
+:is(.is-mobile, .is-phone, .is-tablet) :is(#nr-nav-depth-lock, .nav-files-container) {
+  --nav-item-padding-left: var(--nr-nav-padding-left);
+  --nav-item-children-padding-start: var(--nr-nav-depth-step);
+}
+
+:is(.is-mobile, .is-phone, .is-tablet) :is(.view-header .view-action, .view-header .clickable-icon, .mobile-navbar .clickable-icon, .mobile-toolbar .clickable-icon) {
+  width: 42px;
+  min-width: 42px;
+  height: 42px;
+  min-height: 42px;
+}
+
+:is(.is-mobile, .is-phone, .is-tablet) .metadata-properties .metadata-property {
+  display: grid;
+  grid-template-columns: var(--nr-metadata-key-width) minmax(0, 1fr);
+  column-gap: 6px;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: var(--metadata-input-height);
+  margin-block: 0;
+  padding: var(--metadata-property-padding);
+  line-height: 1.22;
+}
+
+:is(.is-mobile, .is-phone, .is-tablet) .metadata-properties :is(.metadata-property-key, .metadata-property-key-input, .metadata-property-icon, .metadata-property-value, .metadata-input-longtext) {
+  min-height: 0;
+}
+
+:is(.is-mobile, .is-phone, .is-tablet) .metadata-properties .metadata-property > .metadata-property-key {
+  display: flex;
+  grid-column: 1;
+  align-items: center;
+  width: auto;
+  max-width: none;
+  min-width: 0;
+  padding-block: 0;
+  white-space: normal;
+}
+
+:is(.is-mobile, .is-phone, .is-tablet) .metadata-properties .metadata-property-icon {
+  width: 16px;
+  min-width: 16px;
+  margin-inline-end: 5px;
+  padding: 0;
+}
+
+:is(.is-mobile, .is-phone, .is-tablet) .metadata-properties .metadata-property-key-input {
+  max-width: 100%;
+  padding: 0;
+  overflow: visible;
+  line-height: 1.2;
+  text-overflow: clip;
+  white-space: normal;
+}
+
+:is(.is-mobile, .is-phone, .is-tablet) .metadata-properties .metadata-property-value {
+  display: flex;
+  grid-column: 2;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+  padding-block: 0;
+  line-height: 1.2;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+:is(.is-mobile, .is-phone, .is-tablet) .metadata-properties .metadata-property-value :is(input, textarea, .metadata-input-longtext, .metadata-input, .multi-select-container, .multi-select-pill-container) {
+  min-width: 0;
+  min-height: 24px;
+  padding-block: 0;
+  line-height: 1.2;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+:is(.is-mobile, .is-phone, .is-tablet) .metadata-properties .metadata-property[data-property-key='tags'] {
+  align-items: center;
+}
+
+:is(.is-mobile, .is-phone, .is-tablet) .metadata-properties .metadata-property[data-property-key='tags'] :is(.metadata-property-key, .metadata-property-key-input, .metadata-property-icon, .metadata-property-value) {
+  align-self: center;
+  align-items: center;
+  padding-block: 0;
+}
+
+:is(.is-mobile, .is-phone, .is-tablet) .metadata-properties .metadata-property[data-property-key='tags'] .metadata-property-value {
+  padding-block: 1px;
+}
+
+:is(.is-mobile, .is-phone, .is-tablet) .metadata-properties .metadata-property[data-property-key='tags'] :is(.multi-select-container, .multi-select-pill-container) {
+  row-gap: 2px;
+}
+
+:is(.is-mobile, .is-phone, .is-tablet) .metadata-properties .metadata-property[data-property-key='tags'] .multi-select-pill {
+  min-height: 20px;
+  padding-block: 1px;
+  line-height: 1.15;
+}

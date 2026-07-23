@@ -1,0 +1,8 @@
+/* Tag chips keep semantic pill styling; rows follow the final metadata rhythm lock. */
+.theme-dark .metadata-property[data-property-key='tags'] .multi-select-pill,
+.theme-dark a.tag,
+.theme-dark .cm-hashtag {
+  color: color-mix(in srgb, var(--nr-lichen) 84%, var(--nr-cloud));
+  background: color-mix(in srgb, var(--nr-lichen) 10%, var(--nr-shadow));
+  border: 1px solid color-mix(in srgb, var(--nr-lichen) 34%, var(--nr-iron));
+}

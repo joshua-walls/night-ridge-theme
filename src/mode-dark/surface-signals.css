@@ -1,0 +1,354 @@
+/* Beacon pass: sparse signal, colder structure, restrained glow. */
+
+.theme-dark .cm-selectionBackground,
+.theme-dark .markdown-source-view.mod-cm6 .cm-selectionBackground {
+  background: color-mix(in srgb, var(--nr-pine) 24%, transparent);
+}
+
+.theme-dark .cm-active,
+.theme-dark .markdown-source-view.mod-cm6 .cm-active {
+  box-shadow: inset 2px 0 0 color-mix(in srgb, var(--nr-pine) 42%, transparent);
+}
+
+.theme-dark input:focus,
+.theme-dark textarea:focus,
+.theme-dark select:focus,
+.theme-dark .dropdown:focus,
+.theme-dark button:focus,
+.theme-dark .clickable-icon:focus {
+  outline: 1px solid color-mix(in srgb, var(--nr-seafoam) 54%, transparent);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--nr-seafoam) 8%, transparent);
+}
+
+.theme-dark .status-bar {
+  color: var(--status-bar-text-color);
+  border-color: var(--status-bar-border-color);
+}
+
+.theme-dark .nav-folder-children {
+  border-left: var(--nav-indentation-guide-width) solid var(--nav-indentation-guide-color);
+  margin-left: 0.4rem;
+  padding-left: 0.35rem;
+}
+
+.theme-dark .tree-item-self.is-active,
+.theme-dark .nav-file-title.is-active,
+.theme-dark .nav-folder-title.is-active,
+.theme-dark .tree-item-self.nav-file-title.is-active,
+.theme-dark .tree-item-self.nav-folder-title.is-active {
+  box-shadow:
+    inset 3px 0 0 var(--nr-pine),
+    inset 0 0 0 1px color-mix(in srgb, var(--nr-pine) 12%, transparent);
+}
+
+.theme-dark .nav-folder-title.is-active,
+.theme-dark .tree-item-self.nav-folder-title.is-active {
+  box-shadow:
+    inset 3px 0 0 var(--nr-copper),
+    inset 0 0 0 1px color-mix(in srgb, var(--nr-copper) 10%, transparent);
+}
+
+.theme-dark .callout {
+  border-color: color-mix(in srgb, var(--nr-iron) 72%, var(--nr-midnight));
+  border-left: 3px solid var(--nr-pine);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 4%, transparent);
+}
+
+.theme-dark .callout[data-callout='note'],
+.theme-dark .callout[data-callout='abstract'],
+.theme-dark .callout[data-callout='summary'],
+.theme-dark .callout[data-callout='todo'] {
+  border-left-color: var(--nr-pine);
+}
+
+.theme-dark .callout[data-callout='info'],
+.theme-dark .callout[data-callout='tip'],
+.theme-dark .callout[data-callout='hint'] {
+  border-left-color: var(--nr-seafoam);
+}
+
+.theme-dark .callout[data-callout='success'],
+.theme-dark .callout[data-callout='check'],
+.theme-dark .callout[data-callout='done'] {
+  border-left-color: var(--nr-pine);
+}
+
+.theme-dark .callout[data-callout='warning'],
+.theme-dark .callout[data-callout='question'],
+.theme-dark .callout[data-callout='attention'] {
+  border-left-color: var(--nr-copper);
+}
+
+.theme-dark .callout[data-callout='danger'],
+.theme-dark .callout[data-callout='error'],
+.theme-dark .callout[data-callout='failure'],
+.theme-dark .callout[data-callout='bug'] {
+  border-left-color: var(--nr-ember);
+}
+
+.theme-dark .suggestion-item.is-selected,
+.theme-dark .menu-item.is-selected,
+.theme-dark .menu-item:hover {
+  color: color-mix(in srgb, var(--nr-fog) 86%, var(--nr-slate));
+  background: color-mix(in srgb, var(--nr-pine) 10%, var(--nr-shadow));
+  box-shadow: inset 3px 0 0 var(--nr-pine);
+}
+
+.theme-dark .prompt,
+.theme-dark .modal,
+.theme-dark .suggestion-container,
+.theme-dark .menu,
+.theme-dark .popover {
+  background: color-mix(in srgb, var(--nr-midnight) 86%, var(--nr-moonstone));
+  border-color: color-mix(in srgb, var(--nr-iron) 70%, var(--nr-midnight));
+}
+
+.theme-dark .search-result-file-match,
+.theme-dark .search-result-file-matches {
+  background: color-mix(in srgb, var(--nr-midnight) 84%, var(--nr-moonstone));
+  border-color: color-mix(in srgb, var(--nr-iron) 64%, var(--nr-midnight));
+}
+
+.theme-dark .search-result-file-matched-text,
+.theme-dark .cm-searching,
+.theme-dark .is-flashing {
+  color: color-mix(in srgb, var(--nr-cloud) 86%, var(--nr-copper));
+  background: color-mix(in srgb, var(--nr-copper) 26%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--nr-seafoam) 38%, transparent);
+  border-radius: var(--nr-radius-s);
+}
+
+.theme-dark input[type='range'],
+.theme-dark progress,
+.theme-dark meter {
+  accent-color: var(--nr-pine);
+}
+
+.theme-dark progress {
+  background: color-mix(in srgb, var(--nr-midnight) 86%, var(--nr-moonstone));
+  border: 1px solid color-mix(in srgb, var(--nr-iron) 62%, var(--nr-midnight));
+  border-radius: var(--nr-radius-m);
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.theme-dark progress::-webkit-progress-bar {
+  background: color-mix(in srgb, var(--nr-midnight) 86%, var(--nr-moonstone));
+  border-radius: var(--nr-radius-m);
+}
+
+.theme-dark progress::-webkit-progress-value {
+  background: color-mix(in srgb, var(--nr-pine) 82%, var(--nr-slate));
+  border-radius: var(--nr-radius-m);
+  box-shadow: none;
+}
+
+.theme-dark progress::-moz-progress-bar {
+  background: color-mix(in srgb, var(--nr-pine) 82%, var(--nr-slate));
+  border-radius: var(--nr-radius-m);
+  box-shadow: none;
+}
+
+.theme-dark .slider-thumb,
+.theme-dark .slider::-webkit-slider-thumb {
+  background: var(--nr-pine);
+  border-color: color-mix(in srgb, var(--nr-pine) 72%, var(--nr-iron));
+}
+
+.theme-dark .checkbox-container.is-enabled {
+  background: var(--nr-pine);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--nr-pine) 12%, transparent);
+}
+
+.theme-dark .cm-keyword,
+.theme-dark .token.keyword {
+  color: var(--nr-copper);
+}
+
+.theme-dark .cm-string,
+.theme-dark .token.string {
+  color: var(--nr-lichen);
+}
+
+.theme-dark .cm-number,
+.theme-dark .cm-atom,
+.theme-dark .token.number,
+.theme-dark .token.boolean {
+  color: var(--nr-seafoam);
+}
+
+.theme-dark .cm-def,
+.theme-dark .cm-variable-2,
+.theme-dark .token.function {
+  color: var(--nr-pine);
+}
+
+.theme-dark .cm-property,
+.theme-dark .token.property {
+  color: color-mix(in srgb, var(--nr-fog) 84%, var(--nr-slate));
+}
+
+.theme-dark .cm-comment,
+.theme-dark .token.comment {
+  color: color-mix(in srgb, var(--nr-slate) 78%, var(--nr-shadow));
+}
+
+.theme-dark .cm-operator,
+.theme-dark .cm-punctuation,
+.theme-dark .token.operator,
+.theme-dark .token.punctuation {
+  color: color-mix(in srgb, var(--nr-slate) 86%, var(--nr-fog));
+}
+
+.theme-dark .mermaid,
+.theme-dark .mermaid svg,
+.theme-light .mermaid,
+.theme-light .mermaid svg {
+  background: transparent;
+}
+
+.theme-dark :is(#nr-mermaid-override, .mermaid) svg,
+.theme-light :is(#nr-mermaid-override, .mermaid) svg {
+  overflow: visible;
+}
+
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node rect,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node circle,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node ellipse,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node polygon,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node path {
+  fill: #1C2B36;
+  stroke: #6FDAD4;
+  stroke-width: 1.35px;
+  fill-opacity: 0.94;
+  stroke-opacity: 0.92;
+}
+
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node.default rect,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node.default circle,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node.default ellipse,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node.default polygon,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .node.default path {
+  fill: #20323B;
+  stroke: #5FA89D;
+}
+
+.theme-dark :is(#nr-mermaid-override, .mermaid) .flowchart-link,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .edgePath .path,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .messageLine0,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .messageLine1 {
+  stroke: #6F8793;
+  stroke-width: 1.2px;
+  stroke-opacity: 0.82;
+}
+
+.theme-dark :is(#nr-mermaid-override, .mermaid) marker path,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .arrowheadPath {
+  fill: #6F8793;
+  stroke: #6F8793;
+}
+
+.theme-dark :is(#nr-mermaid-override, .mermaid) svg text,
+.theme-dark :is(#nr-mermaid-override, .mermaid) svg tspan,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .label,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .label *,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .nodeLabel,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .nodeLabel *,
+.theme-dark :is(#nr-mermaid-override, .mermaid) foreignObject div,
+.theme-dark :is(#nr-mermaid-override, .mermaid) foreignObject span,
+.theme-dark :is(#nr-mermaid-override, .mermaid) foreignObject p {
+  color: #F5F7F8;
+  fill: #F5F7F8;
+  font-family: var(--mermaid-font-family);
+  font-size: 13px;
+  font-weight: 560;
+  line-height: 1.3;
+}
+
+.theme-dark :is(#nr-mermaid-override, .mermaid) foreignObject,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .nodeLabel,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .edgeLabel,
+.theme-light :is(#nr-mermaid-override, .mermaid) foreignObject,
+.theme-light :is(#nr-mermaid-override, .mermaid) .nodeLabel,
+.theme-light :is(#nr-mermaid-override, .mermaid) .edgeLabel {
+  overflow: visible;
+}
+
+.theme-dark :is(#nr-mermaid-override, .mermaid) .edgeLabel,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .edgeLabel p,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .edgeLabel rect,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .labelBkg {
+  background: #111B24;
+  fill: #111B24;
+  color: #D29A67;
+}
+
+.theme-dark :is(#nr-mermaid-override, .mermaid) .edgeLabel p {
+  border: 1px solid color-mix(in srgb, var(--nr-copper) 44%, transparent);
+  border-radius: var(--nr-radius-s);
+  box-sizing: border-box;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0.03em 0.18em;
+}
+
+.theme-dark :is(#nr-mermaid-override, .mermaid) .cluster rect {
+  fill: color-mix(in srgb, var(--nr-moonstone) 62%, var(--nr-shadow));
+  stroke: color-mix(in srgb, var(--nr-copper) 48%, var(--nr-iron));
+  stroke-width: 1.1px;
+}
+
+.theme-dark :is(#nr-mermaid-override, .mermaid) .cluster .nodeLabel,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .cluster-label,
+.theme-dark :is(#nr-mermaid-override, .mermaid) .cluster-label * {
+  color: color-mix(in srgb, var(--nr-copper) 78%, var(--nr-cloud));
+  fill: color-mix(in srgb, var(--nr-copper) 78%, var(--nr-cloud));
+}
+
+.theme-light :is(#nr-mermaid-override, .mermaid) .node rect,
+.theme-light :is(#nr-mermaid-override, .mermaid) .node circle,
+.theme-light :is(#nr-mermaid-override, .mermaid) .node ellipse,
+.theme-light :is(#nr-mermaid-override, .mermaid) .node polygon,
+.theme-light :is(#nr-mermaid-override, .mermaid) .node path {
+  stroke: color-mix(in srgb, var(--nr-pine) 74%, var(--nr-ridge));
+  stroke-width: 1.35px;
+}
+
+.theme-light :is(#nr-mermaid-override, .mermaid) .edgeLabel,
+.theme-light :is(#nr-mermaid-override, .mermaid) .edgeLabel p {
+  background: color-mix(in srgb, var(--nr-copper) 12%, var(--nr-cloud));
+}
+
+.theme-light :is(#nr-mermaid-override, .mermaid) .edgeLabel p {
+  color: color-mix(in srgb, var(--nr-copper) 72%, var(--nr-midnight));
+  border: 1px solid color-mix(in srgb, var(--nr-copper) 42%, transparent);
+  border-radius: var(--nr-radius-s);
+}
+
+.theme-light :is(#nr-mermaid-override, .mermaid) marker path,
+.theme-light :is(#nr-mermaid-override, .mermaid) .arrowheadPath {
+  fill: color-mix(in srgb, var(--nr-copper) 72%, var(--nr-ridge));
+  stroke: color-mix(in srgb, var(--nr-copper) 72%, var(--nr-ridge));
+}
+
+.theme-dark .canvas-wrapper,
+.theme-dark .canvas {
+  background: var(--canvas-background);
+  --canvas-color: var(--canvas-color-1);
+}
+
+.theme-dark .canvas-node {
+  border-color: color-mix(in srgb, var(--nr-iron) 72%, var(--nr-midnight));
+}
+
+.theme-dark .canvas-node.is-focused,
+.theme-dark .canvas-node.is-selected {
+  border-color: var(--nr-pine);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--nr-pine) 14%, transparent);
+}
+
+.theme-dark .graph-view.color-fill-highlight,
+.theme-dark .graph-view.color-circle-highlight {
+  color: var(--graph-node-focused);
+}

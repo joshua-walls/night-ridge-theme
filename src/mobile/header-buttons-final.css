@@ -1,0 +1,43 @@
+/* Mobile header buttons final lock: keep top actions light and icon-first. */
+.is-mobile .view-header .view-actions,
+.is-mobile .workspace-leaf-content .view-header .view-actions {
+  align-items: center;
+  gap: 0.28rem;
+}
+
+.is-mobile .view-header .clickable-icon,
+.is-mobile .workspace-leaf-content .view-header .clickable-icon {
+  width: 2.25rem;
+  min-width: 2.25rem;
+  height: 2.25rem;
+  min-height: 2.25rem;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: var(--nr-radius-s);
+  background: transparent;
+  box-shadow: none;
+}
+
+.theme-dark.is-mobile .view-header .clickable-icon,
+.is-mobile .theme-dark .view-header .clickable-icon {
+  color: color-mix(in srgb, var(--nr-slate) 86%, var(--nr-fog));
+}
+
+.theme-light.is-mobile .view-header .clickable-icon,
+.is-mobile .theme-light .view-header .clickable-icon {
+  color: color-mix(in srgb, var(--nr-ridge) 78%, var(--nr-midnight));
+}
+
+.theme-dark.is-mobile .view-header .clickable-icon:hover,
+.theme-dark.is-mobile .view-header .clickable-icon:focus-visible,
+.theme-light.is-mobile .view-header .clickable-icon:hover,
+.theme-light.is-mobile .view-header .clickable-icon:focus-visible,
+.is-mobile .theme-dark .view-header .clickable-icon:hover,
+.is-mobile .theme-dark .view-header .clickable-icon:focus-visible,
+.is-mobile .theme-light .view-header .clickable-icon:hover,
+.is-mobile .theme-light .view-header .clickable-icon:focus-visible {
+  color: var(--text-accent-hover);
+  background: var(--background-modifier-hover);
+  border-color: color-mix(in srgb, var(--nr-primary) 24%, transparent);
+  box-shadow: none;
+}

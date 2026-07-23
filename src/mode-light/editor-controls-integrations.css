@@ -1,0 +1,160 @@
+/* Light mode refinement: keep dark-mode signals, translated onto dim paper. */
+
+.theme-light .workspace-leaf.mod-active {
+  box-shadow:
+    inset 1px 0 0 color-mix(in srgb, var(--nr-pine) 52%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--nr-pine) 18%, transparent),
+    inset 0 0 0 1px color-mix(in srgb, var(--nr-ridge) 24%, transparent);
+}
+
+.theme-light .workspace-leaf.mod-active .view-header {
+  border-bottom-color: color-mix(in srgb, var(--nr-pine) 34%, var(--nr-ridge));
+}
+
+.theme-light .nav-file-title,
+.theme-light .tree-item-self.nav-file-title,
+.theme-light .nav-file-title .nav-file-title-content,
+.theme-light .tree-item-self.nav-file-title .tree-item-inner {
+  color: color-mix(in srgb, var(--nr-ridge) 72%, var(--nr-midnight));
+}
+
+.theme-light h4,
+.theme-light .markdown-preview-view h4,
+.theme-light .markdown-rendered h4,
+.theme-light .cm-header-4 {
+  color: color-mix(in srgb, var(--nr-ember) 80%, var(--nr-midnight));
+}
+
+.theme-light h5,
+.theme-light .markdown-preview-view h5,
+.theme-light .markdown-rendered h5,
+.theme-light .cm-header-5 {
+  color: color-mix(in srgb, var(--nr-slate) 86%, var(--nr-midnight));
+}
+
+.theme-light h6,
+.theme-light .markdown-preview-view h6,
+.theme-light .markdown-rendered h6,
+.theme-light .cm-header-6 {
+  color: color-mix(in srgb, var(--nr-seafoam) 70%, var(--nr-ridge));
+}
+
+.theme-light,
+.theme-light .markdown-source-view.mod-cm6 .cm-editor,
+.theme-light .markdown-source-view.mod-cm6 .cm-content,
+.theme-light .markdown-source-view.mod-cm6 .cm-line {
+  caret-color: color-mix(in srgb, var(--nr-pine) 82%, var(--nr-ridge));
+}
+
+.theme-light ::selection {
+  background: color-mix(in srgb, var(--nr-pine) 22%, var(--nr-cloud));
+  color: var(--nr-midnight);
+}
+
+.theme-light .cm-cursor,
+.theme-light .cm-dropCursor {
+  border-left-color: color-mix(in srgb, var(--nr-pine) 82%, var(--nr-ridge));
+  box-shadow: 0 0 7px color-mix(in srgb, var(--nr-pine) 22%, transparent);
+}
+
+.theme-light .cm-selectionBackground,
+.theme-light .markdown-source-view.mod-cm6 .cm-selectionBackground,
+.theme-light .markdown-source-view.mod-cm6 .cm-line::selection,
+.theme-light .markdown-source-view.mod-cm6 .cm-line *::selection {
+  background: color-mix(in srgb, var(--nr-pine) 22%, var(--nr-cloud));
+}
+
+.theme-light button,
+.theme-light .clickable-icon,
+.theme-light .side-dock-ribbon-action {
+  color: color-mix(in srgb, var(--nr-ridge) 72%, var(--nr-slate));
+}
+
+.theme-light button {
+  background: color-mix(in srgb, var(--background-primary-alt) 78%, var(--nr-cloud));
+  border-color: color-mix(in srgb, var(--nr-ridge) 24%, transparent);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 44%, transparent);
+}
+
+.theme-light button:hover,
+.theme-light .clickable-icon:hover {
+  color: color-mix(in srgb, var(--nr-pine) 82%, var(--nr-midnight));
+  background: color-mix(in srgb, var(--nr-pine) 10%, var(--background-primary-alt));
+}
+
+.theme-light button.mod-cta {
+  color: var(--nr-cloud);
+  background: color-mix(in srgb, var(--nr-pine) 86%, var(--nr-ridge));
+  border-color: color-mix(in srgb, var(--nr-pine) 50%, var(--nr-ridge));
+}
+
+.theme-light button.mod-warning {
+  color: var(--nr-cloud);
+  background: color-mix(in srgb, var(--nr-ember) 82%, var(--nr-ridge));
+  border-color: color-mix(in srgb, var(--nr-ember) 54%, var(--nr-ridge));
+}
+
+.theme-light input,
+.theme-light textarea,
+.theme-light select,
+.theme-light .dropdown,
+.theme-light .text-input {
+  color: var(--nr-midnight);
+  background: color-mix(in srgb, var(--nr-cloud) 72%, var(--background-primary-alt));
+  border-color: color-mix(in srgb, var(--nr-ridge) 26%, transparent);
+}
+
+.theme-light input:focus,
+.theme-light textarea:focus,
+.theme-light select:focus,
+.theme-light .dropdown:focus {
+  border-color: color-mix(in srgb, var(--nr-seafoam) 62%, var(--nr-ridge));
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--nr-seafoam) 15%, transparent);
+}
+
+.theme-light .metadata-properties {
+  border-color: color-mix(in srgb, var(--nr-ridge) 30%, transparent);
+}
+
+.theme-light .metadata-add-button {
+  color: color-mix(in srgb, var(--nr-ridge) 70%, var(--nr-slate));
+}
+
+.theme-light .forge-health-dashboard .forge-health-pill[data-status],
+.theme-light .forge-health-dashboard .forge-health-section-status[data-status] {
+  color: var(--forge-health-status-color);
+  border-color: color-mix(in srgb, var(--forge-health-status-color) 38%, transparent);
+  background: color-mix(in srgb, var(--forge-health-status-color) 8%, transparent);
+}
+
+.theme-light .forge-health-dashboard .forge-health-section,
+.theme-light .forge-health-dashboard .forge-health-card,
+.theme-light .forge-health-dashboard .forge-health-metric-card {
+  background: color-mix(in srgb, var(--background-primary-alt) 78%, var(--nr-cloud));
+  border-color: color-mix(in srgb, var(--nr-ridge) 24%, transparent);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 46%, transparent);
+}
+
+.theme-light .markdown-rendered td:first-child,
+.theme-light .markdown-preview-view td:first-child,
+.theme-light .dataview.table-view-table td:first-child {
+  color: color-mix(in srgb, var(--nr-pine) 72%, var(--nr-midnight));
+}
+
+.theme-light .markdown-rendered tr:hover td,
+.theme-light .markdown-preview-view tr:hover td,
+.theme-light .dataview.table-view-table tr:hover td {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 9%, #D5DEE2),
+      color-mix(in srgb, var(--nr-pine) 6%, #D5DEE2) 34%,
+      transparent
+    );
+  border-top-color: color-mix(in srgb, var(--nr-pine) 16%, var(--nr-ridge));
+  border-bottom-color: color-mix(in srgb, var(--nr-pine) 12%, var(--nr-ridge));
+}
+
+.theme-light .status-bar {
+  color: color-mix(in srgb, var(--nr-ridge) 76%, var(--nr-slate));
+}

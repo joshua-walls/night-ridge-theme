@@ -1,0 +1,38 @@
+.markdown-rendered table,
+.markdown-preview-view table,
+.dataview.table-view-table {
+  border-collapse: collapse;
+  border: var(--table-border-width) solid var(--table-border-color);
+  background: var(--table-background);
+}
+
+.markdown-rendered th,
+.markdown-preview-view th,
+.dataview.table-view-table th {
+  color: var(--table-header-color);
+  background: var(--table-header-background);
+  border: var(--table-header-border-width) solid var(--table-header-border-color);
+  font-family: var(--table-header-font);
+  font-size: var(--table-header-size);
+  font-weight: var(--table-header-weight);
+  padding: 0.42em 0.62em;
+  line-height: var(--table-line-height);
+  vertical-align: top;
+}
+
+.markdown-rendered td,
+.markdown-preview-view td,
+.dataview.table-view-table td {
+  color: var(--table-text-color);
+  border: var(--table-border-width) solid var(--table-border-color);
+  font-size: var(--table-text-size);
+  padding: 0.42em 0.62em;
+  line-height: var(--table-line-height);
+  vertical-align: top;
+}
+
+.markdown-rendered tr:hover td,
+.markdown-preview-view tr:hover td,
+.dataview.table-view-table tr:hover td {
+  background: var(--table-row-background-hover);
+}

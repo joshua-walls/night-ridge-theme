@@ -1,0 +1,37 @@
+input,
+textarea,
+select,
+.dropdown,
+button,
+.checkbox-container {
+  background: var(--background-primary-alt);
+  color: var(--text-normal);
+  border-color: var(--border-color);
+  border-radius: var(--nr-radius-s);
+}
+
+button.mod-cta,
+.mod-cta,
+.suggestion-item.is-selected,
+.checkbox-container.is-enabled {
+  background: var(--nr-pine);
+  border-color: var(--nr-pine);
+  color: var(--nr-cloud);
+}
+
+button.mod-warning {
+  background: var(--nr-ember);
+  border-color: var(--nr-ember);
+  color: var(--nr-cloud);
+}
+
+input[type='checkbox'],
+.task-list-item-checkbox {
+  border-color: var(--checkbox-border-color);
+}
+
+input[type='checkbox']:checked,
+.task-list-item-checkbox:checked {
+  background-color: var(--checkbox-color);
+  border-color: var(--checkbox-border-color-hover);
+}

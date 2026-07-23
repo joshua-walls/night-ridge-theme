@@ -1,0 +1,16 @@
+.theme-dark .nav-folder-children .nav-file-title,
+.theme-dark .nav-folder-children .tree-item-self.nav-file-title {
+  color: color-mix(in srgb, var(--nr-fog) 70%, var(--nr-slate));
+}
+
+.theme-dark .nav-file-title.is-active,
+.theme-dark .tree-item-self.nav-file-title.is-active {
+  color: color-mix(in srgb, var(--nr-cloud) 88%, var(--nr-slate));
+  background: rgba(95, 168, 157, 0.14);
+}
+
+.theme-dark .nav-folder-title.is-active,
+.theme-dark .tree-item-self.nav-folder-title.is-active {
+  color: color-mix(in srgb, var(--nr-cloud) 88%, var(--nr-slate));
+  background: rgba(184, 115, 51, 0.12);
+}

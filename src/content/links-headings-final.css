@@ -1,0 +1,140 @@
+/* Final composition lock: copper warms reading anchors; pine stays active UI. */
+
+.theme-dark a,
+.theme-dark .internal-link,
+.theme-dark .external-link,
+.theme-dark .cm-link,
+.theme-dark .cm-url,
+.theme-dark .cm-hmd-internal-link,
+.theme-dark .markdown-rendered .internal-link,
+.theme-light a,
+.theme-light .internal-link,
+.theme-light .external-link,
+.theme-light .cm-link,
+.theme-light .cm-url,
+.theme-light .cm-hmd-internal-link,
+.theme-light .markdown-rendered .internal-link {
+  color: var(--link-color);
+}
+
+.theme-dark a:hover,
+.theme-dark .internal-link:hover,
+.theme-dark .external-link:hover,
+.theme-dark .cm-link:hover,
+.theme-dark .cm-hmd-internal-link:hover,
+.theme-light a:hover,
+.theme-light .internal-link:hover,
+.theme-light .external-link:hover,
+.theme-light .cm-link:hover,
+.theme-light .cm-hmd-internal-link:hover {
+  color: var(--link-color-hover);
+}
+
+.theme-dark h2,
+.theme-dark .markdown-preview-view h2,
+.theme-dark .markdown-rendered h2,
+.theme-dark .cm-header-2,
+.theme-light h2,
+.theme-light .markdown-preview-view h2,
+.theme-light .markdown-rendered h2,
+.theme-light .cm-header-2 {
+  color: var(--h2-color);
+}
+
+.theme-dark h3,
+.theme-dark .markdown-preview-view h3,
+.theme-dark .markdown-rendered h3,
+.theme-dark .cm-header-3,
+.theme-light h3,
+.theme-light .markdown-preview-view h3,
+.theme-light .markdown-rendered h3,
+.theme-light .cm-header-3 {
+  color: var(--h3-color);
+}
+
+.theme-dark h4,
+.theme-dark .markdown-preview-view h4,
+.theme-dark .markdown-rendered h4,
+.theme-dark .cm-header-4,
+.theme-light h4,
+.theme-light .markdown-preview-view h4,
+.theme-light .markdown-rendered h4,
+.theme-light .cm-header-4 {
+  color: var(--h4-color);
+}
+
+.theme-dark h5,
+.theme-dark .markdown-preview-view h5,
+.theme-dark .markdown-rendered h5,
+.theme-dark .cm-header-5,
+.theme-light h5,
+.theme-light .markdown-preview-view h5,
+.theme-light .markdown-rendered h5,
+.theme-light .cm-header-5 {
+  color: var(--h5-color);
+}
+
+.theme-dark h6,
+.theme-dark .markdown-preview-view h6,
+.theme-dark .markdown-rendered h6,
+.theme-dark .cm-header-6,
+.theme-light h6,
+.theme-light .markdown-preview-view h6,
+.theme-light .markdown-rendered h6,
+.theme-light .cm-header-6 {
+  color: var(--h6-color);
+}
+
+.markdown-preview-view h3,
+.markdown-rendered h3 {
+  margin-inline-start: 0.25rem;
+}
+
+.markdown-preview-view h4,
+.markdown-rendered h4 {
+  margin-inline-start: 0.5rem;
+}
+
+.markdown-preview-view h5,
+.markdown-rendered h5 {
+  margin-inline-start: 0.75rem;
+}
+
+.markdown-preview-view h6,
+.markdown-rendered h6 {
+  margin-inline-start: 1rem;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-header-3 {
+  padding-inline-start: 0.25rem;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-header-4 {
+  padding-inline-start: 0.5rem;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-header-5 {
+  padding-inline-start: 0.75rem;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-header-6 {
+  padding-inline-start: 1rem;
+}
+
+.theme-dark .markdown-rendered th,
+.theme-dark .markdown-preview-view th,
+.theme-dark .dataview.table-view-table th,
+.theme-light .markdown-rendered th,
+.theme-light .markdown-preview-view th,
+.theme-light .dataview.table-view-table th {
+  color: var(--text-accent);
+}
+
+.theme-dark .backlink-pane .search-result-file-match,
+.theme-dark .outgoing-link-pane .search-result-file-match,
+.theme-dark .search-result-container .search-result-file-match,
+.theme-light .backlink-pane .search-result-file-match,
+.theme-light .outgoing-link-pane .search-result-file-match,
+.theme-light .search-result-container .search-result-file-match {
+  box-shadow: inset 2px 0 0 color-mix(in srgb, var(--nr-tertiary) 52%, transparent);
+}

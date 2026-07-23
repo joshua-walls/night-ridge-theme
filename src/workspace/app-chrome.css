@@ -1,0 +1,147 @@
+/* App chrome pass: settings, tabs, and status bar stay quiet but intentional. */
+.theme-dark .modal.mod-settings,
+.theme-light .modal.mod-settings {
+  overflow: hidden;
+}
+
+.theme-dark .modal.mod-settings .modal-content,
+.theme-dark .vertical-tab-content-container {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--nr-midnight) 88%, var(--nr-shadow)), var(--nr-shadow));
+}
+
+.theme-light .modal.mod-settings .modal-content,
+.theme-light .vertical-tab-content-container {
+  background: #D1D9DD;
+}
+
+.theme-dark .modal.mod-settings .vertical-tab-header,
+.theme-light .modal.mod-settings .vertical-tab-header {
+  border-right: 1px solid var(--background-modifier-border);
+}
+
+.theme-dark .modal.mod-settings .vertical-tab-header-group-title,
+.theme-light .modal.mod-settings .vertical-tab-header-group-title {
+  color: var(--text-muted);
+  letter-spacing: 0;
+}
+
+.theme-dark .modal.mod-settings .vertical-tab-nav-item,
+.theme-light .modal.mod-settings .vertical-tab-nav-item {
+  border-radius: var(--nr-radius-s);
+}
+
+.theme-dark .modal.mod-settings .vertical-tab-nav-item.is-active {
+  color: color-mix(in srgb, var(--nr-cloud) 88%, var(--nr-pine));
+  background: color-mix(in srgb, var(--nr-pine) 8%, transparent);
+}
+
+.theme-light .modal.mod-settings .vertical-tab-nav-item.is-active {
+  color: color-mix(in srgb, var(--nr-midnight) 88%, var(--nr-pine));
+  background: color-mix(in srgb, var(--nr-pine) 10%, #D1D9DD);
+  box-shadow:
+    inset 2px 0 0 color-mix(in srgb, var(--nr-pine) 74%, var(--nr-ridge)),
+    inset 8px 0 14px color-mix(in srgb, var(--nr-pine) 7%, transparent);
+}
+
+.theme-light .modal.mod-settings .vertical-tab-content > .setting-item,
+.theme-light .vertical-tab-content > .setting-item {
+  background: color-mix(in srgb, #D1D9DD 94%, var(--nr-cloud));
+  border-bottom-color: color-mix(in srgb, var(--nr-ridge) 16%, transparent);
+}
+
+.theme-dark .modal.mod-settings .setting-item:hover {
+  background: color-mix(in srgb, var(--nr-pine) 4%, transparent);
+}
+
+.theme-light .modal.mod-settings .setting-item:hover {
+  background: color-mix(in srgb, var(--nr-cloud) 22%, #D1D9DD);
+}
+
+.theme-dark .workspace-tab-header,
+.theme-light .workspace-tab-header {
+  position: relative;
+}
+
+.theme-dark .workspace-tab-header::after,
+.theme-light .workspace-tab-header::after {
+  content: '';
+  position: absolute;
+  left: 0.85rem;
+  right: 0.85rem;
+  bottom: 0;
+  height: 1px;
+  opacity: 0;
+  transition: opacity 140ms ease, background-color 140ms ease;
+}
+
+.theme-dark .workspace-tab-header:hover::after,
+.theme-light .workspace-tab-header:hover::after {
+  opacity: 0.42;
+  background: var(--nr-slate);
+}
+
+.theme-dark .workspace-tab-header.is-active::after,
+.theme-light .workspace-tab-header.is-active::after {
+  opacity: 1;
+  height: 1px;
+}
+
+.theme-dark .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  color: color-mix(in srgb, var(--nr-cloud) 88%, var(--nr-pine));
+}
+
+.theme-light .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  color: color-mix(in srgb, var(--nr-midnight) 90%, var(--nr-ridge));
+}
+
+.theme-dark .status-bar,
+.theme-light .status-bar {
+  gap: 0.15rem;
+  overflow: hidden;
+}
+
+.theme-dark .status-bar {
+  gap: 0.15rem;
+  border-top-color: color-mix(in srgb, var(--nr-iron) 46%, var(--nr-shadow));
+  background: color-mix(in srgb, var(--nr-midnight) 84%, var(--nr-shadow));
+  box-shadow:
+    inset 0 2px 0 color-mix(in srgb, var(--nr-pine) 58%, transparent),
+    inset 0 3px 8px color-mix(in srgb, var(--nr-pine) 18%, transparent);
+}
+
+.theme-dark .status-bar::before {
+  display: none;
+}
+
+.theme-light .status-bar {
+  box-shadow:
+    inset 0 2px 0 color-mix(in srgb, var(--nr-pine) 42%, transparent),
+    inset 0 3px 8px color-mix(in srgb, var(--nr-pine) 12%, transparent);
+}
+
+.theme-dark .status-bar-item,
+.theme-light .status-bar-item {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--nr-radius-s);
+  padding-inline: 0.35rem;
+}
+
+.theme-dark .status-bar-item {
+  color: color-mix(in srgb, var(--nr-slate) 84%, var(--nr-fog));
+}
+
+.theme-light .status-bar-item {
+  color: color-mix(in srgb, var(--nr-ridge) 78%, var(--nr-midnight));
+}
+
+.theme-dark .status-bar-item.mod-clickable:hover {
+  color: color-mix(in srgb, var(--nr-cloud) 90%, var(--nr-pine));
+  background: color-mix(in srgb, var(--nr-pine) 8%, transparent);
+}
+
+.theme-light .status-bar-item.mod-clickable:hover {
+  color: color-mix(in srgb, var(--nr-midnight) 88%, var(--nr-pine));
+  background: color-mix(in srgb, var(--nr-pine) 10%, transparent);
+}

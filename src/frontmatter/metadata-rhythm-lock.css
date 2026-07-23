@@ -1,0 +1,64 @@
+/* Metadata rhythm lock: keep frontmatter rows cycling after later normalization. */
+.theme-dark .metadata-properties .metadata-property:nth-child(8n + 1) {
+  --nr-property-signal: var(--nr-primary);
+}
+
+.theme-dark .metadata-properties .metadata-property:nth-child(8n + 2) {
+  --nr-property-signal: var(--nr-tertiary);
+}
+
+.theme-dark .metadata-properties .metadata-property:nth-child(8n + 3) {
+  --nr-property-signal: var(--nr-lichen);
+}
+
+.theme-dark .metadata-properties .metadata-property:nth-child(8n + 4) {
+  --nr-property-signal: var(--nr-slate);
+}
+
+.theme-dark .metadata-properties .metadata-property:nth-child(8n + 5) {
+  --nr-property-signal: var(--nr-secondary);
+}
+
+.theme-dark .metadata-properties .metadata-property:nth-child(8n + 6) {
+  --nr-property-signal: var(--nr-danger);
+}
+
+.theme-dark .metadata-properties .metadata-property:nth-child(8n + 7) {
+  --nr-property-signal: color-mix(in srgb, var(--nr-ridge) 62%, var(--nr-secondary));
+}
+
+.theme-dark .metadata-properties .metadata-property:nth-child(8n) {
+  --nr-property-signal: color-mix(in srgb, var(--nr-fog) 78%, var(--nr-slate));
+}
+
+.theme-light .metadata-properties .metadata-property:nth-child(8n + 1) {
+  --nr-property-signal: color-mix(in srgb, var(--nr-primary) 82%, var(--nr-midnight));
+}
+
+.theme-light .metadata-properties .metadata-property:nth-child(8n + 2) {
+  --nr-property-signal: color-mix(in srgb, var(--nr-tertiary) 86%, var(--nr-midnight));
+}
+
+.theme-light .metadata-properties .metadata-property:nth-child(8n + 3) {
+  --nr-property-signal: color-mix(in srgb, var(--nr-lichen) 76%, var(--nr-midnight));
+}
+
+.theme-light .metadata-properties .metadata-property:nth-child(8n + 4) {
+  --nr-property-signal: color-mix(in srgb, var(--nr-slate) 84%, var(--nr-midnight));
+}
+
+.theme-light .metadata-properties .metadata-property:nth-child(8n + 5) {
+  --nr-property-signal: color-mix(in srgb, var(--nr-secondary) 72%, var(--nr-ridge));
+}
+
+.theme-light .metadata-properties .metadata-property:nth-child(8n + 6) {
+  --nr-property-signal: color-mix(in srgb, var(--nr-danger) 82%, var(--nr-midnight));
+}
+
+.theme-light .metadata-properties .metadata-property:nth-child(8n + 7) {
+  --nr-property-signal: color-mix(in srgb, var(--nr-ridge) 78%, var(--nr-primary));
+}
+
+.theme-light .metadata-properties .metadata-property:nth-child(8n) {
+  --nr-property-signal: color-mix(in srgb, var(--nr-fog) 44%, var(--nr-ridge));
+}

@@ -1,0 +1,84 @@
+/* Preview, tree, and backlink scanner polish. */
+.theme-dark .popover.hover-popover,
+.theme-light .popover.hover-popover {
+  overflow: hidden;
+  border-left: 2px solid color-mix(in srgb, var(--nr-seafoam) 62%, transparent);
+}
+
+.theme-dark .popover.hover-popover {
+  background: color-mix(in srgb, var(--nr-midnight) 90%, var(--nr-moonstone));
+  border-color: color-mix(in srgb, var(--nr-iron) 70%, var(--nr-midnight));
+  box-shadow:
+    0 12px 32px color-mix(in srgb, #000 38%, transparent),
+    inset 2px 0 0 color-mix(in srgb, var(--nr-seafoam) 54%, transparent);
+}
+
+.theme-light .popover.hover-popover {
+  background: color-mix(in srgb, #C5D2D7 88%, var(--nr-cloud));
+  border-color: color-mix(in srgb, var(--nr-ridge) 34%, transparent);
+  box-shadow:
+    0 14px 34px color-mix(in srgb, var(--nr-ridge) 18%, transparent),
+    inset 2px 0 0 color-mix(in srgb, var(--nr-seafoam) 48%, transparent);
+}
+
+.theme-dark .popover.hover-popover .markdown-preview-view,
+.theme-light .popover.hover-popover .markdown-preview-view {
+  padding: 1rem 1.15rem;
+}
+
+.theme-light .nav-files-container .nav-file-title,
+.theme-light .nav-files-container .tree-item-self.nav-file-title,
+.theme-light .nav-files-container .nav-file-title .nav-file-title-content,
+.theme-light .nav-files-container .tree-item-self.nav-file-title .tree-item-inner {
+  color: color-mix(in srgb, var(--nr-midnight) 84%, var(--nr-ridge));
+}
+
+.theme-light .nav-files-container .nav-folder-title:hover,
+.theme-light .nav-files-container .nav-file-title:hover,
+.theme-light .nav-files-container .tree-item-self:hover {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 10%, transparent),
+      color-mix(in srgb, var(--nr-ridge) 5%, transparent) 44%,
+      transparent
+    );
+  box-shadow: inset 2px 0 0 color-mix(in srgb, var(--nr-folder-depth-color, var(--nr-pine)) 34%, transparent);
+}
+
+.theme-light .nav-files-container .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children {
+  border-left-color: color-mix(in srgb, var(--nr-folder-depth-color, var(--nr-pine)) 20%, transparent);
+}
+
+.theme-dark .backlink-pane .search-result-file-match,
+.theme-dark .outgoing-link-pane .search-result-file-match,
+.theme-dark .search-result-container .search-result-file-match {
+  background: color-mix(in srgb, var(--nr-moonstone) 74%, var(--nr-midnight));
+  border-color: color-mix(in srgb, var(--nr-iron) 62%, var(--nr-midnight));
+  box-shadow: inset 2px 0 0 color-mix(in srgb, var(--nr-copper) 58%, transparent);
+}
+
+.theme-light .backlink-pane .search-result-file-match,
+.theme-light .outgoing-link-pane .search-result-file-match,
+.theme-light .search-result-container .search-result-file-match {
+  background: color-mix(in srgb, #C5D2D7 86%, var(--nr-cloud));
+  border-color: color-mix(in srgb, var(--nr-ridge) 30%, transparent);
+  box-shadow: inset 2px 0 0 color-mix(in srgb, var(--nr-copper) 54%, transparent);
+}
+
+.theme-dark .backlink-pane .search-result-file-matched-text,
+.theme-dark .outgoing-link-pane .search-result-file-matched-text,
+.theme-dark .search-result-container .search-result-file-matched-text {
+  color: color-mix(in srgb, var(--nr-cloud) 92%, var(--nr-copper));
+  background: color-mix(in srgb, var(--nr-copper) 18%, var(--nr-midnight));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--nr-copper) 28%, transparent);
+}
+
+.theme-light .backlink-pane .search-result-file-matched-text,
+.theme-light .outgoing-link-pane .search-result-file-matched-text,
+.theme-light .search-result-container .search-result-file-matched-text {
+  color: color-mix(in srgb, var(--nr-midnight) 86%, var(--nr-copper));
+  background: color-mix(in srgb, var(--nr-copper) 16%, var(--nr-cloud));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--nr-copper) 26%, transparent);
+}

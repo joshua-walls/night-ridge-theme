@@ -1,0 +1,152 @@
+/* Light mode repair: mobile screenshots showed washout and weak card edges. */
+
+.theme-light .view-content,
+.theme-light .workspace-leaf-content,
+.theme-light .markdown-preview-view,
+.theme-light .markdown-source-view.mod-cm6 .cm-scroller,
+.theme-light .markdown-source-view.mod-cm6 .cm-editor,
+.theme-light .cm-s-obsidian {
+  background: #D1D9DD;
+}
+
+.theme-light .metadata-properties,
+.theme-light .markdown-embed,
+.theme-light .callout,
+.theme-light .prompt,
+.theme-light .popover,
+.theme-light .menu,
+.theme-light .suggestion-container,
+.theme-light .search-result-container,
+.theme-light .modal,
+.theme-light .setting-item,
+.theme-light .forge-health-dashboard .forge-health-section,
+.theme-light .forge-health-dashboard .forge-health-card,
+.theme-light .forge-health-dashboard .forge-health-metric-card {
+  background: #C5D2D7;
+  border-color: color-mix(in srgb, var(--nr-ridge) 46%, transparent);
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 38%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--nr-ridge) 14%, transparent);
+}
+
+.theme-light .metadata-property,
+.theme-light .metadata-property-key,
+.theme-light .metadata-property-key-input,
+.theme-light .metadata-property-value,
+.theme-light .metadata-property-value input,
+.theme-light .metadata-property-value textarea {
+  background: transparent;
+}
+
+.theme-light .metadata-property-key,
+.theme-light .metadata-property-key-input,
+.theme-light .metadata-property-icon {
+  color: color-mix(in srgb, var(--nr-property-signal) 82%, var(--nr-midnight));
+}
+
+.theme-light h1,
+.theme-light .markdown-preview-view h1,
+.theme-light .markdown-rendered h1 {
+  color: color-mix(in srgb, var(--nr-pine) 82%, var(--nr-midnight));
+  background:
+    radial-gradient(
+      ellipse 46px 82% at -2px 50%,
+      color-mix(in srgb, var(--nr-pine) 20%, transparent) 0%,
+      color-mix(in srgb, var(--nr-pine) 12%, transparent) 38%,
+      transparent 76%
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-pine) 8%, transparent) 0%,
+      color-mix(in srgb, var(--nr-pine) 5%, transparent) 32%,
+      transparent 58%
+    );
+}
+
+.theme-light p,
+.theme-light li,
+.theme-light .markdown-preview-view,
+.theme-light .markdown-rendered,
+.theme-light .cm-line,
+.theme-light .markdown-source-view.mod-cm6 {
+  color: color-mix(in srgb, var(--nr-midnight) 94%, var(--nr-shadow));
+}
+
+.theme-light a,
+.theme-light .cm-link,
+.theme-light .external-link {
+  color: color-mix(in srgb, var(--nr-copper) 86%, var(--nr-midnight));
+}
+
+.theme-light code,
+.theme-light .cm-inline-code,
+.theme-light .markdown-rendered :not(pre) > code,
+.theme-light .markdown-preview-view :not(pre) > code {
+  color: color-mix(in srgb, var(--nr-ridge) 82%, var(--nr-midnight));
+  background: color-mix(in srgb, var(--nr-cloud) 44%, #C5D2D7);
+  border-color: color-mix(in srgb, var(--nr-ridge) 38%, transparent);
+}
+
+.theme-light mark,
+.theme-light .cm-highlight {
+  color: var(--nr-midnight);
+  background: color-mix(in srgb, var(--nr-copper) 24%, var(--nr-cloud));
+}
+
+.theme-light .callout {
+  border-color: color-mix(in srgb, var(--nr-ridge) 46%, transparent);
+  border-left-color: var(--nr-callout-signal);
+}
+
+.theme-light .markdown-rendered table,
+.theme-light .markdown-preview-view table,
+.theme-light .dataview.table-view-table {
+  background: #C5D2D7;
+  border-color: color-mix(in srgb, var(--nr-ridge) 52%, transparent);
+}
+
+.theme-light .markdown-rendered th,
+.theme-light .markdown-preview-view th,
+.theme-light .dataview.table-view-table th {
+  color: color-mix(in srgb, var(--nr-copper) 88%, var(--nr-midnight));
+  background: color-mix(in srgb, var(--nr-ridge) 12%, #C5D2D7);
+  border-color: color-mix(in srgb, var(--nr-ridge) 48%, transparent);
+}
+
+.theme-light .markdown-rendered td,
+.theme-light .markdown-preview-view td,
+.theme-light .dataview.table-view-table td {
+  border-color: color-mix(in srgb, var(--nr-ridge) 40%, transparent);
+}
+
+.theme-light .search-result-file-match,
+.theme-light .search-result-file-matches {
+  background: color-mix(in srgb, var(--nr-cloud) 22%, #C5D2D7);
+  border-color: color-mix(in srgb, var(--nr-ridge) 40%, transparent);
+  border-left-color: color-mix(in srgb, var(--nr-copper) 58%, transparent);
+}
+
+.theme-light button,
+.theme-light input,
+.theme-light textarea,
+.theme-light select,
+.theme-light .dropdown,
+.theme-light .text-input {
+  background: color-mix(in srgb, var(--nr-cloud) 40%, #C5D2D7);
+  border-color: color-mix(in srgb, var(--nr-ridge) 42%, transparent);
+}
+
+.theme-light .forge-health-dashboard button:not(.mod-cta):not(.mod-warning):not(.forge-health-action-destructive) {
+  background: color-mix(in srgb, var(--nr-cloud) 30%, #C5D2D7);
+}
+
+.theme-light.is-mobile .mobile-navbar,
+.theme-light.is-mobile .mobile-toolbar,
+.is-mobile .theme-light .mobile-navbar,
+.is-mobile .theme-light .mobile-toolbar {
+  background: #B2C2C9;
+  border-color: color-mix(in srgb, var(--nr-ridge) 30%, transparent);
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 40%, transparent),
+    0 8px 18px color-mix(in srgb, var(--nr-ridge) 20%, transparent);
+}

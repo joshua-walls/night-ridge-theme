@@ -1,0 +1,9 @@
+/* Dark polish pass: keep small status and query text readable in low light. */
+.theme-dark .search-result-file-match,
+.theme-dark .search-result-file-matches {
+  color: color-mix(in srgb, var(--nr-text-body) 88%, var(--nr-cloud));
+}
+
+.theme-dark div.dataview-error-box {
+  color: color-mix(in srgb, var(--nr-text-body) 82%, var(--nr-cloud));
+}

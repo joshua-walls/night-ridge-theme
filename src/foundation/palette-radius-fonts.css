@@ -1,0 +1,44 @@
+/*
+  Night Ridge Theme
+  Version: 0.1.11
+  Palette baseline: 3.1
+*/
+
+:root {
+  --nr-shadow: #05080C;
+  --nr-midnight: #0B1117;
+  --nr-moonstone: #11232F;
+  --nr-ridge: #1C2B36;
+  --nr-iron: #2A343D;
+  --nr-fog: #DDE2E5;
+  --nr-cloud: #F5F7F8;
+
+  --nr-pine: #5FA89D;
+  --nr-copper: #B87333;
+  --nr-lichen: #8FAE8A;
+  --nr-ember: #C94A32;
+  --nr-slate: #6F8793;
+  --nr-seafoam: #6FDAD4;
+
+  --nr-radius-s: 4px;
+  --nr-radius-m: 6px;
+  --nr-font-ui: "Avenir", "Avenir Next", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --nr-font-mono: "SFMono-Regular", "SFMono", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+  --font-text-theme: var(--nr-font-ui);
+  --font-interface-theme: var(--nr-font-ui);
+  --font-monospace-theme: var(--nr-font-mono);
+  --font-mermaid: var(--nr-font-ui);
+  --mermaid-font-family: var(--nr-font-ui);
+  --mermaid-alt-font-family: var(--nr-font-ui);
+
+  --radius-s: var(--nr-radius-s);
+  --radius-m: var(--nr-radius-m);
+  --button-radius: var(--nr-radius-s);
+  --input-radius: var(--nr-radius-s);
+  --checkbox-radius: var(--nr-radius-s);
+  --toggle-radius: var(--nr-radius-m);
+  --modal-radius: var(--nr-radius-m);
+  --callout-radius: var(--nr-radius-m);
+  --tag-radius: var(--nr-radius-s);
+}

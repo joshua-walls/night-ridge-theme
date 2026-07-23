@@ -1,0 +1,7 @@
+/* Forge health state colors: let dashboard status beat generic heading colors. */
+.theme-dark .forge-health-dashboard .forge-health-header[data-status] h1,
+.theme-dark .forge-health-dashboard .forge-health-section-header[data-status] h2,
+.theme-dark .forge-health-dashboard .forge-health-section-header h2[data-status],
+.theme-dark .forge-health-dashboard .forge-health-section[data-status] .forge-health-section-header h2 {
+  color: var(--forge-health-status-color);
+}

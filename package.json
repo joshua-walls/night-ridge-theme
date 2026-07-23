@@ -3,13 +3,19 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build:css": "postcss src/theme.css -o theme.css",
+    "check:css-build": "postcss src/theme.css -o dist/theme.css",
     "lint": "eslint .",
     "lint:css": "node scripts/check-theme-css.mjs",
-    "validate": "npm run lint && npm run lint:css"
+    "audit:css": "node scripts/audit-css-cascade.mjs",
+    "validate": "npm run build:css && npm run lint && npm run lint:css && npm run audit:css"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^8.64.0",
     "eslint": "^9.39.5",
-    "eslint-plugin-obsidianmd": "^0.4.1"
+    "eslint-plugin-obsidianmd": "^0.4.1",
+    "postcss": "^8.5.22",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.1"
   }
 }

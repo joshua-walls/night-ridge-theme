@@ -1,0 +1,173 @@
+/* Composition correction: copper is the reading/navigation accent, not just warning. */
+
+.theme-light .nav-files-container .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-copper) 82%, var(--nr-midnight));
+  border-left-width: 1px;
+  border-left-style: solid;
+}
+
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-lichen) 76%, var(--nr-midnight));
+  border-left-color: color-mix(in srgb, var(--nr-copper) 26%, transparent);
+}
+
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-ember) 78%, var(--nr-midnight));
+  border-left-color: color-mix(in srgb, var(--nr-lichen) 26%, transparent);
+}
+
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-seafoam) 72%, var(--nr-midnight));
+  border-left-color: color-mix(in srgb, var(--nr-ember) 24%, transparent);
+}
+
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-slate) 86%, var(--nr-midnight));
+  border-left-color: color-mix(in srgb, var(--nr-seafoam) 25%, transparent);
+}
+
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-ridge) 72%, var(--nr-pine));
+  border-left-color: color-mix(in srgb, var(--nr-slate) 24%, transparent);
+}
+
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-pine) 78%, var(--nr-midnight));
+  border-left-color: color-mix(in srgb, var(--nr-ridge) 24%, transparent);
+}
+
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: color-mix(in srgb, var(--nr-fog) 60%, var(--nr-ridge));
+  border-left-color: color-mix(in srgb, var(--nr-pine) 24%, transparent);
+}
+
+.theme-light .nav-files-container .nav-file-title.is-active,
+.theme-light .nav-files-container .tree-item-self.nav-file-title.is-active {
+  background:
+    radial-gradient(
+      ellipse 42px 90% at -2px 50%,
+      color-mix(in srgb, var(--nr-pine) 15%, transparent) 0%,
+      color-mix(in srgb, var(--nr-pine) 8%, transparent) 42%,
+      transparent 78%
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-pine) 8%, transparent) 0%,
+      color-mix(in srgb, var(--nr-pine) 4%, transparent) 34%,
+      transparent 74%
+    );
+  box-shadow:
+    inset 1px 0 0 color-mix(in srgb, var(--nr-pine) 64%, transparent),
+    0 0 10px color-mix(in srgb, var(--nr-pine) 7%, transparent);
+}
+
+.theme-light .forge-health-dashboard {
+  --forge-health-status-color: color-mix(in srgb, var(--nr-pine) 82%, var(--nr-midnight));
+  --forge-health-action-destructive-bg: color-mix(in srgb, var(--nr-ember) 78%, var(--nr-midnight));
+  --forge-health-action-destructive-border: color-mix(in srgb, var(--nr-ember) 62%, var(--nr-ridge));
+  --forge-health-action-destructive-color: var(--nr-cloud);
+  --forge-health-action-destructive-hover-bg: color-mix(in srgb, var(--nr-ember) 86%, var(--nr-midnight));
+  --forge-health-action-destructive-hover-color: var(--nr-cloud);
+}
+
+.theme-light .forge-health-dashboard [data-status='good' i],
+.theme-light .forge-health-dashboard [data-status='healthy' i],
+.theme-light .forge-health-dashboard [data-status='clear' i],
+.theme-light .forge-health-dashboard [data-status='valid' i],
+.theme-light .forge-health-dashboard [data-status='indexed' i] {
+  --forge-health-status-color: color-mix(in srgb, var(--nr-pine) 82%, var(--nr-midnight));
+}
+
+.theme-light .forge-health-dashboard [data-status='warning' i],
+.theme-light .forge-health-dashboard [data-status='needs attention' i],
+.theme-light .forge-health-dashboard [data-status='needs-attention' i] {
+  --forge-health-status-color: color-mix(in srgb, var(--nr-copper) 86%, var(--nr-midnight));
+}
+
+.theme-light .forge-health-dashboard [data-status='critical' i],
+.theme-light .forge-health-dashboard [data-status='error' i],
+.theme-light .forge-health-dashboard [data-status='fail' i],
+.theme-light .forge-health-dashboard [data-status='failed' i] {
+  --forge-health-status-color: color-mix(in srgb, var(--nr-ember) 84%, var(--nr-midnight));
+}
+
+.theme-light .forge-health-dashboard [data-status='muted' i],
+.theme-light .forge-health-dashboard [data-status='no note' i],
+.theme-light .forge-health-dashboard [data-status='no-note' i],
+.theme-light .forge-health-dashboard [data-status='exempt' i] {
+  --forge-health-status-color: color-mix(in srgb, var(--nr-slate) 84%, var(--nr-midnight));
+}
+
+.theme-light .forge-health-dashboard .forge-health-header[data-status] h1,
+.theme-light .forge-health-dashboard .forge-health-section[data-status] .forge-health-section-header h2,
+.theme-light .forge-health-dashboard .forge-health-section-header[data-status] h2,
+.theme-light .forge-health-dashboard :is(h1, h2, h3)[data-status] {
+  color: var(--forge-health-status-color);
+}
+
+.theme-light div.dataview-error-box {
+  box-shadow:
+    inset 2px 0 0 color-mix(in srgb, var(--nr-copper) 60%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 42%, transparent);
+}
+
+.theme-light .dataview-error-message {
+  color: color-mix(in srgb, var(--nr-copper) 76%, var(--nr-midnight));
+}
+
+.theme-light pre.dataview-error {
+  color: color-mix(in srgb, var(--nr-ember) 84%, var(--nr-midnight));
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-ember) 12%, #D5DEE2),
+      color-mix(in srgb, var(--background-primary-alt) 88%, var(--nr-cloud))
+    );
+  border-color: color-mix(in srgb, var(--nr-ember) 52%, var(--nr-ridge));
+  box-shadow:
+    inset 2px 0 0 color-mix(in srgb, var(--nr-ember) 66%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 42%, transparent);
+}
+
+.theme-light .search-result-file-match,
+.theme-light .search-result-file-matches {
+  position: relative;
+  border-left: 2px solid color-mix(in srgb, var(--nr-copper) 46%, transparent);
+}
+
+.theme-light .search-result-file-match::before,
+.theme-light .search-result-file-matches::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 -2px;
+  width: 2px;
+  background: color-mix(in srgb, var(--nr-copper) 62%, transparent);
+}
+
+.theme-light .search-result-file-match:hover,
+.theme-light .search-result-file-match.is-active,
+.theme-light .search-result-file-match.is-selected {
+  border-left-color: color-mix(in srgb, var(--nr-seafoam) 70%, var(--nr-ridge));
+}
+
+.theme-light .search-result-file-match:hover::before,
+.theme-light .search-result-file-match.is-active::before,
+.theme-light .search-result-file-match.is-selected::before {
+  background: color-mix(in srgb, var(--nr-seafoam) 76%, var(--nr-ridge));
+}
+
+.theme-light .metadata-property[data-property-key='tags'] .multi-select-pill,
+.theme-light a.tag,
+.theme-light .cm-hashtag {
+  color: color-mix(in srgb, var(--nr-lichen) 72%, var(--nr-midnight));
+  background: color-mix(in srgb, var(--nr-lichen) 12%, #D5DEE2);
+  border: 1px solid color-mix(in srgb, var(--nr-lichen) 34%, var(--nr-ridge));
+}

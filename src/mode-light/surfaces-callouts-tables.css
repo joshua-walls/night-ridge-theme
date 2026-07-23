@@ -1,0 +1,69 @@
+/* Light mode start: dim ridge paper, readable ink, restrained command surfaces. */
+
+.theme-light .workspace-split.mod-left-split,
+.theme-light .workspace-split.mod-right-split,
+.theme-light .nav-files-container {
+  background: color-mix(in srgb, var(--background-primary-alt) 90%, var(--nr-ridge));
+}
+
+.theme-light .markdown-preview-view,
+.theme-light .markdown-source-view.mod-cm6 .cm-editor,
+.theme-light .cm-s-obsidian {
+  background: #D5DEE2;
+  color: var(--text-normal);
+}
+
+.theme-light .metadata-properties,
+.theme-light .markdown-embed,
+.theme-light .callout,
+.theme-light .prompt,
+.theme-light .popover,
+.theme-light .menu,
+.theme-light .suggestion-container,
+.theme-light .search-result-container,
+.theme-light .modal,
+.theme-light .setting-item {
+  background: color-mix(in srgb, var(--background-primary-alt) 78%, var(--nr-cloud));
+  border-color: color-mix(in srgb, var(--nr-ridge) 30%, transparent);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 48%, transparent);
+}
+
+.theme-light .callout {
+  --nr-callout-signal: var(--nr-slate);
+}
+
+.theme-light .callout[data-callout='info'],
+.theme-light .callout[data-callout='tip'],
+.theme-light .callout[data-callout='hint'] {
+  --nr-callout-signal: color-mix(in srgb, var(--nr-seafoam) 86%, var(--nr-ridge));
+}
+
+.theme-light .callout[data-callout='success'],
+.theme-light .callout[data-callout='check'],
+.theme-light .callout[data-callout='done'] {
+  --nr-callout-signal: var(--nr-pine);
+}
+
+.theme-light .callout[data-callout='warning'],
+.theme-light .callout[data-callout='question'],
+.theme-light .callout[data-callout='attention'] {
+  --nr-callout-signal: var(--nr-copper);
+}
+
+.theme-light .callout[data-callout='danger'],
+.theme-light .callout[data-callout='error'],
+.theme-light .callout[data-callout='failure'],
+.theme-light .callout[data-callout='bug'] {
+  --nr-callout-signal: var(--nr-ember);
+}
+
+.theme-light .callout .callout-title,
+.theme-light .callout .callout-icon {
+  color: color-mix(in srgb, var(--nr-callout-signal) 78%, var(--nr-midnight));
+}
+
+.theme-light .markdown-rendered th,
+.theme-light .markdown-preview-view th,
+.theme-light .dataview.table-view-table th {
+  border-bottom-color: color-mix(in srgb, var(--nr-copper) 36%, var(--nr-ridge));
+}

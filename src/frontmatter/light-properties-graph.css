@@ -1,0 +1,78 @@
+/* Light mode repair 4: remove properties ghost panel, calm graph web. */
+.theme-light .metadata-container,
+.theme-light .metadata-content {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.theme-light .metadata-properties {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.theme-light .metadata-property {
+  align-items: center;
+  background: #C5D2D7;
+  border-left: 2px solid color-mix(in srgb, var(--nr-property-signal) 36%, transparent);
+  border-right: 1px solid color-mix(in srgb, var(--nr-ridge) 22%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--nr-ridge) 18%, transparent);
+  min-height: 2.35rem;
+}
+
+.theme-light .metadata-property:first-child {
+  border-top: 1px solid color-mix(in srgb, var(--nr-ridge) 22%, transparent);
+}
+
+.theme-light .metadata-property-key,
+.theme-light .metadata-property-key-input,
+.theme-light .metadata-property-icon {
+  align-items: center;
+  background: color-mix(in srgb, var(--nr-ridge) 7%, transparent);
+  min-height: 2.35rem;
+}
+
+.theme-light .metadata-property-value {
+  align-items: center;
+  min-height: 2.35rem;
+}
+
+.theme-light .metadata-property-value .multi-select-container,
+.theme-light .metadata-property-value .multi-select-pill-container {
+  align-items: center;
+  min-height: 1.8rem;
+}
+
+.theme-light .metadata-property[data-property-key='tags'] {
+  align-items: stretch;
+}
+
+.theme-light .metadata-property[data-property-key='tags'] .metadata-property-key,
+.theme-light .metadata-property[data-property-key='tags'] .metadata-property-key-input {
+  align-self: stretch;
+  align-items: flex-start;
+  padding-top: 0.55rem;
+}
+
+.theme-light .metadata-property[data-property-key='tags'] .metadata-property-icon {
+  align-items: flex-start;
+  padding-top: 0.12rem;
+}
+
+.theme-light .metadata-property[data-property-key='tags'] .metadata-property-value {
+  align-items: flex-start;
+  padding-block: 0.32rem;
+}
+
+.theme-light .metadata-property[data-property-key='tags'] .multi-select-container,
+.theme-light .metadata-property[data-property-key='tags'] .multi-select-pill-container {
+  row-gap: 0.35rem;
+}
+
+.theme-light .metadata-property[data-property-key='tags'] .multi-select-pill {
+  line-height: 1.2;
+  margin-block: 0;
+  min-height: 1.55rem;
+  padding-block: 0.12rem;
+}

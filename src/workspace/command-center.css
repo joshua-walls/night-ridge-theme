@@ -1,0 +1,65 @@
+/* Command center pass: operational focus, telemetry tables, search clarity. */
+
+.theme-dark .workspace-leaf.mod-active .view-header-title {
+  color: color-mix(in srgb, var(--nr-fog) 82%, var(--nr-slate));
+}
+
+.theme-dark .prompt-input,
+.theme-dark .search-input-container input,
+.theme-dark .workspace-leaf.mod-active input[type='search'] {
+  background: color-mix(in srgb, var(--nr-midnight) 88%, var(--nr-moonstone));
+  border: 1px solid color-mix(in srgb, var(--nr-seafoam) 38%, var(--nr-iron));
+  box-shadow:
+    inset 2px 0 0 color-mix(in srgb, var(--nr-seafoam) 52%, transparent),
+    0 0 0 3px color-mix(in srgb, var(--nr-seafoam) 5%, transparent);
+}
+
+.theme-dark .suggestion-container .prompt-results,
+.theme-dark .suggestion {
+  border-top: 1px solid color-mix(in srgb, var(--nr-iron) 52%, transparent);
+}
+
+.theme-dark .suggestion-item {
+  border-radius: var(--nr-radius-s);
+}
+
+.theme-dark .suggestion-item.is-selected .suggestion-highlight,
+.theme-dark .suggestion-highlight {
+  color: color-mix(in srgb, var(--nr-cloud) 84%, var(--nr-copper));
+  background: color-mix(in srgb, var(--nr-copper) 18%, transparent);
+  border-radius: var(--nr-radius-s);
+}
+
+.theme-dark .search-result-file-title {
+  color: color-mix(in srgb, var(--nr-pine) 72%, var(--nr-fog));
+}
+
+.theme-dark .search-result-file-match:hover {
+  background: color-mix(in srgb, var(--nr-pine) 7%, var(--nr-shadow));
+}
+
+.theme-dark .markdown-rendered tr:nth-child(even) td,
+.theme-dark .markdown-preview-view tr:nth-child(even) td,
+.theme-dark .dataview.table-view-table tr:nth-child(even) td {
+  background: color-mix(in srgb, var(--nr-moonstone) 18%, transparent);
+}
+
+.theme-dark .notice {
+  background: color-mix(in srgb, var(--nr-midnight) 88%, var(--nr-moonstone));
+  border: 1px solid color-mix(in srgb, var(--nr-pine) 34%, var(--nr-iron));
+  box-shadow:
+    inset 3px 0 0 var(--nr-pine),
+    0 12px 34px color-mix(in srgb, var(--nr-shadow) 55%, transparent);
+}
+
+.theme-dark .status-bar {
+  position: var(--status-bar-position);
+}
+
+.theme-dark .status-bar::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--nr-pine) 42%, transparent), transparent);
+}
