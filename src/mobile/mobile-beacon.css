@@ -1,0 +1,14 @@
+/* Mobile beacon: active icon signal only, never a whole-button glow. */
+.is-mobile .mobile-navbar .clickable-icon.is-active,
+.is-mobile .mobile-navbar .is-active > .clickable-icon,
+.is-mobile .mobile-toolbar .clickable-icon.is-active,
+.is-mobile .mobile-toolbar .is-active > .clickable-icon {
+  color: var(--nr-seafoam);
+  filter: drop-shadow(0 0 5px color-mix(in srgb, var(--nr-seafoam) 48%, transparent));
+}
+
+.is-mobile .mobile-navbar .clickable-icon.is-active::after,
+.is-mobile .mobile-toolbar .clickable-icon.is-active::after {
+  background: transparent;
+  box-shadow: none;
+}

@@ -1,0 +1,146 @@
+/* Light mode repair 2: remove false boxes, strengthen mobile/control contrast. */
+.theme-light .modal.mod-settings .setting-item-heading,
+.theme-light .vertical-tab-content .setting-item-heading,
+.theme-light .community-modal .setting-item-heading,
+.theme-light .setting-item.setting-item-heading {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.theme-light .setting-item-heading .setting-item-name {
+  color: color-mix(in srgb, var(--nr-ridge) 88%, var(--nr-midnight));
+  font-weight: 720;
+}
+
+.theme-light .modal.mod-settings .setting-item,
+.theme-light .vertical-tab-content .setting-item,
+.theme-light .community-modal .setting-item {
+  align-items: center;
+  min-height: 4.25rem;
+  margin: 0;
+  padding: 0.9rem 1.15rem;
+  background: color-mix(in srgb, #C5D2D7 84%, var(--nr-cloud));
+  border: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--nr-ridge) 20%, transparent);
+  box-shadow: none;
+}
+
+.theme-light .modal.mod-settings .setting-item:last-child,
+.theme-light .vertical-tab-content .setting-item:last-child,
+.theme-light .community-modal .setting-item:last-child {
+  border-bottom: 0;
+}
+
+.theme-light .setting-item-name,
+.theme-light .setting-item-description {
+  color: color-mix(in srgb, var(--nr-midnight) 86%, var(--nr-ridge));
+  line-height: 1.35;
+}
+
+.theme-light .modal.mod-settings .setting-item-name,
+.theme-light .vertical-tab-content .setting-item-name,
+.theme-light .community-modal .setting-item-name {
+  margin-bottom: 0.18rem;
+}
+
+.theme-light .modal.mod-settings .setting-item-description,
+.theme-light .vertical-tab-content .setting-item-description,
+.theme-light .community-modal .setting-item-description {
+  max-width: 42rem;
+}
+
+.theme-light .modal.mod-settings .setting-item-control,
+.theme-light .vertical-tab-content .setting-item-control,
+.theme-light .community-modal .setting-item-control {
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.theme-light .modal.mod-settings .setting-item-control select,
+.theme-light .modal.mod-settings .setting-item-control .dropdown,
+.theme-light .modal.mod-settings .setting-item-control button,
+.theme-light .vertical-tab-content .setting-item-control select,
+.theme-light .vertical-tab-content .setting-item-control .dropdown,
+.theme-light .vertical-tab-content .setting-item-control button,
+.theme-light .community-modal .setting-item-control select,
+.theme-light .community-modal .setting-item-control .dropdown,
+.theme-light .community-modal .setting-item-control button {
+  min-height: 2.15rem;
+}
+
+.theme-light button:not(.mod-cta):not(.mod-warning):not(.forge-health-action-destructive),
+.theme-light .forge-health-dashboard button:not(.mod-cta):not(.mod-warning):not(.forge-health-action-destructive),
+.theme-light .setting-item-control button:not(.mod-cta):not(.mod-warning):not(.forge-health-action-destructive) {
+  color: color-mix(in srgb, var(--nr-midnight) 86%, var(--nr-ridge));
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--nr-cloud) 48%, #C5D2D7),
+      color-mix(in srgb, var(--nr-cloud) 24%, #B2C2C9)
+    );
+  border-color: color-mix(in srgb, var(--nr-ridge) 32%, transparent);
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 42%, transparent),
+    0 1px 2px color-mix(in srgb, var(--nr-ridge) 10%, transparent);
+}
+
+.theme-light button:not(.mod-cta):not(.mod-warning):not(.forge-health-action-destructive):hover,
+.theme-light .forge-health-dashboard button:not(.mod-cta):not(.mod-warning):not(.forge-health-action-destructive):hover,
+.theme-light .setting-item-control button:not(.mod-cta):not(.mod-warning):not(.forge-health-action-destructive):hover {
+  color: color-mix(in srgb, var(--nr-pine) 82%, var(--nr-midnight));
+  border-color: color-mix(in srgb, var(--nr-pine) 40%, transparent);
+  background: color-mix(in srgb, var(--nr-pine) 13%, #C5D2D7);
+}
+
+.theme-light button.mod-cta,
+.theme-light .setting-item-control button.mod-cta,
+.theme-light .forge-health-dashboard button.mod-cta {
+  color: var(--nr-cloud);
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--nr-pine) 90%, var(--nr-seafoam)),
+      color-mix(in srgb, var(--nr-pine) 82%, var(--nr-ridge))
+    );
+  border-color: color-mix(in srgb, var(--nr-ridge) 32%, var(--nr-pine));
+}
+
+.theme-light .nav-files-container .tree-item-self,
+.theme-light .nav-files-container .nav-folder-title,
+.theme-light .nav-files-container .nav-file-title {
+  color: color-mix(in srgb, var(--nr-ridge) 78%, var(--nr-midnight));
+}
+
+.theme-light .nav-files-container .tree-item-self.is-active,
+.theme-light .nav-files-container .nav-folder-title.is-active,
+.theme-light .nav-files-container .nav-file-title.is-active {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-pine) 10%, transparent),
+      color-mix(in srgb, var(--nr-ridge) 5%, transparent) 46%,
+      transparent
+    );
+}
+
+.theme-light.is-mobile .nav-files-container,
+.is-mobile .theme-light .nav-files-container {
+  background: #B3C3CA;
+}
+
+.theme-light .modal-container,
+.theme-light .modal-bg {
+  background-color: color-mix(in srgb, var(--nr-ridge) 32%, transparent);
+}
+
+.theme-light .forge-health-dashboard .forge-health-section {
+  border-top-color: color-mix(in srgb, var(--nr-ridge) 44%, transparent);
+}
+
+.theme-light .forge-health-dashboard .forge-health-metric-card {
+  background: color-mix(in srgb, var(--nr-ridge) 13%, #C5D2D7);
+  border-color: color-mix(in srgb, var(--nr-ridge) 42%, transparent);
+}

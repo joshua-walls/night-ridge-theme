@@ -1,0 +1,81 @@
+/* Live note correction: pine leads normal content; copper is warning/tertiary only. */
+
+.theme-dark .nav-files-container,
+.theme-light .nav-files-container {
+  --nr-folder-depth-color: var(--nr-folder-root);
+}
+
+.theme-dark .nav-files-container .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children,
+.theme-light .nav-files-container .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children {
+  --nr-folder-depth-color: var(--nr-folder-depth-1);
+  border-left-color: color-mix(in srgb, var(--nr-folder-root) 22%, transparent);
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children,
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: var(--nr-folder-depth-2);
+  border-left-color: color-mix(in srgb, var(--nr-folder-depth-1) 22%, transparent);
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children,
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: var(--nr-folder-depth-3);
+  border-left-color: color-mix(in srgb, var(--nr-folder-depth-2) 22%, transparent);
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children,
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: var(--nr-folder-depth-4);
+  border-left-color: color-mix(in srgb, var(--nr-folder-depth-3) 22%, transparent);
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children,
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: var(--nr-folder-depth-5);
+  border-left-color: color-mix(in srgb, var(--nr-folder-depth-4) 22%, transparent);
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children,
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: var(--nr-folder-depth-6);
+  border-left-color: color-mix(in srgb, var(--nr-folder-depth-5) 22%, transparent);
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children,
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: var(--nr-folder-depth-7);
+  border-left-color: color-mix(in srgb, var(--nr-folder-depth-6) 22%, transparent);
+}
+
+.theme-dark .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-dark .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children,
+.theme-light .nav-files-container .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children,
+.theme-light .nav-files-container .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children .tree-item-children {
+  --nr-folder-depth-color: var(--nr-folder-depth-8);
+  border-left-color: color-mix(in srgb, var(--nr-folder-depth-7) 22%, transparent);
+}
+
+.theme-dark .nav-files-container .nav-folder-title,
+.theme-dark .nav-files-container .nav-folder-title .tree-item-inner,
+.theme-dark .nav-files-container .nav-folder-title .nav-folder-title-content,
+.theme-dark .nav-files-container .nav-folder-title .collapse-icon,
+.theme-light .nav-files-container .nav-folder-title,
+.theme-light .nav-files-container .nav-folder-title .tree-item-inner,
+.theme-light .nav-files-container .nav-folder-title .nav-folder-title-content,
+.theme-light .nav-files-container .nav-folder-title .collapse-icon {
+  color: var(--nr-folder-depth-color);
+}

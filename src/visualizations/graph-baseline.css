@@ -1,0 +1,15 @@
+.graph-view.color-line,
+.graph-view.color-arrow {
+  color: var(--graph-line);
+}
+
+.graph-view.color-fill,
+.graph-view.color-circle,
+.graph-view.color-fill-highlight {
+  color: var(--graph-node);
+}
+
+.graph-view.color-fill-tag,
+.graph-view.color-fill-attachment {
+  color: var(--graph-node-tag);
+}

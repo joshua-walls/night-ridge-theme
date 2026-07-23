@@ -1,0 +1,10 @@
+.app-container,
+.theme-dark,
+.theme-light {
+  font-family: var(--font-interface-theme);
+}
+
+::selection {
+  background: var(--text-selection);
+  color: var(--text-normal);
+}

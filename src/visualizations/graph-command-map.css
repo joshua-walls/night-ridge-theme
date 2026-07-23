@@ -1,0 +1,33 @@
+/* Graph command-map pass: dark topology, bright selected signal. */
+
+.theme-dark .graph-view.color-fill-highlight,
+.theme-dark .graph-view.color-circle-highlight,
+.theme-dark .graph-view.color-line-highlight,
+.theme-dark .graph-view.color-arrow-highlight {
+  color: #6FDAD4;
+}
+
+.theme-dark .graph-view.color-fill-focused,
+.theme-dark .graph-view.color-circle-focused {
+  color: #6FDAD4;
+}
+
+.theme-dark .graph-view.color-line-focused,
+.theme-dark .graph-view.color-arrow-focused {
+  color: #5FA89D;
+}
+
+.theme-dark .graph-view.color-fill-unresolved {
+  color: #B87333;
+}
+
+.theme-dark .graph-view.color-fill-tag,
+.theme-dark .graph-view.color-fill-attachment {
+  color: #5FA89D;
+}
+
+.theme-dark .graph-view text,
+.theme-dark .graph-view .graph-view-label {
+  color: #DDE2E5;
+  fill: #DDE2E5;
+}

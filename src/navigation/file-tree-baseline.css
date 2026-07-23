@@ -1,0 +1,50 @@
+.nav-folder-title,
+.nav-file-title,
+.tree-item-self {
+  border-radius: 0;
+  color: var(--nav-item-color);
+}
+
+.nav-folder-title:hover,
+.nav-file-title:hover,
+.tree-item-self:hover {
+  color: var(--nav-item-color-hover);
+  background: var(--nav-item-background-hover);
+}
+
+.tree-item-self.is-active,
+.nav-file-title.is-active,
+.nav-folder-title.is-active,
+.tree-item-self.nav-file-title.is-active,
+.tree-item-self.nav-folder-title.is-active {
+  color: var(--nav-item-color-active);
+  background: var(--nav-item-background-active);
+  box-shadow: inset 3px 0 0 var(--nr-pine);
+}
+
+.tree-item-self.is-active .tree-item-inner,
+.nav-file-title.is-active .nav-file-title-content,
+.nav-folder-title.is-active .nav-folder-title-content,
+.tree-item-self.is-active .collapse-icon {
+  color: var(--nav-item-color-active);
+}
+
+.nav-folder-children .nav-folder-title,
+.nav-folder-children .nav-file-title {
+  color: var(--nr-slate);
+}
+
+.nav-folder-children .nav-folder-children .nav-folder-title,
+.nav-folder-children .nav-folder-children .nav-file-title {
+  color: color-mix(in srgb, var(--nr-copper) 74%, var(--text-muted));
+}
+
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-title,
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-file-title {
+  color: color-mix(in srgb, var(--nr-lichen) 74%, var(--text-muted));
+}
+
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-title,
+.nav-folder-children .nav-folder-children .nav-folder-children .nav-folder-children .nav-file-title {
+  color: color-mix(in srgb, var(--nr-pine) 72%, var(--text-muted));
+}

@@ -1,0 +1,22 @@
+/* Metadata section label: quieter ridge support text, not primary heading. */
+.theme-dark .metadata-properties-heading,
+.theme-dark .metadata-container .metadata-properties-title,
+.theme-dark .metadata-content .metadata-properties-title,
+.theme-dark .metadata-properties .metadata-properties-title,
+.theme-dark .metadata-container > .tree-item-self,
+.theme-light .metadata-properties-heading,
+.theme-light .metadata-container .metadata-properties-title,
+.theme-light .metadata-content .metadata-properties-title,
+.theme-light .metadata-properties .metadata-properties-title,
+.theme-light .metadata-container > .tree-item-self {
+  color: color-mix(in srgb, var(--nr-ridge) 72%, var(--nr-slate));
+  font-weight: 620;
+}
+
+.theme-dark .metadata-properties-heading,
+.theme-dark .metadata-container .metadata-properties-title,
+.theme-dark .metadata-content .metadata-properties-title,
+.theme-dark .metadata-properties .metadata-properties-title,
+.theme-dark .metadata-container > .tree-item-self {
+  color: color-mix(in srgb, var(--nr-ridge) 64%, var(--nr-fog));
+}

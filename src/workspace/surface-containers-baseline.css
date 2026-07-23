@@ -1,0 +1,30 @@
+.metadata-container,
+.metadata-properties,
+.metadata-property,
+.metadata-content,
+.markdown-embed,
+.prompt,
+.popover,
+.menu,
+.suggestion-container,
+.search-result-container,
+.setting-item,
+.modal {
+  background: var(--background-primary-alt);
+  border-color: var(--border-color);
+}
+
+.theme-dark .metadata-container,
+.theme-dark .metadata-properties,
+.theme-dark .metadata-property,
+.theme-dark .metadata-content,
+.theme-dark .markdown-embed,
+.theme-dark .prompt,
+.theme-dark .popover,
+.theme-dark .menu,
+.theme-dark .suggestion-container,
+.theme-dark .search-result-container,
+.theme-dark .setting-item,
+.theme-dark .modal {
+  background: var(--nr-moonstone);
+}

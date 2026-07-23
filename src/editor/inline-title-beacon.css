@@ -1,0 +1,38 @@
+/* Inline note title beacon: theme-level signal, no Forge status guessing. */
+.theme-dark .inline-title,
+.theme-dark .markdown-source-view.mod-cm6 .inline-title,
+.theme-light .inline-title,
+.theme-light .markdown-source-view.mod-cm6 .inline-title {
+  border-left: 2px solid color-mix(in srgb, var(--nr-seafoam) 72%, transparent);
+  border-radius: 2px;
+}
+
+.theme-dark .inline-title,
+.theme-dark .markdown-source-view.mod-cm6 .inline-title {
+  padding: 0.02em 0 0.04em 0.48em;
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 6%, transparent),
+      color-mix(in srgb, var(--nr-pine) 2%, transparent) 34%,
+      transparent 62%
+    );
+  box-shadow:
+    inset 1px 0 0 color-mix(in srgb, var(--nr-seafoam) 56%, transparent),
+    inset 5px 0 12px color-mix(in srgb, var(--nr-seafoam) 5%, transparent);
+}
+
+.theme-light .inline-title,
+.theme-light .markdown-source-view.mod-cm6 .inline-title {
+  padding: 0.02em 0 0.04em 0.48em;
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 9%, transparent),
+      color-mix(in srgb, var(--nr-pine) 4%, transparent) 34%,
+      transparent 62%
+    );
+  box-shadow:
+    inset 1px 0 0 color-mix(in srgb, var(--nr-seafoam) 50%, transparent),
+    inset 5px 0 12px color-mix(in srgb, var(--nr-seafoam) 6%, transparent);
+}

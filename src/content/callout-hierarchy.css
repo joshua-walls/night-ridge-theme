@@ -1,0 +1,44 @@
+/* Callout hierarchy: rails carry status; fills stay quiet. */
+.theme-dark .callout {
+  --nr-callout-signal: var(--nr-slate);
+  border-left-color: var(--nr-callout-signal);
+}
+
+.theme-dark .callout[data-callout='note'],
+.theme-dark .callout[data-callout='quote'],
+.theme-dark .callout[data-callout='cite'],
+.theme-dark .callout[data-callout='abstract'],
+.theme-dark .callout[data-callout='summary'],
+.theme-dark .callout[data-callout='todo'] {
+  --nr-callout-signal: var(--nr-slate);
+}
+
+.theme-dark .callout[data-callout='info'],
+.theme-dark .callout[data-callout='tip'],
+.theme-dark .callout[data-callout='hint'] {
+  --nr-callout-signal: var(--nr-seafoam);
+}
+
+.theme-dark .callout[data-callout='success'],
+.theme-dark .callout[data-callout='check'],
+.theme-dark .callout[data-callout='done'] {
+  --nr-callout-signal: var(--nr-pine);
+}
+
+.theme-dark .callout[data-callout='warning'],
+.theme-dark .callout[data-callout='question'],
+.theme-dark .callout[data-callout='attention'] {
+  --nr-callout-signal: var(--nr-copper);
+}
+
+.theme-dark .callout[data-callout='danger'],
+.theme-dark .callout[data-callout='error'],
+.theme-dark .callout[data-callout='failure'],
+.theme-dark .callout[data-callout='bug'] {
+  --nr-callout-signal: var(--nr-ember);
+}
+
+.theme-dark .callout .callout-title,
+.theme-dark .callout .callout-icon {
+  color: color-mix(in srgb, var(--nr-callout-signal) 86%, var(--nr-cloud));
+}

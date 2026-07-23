@@ -1,0 +1,32 @@
+/* Settings cleanup: keep app settings utilitarian, not note-card styled. */
+.theme-dark .modal.mod-settings .setting-item,
+.theme-dark .vertical-tab-content .setting-item,
+.theme-dark .community-modal .setting-item {
+  background: transparent;
+  border-color: color-mix(in srgb, var(--nr-iron) 52%, var(--nr-shadow));
+  box-shadow: none;
+}
+
+.theme-dark .modal.mod-settings .setting-item-heading,
+.theme-dark .vertical-tab-content .setting-item-heading,
+.theme-dark .modal.mod-settings h1,
+.theme-dark .modal.mod-settings h2,
+.theme-dark .vertical-tab-content h1,
+.theme-dark .vertical-tab-content h2 {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding-bottom: 0;
+}
+
+.theme-dark .modal.mod-settings .setting-item-control,
+.theme-dark .vertical-tab-content .setting-item-control {
+  background: transparent;
+}
+
+.theme-dark .modal.mod-settings .setting-item-control button.mod-cta,
+.theme-dark .vertical-tab-content .setting-item-control button.mod-cta {
+  background: var(--nr-pine);
+  border-color: color-mix(in srgb, var(--nr-pine) 78%, var(--nr-iron));
+  color: color-mix(in srgb, var(--nr-cloud) 88%, var(--nr-slate));
+}

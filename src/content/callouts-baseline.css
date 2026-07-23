@@ -1,0 +1,36 @@
+.callout {
+  background: color-mix(in srgb, var(--nr-moonstone) 82%, var(--background-primary));
+  border-color: var(--border-color);
+  border-style: solid;
+  border-width: var(--callout-border-width);
+  border-radius: var(--callout-radius);
+  padding: var(--callout-padding);
+}
+
+.callout-title {
+  color: var(--callout-title-color);
+  font-size: var(--callout-title-size);
+  font-weight: var(--callout-title-weight);
+  padding: var(--callout-title-padding);
+}
+
+.callout[data-callout='warning'] .callout-title,
+.callout[data-callout='warning'] .callout-icon {
+  color: var(--nr-copper);
+}
+
+.callout[data-callout='danger'] .callout-title,
+.callout[data-callout='error'] .callout-title,
+.callout[data-callout='failure'] .callout-title,
+.callout[data-callout='danger'] .callout-icon,
+.callout[data-callout='error'] .callout-icon,
+.callout[data-callout='failure'] .callout-icon {
+  color: var(--nr-ember);
+}
+
+.callout[data-callout='info'] .callout-title,
+.callout[data-callout='tip'] .callout-title,
+.callout[data-callout='info'] .callout-icon,
+.callout[data-callout='tip'] .callout-icon {
+  color: var(--nr-seafoam);
+}

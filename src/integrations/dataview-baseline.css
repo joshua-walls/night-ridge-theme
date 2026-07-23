@@ -1,0 +1,25 @@
+.dataview.inline-field-key,
+.dataview.inline-field-value,
+.dataview.inline-field-standalone-value {
+  color: var(--nr-pine);
+  background: color-mix(in srgb, var(--nr-pine) 10%, transparent);
+  border: 1px solid var(--border-color);
+  border-radius: var(--nr-radius-s);
+}
+
+div.dataview-error-box {
+  color: var(--text-normal);
+  background: color-mix(in srgb, var(--nr-copper) 6%, var(--background-primary));
+  border: 1px solid color-mix(in srgb, var(--nr-copper) 38%, var(--border-color));
+  border-radius: var(--nr-radius-m);
+}
+
+.dataview-error-message {
+  color: color-mix(in srgb, var(--nr-copper) 56%, var(--text-normal));
+}
+
+pre.dataview-error {
+  color: color-mix(in srgb, var(--nr-ember) 82%, var(--text-normal));
+  background: color-mix(in srgb, var(--nr-ember) 9%, var(--background-primary));
+  border-color: color-mix(in srgb, var(--nr-ember) 56%, var(--border-color));
+}

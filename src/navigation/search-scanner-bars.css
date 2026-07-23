@@ -1,0 +1,29 @@
+/* Search scanner bars: slim ticks for result cards, seafoam for active/focus. */
+.theme-dark .search-result-file-match,
+.theme-dark .search-result-file-matches {
+  position: relative;
+  border-left: 2px solid color-mix(in srgb, var(--nr-copper) 44%, transparent);
+}
+
+.theme-dark .search-result-file-match::before,
+.theme-dark .search-result-file-matches::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 -2px;
+  width: 2px;
+  background: color-mix(in srgb, var(--nr-copper) 64%, transparent);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--nr-copper) 16%, transparent);
+}
+
+.theme-dark .search-result-file-match:hover,
+.theme-dark .search-result-file-match.is-active,
+.theme-dark .search-result-file-match.is-selected {
+  border-left-color: color-mix(in srgb, var(--nr-seafoam) 62%, transparent);
+}
+
+.theme-dark .search-result-file-match:hover::before,
+.theme-dark .search-result-file-match.is-active::before,
+.theme-dark .search-result-file-match.is-selected::before {
+  background: color-mix(in srgb, var(--nr-seafoam) 82%, transparent);
+  box-shadow: 0 0 9px color-mix(in srgb, var(--nr-seafoam) 28%, transparent);
+}

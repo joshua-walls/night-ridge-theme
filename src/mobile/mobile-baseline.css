@@ -1,0 +1,36 @@
+.is-mobile .mobile-navbar,
+.is-mobile .mobile-tab-switcher {
+  background: var(--background-primary-alt);
+  border-color: var(--border-color);
+}
+
+.is-mobile .nav-folder-title,
+.is-mobile .nav-file-title {
+  min-height: 34px;
+}
+
+.is-mobile .markdown-preview-view,
+.is-mobile .markdown-source-view {
+  padding-bottom: 6rem;
+}
+
+.is-mobile .mobile-toolbar {
+  color: var(--text-muted);
+}
+
+.is-mobile .mobile-toolbar .clickable-icon:hover {
+  color: var(--text-accent);
+}
+
+@media (max-width: 640px) {
+  .markdown-preview-view,
+  .markdown-source-view {
+    --file-line-width: min(100%, 42rem);
+  }
+
+  h1,
+  .markdown-preview-view h1,
+  .markdown-rendered h1 {
+    padding-left: 0.45em;
+  }
+}

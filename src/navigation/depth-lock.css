@@ -1,0 +1,148 @@
+/* Navigation depth lock: opening, hovering, and selecting rows must not change indent. */
+.theme-dark :is(#nr-nav-depth-lock, .nav-files-container),
+.theme-light :is(#nr-nav-depth-lock, .nav-files-container) {
+  --nav-item-padding: 0.3rem 0.6rem;
+  --nav-item-parent-padding: 0.3rem 0.6rem;
+  --nr-nav-padding-left: 0.42rem;
+  --nav-item-padding-left: var(--nr-nav-padding-left);
+  --nr-nav-depth-step: 0.82rem;
+  --nav-item-children-padding-start: var(--nr-nav-depth-step);
+  --nav-item-children-margin-start: 0;
+  --nr-nav-disclosure-size: 1rem;
+  --nr-nav-disclosure-gap: 0.48rem;
+}
+
+.theme-dark :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-children, .tree-item-children),
+.theme-light :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-children, .tree-item-children) {
+  margin-inline-start: 0;
+  padding-inline-start: var(--nr-nav-depth-step);
+  border-left-width: 1px;
+  border-left-style: solid;
+}
+
+.theme-dark :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-title, .nav-file-title, .tree-item-self),
+.theme-light :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-title, .nav-file-title, .tree-item-self) {
+  align-items: center;
+  box-sizing: border-box;
+  min-height: var(--nr-nav-item-min-height);
+  margin-inline-start: 0;
+  border-left: 0 solid transparent;
+  padding-inline-start: var(--nr-nav-padding-left);
+}
+
+.theme-dark :is(#nr-nav-depth-lock, .nav-files-container) .collapse-icon,
+.theme-light :is(#nr-nav-depth-lock, .nav-files-container) .collapse-icon {
+  display: inline-flex;
+  position: static;
+  inset: auto;
+  align-items: center;
+  justify-content: center;
+  width: var(--nr-nav-disclosure-size);
+  min-width: var(--nr-nav-disclosure-size);
+  flex: 0 0 var(--nr-nav-disclosure-size);
+  margin-inline: 0 var(--nr-nav-disclosure-gap);
+  padding: 0;
+}
+
+.theme-dark :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-file-title, .tree-item-self.nav-file-title),
+.theme-light :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-file-title, .tree-item-self.nav-file-title) {
+  padding-inline-start: calc(var(--nr-nav-padding-left) + var(--nr-nav-disclosure-size) + var(--nr-nav-disclosure-gap));
+}
+
+.theme-dark :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-title-content, .nav-file-title-content, .tree-item-inner),
+.theme-light :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-title-content, .nav-file-title-content, .tree-item-inner) {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin-inline-start: 0;
+  padding-inline-start: 0;
+}
+
+.theme-dark :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-title, .nav-file-title, .tree-item-self):is(:hover, .is-active),
+.theme-light :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-title, .nav-file-title, .tree-item-self):is(:hover, .is-active) {
+  padding-inline-start: var(--nr-nav-padding-left);
+  border-left-width: 0;
+}
+
+.theme-dark :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-file-title, .tree-item-self.nav-file-title):is(:hover, .is-active),
+.theme-light :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-file-title, .tree-item-self.nav-file-title):is(:hover, .is-active) {
+  padding-inline-start: calc(var(--nr-nav-padding-left) + var(--nr-nav-disclosure-size) + var(--nr-nav-disclosure-gap));
+}
+
+.theme-dark :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-title.is-active, .tree-item-self.nav-folder-title.is-active, .nav-file-title.is-active, .tree-item-self.nav-file-title.is-active),
+.theme-light :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-title.is-active, .tree-item-self.nav-folder-title.is-active, .nav-file-title.is-active, .tree-item-self.nav-file-title.is-active) {
+  box-shadow: inset 3px 0 0 color-mix(in srgb, var(--nr-primary) 68%, transparent);
+}
+
+.theme-dark .prompt,
+.theme-dark .popover,
+.theme-dark .menu,
+.theme-dark .suggestion-container,
+.theme-dark .modal,
+.theme-light .prompt,
+.theme-light .popover,
+.theme-light .menu,
+.theme-light .suggestion-container,
+.theme-light .modal {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: var(--nr-radius-m);
+}
+
+.theme-dark .menu-item,
+.theme-light .menu-item,
+.theme-dark .suggestion-item,
+.theme-light .suggestion-item {
+  border-radius: var(--nr-radius-s);
+  min-height: 2rem;
+}
+
+.theme-dark .menu-item:not(.is-label):not(.is-disabled):hover,
+.theme-dark .menu-item.selected:not(.is-label):not(.is-disabled),
+.theme-dark .menu-item.is-selected:not(.is-label):not(.is-disabled),
+.theme-dark .suggestion-item.is-selected {
+  color: color-mix(in srgb, var(--nr-fog) 88%, var(--nr-pine));
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-pine) 10%, transparent),
+      color-mix(in srgb, var(--nr-pine) 4%, transparent) 42%,
+      transparent
+    );
+  box-shadow:
+    inset 3px 0 0 color-mix(in srgb, var(--nr-pine) 74%, transparent),
+    inset 10px 0 18px color-mix(in srgb, var(--nr-pine) 4%, transparent);
+}
+
+.theme-light .menu-item:not(.is-label):not(.is-disabled):hover,
+.theme-light .menu-item.selected:not(.is-label):not(.is-disabled),
+.theme-light .menu-item.is-selected:not(.is-label):not(.is-disabled),
+.theme-light .suggestion-item.is-selected {
+  color: color-mix(in srgb, var(--nr-midnight) 90%, var(--nr-pine));
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-pine) 15%, var(--nr-surface-1)),
+      color-mix(in srgb, var(--nr-pine) 8%, var(--nr-surface-1)) 46%,
+      color-mix(in srgb, var(--nr-cloud) 18%, var(--nr-surface-1))
+    );
+  box-shadow:
+    inset 3px 0 0 color-mix(in srgb, var(--nr-pine) 76%, var(--nr-ridge)),
+    inset 10px 0 18px color-mix(in srgb, var(--nr-pine) 6%, transparent);
+}
+
+.theme-dark .menu-separator,
+.theme-light .menu-separator {
+  border-color: var(--nr-line-soft);
+}
+
+.theme-dark .menu-item-title,
+.theme-dark .suggestion-title,
+.theme-light .menu-item-title,
+.theme-light .suggestion-title {
+  letter-spacing: 0;
+}
+
+.theme-dark input.prompt-input,
+.theme-light input.prompt-input {
+  font-weight: 560;
+}

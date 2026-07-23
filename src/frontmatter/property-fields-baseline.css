@@ -1,0 +1,11 @@
+.metadata-property-key,
+.metadata-property-key-input,
+.metadata-property-icon {
+  color: var(--metadata-label-text-color);
+}
+
+.metadata-property-value,
+.metadata-property-value input,
+.metadata-property-value textarea {
+  color: var(--metadata-input-text-color);
+}

@@ -1,0 +1,46 @@
+.inline-title,
+.markdown-source-view.mod-cm6 .inline-title {
+  color: var(--inline-title-color);
+}
+
+h1,
+.markdown-preview-view h1,
+.markdown-rendered h1 {
+  color: var(--h1-color);
+  border-left-color: var(--nr-pine);
+}
+
+h2,
+.markdown-preview-view h2,
+.markdown-rendered h2,
+.cm-header-2 {
+  color: var(--h2-color);
+}
+
+h3,
+.markdown-preview-view h3,
+.markdown-rendered h3,
+.cm-header-3 {
+  color: var(--h3-color);
+}
+
+h4,
+.markdown-preview-view h4,
+.markdown-rendered h4,
+.cm-header-4 {
+  color: var(--h4-color);
+}
+
+h5,
+.markdown-preview-view h5,
+.markdown-rendered h5,
+.cm-header-5 {
+  color: var(--h5-color);
+}
+
+h6,
+.markdown-preview-view h6,
+.markdown-rendered h6,
+.cm-header-6 {
+  color: var(--h6-color);
+}

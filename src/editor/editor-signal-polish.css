@@ -1,0 +1,25 @@
+/* Editor signal polish: seafoam caret, dark pine selection, no heading overrides. */
+.theme-dark,
+.theme-dark .markdown-source-view.mod-cm6 .cm-editor,
+.theme-dark .markdown-source-view.mod-cm6 .cm-content,
+.theme-dark .markdown-source-view.mod-cm6 .cm-line {
+  caret-color: var(--nr-seafoam);
+}
+
+.theme-dark ::selection {
+  background: color-mix(in srgb, var(--nr-pine) 34%, var(--nr-shadow));
+  color: color-mix(in srgb, var(--nr-cloud) 92%, var(--nr-slate));
+}
+
+.theme-dark .cm-cursor,
+.theme-dark .cm-dropCursor {
+  border-left-color: var(--nr-seafoam);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--nr-seafoam) 32%, transparent);
+}
+
+.theme-dark .cm-selectionBackground,
+.theme-dark .markdown-source-view.mod-cm6 .cm-selectionBackground,
+.theme-dark .markdown-source-view.mod-cm6 .cm-line::selection,
+.theme-dark .markdown-source-view.mod-cm6 .cm-line *::selection {
+  background: color-mix(in srgb, var(--nr-pine) 26%, var(--nr-shadow));
+}

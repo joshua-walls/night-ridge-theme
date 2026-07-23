@@ -1,0 +1,24 @@
+/* Dataview state language: empty is neutral, warnings are copper, errors stay ember. */
+.theme-dark div.dataview-error-box {
+  box-shadow:
+    inset 2px 0 0 color-mix(in srgb, var(--nr-copper) 54%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 3%, transparent);
+}
+
+.theme-dark .dataview-error-message {
+  color: color-mix(in srgb, var(--nr-copper) 64%, var(--nr-fog));
+}
+
+.theme-dark pre.dataview-error {
+  color: color-mix(in srgb, var(--nr-ember) 88%, var(--nr-fog));
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-ember) 10%, var(--nr-shadow)),
+      color-mix(in srgb, var(--nr-midnight) 92%, var(--nr-shadow))
+    );
+  border-color: color-mix(in srgb, var(--nr-ember) 58%, var(--nr-iron));
+  box-shadow:
+    inset 2px 0 0 color-mix(in srgb, var(--nr-ember) 72%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 3%, transparent);
+}

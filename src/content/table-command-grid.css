@@ -1,0 +1,49 @@
+/* Table command grid polish: restrained borders, copper headers, pine lead column. */
+.theme-dark .markdown-rendered table,
+.theme-dark .markdown-preview-view table,
+.theme-dark .dataview.table-view-table {
+  background: color-mix(in srgb, var(--nr-midnight) 86%, var(--nr-shadow));
+  border-color: color-mix(in srgb, var(--nr-iron) 74%, var(--nr-midnight));
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--nr-cloud) 4%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--nr-shadow) 72%, transparent);
+}
+
+.theme-dark .markdown-rendered th,
+.theme-dark .markdown-preview-view th,
+.theme-dark .dataview.table-view-table th {
+  color: color-mix(in srgb, var(--nr-copper) 88%, var(--nr-cloud));
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--nr-ridge) 78%, var(--nr-midnight)),
+      color-mix(in srgb, var(--nr-midnight) 92%, var(--nr-ridge))
+    );
+  border-bottom-color: color-mix(in srgb, var(--nr-copper) 42%, var(--nr-iron));
+}
+
+.theme-dark .markdown-rendered td:first-child,
+.theme-dark .markdown-preview-view td:first-child,
+.theme-dark .dataview.table-view-table td:first-child {
+  color: color-mix(in srgb, var(--nr-pine) 76%, var(--nr-fog));
+}
+
+.theme-dark .markdown-rendered td,
+.theme-dark .markdown-preview-view td,
+.theme-dark .dataview.table-view-table td {
+  border-color: color-mix(in srgb, var(--nr-iron) 68%, var(--nr-midnight));
+}
+
+.theme-dark .markdown-rendered tr:hover td,
+.theme-dark .markdown-preview-view tr:hover td,
+.theme-dark .dataview.table-view-table tr:hover td {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-seafoam) 7%, var(--nr-shadow)),
+      color-mix(in srgb, var(--nr-pine) 5%, var(--nr-shadow)) 34%,
+      color-mix(in srgb, var(--nr-shadow) 96%, transparent)
+    );
+  border-top-color: color-mix(in srgb, var(--nr-pine) 18%, var(--nr-iron));
+  border-bottom-color: color-mix(in srgb, var(--nr-pine) 14%, var(--nr-iron));
+}

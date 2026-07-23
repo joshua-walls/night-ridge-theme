@@ -1,0 +1,27 @@
+/* Live Preview edit mode: no callout/quote gutters while editing. */
+.theme-dark .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote,
+.theme-dark .markdown-source-view.mod-cm6 .cm-quote,
+.theme-light .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote,
+.theme-light .markdown-source-view.mod-cm6 .cm-quote {
+  border-left: 0;
+  box-shadow: none;
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote::before,
+.theme-dark .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote::after,
+.theme-dark .markdown-source-view.mod-cm6 .cm-quote::before,
+.theme-dark .markdown-source-view.mod-cm6 .cm-quote::after,
+.theme-light .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote::before,
+.theme-light .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote::after,
+.theme-light .markdown-source-view.mod-cm6 .cm-quote::before,
+.theme-light .markdown-source-view.mod-cm6 .cm-quote::after {
+  border-left: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .cm-formatting-quote,
+.theme-light .markdown-source-view.mod-cm6 .cm-formatting-quote {
+  color: color-mix(in srgb, var(--nr-slate) 56%, var(--text-muted));
+  text-shadow: none;
+}

@@ -1,0 +1,7 @@
+/* Edit-mode callout fallback: neutral gutter unless Obsidian exposes type hooks. */
+.theme-dark .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote,
+.theme-dark .markdown-source-view.mod-cm6 .cm-quote,
+.theme-light .markdown-source-view.mod-cm6 .cm-line.HyperMD-quote,
+.theme-light .markdown-source-view.mod-cm6 .cm-quote {
+  border-left-color: color-mix(in srgb, var(--nr-slate) 24%, transparent);
+}

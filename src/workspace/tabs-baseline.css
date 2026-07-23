@@ -1,0 +1,4 @@
+.workspace-tab-header.is-active {
+  color: var(--nr-pine);
+  border-bottom: 2px solid var(--nr-pine);
+}

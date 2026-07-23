@@ -1,0 +1,40 @@
+.workspace,
+.workspace-split,
+.workspace-tabs,
+.workspace-tab-container,
+.workspace-leaf-content,
+.view-content,
+.markdown-source-view,
+.markdown-preview-view {
+  background: var(--background-primary);
+  color: var(--text-normal);
+}
+
+.workspace-ribbon,
+.workspace-tabs .workspace-tab-header-container,
+.view-header,
+.mod-sidedock .workspace-tabs {
+  background: var(--ribbon-background);
+  border-color: var(--tab-divider-color);
+}
+
+.status-bar {
+  background: var(--status-bar-background);
+  border-color: var(--status-bar-border-color);
+  border-style: solid;
+  border-width: var(--status-bar-border-width);
+  color: var(--status-bar-text-color);
+}
+
+.view-header-title,
+.workspace-tab-header-inner-title,
+.side-dock-ribbon-action,
+.clickable-icon {
+  color: var(--text-muted);
+}
+
+.clickable-icon:hover,
+.side-dock-ribbon-action:hover {
+  color: var(--text-accent);
+  background: var(--background-modifier-hover);
+}

@@ -1,0 +1,75 @@
+/* Mobile header action group final lock: remove the shared pill capsule. */
+.is-mobile .view-header .view-actions,
+.is-mobile .view-header .view-header-actions,
+.is-mobile .view-header .view-header-nav-buttons,
+.is-mobile .view-header .mobile-view-actions,
+.is-mobile .workspace-leaf-content .view-header .view-actions,
+.is-mobile .workspace-leaf-content .view-header .view-header-actions,
+.is-mobile .workspace-leaf-content .view-header .view-header-nav-buttons,
+.is-mobile .workspace-leaf-content .view-header .mobile-view-actions {
+  align-items: center;
+  gap: 0.28rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  overflow: visible;
+}
+
+.is-mobile .view-header .view-action,
+.is-mobile .view-header .clickable-icon,
+.is-mobile .view-header .view-actions .clickable-icon,
+.is-mobile .view-header .view-header-actions .clickable-icon,
+.is-mobile .view-header .view-header-nav-buttons .clickable-icon,
+.is-mobile .view-header .mobile-view-actions .clickable-icon {
+  width: 2.2rem;
+  min-width: 2.2rem;
+  height: 2.2rem;
+  min-height: 2.2rem;
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: var(--nr-radius-s);
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.is-mobile .view-header .view-action::before,
+.is-mobile .view-header .view-action::after,
+.is-mobile .view-header .clickable-icon::before,
+.is-mobile .view-header .clickable-icon::after {
+  content: none;
+  display: none;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.theme-dark.is-mobile .view-header .view-action,
+.theme-dark.is-mobile .view-header .clickable-icon,
+.is-mobile .theme-dark .view-header .view-action,
+.is-mobile .theme-dark .view-header .clickable-icon {
+  color: color-mix(in srgb, var(--nr-slate) 88%, var(--nr-fog));
+}
+
+.theme-light.is-mobile .view-header .view-action,
+.theme-light.is-mobile .view-header .clickable-icon,
+.is-mobile .theme-light .view-header .view-action,
+.is-mobile .theme-light .view-header .clickable-icon {
+  color: color-mix(in srgb, var(--nr-ridge) 82%, var(--nr-midnight));
+}
+
+.theme-dark.is-mobile .view-header .view-action:active,
+.theme-dark.is-mobile .view-header .clickable-icon:active,
+.theme-light.is-mobile .view-header .view-action:active,
+.theme-light.is-mobile .view-header .clickable-icon:active,
+.is-mobile .theme-dark .view-header .view-action:active,
+.is-mobile .theme-dark .view-header .clickable-icon:active,
+.is-mobile .theme-light .view-header .view-action:active,
+.is-mobile .theme-light .view-header .clickable-icon:active {
+  background: var(--background-modifier-hover);
+  border-color: color-mix(in srgb, var(--nr-primary) 22%, transparent);
+}

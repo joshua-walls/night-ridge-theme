@@ -1,0 +1,18 @@
+.theme-dark select,
+.theme-dark .dropdown,
+.theme-light select,
+.theme-light .dropdown {
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position: right 0.75rem center;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.theme-dark .setting-item-control select,
+.theme-dark .setting-item-control .dropdown,
+.theme-light .setting-item-control select,
+.theme-light .setting-item-control .dropdown {
+  min-height: 2.3rem;
+  padding-right: 2rem;
+}

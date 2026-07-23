@@ -1,0 +1,12 @@
+/* Shared semantic tokens used by both modes. */
+body {
+  --nr-primary: var(--nr-pine);
+  --nr-secondary: var(--nr-seafoam);
+  --nr-tertiary: var(--nr-copper);
+  --nr-danger: var(--nr-ember);
+  --nr-control-height: 2.15rem;
+  --nr-touch-height: 2.65rem;
+  --nr-nav-item-min-height: 1.8rem;
+  --nr-pro-radius: 5px;
+  --nr-pro-ease: 140ms ease;
+}

@@ -1,0 +1,172 @@
+/* Deep polish pass: calmer content chrome, stronger contrast, preserved task affordance. */
+
+.theme-dark h1,
+.theme-dark .markdown-preview-view h1,
+.theme-dark .markdown-rendered h1,
+.theme-light h1,
+.theme-light .markdown-preview-view h1,
+.theme-light .markdown-rendered h1 {
+  background: none;
+  border-left: 3px solid color-mix(in srgb, var(--nr-primary) 78%, var(--nr-secondary));
+  box-shadow: none;
+  line-height: 1.22;
+  padding-inline-start: 0.58rem;
+  text-shadow: none;
+}
+
+.theme-light h1,
+.theme-light .markdown-preview-view h1,
+.theme-light .markdown-rendered h1 {
+  border-left-color: color-mix(in srgb, var(--nr-primary) 72%, var(--nr-ridge));
+}
+
+.theme-dark .markdown-source-view.mod-cm6 .HyperMD-header-1,
+.theme-light .markdown-source-view.mod-cm6 .HyperMD-header-1 {
+  padding-inline-start: 0.58rem;
+}
+
+.theme-dark .metadata-properties .metadata-property,
+.theme-light .metadata-properties .metadata-property {
+  min-height: 2.32rem;
+  margin-block: 0.06rem;
+  border-radius: var(--nr-radius-s);
+  border-bottom-color: transparent;
+}
+
+.theme-dark .metadata-properties .metadata-property {
+  background: color-mix(in srgb, var(--nr-surface-2) 52%, transparent);
+  border-left-color: color-mix(in srgb, var(--nr-property-signal) 42%, transparent);
+}
+
+.theme-light .metadata-properties .metadata-property {
+  background: color-mix(in srgb, var(--nr-cloud) 30%, transparent);
+  border-left-color: color-mix(in srgb, var(--nr-property-signal) 38%, var(--nr-surface-2));
+}
+
+.theme-dark .metadata-property-value,
+.theme-dark .metadata-property-value input,
+.theme-dark .metadata-property-value textarea {
+  color: color-mix(in srgb, var(--nr-text-body) 92%, var(--nr-cloud));
+}
+
+.theme-light .metadata-property-value,
+.theme-light .metadata-property-value input,
+.theme-light .metadata-property-value textarea {
+  color: color-mix(in srgb, var(--nr-text-body) 94%, var(--nr-shadow));
+}
+
+.theme-dark .callout .callout-title::after,
+.theme-light .callout .callout-title::after {
+  width: min(5.75rem, 30%);
+  opacity: 0.52;
+}
+
+.theme-dark .callout .callout,
+.theme-light .callout .callout {
+  border-color: color-mix(in srgb, var(--nr-callout-signal) 24%, var(--nr-line-strong));
+}
+
+.theme-dark .callout .callout {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-callout-signal) 6%, var(--nr-surface-0)),
+      color-mix(in srgb, var(--nr-surface-1) 86%, var(--nr-surface-0)) 18%,
+      color-mix(in srgb, var(--nr-surface-1) 86%, var(--nr-surface-0))
+    );
+}
+
+.theme-light .callout .callout {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-callout-signal) 9%, var(--nr-surface-0)),
+      color-mix(in srgb, var(--nr-surface-0) 72%, var(--nr-cloud)) 18%,
+      color-mix(in srgb, var(--nr-surface-0) 72%, var(--nr-cloud))
+    );
+}
+
+.theme-dark pre,
+.theme-dark .markdown-rendered pre,
+.theme-dark .markdown-preview-view pre,
+.theme-light pre,
+.theme-light .markdown-rendered pre,
+.theme-light .markdown-preview-view pre {
+  border-width: 1px;
+  border-left-width: 2px;
+  padding-block: 0.78em;
+}
+
+.theme-dark pre,
+.theme-dark .markdown-rendered pre,
+.theme-dark .markdown-preview-view pre {
+  border-color: color-mix(in srgb, var(--nr-line-strong) 72%, var(--nr-surface-0));
+  border-left-color: color-mix(in srgb, var(--nr-secondary) 62%, var(--nr-primary));
+}
+
+.theme-light pre,
+.theme-light .markdown-rendered pre,
+.theme-light .markdown-preview-view pre {
+  border-color: color-mix(in srgb, var(--nr-line-strong) 74%, var(--nr-surface-2));
+  border-left-color: color-mix(in srgb, var(--nr-secondary) 48%, var(--nr-ridge));
+}
+
+.theme-dark .block-language-dataview,
+.theme-dark .block-language-query,
+.theme-dark .block-language-lockblock,
+.theme-light .block-language-dataview,
+.theme-light .block-language-query,
+.theme-light .block-language-lockblock {
+  border-radius: var(--nr-pro-radius);
+}
+
+.theme-dark .block-language-dataview {
+  color: color-mix(in srgb, var(--nr-text-body) 86%, var(--nr-secondary));
+  background: color-mix(in srgb, var(--nr-surface-1) 72%, var(--nr-surface-0));
+  border-color: color-mix(in srgb, var(--nr-secondary) 28%, var(--nr-line-strong));
+}
+
+.theme-light .block-language-dataview {
+  color: color-mix(in srgb, var(--nr-text-body) 88%, var(--nr-secondary));
+  background: color-mix(in srgb, var(--nr-surface-1) 62%, var(--nr-cloud));
+  border-color: color-mix(in srgb, var(--nr-secondary) 24%, var(--nr-line-strong));
+}
+
+.theme-dark div.dataview-error-box,
+.theme-light div.dataview-error-box {
+  min-height: 8.25rem;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: var(--nr-pro-radius);
+  box-shadow: none;
+}
+
+.theme-dark div.dataview-error-box {
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-secondary) 4%, var(--nr-surface-0)),
+      color-mix(in srgb, var(--nr-surface-1) 78%, var(--nr-surface-0)) 22%,
+      color-mix(in srgb, var(--nr-surface-1) 78%, var(--nr-surface-0))
+    );
+  border-color: color-mix(in srgb, var(--nr-secondary) 22%, var(--nr-line-strong));
+  border-left-color: color-mix(in srgb, var(--nr-secondary) 42%, var(--nr-primary));
+}
+
+.theme-light div.dataview-error-box {
+  color: color-mix(in srgb, var(--nr-text-muted) 80%, var(--nr-text-body));
+  background:
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--nr-secondary) 6%, var(--nr-surface-0)),
+      color-mix(in srgb, var(--nr-surface-1) 72%, var(--nr-cloud)) 22%,
+      color-mix(in srgb, var(--nr-surface-1) 72%, var(--nr-cloud))
+    );
+  border-color: color-mix(in srgb, var(--nr-secondary) 18%, var(--nr-line-strong));
+  border-left-color: color-mix(in srgb, var(--nr-secondary) 34%, var(--nr-ridge));
+}
+
+.theme-dark .dataview-error-message,
+.theme-light .dataview-error-message {
+  color: inherit;
+}

@@ -1,0 +1,13 @@
+/* Folder altitude: inherited depth ladder, one color per nesting level. */
+
+.theme-dark .nav-files-container .nav-folder-title,
+.theme-dark .nav-files-container .nav-folder-title .tree-item-inner,
+.theme-dark .nav-files-container .nav-folder-title .nav-folder-title-content,
+.theme-dark .nav-files-container .nav-folder-title .collapse-icon {
+  color: var(--nr-folder-depth-color);
+}
+
+.theme-dark .nav-file-tag,
+.theme-dark .nav-file-title .nav-file-tag {
+  color: color-mix(in srgb, var(--nr-slate) 72%, var(--nr-shadow));
+}
