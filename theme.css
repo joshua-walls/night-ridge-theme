@@ -6538,7 +6538,6 @@ body {
 
 .theme-dark :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-title, .nav-file-title, .tree-item-self),
 .theme-light :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-title, .nav-file-title, .tree-item-self) {
-  display: flex;
   align-items: center;
   box-sizing: border-box;
   min-height: var(--nr-nav-item-min-height);
