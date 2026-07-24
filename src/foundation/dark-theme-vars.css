@@ -123,8 +123,8 @@
   --table-row-background-hover: color-mix(in srgb, var(--nr-pine) 7%, transparent);
   --table-row-alt-background: color-mix(in srgb, var(--nr-ridge) 16%, transparent);
   --table-row-alt-background-hover: color-mix(in srgb, var(--nr-pine) 9%, transparent);
-  --metadata-background: var(--nr-surface-2);
-  --metadata-border-color: var(--nr-line-soft);
+  --metadata-background: #08141D;
+  --metadata-border-color: #263A45;
   --metadata-border-radius: var(--nr-radius-m);
   --metadata-label-text-color: color-mix(in srgb, var(--nr-slate) 78%, var(--nr-fog));
   --metadata-label-text-color-hover: color-mix(in srgb, var(--nr-fog) 84%, var(--nr-slate));

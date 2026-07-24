@@ -29,8 +29,8 @@
 }
 
 .theme-dark .metadata-properties {
-  background: #08141D;
-  border-color: #263A45;
+  background: var(--metadata-background);
+  border-color: var(--metadata-border-color);
   box-shadow:
     inset 0 1px 0 rgba(245, 247, 248, 0.025),
     0 0 0 1px rgba(5, 8, 12, 0.72);

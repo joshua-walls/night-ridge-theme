@@ -1,158 +1,89 @@
-/* Task state controls: compact square markers, with renderer-specific plumbing only where Obsidian differs. */
+/* Task state controls: style the real checkbox so Obsidian keeps renderer-native alignment. */
 .theme-dark,
 .theme-light {
-  --nr-task-status-width: var(--checkbox-size);
-  --nr-task-status-height: var(--checkbox-size);
-  --nr-task-status-font-size: 1em;
-  --nr-task-status-gap: 0.5em;
-  --nr-task-status-inline-start: calc(0px - var(--nr-task-status-width) - var(--nr-task-status-gap));
-  --nr-task-status-editor-indent: calc(var(--nr-task-status-width) + var(--nr-task-status-gap) + var(--nr-task-status-gap) + var(--nr-task-status-gap) + var(--nr-task-status-gap));
-  --nr-task-status-editor-marker-adjust: 0.72em;
-  --nr-task-status-editor-text-gap: 0.9em;
-  --nr-task-status-block-start: 0.15em;
+  --nr-task-status-size: var(--checkbox-size);
 }
 
-:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view) li.task-list-item:is([data-task='/'], [data-task='i'], [data-task='?'], [data-task='*'], [data-task='!'], [data-task='>'], [data-task='-']),
-:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view) li.plugin-tasks-list-item.task-list-item:is([data-task='/'], [data-task='i'], [data-task='?'], [data-task='*'], [data-task='!'], [data-task='>'], [data-task='-']) > .tasks-list-text,
-:is(.theme-dark, .theme-light) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-task-line:is([data-task='/'], [data-task='i'], [data-task='?'], [data-task='*'], [data-task='!'], [data-task='>'], [data-task='-']) {
-  position: relative;
+:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view)
+li.task-list-item:is([data-task='>'], [data-task='/'], [data-task='?'], [data-task='!'], [data-task='*'], [data-task='-'], [data-task='i'])
+> input.task-list-item-checkbox,
+:is(.theme-dark, .theme-light) .markdown-source-view.mod-cm6
+.HyperMD-task-line:is([data-task='>'], [data-task='/'], [data-task='?'], [data-task='!'], [data-task='*'], [data-task='-'], [data-task='i'])
+.task-list-item-checkbox {
+  display: inline-block;
+  box-sizing: border-box;
+  width: var(--nr-task-status-size);
+  min-width: var(--nr-task-status-size);
+  height: var(--nr-task-status-size);
+  min-height: var(--nr-task-status-size);
+  margin-inline-end: 0.5em;
+  border: 1px solid var(--nr-task-status-signal);
+  border-radius: var(--checkbox-radius, 4px);
+  background-color: color-mix(in srgb, var(--nr-task-status-signal) 82%, var(--background-primary));
+  background-image: var(--nr-task-status-icon);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 86% 86%;
+  box-shadow: none;
+  opacity: 1;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
-:is(.theme-dark, .theme-light) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-task-line:is([data-task='/'], [data-task='i'], [data-task='?'], [data-task='*'], [data-task='!'], [data-task='>'], [data-task='-']) {
-  padding-inline-start: var(--nr-task-status-editor-indent);
-}
-
-:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view) li.task-list-item[data-task='/'],
-:is(.theme-dark, .theme-light) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-task-line[data-task='/'] {
-  --nr-task-status-mark: "/";
-  --nr-task-status-signal: var(--nr-pine);
-}
-
-:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view) li.task-list-item[data-task='i'],
-:is(.theme-dark, .theme-light) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-task-line[data-task='i'] {
-  --nr-task-status-mark: "i";
-  --nr-task-status-signal: var(--nr-seafoam);
-}
-
-:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view) li.task-list-item[data-task='?'],
-:is(.theme-dark, .theme-light) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-task-line[data-task='?'] {
-  --nr-task-status-mark: "?";
-  --nr-task-status-signal: var(--nr-copper);
-}
-
-:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view) li.task-list-item[data-task='*'],
-:is(.theme-dark, .theme-light) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-task-line[data-task='*'] {
-  --nr-task-status-mark: "*";
-  --nr-task-status-signal: var(--nr-lichen);
-}
-
-:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view) li.task-list-item[data-task='!'],
-:is(.theme-dark, .theme-light) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-task-line[data-task='!'] {
-  --nr-task-status-mark: "!";
-  --nr-task-status-signal: var(--nr-ember);
-}
-
-:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view) li.task-list-item[data-task='>'],
-:is(.theme-dark, .theme-light) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-task-line[data-task='>'] {
-  --nr-task-status-mark: ">";
-  --nr-task-status-signal: var(--nr-copper);
-}
-
-:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view) li.task-list-item[data-task='-'],
-:is(.theme-dark, .theme-light) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-task-line[data-task='-'] {
-  --nr-task-status-mark: "-";
-  --nr-task-status-signal: var(--nr-slate);
-}
-
-:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view) li.plugin-tasks-list-item.task-list-item:is([data-task='/'], [data-task='i'], [data-task='?'], [data-task='*'], [data-task='!'], [data-task='>'], [data-task='-'])::before,
-:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view) li.task-list-item:is([data-task='/'], [data-task='i'], [data-task='?'], [data-task='*'], [data-task='!'], [data-task='>'], [data-task='-'])::after,
-:is(.theme-dark, .theme-light) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-task-line:is([data-task='/'], [data-task='i'], [data-task='?'], [data-task='*'], [data-task='!'], [data-task='>'], [data-task='-'])::after {
+:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view)
+li.task-list-item:is([data-task='>'], [data-task='/'], [data-task='?'], [data-task='!'], [data-task='*'], [data-task='-'], [data-task='i'])
+> input.task-list-item-checkbox::before,
+:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view)
+li.task-list-item:is([data-task='>'], [data-task='/'], [data-task='?'], [data-task='!'], [data-task='*'], [data-task='-'], [data-task='i'])
+> input.task-list-item-checkbox::after,
+:is(.theme-dark, .theme-light) .markdown-source-view.mod-cm6
+.HyperMD-task-line:is([data-task='>'], [data-task='/'], [data-task='?'], [data-task='!'], [data-task='*'], [data-task='-'], [data-task='i'])
+.task-list-item-checkbox::before,
+:is(.theme-dark, .theme-light) .markdown-source-view.mod-cm6
+.HyperMD-task-line:is([data-task='>'], [data-task='/'], [data-task='?'], [data-task='!'], [data-task='*'], [data-task='-'], [data-task='i'])
+.task-list-item-checkbox::after {
   content: none;
   display: none;
 }
 
-:is(.theme-dark, .theme-light) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-task-line:is([data-task='/'], [data-task='i'], [data-task='?'], [data-task='*'], [data-task='!'], [data-task='>'], [data-task='-']) :is(.cm-formatting-task, .cm-formatting-task-start, .cm-formatting-task-end) {
-  display: none;
+:is(.theme-dark, .theme-light) li.task-list-item[data-task='>'],
+:is(.theme-dark, .theme-light) .HyperMD-task-line[data-task='>'] {
+  --nr-task-status-signal: var(--nr-copper);
+  --nr-task-status-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Ctext x='9' y='13' text-anchor='middle' font-family='Menlo,monospace' font-size='12' font-weight='800' fill='%23061016'%3E%26gt;%3C/text%3E%3C/svg%3E");
 }
 
-:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view) li.task-list-item.is-checked:not(.plugin-tasks-list-item):is([data-task='/'], [data-task='i'], [data-task='?'], [data-task='*'], [data-task='!'], [data-task='>'], [data-task='-'])::before,
-:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view) li.plugin-tasks-list-item.task-list-item.is-checked:is([data-task='/'], [data-task='i'], [data-task='?'], [data-task='*'], [data-task='!'], [data-task='>'], [data-task='-']) > .tasks-list-text::before,
-:is(.theme-dark, .theme-light) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-task-line:is([data-task='/'], [data-task='i'], [data-task='?'], [data-task='*'], [data-task='!'], [data-task='>'], [data-task='-'])::before {
-  content: var(--nr-task-status-mark);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  width: var(--nr-task-status-width);
-  min-width: var(--nr-task-status-width);
-  height: var(--nr-task-status-height);
-  margin-inline: 0;
-  padding: 0;
-  border: 1px solid color-mix(in srgb, var(--nr-task-status-signal) var(--nr-task-status-border-signal), var(--nr-task-status-border-base));
-  border-radius: var(--checkbox-radius);
-  color: color-mix(in srgb, var(--nr-task-status-signal) var(--nr-task-status-text-signal), var(--nr-task-status-text-base));
-  background: color-mix(in srgb, var(--nr-task-status-signal) var(--nr-task-status-bg-signal), var(--nr-task-status-bg-base));
-  font-family: var(--font-interface-theme);
-  font-size: var(--nr-task-status-font-size);
-  font-style: normal;
-  font-weight: 650;
-  letter-spacing: 0;
-  line-height: 1;
-  pointer-events: none;
-  text-align: center;
-  text-decoration: none;
-  text-indent: 0;
-  text-transform: none;
-  vertical-align: -0.13em;
-  white-space: nowrap;
+:is(.theme-dark, .theme-light) li.task-list-item[data-task='/'],
+:is(.theme-dark, .theme-light) .HyperMD-task-line[data-task='/'] {
+  --nr-task-status-signal: var(--nr-pine);
+  --nr-task-status-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Ctext x='9' y='13' text-anchor='middle' font-family='Menlo,monospace' font-size='13' font-weight='800' fill='%23061016'%3E/%3C/text%3E%3C/svg%3E");
 }
 
-:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view) li.task-list-item.is-checked:not(.plugin-tasks-list-item):is([data-task='/'], [data-task='i'], [data-task='?'], [data-task='*'], [data-task='!'], [data-task='>'], [data-task='-'])::before,
-:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view) li.plugin-tasks-list-item.task-list-item.is-checked:is([data-task='/'], [data-task='i'], [data-task='?'], [data-task='*'], [data-task='!'], [data-task='>'], [data-task='-']) > .tasks-list-text::before {
-  position: absolute;
-  inset-inline-start: var(--nr-task-status-inline-start);
-  top: var(--nr-task-status-block-start);
+:is(.theme-dark, .theme-light) li.task-list-item[data-task='?'],
+:is(.theme-dark, .theme-light) .HyperMD-task-line[data-task='?'] {
+  --nr-task-status-signal: var(--nr-copper);
+  --nr-task-status-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Ctext x='9' y='13' text-anchor='middle' font-family='Menlo,monospace' font-size='11' font-weight='800' fill='%23061016'%3E?%3C/text%3E%3C/svg%3E");
 }
 
-:is(.theme-dark, .theme-light) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-task-line:is([data-task='/'], [data-task='i'], [data-task='?'], [data-task='*'], [data-task='!'], [data-task='>'], [data-task='-'])::before {
-  margin-inline: var(--nr-task-status-editor-marker-adjust) var(--nr-task-status-editor-text-gap);
+:is(.theme-dark, .theme-light) li.task-list-item[data-task='!'],
+:is(.theme-dark, .theme-light) .HyperMD-task-line[data-task='!'] {
+  --nr-task-status-signal: var(--nr-ember);
+  --nr-task-status-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Ctext x='9' y='13' text-anchor='middle' font-family='Menlo,monospace' font-size='12' font-weight='800' fill='%23061016'%3E!%3C/text%3E%3C/svg%3E");
 }
 
-:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view) li.task-list-item.is-checked:not(.plugin-tasks-list-item):is([data-task='/'], [data-task='i'], [data-task='?'], [data-task='*'], [data-task='!'], [data-task='>'], [data-task='-']):is(:hover, :focus-within)::before,
-:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view) li.plugin-tasks-list-item.task-list-item.is-checked:is([data-task='/'], [data-task='i'], [data-task='?'], [data-task='*'], [data-task='!'], [data-task='>'], [data-task='-']):is(:hover, :focus-within) > .tasks-list-text::before,
-:is(.theme-dark, .theme-light) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-task-line:is([data-task='/'], [data-task='i'], [data-task='?'], [data-task='*'], [data-task='!'], [data-task='>'], [data-task='-']):is(:hover, :focus-within)::before {
-  border-color: color-mix(in srgb, var(--nr-task-status-signal) var(--nr-task-status-border-hover-signal), var(--nr-task-status-border-hover-base));
-  background: color-mix(in srgb, var(--nr-task-status-signal) var(--nr-task-status-bg-hover-signal), var(--nr-task-status-bg-base));
+:is(.theme-dark, .theme-light) li.task-list-item[data-task='*'],
+:is(.theme-dark, .theme-light) .HyperMD-task-line[data-task='*'] {
+  --nr-task-status-signal: var(--nr-lichen);
+  --nr-task-status-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Ctext x='9' y='14' text-anchor='middle' font-family='Menlo,monospace' font-size='13' font-weight='800' fill='%23061016'%3E*%3C/text%3E%3C/svg%3E");
 }
 
-:is(.theme-dark, .theme-light) :is(.markdown-rendered, .markdown-preview-view) li.task-list-item.is-checked:is([data-task='/'], [data-task='i'], [data-task='?'], [data-task='*'], [data-task='!'], [data-task='>'], [data-task='-']) > input.task-list-item-checkbox {
-  position: absolute;
-  inset-inline-start: var(--nr-task-status-inline-start);
-  top: var(--nr-task-status-block-start);
-  z-index: 2;
-  width: var(--nr-task-status-width);
-  min-width: var(--nr-task-status-width);
-  height: var(--nr-task-status-height);
-  margin: 0;
-  border: 0;
-  background: transparent;
-  box-shadow: none;
-  opacity: 0;
-  cursor: pointer;
+:is(.theme-dark, .theme-light) li.task-list-item[data-task='-'],
+:is(.theme-dark, .theme-light) .HyperMD-task-line[data-task='-'] {
+  --nr-task-status-signal: var(--nr-slate);
+  --nr-task-status-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Ctext x='9' y='13' text-anchor='middle' font-family='Menlo,monospace' font-size='13' font-weight='800' fill='%23061016'%3E-%3C/text%3E%3C/svg%3E");
 }
 
-:is(.theme-dark, .theme-light) .markdown-source-view.mod-cm6.is-live-preview .HyperMD-task-line:is([data-task='/'], [data-task='i'], [data-task='?'], [data-task='*'], [data-task='!'], [data-task='>'], [data-task='-']) .task-list-item-checkbox {
-  position: absolute;
-  inset-inline-start: calc(var(--nr-task-status-editor-indent) + var(--nr-task-status-editor-marker-adjust));
-  top: var(--nr-task-status-block-start);
-  z-index: 2;
-  width: var(--nr-task-status-width);
-  min-width: var(--nr-task-status-width);
-  height: var(--nr-task-status-height);
-  margin: 0;
-  border: 0;
-  background: transparent;
-  box-shadow: none;
-  opacity: 0;
-  cursor: pointer;
+:is(.theme-dark, .theme-light) li.task-list-item[data-task='i'],
+:is(.theme-dark, .theme-light) .HyperMD-task-line[data-task='i'] {
+  --nr-task-status-signal: var(--nr-seafoam);
+  --nr-task-status-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Ctext x='9' y='13' text-anchor='middle' font-family='Menlo,monospace' font-size='12' font-weight='800' fill='%23061016'%3Ei%3C/text%3E%3C/svg%3E");
 }

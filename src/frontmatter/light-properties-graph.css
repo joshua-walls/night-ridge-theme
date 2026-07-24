@@ -14,7 +14,7 @@
 
 .theme-light .metadata-property {
   align-items: center;
-  background: #C5D2D7;
+  background: var(--metadata-background);
   border-left: 2px solid color-mix(in srgb, var(--nr-property-signal) 36%, transparent);
   border-right: 1px solid color-mix(in srgb, var(--nr-ridge) 22%, transparent);
   border-bottom: 1px solid color-mix(in srgb, var(--nr-ridge) 18%, transparent);

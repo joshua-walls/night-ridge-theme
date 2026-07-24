@@ -1,76 +1,41 @@
-/* Navigation depth lock: opening, hovering, and selecting rows must not change indent. */
-.theme-dark :is(#nr-nav-depth-lock, .nav-files-container),
-.theme-light :is(#nr-nav-depth-lock, .nav-files-container) {
-  --nav-item-padding: 0.3rem 0.6rem;
-  --nav-item-parent-padding: 0.3rem 0.6rem;
-  --nr-nav-padding-left: 0.42rem;
-  --nav-item-padding-left: var(--nr-nav-padding-left);
-  --nr-nav-depth-step: 0.82rem;
-  --nav-item-children-padding-start: var(--nr-nav-depth-step);
-  --nav-item-children-margin-start: 0;
-  --nr-nav-disclosure-size: 1rem;
-  --nr-nav-disclosure-gap: 0.48rem;
-}
-
-.theme-dark :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-children, .tree-item-children),
-.theme-light :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-children, .tree-item-children) {
-  margin-inline-start: 0;
-  padding-inline-start: var(--nr-nav-depth-step);
-  border-left-width: 1px;
-  border-left-style: solid;
-}
-
-.theme-dark :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-title, .nav-file-title, .tree-item-self),
-.theme-light :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-title, .nav-file-title, .tree-item-self) {
-  align-items: center;
+/* Navigation stability: Trailmark-style row cues without changing folder alignment. */
+:is(#nr-nav-stability, .theme-dark, .theme-light) .nav-files-container :is(
+  .tree-item-self.nav-file-title,
+  .tree-item-self.nav-folder-title,
+  .nav-file-title,
+  .nav-folder-title
+) {
   box-sizing: border-box;
-  min-height: var(--nr-nav-item-min-height);
-  margin-inline-start: 0;
-  border-left: 0 solid transparent;
-  padding-inline-start: var(--nr-nav-padding-left);
+  border-left: 0;
+  border-right: 0;
 }
 
-.theme-dark :is(#nr-nav-depth-lock, .nav-files-container) .collapse-icon,
-.theme-light :is(#nr-nav-depth-lock, .nav-files-container) .collapse-icon {
-  display: inline-flex;
-  position: static;
-  inset: auto;
-  align-items: center;
-  justify-content: center;
-  width: var(--nr-nav-disclosure-size);
-  min-width: var(--nr-nav-disclosure-size);
-  flex: 0 0 var(--nr-nav-disclosure-size);
-  margin-inline: 0 var(--nr-nav-disclosure-gap);
-  padding: 0;
+:is(#nr-nav-stability, .theme-dark, .theme-light) .nav-files-container :is(
+  .tree-item-self.nav-file-title,
+  .tree-item-self.nav-folder-title,
+  .nav-file-title,
+  .nav-folder-title
+)::before,
+:is(#nr-nav-stability, .theme-dark, .theme-light) .nav-files-container :is(
+  .tree-item-self.nav-folder-title,
+  .nav-folder-title
+)::after {
+  content: none;
+  display: none;
 }
 
-.theme-dark :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-file-title, .tree-item-self.nav-file-title),
-.theme-light :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-file-title, .tree-item-self.nav-file-title) {
-  padding-inline-start: calc(var(--nr-nav-padding-left) + var(--nr-nav-disclosure-size) + var(--nr-nav-disclosure-gap));
-}
-
-.theme-dark :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-title-content, .nav-file-title-content, .tree-item-inner),
-.theme-light :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-title-content, .nav-file-title-content, .tree-item-inner) {
-  flex: 1 1 auto;
-  min-width: 0;
-  margin-inline-start: 0;
-  padding-inline-start: 0;
-}
-
-.theme-dark :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-title, .nav-file-title, .tree-item-self):is(:hover, .is-active),
-.theme-light :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-title, .nav-file-title, .tree-item-self):is(:hover, .is-active) {
-  padding-inline-start: var(--nr-nav-padding-left);
-  border-left-width: 0;
-}
-
-.theme-dark :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-file-title, .tree-item-self.nav-file-title):is(:hover, .is-active),
-.theme-light :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-file-title, .tree-item-self.nav-file-title):is(:hover, .is-active) {
-  padding-inline-start: calc(var(--nr-nav-padding-left) + var(--nr-nav-disclosure-size) + var(--nr-nav-disclosure-gap));
-}
-
-.theme-dark :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-title.is-active, .tree-item-self.nav-folder-title.is-active, .nav-file-title.is-active, .tree-item-self.nav-file-title.is-active),
-.theme-light :is(#nr-nav-depth-lock, .nav-files-container) :is(.nav-folder-title.is-active, .tree-item-self.nav-folder-title.is-active, .nav-file-title.is-active, .tree-item-self.nav-file-title.is-active) {
-  box-shadow: inset 3px 0 0 color-mix(in srgb, var(--nr-primary) 68%, transparent);
+:is(#nr-nav-stability, .theme-dark, .theme-light) .nav-files-container :is(
+  .tree-item-self.is-active,
+  .tree-item-self.nav-file-title.is-active,
+  .tree-item-self.nav-folder-title.is-active,
+  .nav-file-title.is-active,
+  .nav-folder-title.is-active
+) {
+  border-left: 0;
+  border-right: 0;
+  box-shadow:
+    inset 2px 0 0 color-mix(in srgb, var(--nr-folder-depth-color, var(--nr-pine)) 76%, var(--nr-pine)),
+    inset 10px 0 18px color-mix(in srgb, var(--nr-folder-depth-color, var(--nr-ridge)) 8%, transparent);
 }
 
 .theme-dark .prompt,
