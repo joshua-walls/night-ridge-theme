@@ -26,10 +26,8 @@
   border-color: var(--status-bar-border-color);
 }
 
-.theme-dark .nav-folder-children {
+.theme-dark .nav-files-container :is(.nav-folder-children, .tree-item-children) {
   border-left: var(--nav-indentation-guide-width) solid var(--nav-indentation-guide-color);
-  margin-left: 0.4rem;
-  padding-left: 0.35rem;
 }
 
 .theme-dark .tree-item-self.is-active,

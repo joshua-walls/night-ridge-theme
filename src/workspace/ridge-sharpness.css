@@ -58,7 +58,6 @@
   color: color-mix(in srgb, var(--nr-seafoam) 84%, var(--nr-cloud));
 }
 
-.theme-dark .metadata-properties,
 .theme-dark .markdown-embed,
 .theme-dark .callout,
 .theme-dark .prompt,

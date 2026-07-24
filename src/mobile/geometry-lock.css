@@ -11,27 +11,138 @@ body:is(.is-mobile, .is-phone, .is-tablet),
   --metadata-input-height: 28px;
   --metadata-property-padding: 1px 6px;
   --nr-metadata-key-width: minmax(8.75rem, 40%);
-  --nav-item-padding: 8px 10px;
-  --nav-item-parent-padding: 8px 10px;
-  --nr-nav-padding-left: 14px;
-  --nr-nav-item-min-height: 34px;
-  --nr-nav-depth-step: 14px;
-  --nr-nav-disclosure-size: 16px;
-  --nr-nav-disclosure-gap: 8px;
   --nr-task-status-width: var(--checkbox-size);
   --nr-task-status-height: var(--checkbox-size);
   --nr-task-status-font-size: 11px;
   --nr-task-status-gap: 0.5em;
 }
 
+/* Mobile folder tree: preserve native row geometry while stabilizing cues. */
+:is(
+  #nr-mobile-tree,
+  body.theme-dark.is-mobile,
+  body.theme-light.is-mobile,
+  body.is-mobile.theme-dark,
+  body.is-mobile.theme-light,
+  body.is-mobile[data-theme='dark'],
+  body.is-mobile:not([data-theme='dark'])
+) .nav-files-container {
+  --nav-item-children-margin-start: 0.62em;
+  --nav-item-children-padding-start: 0.74em;
+}
+
+:is(
+  #nr-mobile-tree,
+  body.theme-dark.is-mobile,
+  body.theme-light.is-mobile,
+  body.is-mobile.theme-dark,
+  body.is-mobile.theme-light,
+  body.is-mobile[data-theme='dark'],
+  body.is-mobile:not([data-theme='dark'])
+) .nav-files-container :is(
+  .tree-item-self,
+  .nav-folder-title,
+  .tree-item-self.nav-folder-title,
+  .nav-file-title,
+  .tree-item-self.nav-file-title
+) {
+  box-sizing: border-box;
+  border-left: 0;
+  border-right: 0;
+}
+
+:is(
+  #nr-mobile-tree,
+  body.theme-dark.is-mobile,
+  body.theme-light.is-mobile,
+  body.is-mobile.theme-dark,
+  body.is-mobile.theme-light,
+  body.is-mobile[data-theme='dark'],
+  body.is-mobile:not([data-theme='dark'])
+) .nav-files-container :is(
+  .nav-folder-title-content,
+  .nav-file-title-content,
+  .tree-item-inner
+) {
+  min-width: 0;
+}
+
+/* Hover/active states must not change row width or text alignment. */
+:is(
+  #nr-mobile-tree,
+  body.theme-dark.is-mobile,
+  body.theme-light.is-mobile,
+  body.is-mobile.theme-dark,
+  body.is-mobile.theme-light,
+  body.is-mobile[data-theme='dark'],
+  body.is-mobile:not([data-theme='dark'])
+) .nav-files-container :is(
+  .tree-item-self,
+  .nav-folder-title,
+  .tree-item-self.nav-folder-title,
+  .nav-file-title,
+  .tree-item-self.nav-file-title
+):is(:hover, .is-active) {
+  border-left: 0;
+  border-right: 0;
+}
+
+/* Active cue uses inset shadow so it does not move text. */
+:is(
+  #nr-mobile-tree,
+  body.theme-dark.is-mobile,
+  body.theme-light.is-mobile,
+  body.is-mobile.theme-dark,
+  body.is-mobile.theme-light,
+  body.is-mobile[data-theme='dark'],
+  body.is-mobile:not([data-theme='dark'])
+) .nav-files-container :is(
+  .tree-item-self.is-active,
+  .nav-folder-title.is-active,
+  .tree-item-self.nav-folder-title.is-active,
+  .nav-file-title.is-active,
+  .tree-item-self.nav-file-title.is-active
+) {
+  box-shadow:
+    inset 2px 0 0 var(--nr-folder-depth-color, var(--text-accent)),
+    inset 10px 0 18px color-mix(in srgb, var(--nr-folder-depth-color, var(--text-accent)) 8%, transparent);
+}
+
+/* Depth is handled by child containers, not row hover/active padding. */
+:is(
+  #nr-mobile-tree,
+  body.theme-dark.is-mobile,
+  body.theme-light.is-mobile,
+  body.is-mobile.theme-dark,
+  body.is-mobile.theme-light,
+  body.is-mobile[data-theme='dark'],
+  body.is-mobile:not([data-theme='dark'])
+) .nav-files-container .nav-folder.mod-root > .nav-folder-children {
+  margin-inline-start: 0;
+  padding-inline-start: 0;
+  border-left: 0;
+}
+
+:is(
+  #nr-mobile-tree,
+  body.theme-dark.is-mobile,
+  body.theme-light.is-mobile,
+  body.is-mobile.theme-dark,
+  body.is-mobile.theme-light,
+  body.is-mobile[data-theme='dark'],
+  body.is-mobile:not([data-theme='dark'])
+) .nav-files-container :is(
+  .nav-folder:not(.mod-root) > .nav-folder-children,
+  .tree-item > .tree-item-children
+) {
+  margin-inline-start: var(--nav-item-children-margin-start);
+  padding-inline-start: var(--nav-item-children-padding-start);
+  border-left: 1px solid color-mix(in srgb, var(--nr-folder-depth-color, var(--text-muted)) 28%, transparent);
+}
+
 :is(.is-mobile, .is-phone, .is-tablet) :is(.nav-files-container, .metadata-container, .metadata-properties, .metadata-property, .view-header, .mobile-navbar, .mobile-toolbar) {
   font-family: var(--font-interface-theme);
   font-size: var(--font-ui-medium, 16px);
-}
-
-:is(.is-mobile, .is-phone, .is-tablet) :is(#nr-nav-depth-lock, .nav-files-container) {
-  --nav-item-padding-left: var(--nr-nav-padding-left);
-  --nav-item-children-padding-start: var(--nr-nav-depth-step);
 }
 
 :is(.is-mobile, .is-phone, .is-tablet) :is(.view-header .view-action, .view-header .clickable-icon, .mobile-navbar .clickable-icon, .mobile-toolbar .clickable-icon) {
@@ -44,7 +155,7 @@ body:is(.is-mobile, .is-phone, .is-tablet),
 :is(.is-mobile, .is-phone, .is-tablet) .metadata-properties .metadata-property {
   display: grid;
   grid-template-columns: var(--nr-metadata-key-width) minmax(0, 1fr);
-  column-gap: 6px;
+  gap: 0 6px;
   align-items: center;
   box-sizing: border-box;
   min-height: var(--metadata-input-height);
