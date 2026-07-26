@@ -133,17 +133,3 @@
   --nr-folder-depth-color: #C4D0D5;
   border-left-color: rgba(95, 168, 157, 0.30);
 }
-
-.theme-dark .graph-view,
-.theme-dark .graph-view-container,
-.theme-dark .workspace-leaf-content[data-type='graph'] .view-content,
-.theme-dark .workspace-leaf-content[data-type='localgraph'] .view-content {
-  background: #02070B;
-}
-
-.theme-dark .graph-view.color-fill-highlight,
-.theme-dark .graph-view.color-circle-highlight,
-.theme-dark .graph-view.color-fill-focused,
-.theme-dark .graph-view.color-circle-focused {
-  color: #6FDAD4;
-}

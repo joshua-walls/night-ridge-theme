@@ -329,43 +329,6 @@
   border-radius: var(--nr-radius-s);
 }
 
-.theme-dark .graph-view,
-.theme-dark .graph-view-container,
-.theme-dark .workspace-leaf-content[data-type='graph'] .view-content {
-  background: var(--nr-surface-0);
-}
-
-.theme-light .graph-view,
-.theme-light .graph-view-container,
-.theme-light .workspace-leaf-content[data-type='graph'] .view-content {
-  background: var(--nr-surface-0);
-}
-
-.theme-dark .graph-view.color-line,
-.theme-dark .graph-view.color-arrow,
-.theme-light .graph-view.color-line,
-.theme-light .graph-view.color-arrow {
-  color: var(--graph-line);
-}
-
-.theme-dark .graph-view.color-fill,
-.theme-dark .graph-view.color-circle,
-.theme-light .graph-view.color-fill,
-.theme-light .graph-view.color-circle {
-  color: var(--graph-node);
-}
-
-.theme-dark .graph-view.color-fill-highlight,
-.theme-dark .graph-view.color-circle-highlight,
-.theme-dark .graph-view.color-fill-focused,
-.theme-dark .graph-view.color-circle-focused,
-.theme-light .graph-view.color-fill-highlight,
-.theme-light .graph-view.color-circle-highlight,
-.theme-light .graph-view.color-fill-focused,
-.theme-light .graph-view.color-circle-focused {
-  color: var(--graph-node-focused);
-}
-
 .theme-dark .modal.mod-settings .setting-item,
 .theme-light .modal.mod-settings .setting-item {
   min-height: 4rem;

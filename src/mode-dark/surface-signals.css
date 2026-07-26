@@ -345,8 +345,3 @@
   border-color: var(--nr-pine);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--nr-pine) 14%, transparent);
 }
-
-.theme-dark .graph-view.color-fill-highlight,
-.theme-dark .graph-view.color-circle-highlight {
-  color: var(--graph-node-focused);
-}

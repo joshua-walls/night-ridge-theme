@@ -1,4 +1,4 @@
-/* Ridge edge pass: sharper active pane, darker graph topology, leaner properties. */
+/* Ridge edge pass: sharper active pane and leaner properties. */
 .theme-dark .workspace-leaf.mod-active {
   box-shadow:
     inset 1px 0 0 color-mix(in srgb, var(--nr-pine) 52%, transparent),
@@ -8,24 +8,6 @@
 
 .theme-dark .workspace-leaf.mod-active .view-header {
   border-bottom-color: color-mix(in srgb, var(--nr-pine) 34%, var(--nr-iron));
-}
-
-.theme-dark .graph-view.color-line,
-.theme-dark .graph-view.color-arrow {
-  color: #17262E;
-}
-
-.theme-dark .graph-view.color-fill,
-.theme-dark .graph-view.color-circle {
-  color: #35645E;
-}
-
-.theme-dark .graph-view.color-fill-tag {
-  color: #5F805B;
-}
-
-.theme-dark .graph-view.color-fill-attachment {
-  color: #4F646D;
 }
 
 .theme-dark .metadata-properties {
