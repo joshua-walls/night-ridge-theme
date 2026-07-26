@@ -1,15 +1,125 @@
-.graph-view.color-line,
-.graph-view.color-arrow {
+.theme-dark .graph-view,
+.theme-dark .graph-view-container,
+.theme-dark .workspace-leaf-content[data-type='graph'] .view-content,
+.theme-dark .workspace-leaf-content[data-type='localgraph'] .view-content,
+.theme-light .graph-view,
+.theme-light .graph-view-container,
+.theme-light .workspace-leaf-content[data-type='graph'] .view-content,
+.theme-light .workspace-leaf-content[data-type='localgraph'] .view-content {
+  background-color: var(--nr-graph-background-alt);
+  background-image:
+    linear-gradient(
+      180deg,
+      var(--nr-graph-background),
+      var(--nr-graph-background-alt)
+    );
+}
+
+.theme-dark .graph-view.color-line,
+.theme-dark .graph-view.color-arrow,
+.theme-light .graph-view.color-line,
+.theme-light .graph-view.color-arrow {
   color: var(--graph-line);
 }
 
-.graph-view.color-fill,
-.graph-view.color-circle,
-.graph-view.color-fill-highlight {
+.theme-dark .graph-view.color-fill,
+.theme-dark .graph-view.color-circle,
+.theme-light .graph-view.color-fill,
+.theme-light .graph-view.color-circle {
   color: var(--graph-node);
 }
 
-.graph-view.color-fill-tag,
-.graph-view.color-fill-attachment {
+.theme-dark .graph-view.color-fill-highlight,
+.theme-dark .graph-view.color-circle-highlight,
+.theme-dark .graph-view.color-fill-focused,
+.theme-dark .graph-view.color-circle-focused,
+.theme-light .graph-view.color-fill-highlight,
+.theme-light .graph-view.color-circle-highlight,
+.theme-light .graph-view.color-fill-focused,
+.theme-light .graph-view.color-circle-focused {
+  color: var(--graph-node-focused);
+}
+
+.theme-dark .graph-view.color-line-highlight,
+.theme-dark .graph-view.color-arrow-highlight,
+.theme-dark .graph-view.color-line-focused,
+.theme-dark .graph-view.color-arrow-focused,
+.theme-light .graph-view.color-line-highlight,
+.theme-light .graph-view.color-arrow-highlight,
+.theme-light .graph-view.color-line-focused,
+.theme-light .graph-view.color-arrow-focused {
+  color: var(--nr-graph-line-focused);
+}
+
+.theme-dark .graph-view.color-fill-unresolved,
+.theme-dark .graph-view.color-circle-unresolved,
+.theme-light .graph-view.color-fill-unresolved,
+.theme-light .graph-view.color-circle-unresolved {
+  color: var(--graph-node-unresolved);
+}
+
+.theme-dark .graph-view.color-fill-tag,
+.theme-dark .graph-view.color-circle-tag,
+.theme-light .graph-view.color-fill-tag,
+.theme-light .graph-view.color-circle-tag {
   color: var(--graph-node-tag);
+}
+
+.theme-dark .graph-view.color-fill-attachment,
+.theme-dark .graph-view.color-circle-attachment,
+.theme-light .graph-view.color-fill-attachment,
+.theme-light .graph-view.color-circle-attachment {
+  color: var(--graph-node-attachment);
+}
+
+.theme-dark .graph-view.color-text,
+.theme-dark .graph-view text,
+.theme-dark .graph-view .graph-view-label,
+.theme-light .graph-view.color-text,
+.theme-light .graph-view text,
+.theme-light .graph-view .graph-view-label {
+  color: var(--graph-text);
+  fill: var(--graph-text);
+}
+
+.theme-dark .graph-controls,
+.theme-light .graph-controls {
+  color: var(--text-normal);
+  --background-modifier-form-field: var(--nr-graph-input-background);
+  --interactive-normal: var(--nr-graph-toggle-background);
+  --interactive-hover: color-mix(in srgb, var(--graph-node) 14%, var(--nr-graph-toggle-background));
+  --interactive-accent: var(--graph-node);
+  --interactive-accent-hover: var(--graph-node-focused);
+  background: var(--nr-graph-controls-background);
+  border: 1px solid var(--nr-line-strong);
+  box-shadow:
+    0 14px 34px color-mix(in srgb, var(--nr-shadow) 24%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--nr-secondary) 10%, transparent);
+}
+
+.theme-dark .graph-controls input[type='search'],
+.theme-light .graph-controls input[type='search'] {
+  background: var(--nr-graph-input-background);
+  border-color: var(--nr-graph-input-border);
+  box-shadow:
+    inset 2px 0 0 color-mix(in srgb, var(--graph-node) 54%, transparent),
+    0 0 0 3px color-mix(in srgb, var(--graph-node) 6%, transparent);
+}
+
+.theme-dark .graph-controls .checkbox-container,
+.theme-light .graph-controls .checkbox-container {
+  background: var(--nr-graph-toggle-background);
+  border-color: var(--nr-graph-input-border);
+}
+
+.theme-dark .graph-controls .checkbox-container.is-enabled,
+.theme-light .graph-controls .checkbox-container.is-enabled {
+  background: var(--graph-node);
+  border-color: var(--graph-node-focused);
+  color: var(--text-on-accent);
+}
+
+.theme-dark .graph-control-section,
+.theme-light .graph-control-section {
+  border-top-color: var(--nr-line-soft);
 }

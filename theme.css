@@ -206,13 +206,20 @@ body {
   --callout-summary: 111, 135, 147;
   --callout-todo: 95, 168, 157;
   --callout-quote: 143, 174, 138;
-  --graph-line: color-mix(in srgb, var(--nr-slate) 34%, var(--nr-shadow));
-  --graph-node: color-mix(in srgb, var(--nr-primary) 64%, var(--nr-slate));
-  --graph-node-focused: color-mix(in srgb, var(--nr-primary) 88%, var(--nr-secondary));
-  --graph-node-tag: color-mix(in srgb, var(--nr-lichen) 80%, var(--nr-slate));
-  --graph-node-attachment: var(--nr-slate);
-  --graph-node-unresolved: var(--nr-tertiary);
-  --graph-text: color-mix(in srgb, var(--nr-fog) 86%, var(--nr-slate));
+  --nr-graph-background: color-mix(in srgb, var(--nr-shadow) 78%, var(--nr-moonstone));
+  --nr-graph-background-alt: color-mix(in srgb, var(--nr-midnight) 52%, var(--nr-ridge));
+  --nr-graph-controls-background: color-mix(in srgb, var(--nr-surface-1) 94%, var(--nr-shadow));
+  --nr-graph-input-background: color-mix(in srgb, var(--nr-shadow) 70%, var(--nr-moonstone));
+  --nr-graph-input-border: #467A74;
+  --nr-graph-toggle-background: color-mix(in srgb, var(--nr-surface-3) 74%, var(--nr-shadow));
+  --nr-graph-line-focused: #70C9BE;
+  --graph-line: #5FA89D;
+  --graph-node: #74C4B9;
+  --graph-node-focused: #7ADDD5;
+  --graph-node-tag: #77B798;
+  --graph-node-attachment: #5E8E8C;
+  --graph-node-unresolved: var(--nr-copper);
+  --graph-text: #B8CAC8;
   --canvas-background: var(--nr-shadow);
   --canvas-dot-pattern: color-mix(in srgb, var(--nr-iron) 36%, transparent);
   --canvas-color-1: var(--nr-pine);
@@ -440,13 +447,20 @@ body {
   --callout-summary: 83, 103, 114;
   --callout-todo: 64, 127, 119;
   --callout-quote: 99, 128, 92;
-  --graph-line: color-mix(in srgb, var(--nr-slate) 48%, var(--nr-surface-0));
-  --graph-node: color-mix(in srgb, var(--nr-primary) 74%, var(--nr-ridge));
-  --graph-node-focused: color-mix(in srgb, var(--nr-primary) 86%, var(--nr-secondary));
-  --graph-node-tag: color-mix(in srgb, var(--nr-lichen) 70%, var(--nr-ridge));
-  --graph-node-attachment: color-mix(in srgb, var(--nr-slate) 82%, var(--nr-ridge));
-  --graph-node-unresolved: color-mix(in srgb, var(--nr-tertiary) 86%, var(--nr-ridge));
-  --graph-text: var(--nr-midnight);
+  --nr-graph-background: color-mix(in srgb, var(--nr-surface-1) 72%, var(--nr-cloud));
+  --nr-graph-background-alt: color-mix(in srgb, var(--nr-surface-3) 82%, var(--nr-ridge));
+  --nr-graph-controls-background: color-mix(in srgb, var(--nr-surface-0) 86%, var(--nr-cloud));
+  --nr-graph-input-background: color-mix(in srgb, var(--nr-cloud) 38%, var(--nr-surface-1));
+  --nr-graph-input-border: color-mix(in srgb, var(--nr-primary) 42%, var(--nr-ridge));
+  --nr-graph-toggle-background: color-mix(in srgb, var(--nr-surface-2) 76%, var(--nr-cloud));
+  --nr-graph-line-focused: #257A75;
+  --graph-line: #557E79;
+  --graph-node: #32766F;
+  --graph-node-focused: #1F8B84;
+  --graph-node-tag: #647E5E;
+  --graph-node-attachment: #536A74;
+  --graph-node-unresolved: #8C5526;
+  --graph-text: var(--nr-moonstone);
   --canvas-background: color-mix(in srgb, var(--nr-cloud) 78%, var(--nr-fog));
   --canvas-dot-pattern: color-mix(in srgb, var(--nr-slate) 24%, transparent);
   --canvas-color-1: var(--nr-pine);
@@ -949,20 +963,130 @@ input[type='checkbox']:checked,
   color: var(--nr-pine);
   border-bottom: 2px solid var(--nr-pine);
 }
-.graph-view.color-line,
-.graph-view.color-arrow {
+.theme-dark .graph-view,
+.theme-dark .graph-view-container,
+.theme-dark .workspace-leaf-content[data-type='graph'] .view-content,
+.theme-dark .workspace-leaf-content[data-type='localgraph'] .view-content,
+.theme-light .graph-view,
+.theme-light .graph-view-container,
+.theme-light .workspace-leaf-content[data-type='graph'] .view-content,
+.theme-light .workspace-leaf-content[data-type='localgraph'] .view-content {
+  background-color: var(--nr-graph-background-alt);
+  background-image:
+    linear-gradient(
+      180deg,
+      var(--nr-graph-background),
+      var(--nr-graph-background-alt)
+    );
+}
+
+.theme-dark .graph-view.color-line,
+.theme-dark .graph-view.color-arrow,
+.theme-light .graph-view.color-line,
+.theme-light .graph-view.color-arrow {
   color: var(--graph-line);
 }
 
-.graph-view.color-fill,
-.graph-view.color-circle,
-.graph-view.color-fill-highlight {
+.theme-dark .graph-view.color-fill,
+.theme-dark .graph-view.color-circle,
+.theme-light .graph-view.color-fill,
+.theme-light .graph-view.color-circle {
   color: var(--graph-node);
 }
 
-.graph-view.color-fill-tag,
-.graph-view.color-fill-attachment {
+.theme-dark .graph-view.color-fill-highlight,
+.theme-dark .graph-view.color-circle-highlight,
+.theme-dark .graph-view.color-fill-focused,
+.theme-dark .graph-view.color-circle-focused,
+.theme-light .graph-view.color-fill-highlight,
+.theme-light .graph-view.color-circle-highlight,
+.theme-light .graph-view.color-fill-focused,
+.theme-light .graph-view.color-circle-focused {
+  color: var(--graph-node-focused);
+}
+
+.theme-dark .graph-view.color-line-highlight,
+.theme-dark .graph-view.color-arrow-highlight,
+.theme-dark .graph-view.color-line-focused,
+.theme-dark .graph-view.color-arrow-focused,
+.theme-light .graph-view.color-line-highlight,
+.theme-light .graph-view.color-arrow-highlight,
+.theme-light .graph-view.color-line-focused,
+.theme-light .graph-view.color-arrow-focused {
+  color: var(--nr-graph-line-focused);
+}
+
+.theme-dark .graph-view.color-fill-unresolved,
+.theme-dark .graph-view.color-circle-unresolved,
+.theme-light .graph-view.color-fill-unresolved,
+.theme-light .graph-view.color-circle-unresolved {
+  color: var(--graph-node-unresolved);
+}
+
+.theme-dark .graph-view.color-fill-tag,
+.theme-dark .graph-view.color-circle-tag,
+.theme-light .graph-view.color-fill-tag,
+.theme-light .graph-view.color-circle-tag {
   color: var(--graph-node-tag);
+}
+
+.theme-dark .graph-view.color-fill-attachment,
+.theme-dark .graph-view.color-circle-attachment,
+.theme-light .graph-view.color-fill-attachment,
+.theme-light .graph-view.color-circle-attachment {
+  color: var(--graph-node-attachment);
+}
+
+.theme-dark .graph-view.color-text,
+.theme-dark .graph-view text,
+.theme-dark .graph-view .graph-view-label,
+.theme-light .graph-view.color-text,
+.theme-light .graph-view text,
+.theme-light .graph-view .graph-view-label {
+  color: var(--graph-text);
+  fill: var(--graph-text);
+}
+
+.theme-dark .graph-controls,
+.theme-light .graph-controls {
+  color: var(--text-normal);
+  --background-modifier-form-field: var(--nr-graph-input-background);
+  --interactive-normal: var(--nr-graph-toggle-background);
+  --interactive-hover: color-mix(in srgb, var(--graph-node) 14%, var(--nr-graph-toggle-background));
+  --interactive-accent: var(--graph-node);
+  --interactive-accent-hover: var(--graph-node-focused);
+  background: var(--nr-graph-controls-background);
+  border: 1px solid var(--nr-line-strong);
+  box-shadow:
+    0 14px 34px color-mix(in srgb, var(--nr-shadow) 24%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--nr-secondary) 10%, transparent);
+}
+
+.theme-dark .graph-controls input[type='search'],
+.theme-light .graph-controls input[type='search'] {
+  background: var(--nr-graph-input-background);
+  border-color: var(--nr-graph-input-border);
+  box-shadow:
+    inset 2px 0 0 color-mix(in srgb, var(--graph-node) 54%, transparent),
+    0 0 0 3px color-mix(in srgb, var(--graph-node) 6%, transparent);
+}
+
+.theme-dark .graph-controls .checkbox-container,
+.theme-light .graph-controls .checkbox-container {
+  background: var(--nr-graph-toggle-background);
+  border-color: var(--nr-graph-input-border);
+}
+
+.theme-dark .graph-controls .checkbox-container.is-enabled,
+.theme-light .graph-controls .checkbox-container.is-enabled {
+  background: var(--graph-node);
+  border-color: var(--graph-node-focused);
+  color: var(--text-on-accent);
+}
+
+.theme-dark .graph-control-section,
+.theme-light .graph-control-section {
+  border-top-color: var(--nr-line-soft);
 }
 .is-mobile .mobile-navbar,
 .is-mobile .mobile-tab-switcher {
@@ -1486,11 +1610,6 @@ h6,
   border-color: var(--nr-pine);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--nr-pine) 14%, transparent);
 }
-
-.theme-dark .graph-view.color-fill-highlight,
-.theme-dark .graph-view.color-circle-highlight {
-  color: var(--graph-node-focused);
-}
 /* Signature pass: beacon rhythm, folder altitude, ridge depth. */
 .theme-dark {
   caret-color: var(--nr-seafoam);
@@ -1794,39 +1913,6 @@ h6,
     inset 2px 0 0 color-mix(in srgb, var(--nr-seafoam) 84%, transparent),
     0 0 0 3px color-mix(in srgb, var(--nr-seafoam) 10%, transparent);
 }
-/* Graph command-map pass: dark topology, bright selected signal. */
-
-.theme-dark .graph-view.color-fill-highlight,
-.theme-dark .graph-view.color-circle-highlight,
-.theme-dark .graph-view.color-line-highlight,
-.theme-dark .graph-view.color-arrow-highlight {
-  color: #6FDAD4;
-}
-
-.theme-dark .graph-view.color-fill-focused,
-.theme-dark .graph-view.color-circle-focused {
-  color: #6FDAD4;
-}
-
-.theme-dark .graph-view.color-line-focused,
-.theme-dark .graph-view.color-arrow-focused {
-  color: #5FA89D;
-}
-
-.theme-dark .graph-view.color-fill-unresolved {
-  color: #B87333;
-}
-
-.theme-dark .graph-view.color-fill-tag,
-.theme-dark .graph-view.color-fill-attachment {
-  color: #5FA89D;
-}
-
-.theme-dark .graph-view text,
-.theme-dark .graph-view .graph-view-label {
-  color: #DDE2E5;
-  fill: #DDE2E5;
-}
 /* Crisp command center pass: remove fog, keep dark. */
 
 .theme-dark .markdown-embed,
@@ -1962,21 +2048,7 @@ h6,
   --nr-folder-depth-color: #C4D0D5;
   border-left-color: rgba(95, 168, 157, 0.30);
 }
-
-.theme-dark .graph-view,
-.theme-dark .graph-view-container,
-.theme-dark .workspace-leaf-content[data-type='graph'] .view-content,
-.theme-dark .workspace-leaf-content[data-type='localgraph'] .view-content {
-  background: #02070B;
-}
-
-.theme-dark .graph-view.color-fill-highlight,
-.theme-dark .graph-view.color-circle-highlight,
-.theme-dark .graph-view.color-fill-focused,
-.theme-dark .graph-view.color-circle-focused {
-  color: #6FDAD4;
-}
-/* Ridge edge pass: sharper active pane, darker graph topology, leaner properties. */
+/* Ridge edge pass: sharper active pane and leaner properties. */
 .theme-dark .workspace-leaf.mod-active {
   box-shadow:
     inset 1px 0 0 color-mix(in srgb, var(--nr-pine) 52%, transparent),
@@ -1986,24 +2058,6 @@ h6,
 
 .theme-dark .workspace-leaf.mod-active .view-header {
   border-bottom-color: color-mix(in srgb, var(--nr-pine) 34%, var(--nr-iron));
-}
-
-.theme-dark .graph-view.color-line,
-.theme-dark .graph-view.color-arrow {
-  color: #17262E;
-}
-
-.theme-dark .graph-view.color-fill,
-.theme-dark .graph-view.color-circle {
-  color: #35645E;
-}
-
-.theme-dark .graph-view.color-fill-tag {
-  color: #5F805B;
-}
-
-.theme-dark .graph-view.color-fill-attachment {
-  color: #4F646D;
 }
 
 .theme-dark .metadata-properties {
@@ -3039,56 +3093,7 @@ h6,
   background: color-mix(in srgb, var(--nr-ridge) 13%, #C5D2D7);
   border-color: color-mix(in srgb, var(--nr-ridge) 42%, transparent);
 }
-/* Light mode repair 3: graph readability and calmer mobile nav selection. */
-.theme-light .graph-view,
-.theme-light .graph-view-container,
-.theme-light .workspace-leaf-content[data-type='graph'] .view-content,
-.theme-light .workspace-leaf-content[data-type='localgraph'] .view-content {
-  background: #D1D9DD;
-}
-
-.theme-light .graph-view.color-line,
-.theme-light .graph-view.color-arrow {
-  color: var(--graph-line);
-}
-
-.theme-light .graph-view.color-fill,
-.theme-light .graph-view.color-circle {
-  color: var(--graph-node);
-}
-
-.theme-light .graph-view.color-fill-highlight,
-.theme-light .graph-view.color-circle-highlight,
-.theme-light .graph-view.color-fill-focused,
-.theme-light .graph-view.color-circle-focused {
-  color: var(--graph-node-focused);
-}
-
-.theme-light .graph-view.color-line-highlight,
-.theme-light .graph-view.color-arrow-highlight,
-.theme-light .graph-view.color-line-focused,
-.theme-light .graph-view.color-arrow-focused {
-  color: var(--graph-node);
-}
-
-.theme-light .graph-view.color-fill-unresolved {
-  color: var(--graph-node-unresolved);
-}
-
-.theme-light .graph-view.color-fill-tag {
-  color: var(--graph-node-tag);
-}
-
-.theme-light .graph-view.color-fill-attachment {
-  color: var(--graph-node-attachment);
-}
-
-.theme-light .graph-view text,
-.theme-light .graph-view .graph-view-label {
-  color: var(--graph-text);
-  fill: var(--graph-text);
-}
-
+/* Light mode repair 3: calmer mobile nav selection. */
 .theme-light.is-mobile .mobile-navbar .clickable-icon.is-active,
 .theme-light.is-mobile .mobile-navbar .is-active > .clickable-icon,
 .is-mobile .theme-light .mobile-navbar .clickable-icon.is-active,
@@ -4294,43 +4299,6 @@ h6,
   color: var(--text-warning);
   background: var(--nr-tertiary-soft);
   border-radius: var(--nr-radius-s);
-}
-
-.theme-dark .graph-view,
-.theme-dark .graph-view-container,
-.theme-dark .workspace-leaf-content[data-type='graph'] .view-content {
-  background: var(--nr-surface-0);
-}
-
-.theme-light .graph-view,
-.theme-light .graph-view-container,
-.theme-light .workspace-leaf-content[data-type='graph'] .view-content {
-  background: var(--nr-surface-0);
-}
-
-.theme-dark .graph-view.color-line,
-.theme-dark .graph-view.color-arrow,
-.theme-light .graph-view.color-line,
-.theme-light .graph-view.color-arrow {
-  color: var(--graph-line);
-}
-
-.theme-dark .graph-view.color-fill,
-.theme-dark .graph-view.color-circle,
-.theme-light .graph-view.color-fill,
-.theme-light .graph-view.color-circle {
-  color: var(--graph-node);
-}
-
-.theme-dark .graph-view.color-fill-highlight,
-.theme-dark .graph-view.color-circle-highlight,
-.theme-dark .graph-view.color-fill-focused,
-.theme-dark .graph-view.color-circle-focused,
-.theme-light .graph-view.color-fill-highlight,
-.theme-light .graph-view.color-circle-highlight,
-.theme-light .graph-view.color-fill-focused,
-.theme-light .graph-view.color-circle-focused {
-  color: var(--graph-node-focused);
 }
 
 .theme-dark .modal.mod-settings .setting-item,
